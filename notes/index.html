@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Notes 🤓 | Sukalaper Home</title>
+<meta name="keywords" content="">
+<meta name="description" content="Sebuah halaman untuk corat-coret">
+<meta name="author" content="Sukalaper">
+<link rel="canonical" href="https://suk4laper.space/notes/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.81faaced47abf343b1d938afd819a94a04b7aa6624ee81acb73006b0488fdf16.css" integrity="sha256-gfqs7Uer80Ox2Tiv2BmpSgS3qmYk7oGstzAGsEiP3xY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://suk4laper.space/image/favicon.ico">
+<link rel="alternate" type="application/rss+xml" href="https://suk4laper.space/notes/index.xml">
+
+<meta name="twitter:title" content="Notes 🤓 | Sukalaper Home" />
+<meta name="twitter:description" content="Sebuah halaman untuk corat-coret" />
+<meta property="og:title" content="Notes 🤓 | Sukalaper Home" />
+<meta property="og:description" content="Sebuah halaman untuk corat-coret" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://suk4laper.space/notes/" />
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Notes 🤓",
+      "item": "https://suk4laper.space/notes/"
+    }
+  ]
+}
+</script>
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+
+</head>
+
+<body class="list-page type-essays kind-section layout-" id="top"><script data-no-instant>
+function switchTheme(theme) {
+  switch (theme) {
+    case 'light':
+      document.body.classList.remove('dark');
+      break;
+    case 'dark':
+      document.body.classList.add('dark');
+      break;
+    
+    default:
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+      }
+  }
+}
+
+function isDarkTheme() {
+  return document.body.className.includes("dark");
+}
+
+function getPrefTheme() {
+  return localStorage.getItem("pref-theme");
+}
+
+function setPrefTheme(theme) {
+  switchTheme(theme)
+  localStorage.setItem("pref-theme", theme);
+}
+
+const toggleThemeCallbacks = {}
+toggleThemeCallbacks['main'] = (isDark) => {
+  
+  if (isDark) {
+    setPrefTheme('light');
+  } else {
+    setPrefTheme('dark');
+  }
+}
+
+
+
+
+window.addEventListener('toggle-theme', function() {
+  
+  const isDark = isDarkTheme()
+  for (const key in toggleThemeCallbacks) {
+    toggleThemeCallbacks[key](isDark)
+  }
+});
+
+
+function toggleThemeListener() {
+  
+  window.dispatchEvent(new CustomEvent('toggle-theme'));
+}
+
+</script>
+<script>
+  
+  (function() {
+    const defaultTheme = 'light';
+    const prefTheme = getPrefTheme();
+    const theme = prefTheme ? prefTheme : defaultTheme;
+
+    switchTheme(theme);
+  })();
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://suk4laper.space" accesskey="h" title="Sukalaper Home (Alt + H)">Sukalaper Home</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://suk4laper.space/categories/" title="Categories"
+                >Categories
+                </a>
+            </li>
+            <li>
+                <a href="https://suk4laper.space/notes/" title="Notes" class="active"
+                >Notes
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<header class="page-header">
+  <h1>Notes 🤓</h1>
+  <div class="post-description">
+    Sebuah halaman untuk corat-coret
+  </div><div class="inline-links">
+  
+  
+  <span><a href="https://suk4laper.space/notes/index.xml" target="_blank">RSS</a></span></div>
+</header>
+
+
+
+
+
+
+<article class="post-entry">
+  <h2 class="entry-title">
+    <a aria-label="post link to " href="https://suk4laper.space/notes/about/">
+    </a>
+  </h2>
+  <div class="post-meta"><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text" style="user-select: text;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" style="user-select: text;"></path><polyline points="14 2 14 8 20 8" style="user-select: text;"></polyline><line x1="16" y1="13" x2="8" y2="13" style="user-select: text;"></line><line x1="16" y1="17" x2="8" y2="17" style="user-select: text;"></line><polyline points="10 9 9 9 8 9" style="user-select: text;"></polyline></svg>
+  <span>82 words</span></span>
+
+  </div>
+  <section class="post-content">
+    <h3 id="128123">👻</h3>
+<p>Sebagai tambahan informasi blog ini dibuat dengan spesifikasi mesin sebagai berikut.</p>
+<ul>
+<li>Mesin: <del>Thinkpad X220</del> Thinkpad T460
+<ul>
+<li>Sistem operasi: Arch Linux</li>
+<li><del>Desktop environment</del> Window manager: i3wm</li>
+<li>Teks editor: <del>Emacs</del> Vim</li>
+<li>Peramban: Qutebrowser, Firefox</li>
+</ul>
+</li>
+</ul>
+<hr>
+<blockquote>
+<p><em>Look at you, you miserable fool</em>.
+<em>Get off your knees, your prayers fall upon deaf ears</em>.
+<em>Gods turned his back on you, heavens gates are shut</em>.
+<em>And now you&rsquo;re knocking on the devil&rsquo;s door</em>.</p>
+<p>&ndash; <em>Alesana - The Thespian</em></p>
+</blockquote>
+<html>
+  <style>
+    #blur {
+      font-size: 13px;
+      color: transparent;
+      text-shadow: 0 0 12px #000;
+    }
+  </style>
+<div id="blur">
+Apa yang ingin Anda lihat? Ini hanya sebuah teks buram.
+</div>
+<p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
+
+  </section>
+</article>
+    </main>
+    
+<footer class="footer">
+  <span>&copy; 2023 <a href="https://suk4laper.space">Sukalaper Home</a></span><span style="display: inline-block; margin-left: 1em;">
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
+  </span>
+  <span style="display: inline-block; margin-left: 1em;">
+    Powered by
+    <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a>
+  </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+    <path d="M12 6H0l6-6z" />
+  </svg>
+</a>
+
+<script>
+  (function() {
+     
+    const disableThemeToggle = '' == '1';
+    if (disableThemeToggle) {
+      return;
+    }
+
+    let button = document.getElementById("theme-toggle")
+    
+    button.removeEventListener('click', toggleThemeListener)
+    
+    button.addEventListener('click', toggleThemeListener)
+  })();
+</script>
+
+<script>
+  (function () {
+    let menu = document.getElementById('menu')
+    if (menu) {
+      menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+      menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+      }
+    }
+
+    const disableSmoothScroll = '' == '1';
+    const enableInstantClick = '' == '1';
+    
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || disableSmoothScroll || enableInstantClick) {
+      return;
+    }
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        var id = this.getAttribute("href").substr(1);
+        document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+          behavior: "smooth"
+        });
+        if (id === "top") {
+          history.replaceState(null, null, " ");
+        } else {
+          history.pushState(null, null, `#${id}`);
+        }
+      });
+    });
+  })();
+</script>
+<script>
+  var mybutton = document.getElementById("top-link");
+  window.onscroll = function () {
+    if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+      mybutton.style.visibility = "visible";
+      mybutton.style.opacity = "1";
+    } else {
+      mybutton.style.visibility = "hidden";
+      mybutton.style.opacity = "0";
+    }
+  };
+</script>
+<script>
+  if (window.scrollListeners) {
+    
+    for (const listener of scrollListeners) {
+      window.removeEventListener('scroll', listener)
+    }
+  }
+  window.scrollListeners = []
+</script>
+
+
+
+<script src="/js/medium-zoom.min.js" data-no-instant
+></script>
+</body>
+
+</html>

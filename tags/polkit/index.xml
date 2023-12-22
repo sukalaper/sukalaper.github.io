@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Polkit on Sukalaper Home</title>
+    <link>https://suk4laper.space/tags/polkit/</link>
+    <description>Recent content in Polkit on Sukalaper Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 08 Sep 2023 10:15:38 +0700</lastBuildDate><atom:link href="https://suk4laper.space/tags/polkit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cara Mengatasi Error Response To PolicyKit Daemon</title>
+      <link>https://suk4laper.space/posts/7-cara-mengatasi-error-response-to-policykit-daemon/cara-mengatasi-error-response-to-policykit-daemon/</link>
+      <pubDate>Fri, 08 Sep 2023 10:15:38 +0700</pubDate>
+      
+      <guid>https://suk4laper.space/posts/7-cara-mengatasi-error-response-to-policykit-daemon/cara-mengatasi-error-response-to-policykit-daemon/</guid>
+      <description>Polkit (sebelumnya PolicyKit ) adalah komponen untuk mengontrol hak istimewa seluruh sistem dalam sistem operasi mirip Unix.</description>
+      <content:encoded><![CDATA[<p>Pesan kesalahan ini saya dapatkan ketika menjalankan perintah <code>$ pkexec ls</code> yang menunjukan keluaran sebagai berikut.</p>
+<pre tabindex="0"><code>==== AUTHENTICATING FOR org.freedesktop.policykit.exec ====
+Authentication is needed to run `/usr/bin/ls&#39; as the super user
+Authenticating as: anggiramadyansyah
+Password:
+polkit-agent-helper-1: error response to PolicyKit daemon: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: No session for cookie
+==== AUTHENTICATION FAILED ====
+Error executing command as another user: Not authorized
+
+This incident has been reported.
+</code></pre><p>Sebelumnya, saya memang tidak menggunakan <a href="https://wiki.archlinux.org/title/Polkit"><em>polkit</em></a> berbasis antar muka pengguna grafis seperti:</p>
+<ol>
+<li><a href="https://archlinux.org/packages/?name=polkit-gnome">Polkit-gnome</a></li>
+<li><a href="https://aur.archlinux.org/packages/xfce-polkit">Xfce-polkit</a></li>
+<li><a href="https://archlinux.org/packages/?name=mate-polkit">Mate-polkit</a></li>
+<li>Dll.</li>
+</ol>
+<p>Untuk mengatasi masalah ini kita perlu tahu ID proses; <a href="https://www.tutorialspoint.com/what-is-a-pid-file-in-linuxhttps://www.tutorialspoint.com/what-is-a-pid-file-in-linux">PID</a> dari <em>shell</em> yang sedang kita gunakan.</p>
+<p>Untuk itu kita perlu perintah dibawah ini.</p>
+<pre tabindex="0"><code>$ echo $$
+2354
+</code></pre><p>Maka ID proses kita saat ini adalah <strong>2354</strong>.</p>
+<p>Setelah itu kita harus membuka sebuah terminal kembali dengan isi perintah seperti ini.</p>
+<pre tabindex="0"><code>$ pkttyagent --process 2354 
+</code></pre><p>Maka keluaran dari perintah di atas adalah sebagai berikut.</p>
+<pre tabindex="0"><code>$ pkttyagent --process 2354                                                                                                                                                                                         
+==== AUTHENTICATING FOR org.freedesktop.policykit.exec ====
+Authentication is needed to run `/usr/bin/ls&#39; as the super user
+Authenticating as: anggiramadyansyah
+Password:
+==== AUTHENTICATION COMPLETE ====
+</code></pre><p>Setelahnya, silahkan lakukan yang teman-teman inginkan dengan <code>pkexec</code> pada terminal pertama.</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
