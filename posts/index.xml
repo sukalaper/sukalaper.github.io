@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Sukalaper Home</title>
-    <link>https://suk4laper.space/posts/</link>
+    <link>https://sukalaper.github.io/posts/</link>
     <description>Recent content in Posts on Sukalaper Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 08 Sep 2023 10:15:38 +0700</lastBuildDate><atom:link href="https://suk4laper.space/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Sep 2023 10:15:38 +0700</lastBuildDate><atom:link href="https://sukalaper.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Haruskah Manusia Seharusnya Menulis Kode?</title>
-      <link>https://suk4laper.space/posts/1-haruskah-manusia-seharusnya-menulis-kode/haruskah-manusia-seharusnya-menulis-kode/</link>
+      <link>https://sukalaper.github.io/posts/1-haruskah-manusia-seharusnya-menulis-kode/haruskah-manusia-seharusnya-menulis-kode/</link>
       <pubDate>Tue, 22 Aug 2023 21:04:12 +0700</pubDate>
       
-      <guid>https://suk4laper.space/posts/1-haruskah-manusia-seharusnya-menulis-kode/haruskah-manusia-seharusnya-menulis-kode/</guid>
+      <guid>https://sukalaper.github.io/posts/1-haruskah-manusia-seharusnya-menulis-kode/haruskah-manusia-seharusnya-menulis-kode/</guid>
       <description>Perdebatan dalam dunia teknologi apakah AI akan menggantikan peran pengkode manusia sepenuhnya.</description>
       <content:encoded><![CDATA[<blockquote>
 <p><strong>Catatan</strong>: Saya hanya penerjemah bukan penulis asli. Tulisan asli dapat Anda baca di <a href="https://medium.com/@abraaorl/should-humans-write-code-at-all-e5c0fb15c56f">Should Humans write Code at all?</a></p>
@@ -38,10 +38,10 @@
     
     <item>
       <title>Cara Mengatasi Error Response To PolicyKit Daemon</title>
-      <link>https://suk4laper.space/posts/7-cara-mengatasi-error-response-to-policykit-daemon/cara-mengatasi-error-response-to-policykit-daemon/</link>
+      <link>https://sukalaper.github.io/posts/7-cara-mengatasi-error-response-to-policykit-daemon/cara-mengatasi-error-response-to-policykit-daemon/</link>
       <pubDate>Fri, 08 Sep 2023 10:15:38 +0700</pubDate>
       
-      <guid>https://suk4laper.space/posts/7-cara-mengatasi-error-response-to-policykit-daemon/cara-mengatasi-error-response-to-policykit-daemon/</guid>
+      <guid>https://sukalaper.github.io/posts/7-cara-mengatasi-error-response-to-policykit-daemon/cara-mengatasi-error-response-to-policykit-daemon/</guid>
       <description>Polkit (sebelumnya PolicyKit ) adalah komponen untuk mengontrol hak istimewa seluruh sistem dalam sistem operasi mirip Unix.</description>
       <content:encoded><![CDATA[<p>Pesan kesalahan ini saya dapatkan ketika menjalankan perintah <code>$ pkexec ls</code> yang menunjukan keluaran sebagai berikut.</p>
 <pre tabindex="0"><code>==== AUTHENTICATING FOR org.freedesktop.policykit.exec ====

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Notes 🤓 on Sukalaper Home</title>
-    <link>https://suk4laper.space/notes/</link>
+    <link>https://sukalaper.github.io/notes/</link>
     <description>Recent content in Notes 🤓 on Sukalaper Home</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://suk4laper.space/notes/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://sukalaper.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://suk4laper.space/notes/about/</link>
+      <link>https://sukalaper.github.io/notes/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://suk4laper.space/notes/about/</guid>
+      <guid>https://sukalaper.github.io/notes/about/</guid>
       <description>👻 Sebagai tambahan informasi blog ini dibuat dengan spesifikasi mesin sebagai berikut.
 Mesin: Thinkpad X220 Thinkpad T460 Sistem operasi: Arch Linux Desktop environment Window manager: i3wm Teks editor: Emacs Vim Peramban: Qutebrowser, Firefox Look at you, you miserable fool. Get off your knees, your prayers fall upon deaf ears. Gods turned his back on you, heavens gates are shut. And now you&amp;rsquo;re knocking on the devil&amp;rsquo;s door.
 &amp;ndash; Alesana - The Thespian</description>

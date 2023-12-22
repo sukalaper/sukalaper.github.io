@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>GNU/Linux on Sukalaper Home</title>
-    <link>https://suk4laper.space/categories/gnu/linux/</link>
+    <link>https://sukalaper.github.io/categories/gnu/linux/</link>
     <description>Recent content in GNU/Linux on Sukalaper Home</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://suk4laper.space/categories/gnu/linux/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://sukalaper.github.io/categories/gnu/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cara Mengatasi Error Response To PolicyKit Daemon</title>
-      <link>https://suk4laper.space/posts/7-cara-mengatasi-error-response-to-policykit-daemon/cara-mengatasi-error-response-to-policykit-daemon/</link>
+      <link>https://sukalaper.github.io/posts/7-cara-mengatasi-error-response-to-policykit-daemon/cara-mengatasi-error-response-to-policykit-daemon/</link>
       <pubDate>Fri, 08 Sep 2023 10:15:38 +0700</pubDate>
       
-      <guid>https://suk4laper.space/posts/7-cara-mengatasi-error-response-to-policykit-daemon/cara-mengatasi-error-response-to-policykit-daemon/</guid>
+      <guid>https://sukalaper.github.io/posts/7-cara-mengatasi-error-response-to-policykit-daemon/cara-mengatasi-error-response-to-policykit-daemon/</guid>
       <description>Polkit (sebelumnya PolicyKit ) adalah komponen untuk mengontrol hak istimewa seluruh sistem dalam sistem operasi mirip Unix.</description>
       <content:encoded><![CDATA[<p>Pesan kesalahan ini saya dapatkan ketika menjalankan perintah <code>$ pkexec ls</code> yang menunjukan keluaran sebagai berikut.</p>
 <pre tabindex="0"><code>==== AUTHENTICATING FOR org.freedesktop.policykit.exec ====
