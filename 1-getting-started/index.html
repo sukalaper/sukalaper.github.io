@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.121.1">
-  <link rel="canonical" href="https://example.com/" />
+  <link rel="canonical" href="https://example.com/1-getting-started/" />
 
   
     
-      <meta name="description" content="An accessibility-friendly Hugo theme, ported from the original Cupper project.">
-    
+    <meta name="description" content="Original repo is no longer maintained. It’s archived and read-only. Fork available here. Cupper An accessibility-friendly Hugo theme, ported from the original Cupper project.
+Table of contents Demo Minimum Hugo version Installation Updating Run example site Configuration Nav Title or Logo Favicons Shortcodes Syntax highlighting Enable Table of Contents for a Blog Post Localization Custom CSS and JS Default to Dark Theme Enable utterances Non-Git Repo Getting help Credits Demo You’re watching it here~">
   
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://example.com/apple-touch-icon.png">
@@ -61,9 +61,7 @@
 
   
   
-    
-  
-  <title>Sukalaper - Home</title>
+  <title>Getting Started With Cupper | Sukalaper - Home</title>
 </head>
 
   <body>
@@ -215,7 +213,7 @@
       
       
       
-      <a href="/post/" >
+      <a href="/post/" aria-current="page">
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use href="#bookmark"></use>
         </svg>
@@ -275,9 +273,219 @@
         <div>
           
   <main id="main">
-    <h1>Sukalaper - Home</h1>
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use href="#bookmark"></use>
+      </svg>
+      Getting Started With Cupper
+    </h1>
+
+    <div class="date">
+      
+      
+      <strong>Publish date: </strong>Dec 30, 2023
+      
+        
+      
+    </div>
+
     
+      <div class="tags">
+        <strong>Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use href="#tag"></use>
+              </svg>
+              
+              <a href="/tags/hugo/">hugo</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use href="#tag"></use>
+              </svg>
+              
+              <a href="/tags/shortcodes/">shortcodes</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+
+    
+
+
+    <aside aria-label="warning" class="note warning">
+  <div>
+    <svg class="sign" aria-hidden="true" viewBox="0 0 48.430474 41.646302" focusable="false">
+      <use href="#warning"></use>
+    </svg>
+    <a href="https://github.com/zwbetz-gh/cupper-hugo-theme/blob/master/README.md">Original repo</a> <strong>is no longer maintained. It&rsquo;s archived and read-only</strong>. Fork available <a href="https://github.com/sukalaper/cupper-hugo-theme">here</a>.
+  </div>
+</aside>
+
+<hr>
+<h1 id="cupper">Cupper</h1>
+<p><a href="https://app.netlify.com/sites/cupper-hugo-theme/deploys"><img src="https://api.netlify.com/api/v1/badges/bc8c4e51-37ee-419d-ad4f-b378010ee546/deploy-status" alt="Netlify Status"></a></p>
+<p>An accessibility-friendly Hugo theme, ported from the <a href="https://github.com/ThePacielloGroup/cupper">original Cupper</a> project.</p>
+<h2 id="table-of-contents">Table of contents</h2>
+<!-- toc -->
+<ul>
+<li><a href="#demo">Demo</a></li>
+<li><a href="#minimum-hugo-version">Minimum Hugo version</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#updating">Updating</a></li>
+<li><a href="#run-example-site">Run example site</a></li>
+<li><a href="#configuration">Configuration</a></li>
+<li><a href="#nav-title-or-logo">Nav Title or Logo</a></li>
+<li><a href="#favicons">Favicons</a></li>
+<li><a href="#shortcodes">Shortcodes</a></li>
+<li><a href="#syntax-highlighting">Syntax highlighting</a></li>
+<li><a href="#enable-table-of-contents-for-a-blog-post">Enable Table of Contents for a Blog Post</a></li>
+<li><a href="#localization">Localization</a></li>
+<li><a href="#custom-css-and-js">Custom CSS and JS</a></li>
+<li><a href="#default-to-dark-theme">Default to Dark Theme</a></li>
+<li><a href="#enable-utterances">Enable utterances</a></li>
+<li><a href="#non-git-repo">Non-Git Repo</a></li>
+<li><a href="#getting-help">Getting help</a></li>
+<li><a href="#credits">Credits</a></li>
+</ul>
+<!-- tocstop -->
+<h2 id="demo">Demo</h2>
+<p>You&rsquo;re watching it here~</p>
+<h2 id="minimum-hugo-version">Minimum Hugo Version</h2>
+<p>Hugo version <code>0.81.0</code> or higher is required. View the <a href="https://github.com/gohugoio/hugo/releases">Hugo releases</a> and download the binary for your OS.</p>
+<h2 id="installation">Installation</h2>
+<p>From the root of your folder:</p>
+<pre><code>hugo new site example.com &amp;&amp; cd example.com
+git init
+git submodule add https://github.com/zwbetz-gh/cupper-hugo-theme.git themes/cupper-hugo-theme
+</code></pre>
+<p>Make sure to change <code>example.com</code> to your site.</p>
+<h2 id="updating">Updating</h2>
+<p>From the root of your site:</p>
+<pre><code>git submodule update --remote --merge
+</code></pre>
+<h2 id="run-example-site">Run example site</h2>
+<p>From the root of <code>themes/cupper-hugo-theme/exampleSite</code>:</p>
+<pre><code>hugo server --themesDir ../..
+</code></pre>
+<aside aria-label="note" class="note">
+  <div>
+    <svg class="sign" aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
+      <use href="#info"></use>
+    </svg>
+    <p>If you get the error like.</p>
+<p><code>found no layout file for &quot;html&quot; for kind &quot;taxonomy&quot;</code></p>
+<p>delete the file <code>hugo.toml</code>.</p>
+
+  </div>
+</aside>
+
+<h2 id="configuration">Configuration</h2>
+<p>Copy <code>config.yaml</code> from the <a href="https://github.com/zwbetz-gh/cupper-hugo-theme/tree/master/exampleSite"><code>exampleSite</code></a> then edit as desired.</p>
+<h2 id="nav-title-or-logo">Nav Title or Logo</h2>
+<ul>
+<li>The <code>navTitleText</code> param will be checked in your config file. If this param exists, the text value will be used as the nav title.</li>
+<li>Otherwise, a logo will be used as the nav title. Place your <strong>SVG</strong> logo at <code>static/images/logo.svg</code>. If you don&rsquo;t provide a logo, then the default theme logo will be used.</li>
+</ul>
+<h2 id="favicons">Favicons</h2>
+<p>Upload your image to <a href="https://realfavicongenerator.net/">RealFaviconGenerator</a> then copy-paste the generated favicon files under <code>static</code>.</p>
+<h2 id="shortcodes">Shortcodes</h2>
+<p>See the <a href="https://cupper-hugo-theme.netlify.com/cupper-shortcodes/">full list of supported shortcodes</a>.</p>
+<h2 id="syntax-highlighting">Syntax highlighting</h2>
+<p>Syntax highlighting is provided by <a href="https://prismjs.com/">Prism</a>. See this <a href="https://cupper-hugo-theme.netlify.com/cupper-shortcodes/#syntax-highlighting">markdown code fences example</a>.</p>
+<p>By default, only a few languages are supported. If you want to add more, follow these steps:</p>
+<ol>
+<li>Select the languages you want from <a href="https://prismjs.com/download.html">https://prismjs.com/download.html</a></li>
+<li>Download the JS file, then copy it to <code>static/js/prism.js</code></li>
+<li>Download the CSS file, then copy it to <code>static/css/prism.css</code></li>
+</ol>
+<h2 id="enable-table-of-contents-for-a-blog-post">Enable Table of Contents for a Blog Post</h2>
+<p>Set <code>toc</code> to <code>true</code>. For example:</p>
+<pre><code>---
+title: &quot;My page with a few headings&quot;
+toc: true
+---
+</code></pre>
+<h2 id="localization">Localization</h2>
+<p>The strings in the templates of this theme can be localized. Make a copy of <code>&lt;THEME_BASE_FOLDER&gt;/i18n/en.yaml</code> to <code>&lt;YOUR_SITE_FOLDER&gt;/i18n/&lt;YOUR_SITE_LANGUAGE&gt;.yaml</code> and translate one by one, changing the <code>translation</code> field.</p>
+<p><a href="https://regisphilibert.com/blog/2018/08/hugo-multilingual-part-2-i18n-string-localization/">Here is a tutorial that goes more in depth about this.</a></p>
+<h2 id="custom-css-and-js">Custom CSS And JS</h2>
+<p>You can provide an optional list of custom CSS files, which must be placed inside the <code>static</code> dir. These will load after the theme CSS loads. So, <code>static/css/custom_01.css</code> translates to <code>css/custom_01.css</code>.</p>
+<p>You can provide an optional list of custom JS files, which must be placed inside the <code>static</code> dir. These will load after the theme JS loads. So, <code>static/js/custom_01.js</code> translates to <code>js/custom_01.js</code>.</p>
+<p>See the <a href="https://github.com/zwbetz-gh/cupper-hugo-theme/blob/master/exampleSite/config.yaml">example site config file</a> for sample usage.</p>
+<h2 id="default-to-dark-theme">Default To Dark Theme</h2>
+<p>In the site config file set the param <code>defaultDarkTheme</code> to <code>true</code>.</p>
+<p>E.g. for <code>config.yaml</code></p>
+<pre><code class="language-yaml">params:
+  defaultDarkTheme: true
+</code></pre>
+<aside aria-label="note" class="note">
+  <div>
+    <svg class="sign" aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
+      <use href="#info"></use>
+    </svg>
+    <p>That the default of light or dark theme only applies to the first visit to a site using this theme. Once the site is visited the choice of dark or light theme is stored in &rsquo;local storage&rsquo; in the browser.</p>
+<p>To reset to a &lsquo;first visit&rsquo; scenario (e.g. for testing), one needs to either browse in private mode (aka Incognito/InPrivate/etc) or delete &rsquo;local storage&rsquo; for this site. The easiest way to do that, but which affects other sites as well, is to use the &lsquo;Clear History&rsquo; feature of the browser.</p>
+<p>Check your browser&rsquo;s help or documentation for details.</p>
+
+  </div>
+</aside>
+
+<h2 id="enable-utterances">Enable utterances</h2>
+<p><code>utterances</code> is a lightweight comments widget built on GitHub issues.</p>
+<p>Firstly, choose the repository utterances will connect to:</p>
+<ol>
+<li>Make sure the repo is public, otherwise your readers will not be able to view the issues/comments.</li>
+<li>Make sure the <a href="https://github.com/apps/utterances">utterances app</a> is installed on the repo, otherwise users will not be able to post comments.</li>
+<li>If your repo is a fork, navigate to its settings tab and confirm the issues feature is turned on.</li>
+</ol>
+<p>Secondly,In the site config file set the param <code>utterances.repo</code> to enable it.</p>
+<p>E.g. for <code>config.yaml</code></p>
+<pre><code class="language-yaml">params:
+  utterances:
+    repo: username/username.github.io
+    issueTerm: title
+    theme: github-light
+</code></pre>
+<p>Refer to <a href="https://utteranc.es/">utterances</a> for more information!</p>
+<h2 id="non-git-repo">Non-Git Repo</h2>
+<p>If your site is <strong>not</strong> a git repo, then set <code>enableGitInfo</code> to <code>false</code> in your config file.</p>
+<h2 id="getting-help">Getting help</h2>
+<p>If you run into an issue that isn&rsquo;t answered by this documentation or the <a href="https://github.com/zwbetz-gh/cupper-hugo-theme/tree/master/exampleSite"><code>exampleSite</code></a>, then visit the <a href="https://discourse.gohugo.io/">Hugo forum</a>. The folks there are helpful and friendly. <strong>Before</strong> asking your question, be sure to read the <a href="https://discourse.gohugo.io/t/requesting-help/9132">requesting help guidelines</a>.</p>
+<h2 id="credits">Credits</h2>
+<p>Thank you to <a href="http://www.heydonworks.com">Heydon Pickering</a> and <a href="https://www.paciellogroup.com/">The Paciello Group</a> for creating the original Cupper project.</p>
+
   </main>
+  <div id="disqus-container">
+  
+    <button id="disqus-button" onclick="showComments()">Show comments</button>
+    <div id="disqus-comments">
+      
+      
+      
+        <p><em>Disqus comments are disabled.</em></p>
+        <script type="application/javascript">
+          function showComments() {
+            // Remove button
+var disqusButton = document.getElementById('disqus-button');
+disqusButton.parentNode.removeChild(disqusButton); 
+// Un-hide comments
+var disqusComments = document.getElementById('disqus-comments');
+disqusComments.style.display = 'block'; 
+          }
+        </script>
+      
+      <noscript>Enable JavaScript to view Disqus comments.</noscript>
+    </div>
+  
+</div>
+
+  
+
 
           
         </div>
