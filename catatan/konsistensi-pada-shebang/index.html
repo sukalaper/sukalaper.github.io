@@ -9,24 +9,24 @@
     <meta name="generator" content="Retype 3.5.0">
 
     <!-- Primary Meta Tags -->
-    <title>Cara Mengatasi Error Response To Policy Kit Daemon</title>
-    <meta name="title" content="Cara Mengatasi Error Response To Policy Kit Daemon">
-    <meta name="description" content="Pesan kesalahan ini saya dapatkan ketika menjalankan perintah $ pkexec ls yang menunjukan keluaran sebagai berikut.">
+    <title>Konsistensi Pada Shebang</title>
+    <meta name="title" content="Konsistensi Pada Shebang">
+    <meta name="description" content="/bin/sh biasanya adalah symlink ke shell default sistem.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://sukalaper.github.io/catatan/cara-mengatasi-error-response-to-policy-kit-daemon/">
+    <link rel="canonical" href="https://sukalaper.github.io/catatan/konsistensi-pada-shebang/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sukalaper.github.io/catatan/cara-mengatasi-error-response-to-policy-kit-daemon/">
-    <meta property="og:title" content="Cara Mengatasi Error Response To Policy Kit Daemon">
-    <meta property="og:description" content="Pesan kesalahan ini saya dapatkan ketika menjalankan perintah $ pkexec ls yang menunjukan keluaran sebagai berikut.">
+    <meta property="og:url" content="https://sukalaper.github.io/catatan/konsistensi-pada-shebang/">
+    <meta property="og:title" content="Konsistensi Pada Shebang">
+    <meta property="og:description" content="/bin/sh biasanya adalah symlink ke shell default sistem.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://sukalaper.github.io/catatan/cara-mengatasi-error-response-to-policy-kit-daemon/">
-    <meta property="twitter:title" content="Cara Mengatasi Error Response To Policy Kit Daemon">
-    <meta property="twitter:description" content="Pesan kesalahan ini saya dapatkan ketika menjalankan perintah $ pkexec ls yang menunjukan keluaran sebagai berikut.">
+    <meta property="twitter:url" content="https://sukalaper.github.io/catatan/konsistensi-pada-shebang/">
+    <meta property="twitter:title" content="Konsistensi Pada Shebang">
+    <meta property="twitter:description" content="/bin/sh biasanya adalah symlink ke shell default sistem.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -35,6 +35,7 @@
     <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.758385692287" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
     <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.758385692287" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.758385692287" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -149,53 +150,36 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="cara-mengatasi-error-response-to-policy-kit-daemon" class="break-words">
+<doc-anchor-target id="konsistensi-pada-shebang" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#cara-mengatasi-error-response-to-policy-kit-daemon">#</doc-anchor-trigger>
-        <span>Cara Mengatasi Error Response To Policy Kit Daemon</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#konsistensi-pada-shebang">#</doc-anchor-trigger>
+        <span>Konsistensi Pada Shebang</span>
     </h1>
 </doc-anchor-target>
-<p>Pesan kesalahan ini saya dapatkan ketika menjalankan perintah <code v-pre>$ pkexec ls</code> yang menunjukan keluaran sebagai berikut.</p>
+<p><code v-pre>/bin/sh</code> biasanya adalah <em>symlink</em> ke <em>shell default</em> sistem. Ini mungkin cara yang sederhana untuk dilakukan, terutama bagi mereka yang menulis skrip dalam <em>shell POSIX</em>. Namun, jika teman-teman menulis skrip <code v-pre>bash</code> itu bukan ide yang baik.</p>
+<p>Jika teman-teman menulis skrip <code v-pre>bash</code> akan terlihat seperti ini.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">==== AUTHENTICATING FOR org.freedesktop.policykit.exec ====
-Authentication is needed to run `/usr/bin/ls' as the super user
-Authenticating as: anggiramadyansyah
-Password:
-polkit-agent-helper-1: error response to PolicyKit daemon: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: No session for cookie
-==== AUTHENTICATION FAILED ====
-Error executing command as another user: Not authorized
+<div class="codeblock-title">function.sh</div>
+<pre class="language-bash"><code v-pre class="language-bash">#!/bin/sh
 
-This incident has been reported.</code></pre>
+# your magical formulas here</code></pre>
 </doc-codeblock></div>
-<p>Sebelumnya, saya memang tidak menggunakan <a href="https://wiki.archlinux.org/title/Polkit"><em>polkit</em></a> berbasis antar muka pengguna grafis seperti:</p>
-<ol>
-<li><a href="https://archlinux.org/packages/?name=polkit-gnome">Polkit-gnome</a></li>
-<li><a href="https://aur.archlinux.org/packages/xfce-polkit">Xfce-polkit</a></li>
-<li><a href="https://archlinux.org/packages/?name=mate-polkit">Mate-polkit</a></li>
-<li>Dll.</li>
-</ol>
-<p>Untuk mengatasi masalah ini kita perlu tahu ID proses; <a href="https://www.tutorialspoint.com/what-is-a-pid-file-in-linuxhttps://www.tutorialspoint.com/what-is-a-pid-file-in-linux">PID</a> dari <em>shell</em> yang sedang kita gunakan.</p>
-<p>Untuk itu kita perlu perintah dibawah ini.</p>
+<p>Skrip teman-teman biasanya tidak berfungsi dengan baik pada setiap sistem yang tidak menggunakan <code v-pre>bash</code> sebagai <em>shell default</em> mereka.</p>
+<p>Cara yang benar adalah teman-teman harus menjelaskan bahwa skrip ini adalah <code v-pre>bash</code> dengan cara.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">$ echo $$
-2354</code></pre>
+<div class="codeblock-title">function.bash</div>
+<pre class="language-bash"><code v-pre class="language-bash">#!/bin/bash
+
+# your magical formulas here</code></pre>
 </doc-codeblock></div>
-<p>Maka ID proses kita saat ini adalah <strong>2354</strong>.</p>
-<p>Setelah itu kita harus membuka sebuah terminal kembali dengan isi perintah seperti ini.</p>
+<p>Atau jika teman-teman khawatir bahwa <code v-pre>bash</code> tidak berada di <code v-pre>/bin</code>, teman-teman dapat menggunakan <code v-pre>env</code> sebagai gantinya.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">$ pkttyagent --process 2354</code></pre>
+<div class="codeblock-title">function.bash</div>
+<pre class="language-bash"><code v-pre class="language-bash">#!/usr/bin/env bash
+
+# your magical formulas here</code></pre>
 </doc-codeblock></div>
-<p>Maka keluaran dari perintah di atas adalah sebagai berikut.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">$ pkttyagent --process 2354
-==== AUTHENTICATING FOR org.freedesktop.policykit.exec ====
-Authentication is needed to run `/usr/bin/ls' as the super user
-Authenticating as: anggiramadyansyah
-Password:
-==== AUTHENTICATION COMPLETE ====</code></pre>
-</doc-codeblock></div>
-<p>Setelahnya, silahkan lakukan yang teman-teman inginkan dengan <code v-pre>pkexec</code> pada terminal pertama.</p>
-<p>Mungkin cara ini kurang baik, tapi ini bekerja dibanding tidak sama sekali.</p>
+<p>Meskipun ini masih belum mencakup semua sistem karena masih menggunakan <em>path</em> absolut, namun setidaknya skrip teman-teman berjalan dengan benar di bawah penerjemah; <code v-pre>bash</code> bukan <em>shell default</em> sistem yang tidak dapat teman-teman prediksi 100%.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -205,23 +189,16 @@ Password:
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../catatan/cara-mengatasi-xampp-is-currently-only-available-as-32-bit/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Welcome $home anyone!</span>
+                                                <span class="block mt-1">Cara Mengatasi XAMPP Is Currently Only Available As 32​bit Pada Arch Linux</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../catatan/cara-mengatasi-garis-baru-pada-alacritty/">
-                                            <span>
-                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Cara Mengatasi Garis Baru Pada Alacritty</span>
-                                            </span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
-                                        </a>
                                     </div>
                                 </nav>
                             </footer>
@@ -262,6 +239,6 @@ Password:
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Cara Mengatasi Error Response To Policy Kit Daemon", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Konsistensi Pada Shebang", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
