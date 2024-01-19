@@ -9,24 +9,24 @@
     <meta name="generator" content="Retype 3.5.0">
 
     <!-- Primary Meta Tags -->
-    <title>Cara Instalasi Hingga Deploy Retype Ke Github</title>
-    <meta name="title" content="Cara Instalasi Hingga Deploy Retype Ke Github">
-    <meta name="description" content="Coming Soon.">
+    <title>Cara Copy Paste Pada Vim Ke Program Lain</title>
+    <meta name="title" content="Cara Copy Paste Pada Vim Ke Program Lain">
+    <meta name="description" content="Ketikan perintah $ vim --version | grep clipboard pada terminal teman-teman. Jika keluaran menunjukan seperti ini.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://sukalaper.github.io/catatan/cara-instalasi-hingga-deploy-retype-ke-github/">
+    <link rel="canonical" href="https://sukalaper.github.io/catatan/cara-copy-paste-pada-vim-ke-program-lain/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sukalaper.github.io/catatan/cara-instalasi-hingga-deploy-retype-ke-github/">
-    <meta property="og:title" content="Cara Instalasi Hingga Deploy Retype Ke Github">
-    <meta property="og:description" content="Coming Soon.">
+    <meta property="og:url" content="https://sukalaper.github.io/catatan/cara-copy-paste-pada-vim-ke-program-lain/">
+    <meta property="og:title" content="Cara Copy Paste Pada Vim Ke Program Lain">
+    <meta property="og:description" content="Ketikan perintah $ vim --version | grep clipboard pada terminal teman-teman. Jika keluaran menunjukan seperti ini.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://sukalaper.github.io/catatan/cara-instalasi-hingga-deploy-retype-ke-github/">
-    <meta property="twitter:title" content="Cara Instalasi Hingga Deploy Retype Ke Github">
-    <meta property="twitter:description" content="Coming Soon.">
+    <meta property="twitter:url" content="https://sukalaper.github.io/catatan/cara-copy-paste-pada-vim-ke-program-lain/">
+    <meta property="twitter:title" content="Cara Copy Paste Pada Vim Ke Program Lain">
+    <meta property="twitter:description" content="Ketikan perintah $ vim --version | grep clipboard pada terminal teman-teman. Jika keluaran menunjukan seperti ini.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -35,6 +35,7 @@
     <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.759000930341" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
     <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.759000930341" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.759000930341" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -149,17 +150,35 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="cara-instalasi-hingga-deploy-retype-ke-github" class="break-words">
+<doc-anchor-target id="cara-copy-paste-pada-vim-ke-program-lain" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#cara-instalasi-hingga-deploy-retype-ke-github">#</doc-anchor-trigger>
-        <span>Cara Instalasi Hingga Deploy Retype Ke Github</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#cara-copy-paste-pada-vim-ke-program-lain">#</doc-anchor-trigger>
+        <span>Cara Copy Paste Pada Vim Ke Program Lain</span>
     </h1>
 </doc-anchor-target>
+<p>Ketikan perintah <code v-pre>$ vim --version | grep &quot;clipboard&quot;</code> pada terminal teman-teman. Jika keluaran menunjukan seperti ini.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markdown"><code v-pre class="language-markdown">$ vim --version | grep &quot;clipboard&quot;
++clipboard         +keymap            +printer           +vertsplit
++ex_extra          +mouse_netterm     +syntax            +xterm_clipboard</code></pre>
+</doc-codeblock></div>
+<p>Maka Vim sudah mendukung <em>clipboard</em>.</p>
+<p>Namun, jika keluaran menunjukan seperti ini.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markdown"><code v-pre class="language-markdown">$ vim --version | grep &quot;clipboard&quot;
+-clipboard         +keymap            +printer           +vertsplit
++ex_extra          +mouse_netterm     +syntax            -xterm_clipboard</code></pre>
+</doc-codeblock></div>
+<p>Maka teman-teman harus melakukan instalasi <a href="https://archlinux.org/packages/extra/x86_64/gvim/">Gvim</a> yang mana <strong>wajib melakukan <em>uninstall</em></strong> terhadap <a href="https://www.vim.org/">Vim</a> terlebih dahulu.</p>
+<p>Jika sudah, teman-teman dapat meletakan konfigurasi ini pada <code v-pre>.vimrc</code></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markdown"><code v-pre class="language-markdown">set clipboard=unnamed,unnamedplus</code></pre>
+</doc-codeblock></div>
 <div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-300"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
         <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-300" width="22" height="22" viewBox="0 0 24 24" role="presentation">
                 <g fill="currentColor"><g>
                     <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
                     <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
@@ -168,7 +187,8 @@
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-<p>Coming Soon.</p>
+            <h5>Informasi</h5>
+<p>Saat ini saya sedang melirik <a href="https://helix-editor.com/"><em>Helix</em></a> sebagai alternatif.</p>
         </div>
     </div>
 </div>
@@ -181,20 +201,20 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../catatan/cara-instalasi-hingga-deploy-hugo-ke-github/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../catatan/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Cara Instalasi Hingga Deploy Hugo Ke Git​Hub</span>
+                                                <span class="block mt-1">Catatan</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../catatan/cara-mengatasi-error-response-to-policy-kit-daemon/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../catatan/cara-instalasi-hingga-deploy-hugo-ke-github/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Cara Mengatasi Error Response To Policy Kit Daemon</span>
+                                                <span class="block mt-1">Cara Instalasi Hingga Deploy Hugo Ke Git​Hub</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -238,6 +258,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Cara Instalasi Hingga Deploy Retype Ke Github", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Cara Copy Paste Pada Vim Ke Program Lain", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
