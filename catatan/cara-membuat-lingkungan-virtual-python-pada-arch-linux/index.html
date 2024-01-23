@@ -9,24 +9,24 @@
     <meta name="generator" content="Retype 3.5.0">
 
     <!-- Primary Meta Tags -->
-    <title>Konsistensi Pada Shebang</title>
-    <meta name="title" content="Konsistensi Pada Shebang">
-    <meta name="description" content="/bin/sh biasanya adalah symlink ke shell default sistem.">
+    <title>Cara Membuat Lingkungan Virtual Python Pada Direktori Tertentu Di Arch Linux</title>
+    <meta name="title" content="Cara Membuat Lingkungan Virtual Python Pada Direktori Tertentu Di Arch Linux">
+    <meta name="description" content="Pada saat menjalankan sebuah proyek yang memerlukan Python, saya mendapat keluaran seperti ini.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://sukalaper.github.io/catatan/konsistensi-pada-shebang/">
+    <link rel="canonical" href="https://sukalaper.github.io/catatan/cara-membuat-lingkungan-virtual-python-pada-arch-linux/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sukalaper.github.io/catatan/konsistensi-pada-shebang/">
-    <meta property="og:title" content="Konsistensi Pada Shebang">
-    <meta property="og:description" content="/bin/sh biasanya adalah symlink ke shell default sistem.">
+    <meta property="og:url" content="https://sukalaper.github.io/catatan/cara-membuat-lingkungan-virtual-python-pada-arch-linux/">
+    <meta property="og:title" content="Cara Membuat Lingkungan Virtual Python Pada Direktori Tertentu Di Arch Linux">
+    <meta property="og:description" content="Pada saat menjalankan sebuah proyek yang memerlukan Python, saya mendapat keluaran seperti ini.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://sukalaper.github.io/catatan/konsistensi-pada-shebang/">
-    <meta property="twitter:title" content="Konsistensi Pada Shebang">
-    <meta property="twitter:description" content="/bin/sh biasanya adalah symlink ke shell default sistem.">
+    <meta property="twitter:url" content="https://sukalaper.github.io/catatan/cara-membuat-lingkungan-virtual-python-pada-arch-linux/">
+    <meta property="twitter:title" content="Cara Membuat Lingkungan Virtual Python Pada Direktori Tertentu Di Arch Linux">
+    <meta property="twitter:description" content="Pada saat menjalankan sebuah proyek yang memerlukan Python, saya mendapat keluaran seperti ini.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -150,36 +150,63 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="konsistensi-pada-shebang" class="break-words">
+<doc-anchor-target id="cara-membuat-lingkungan-virtual-python-pada-direktori-tertentu-di-arch-linux" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#konsistensi-pada-shebang">#</doc-anchor-trigger>
-        <span>Konsistensi Pada Shebang</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#cara-membuat-lingkungan-virtual-python-pada-direktori-tertentu-di-arch-linux">#</doc-anchor-trigger>
+        <span>Cara Membuat Lingkungan Virtual Python Pada Direktori Tertentu Di Arch Linux</span>
     </h1>
 </doc-anchor-target>
-<p><code v-pre>/bin/sh</code> biasanya adalah <em>symlink</em> ke <em>shell default</em> sistem. Ini mungkin cara yang sederhana untuk dilakukan, terutama bagi mereka yang menulis skrip dalam <em>shell POSIX</em>. Namun, jika teman-teman menulis skrip <code v-pre>bash</code> itu bukan ide yang baik.</p>
-<p>Jika teman-teman menulis skrip <code v-pre>bash</code> akan terlihat seperti ini.</p>
+<p>Pada saat menjalankan sebuah proyek yang memerlukan <code v-pre>Python</code>, saya mendapat keluaran seperti ini.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<div class="codeblock-title">function.sh</div>
-<pre class="language-bash"><code v-pre class="language-bash">#!/bin/sh
+<div class="codeblock-title">pip install -r requirements.txt</div>
+<pre class="language-none"><code v-pre class="language-none">error: externally-managed-environment
 
-# your magical formulas here</code></pre>
+× This environment is externally managed
+╰─&gt; To install Python packages system-wide, try 'pacman -S
+    python-xyz', where xyz is the package you are trying to
+    install.
+
+    If you wish to install a non-Arch-packaged Python package,
+    create a virtual environment using 'python -m venv path/to/venv'.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip.
+
+    If you wish to install a non-Arch packaged Python application,
+    it may be easiest to use 'pipx install xyz', which will manage a
+    virtual environment for you. Make sure you have python-pipx
+    installed via pacman.
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.</code></pre>
 </doc-codeblock></div>
-<p>Skrip teman-teman biasanya tidak berfungsi dengan baik pada setiap sistem yang tidak menggunakan <code v-pre>bash</code> sebagai <em>shell default</em> mereka.</p>
-<p>Cara yang benar adalah teman-teman harus menjelaskan bahwa skrip ini adalah <code v-pre>bash</code> dengan cara.</p>
+<p>Setelah membaca keluaran yang diberikan, langkah yang harus dilakukan adalah membuat sebuah lingkungan virtual pada direktori saat ini dengan perintah.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<div class="codeblock-title">function.bash</div>
-<pre class="language-bash"><code v-pre class="language-bash">#!/bin/bash
-
-# your magical formulas here</code></pre>
+<pre class="language-python"><code v-pre class="language-python">$ python -m venv .</code></pre>
 </doc-codeblock></div>
-<p>Atau jika teman-teman khawatir bahwa <code v-pre>bash</code> tidak berada di <code v-pre>/bin</code>, teman-teman dapat menggunakan <code v-pre>env</code> sebagai gantinya.</p>
+<p>setelahnya akan ada direktori bernama <code v-pre>bin/</code> didalamnya. Kira-kira seperti ini.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<div class="codeblock-title">function.bash</div>
-<pre class="language-bash"><code v-pre class="language-bash">#!/usr/bin/env bash
-
-# your magical formulas here</code></pre>
+<pre class="language-none"><code v-pre class="language-none">circle-X
+├── bin -&gt; folder baru yang muncul.
+├── CHANGELOG.txt
+├── Docs
+├── include
+├── lib
+├── circle-x.py
+└── requirements.txt</code></pre>
 </doc-codeblock></div>
-<p>Meskipun ini masih belum mencakup semua sistem karena masih menggunakan <em>path</em> absolut, namun setidaknya skrip teman-teman berjalan dengan benar di bawah penerjemah; <code v-pre>bash</code> bukan <em>shell default</em> sistem yang tidak dapat teman-teman prediksi 100%.</p>
+<p>Selanjutnya saatnya mengaktifkan lingkungan virtual tersebut dengan perintah.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-python"><code v-pre class="language-python">$ source /bin/activate</code></pre>
+</doc-codeblock></div>
+<p>Harusnya, <em>shell</em> saat ini akan berubah untuk menunjukan bahwa kita telah berhasil berada didalam lingkungan virtual. Kurang lebih menjadi seperti ini.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">(circle-X) anggiramadyansyah :: ~/Documents/circle-X ‹master*› »</code></pre>
+</doc-codeblock></div>
+<p>Sekarang teman-teman dapat melanjutkan dengan melakukan instalasi paket-paket yang dibutuhkan dengan perintah.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">pip install -r requirements.txt</code></pre>
+</doc-codeblock></div>
+<p>Dengan langkah-langkah ini, seharusnya teman-teman dapat mengelola dependensi proyek <code v-pre>python</code> dengan aman di dalam lingkungan virtual yang terisolasi.</p>
+<p>Setelah selesai, keluar dari lingkungan virtual dengan perintah <code v-pre>$ deactive</code>.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -189,20 +216,20 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../catatan/cara-mengatasi-xampp-is-currently-only-available-as-32-bit/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../catatan/cara-instalasi-hingga-deploy-retype-ke-github/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Cara Mengatasi XAMPP Is Currently Only Available As 32​bit Pada Arch Linux</span>
+                                                <span class="block mt-1">Cara Instalasi Hingga Deploy Retype Ke Github</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../coret-coret/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../catatan/cara-mengatasi-error-response-to-policy-kit-daemon/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Coret coret</span>
+                                                <span class="block mt-1">Cara Mengatasi Error Response To Policy Kit Daemon</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -246,6 +273,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Konsistensi Pada Shebang", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Cara Membuat Lingkungan Virtual Python Pada Direktori Tertentu Di Arch Linux", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
