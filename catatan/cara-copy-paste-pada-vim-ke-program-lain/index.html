@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.759352766123">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.759608799797">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -11,7 +11,7 @@
     <!-- Primary Meta Tags -->
     <title>Cara Copy Paste Pada Vim Ke Program Lain</title>
     <meta name="title" content="Cara Copy Paste Pada Vim Ke Program Lain">
-    <meta name="description" content="Ketikan perintah.">
+    <meta name="description" content="Pada beberapa waktu, saya cukup kesulitan untuk copy - paste pada Vim. Sehingga saya harus menggunakan perintah ">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://sukalaper.github.io/catatan/cara-copy-paste-pada-vim-ke-program-lain/">
@@ -20,22 +20,22 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sukalaper.github.io/catatan/cara-copy-paste-pada-vim-ke-program-lain/">
     <meta property="og:title" content="Cara Copy Paste Pada Vim Ke Program Lain">
-    <meta property="og:description" content="Ketikan perintah.">
+    <meta property="og:description" content="Pada beberapa waktu, saya cukup kesulitan untuk copy - paste pada Vim. Sehingga saya harus menggunakan perintah ">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://sukalaper.github.io/catatan/cara-copy-paste-pada-vim-ke-program-lain/">
     <meta property="twitter:title" content="Cara Copy Paste Pada Vim Ke Program Lain">
-    <meta property="twitter:description" content="Ketikan perintah.">
+    <meta property="twitter:description" content="Pada beberapa waktu, saya cukup kesulitan untuk copy - paste pada Vim. Sehingga saya harus menggunakan perintah ">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.759352766123" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.759608799797" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.759352766123" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.759608799797" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.759352766123" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.759352766123" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.759608799797" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.759608799797" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -156,7 +156,9 @@
         <span>Cara Copy Paste Pada Vim Ke Program Lain</span>
     </h1>
 </doc-anchor-target>
-<p>Ketikan perintah.</p>
+<p>Pada beberapa waktu, saya cukup kesulitan untuk <em>copy - paste</em> pada Vim. Sehingga saya harus menggunakan perintah <code v-pre>$ cat xx.cpp | xclip -selection clipboard</code>, sebenenarnya perintah tersebut dapat saya buat <a href="https://jonsuh.com/blog/bash-command-line-shortcuts/"><em>alias</em></a> sehingga lebih mudah untuk memanggilnya namun saya merasa masih kurang efisien jika saya ingin melakukan <em>copy - paste</em> beberapa kalimat saja yang ada di dalam sebuah file.</p>
+<p>Akhirnya saya mencari sebuah solusi pada Google dan menemukan salah satu referensi, <a href="">disini</a>.</p>
+<p>Jadi, langkah pertama kita harus melakukan identifikasi terlebih dahulu pada Vim dengan perintah.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">$ vim --version | grep &quot;clipboard&quot;</code></pre>
 </doc-codeblock></div>
@@ -166,14 +168,20 @@
 +clipboard         +keymap            +printer           +vertsplit
 +ex_extra          +mouse_netterm     +syntax            +xterm_clipboard</code></pre>
 </doc-codeblock></div>
-<p>Maka Vim sudah mendukung <em>clipboard</em>. Namun, jika keluaran menunjukan seperti ini.</p>
+<p>Maka <strong>Vim sudah mendukung <em>clipboard</em></strong>.</p>
+<p>Namun, jika keluaran menunjukan seperti ini.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-markdown"><code v-pre class="language-markdown">$ vim --version | grep &quot;clipboard&quot;
 -clipboard         +keymap            +printer           +vertsplit
 +ex_extra          +mouse_netterm     +syntax            -xterm_clipboard</code></pre>
 </doc-codeblock></div>
 <p>Maka teman-teman harus melakukan instalasi <a href="https://archlinux.org/packages/extra/x86_64/gvim/">Gvim</a> yang mana <strong>wajib melakukan <em>uninstall</em></strong> terhadap <a href="https://www.vim.org/">Vim</a> terlebih dahulu.</p>
-<p>Jika sudah, teman-teman dapat meletakan konfigurasi ini pada <code v-pre>.vimrc</code></p>
+<p>Karena disini saya menggunakan GNU/Linux berdistribusi Arch Linux, maka saya cukup menuliskan perintah seperti ini.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markdown"><code v-pre class="language-markdown">$ sudo pacman -Rns vim
+$ sudo pacman -S gvim</code></pre>
+</doc-codeblock></div>
+<p>Jika Gvim sudah terpasang, teman-teman dapat menambahkan konfigurasi ini pada <code v-pre>.vimrc</code></p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">.vimrc</div>
 <pre class="language-vim"><code v-pre class="language-vim">set clipboard=unnamed,unnamedplus</code></pre>
