@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.759608799797">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.760475031572">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -30,11 +30,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.759608799797" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.760475031572" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.759608799797" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.760475031572" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.759608799797" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.760475031572" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -192,10 +192,27 @@
 </blockquote>
 <p>Jika teman-teman menggunakan distribusi lain atau bahkan sistem operasi lain, silahkan merujuk pada <a href="https://gohugo.io/documentation/">dokumentasi Hugo</a>.</p>
 <ol>
-<li>Pasang paket Hugo dengan perintah <code v-pre>$ sudo pacman -S hugo git</code>.</li>
-<li>Verifikasi Hugo dengan perintah <code v-pre>$ hugo version</code>.</li>
-<li>Buat website teman-teman dengan perintah <code v-pre>$ hugo new site nama-website-teman-teman &amp;&amp; cd nama-website-teman-teman</code>.</li>
-<li>Teman-teman telah berada pada direktori website silahkan lakukan konfigurasi pada <code v-pre>config.toml</code> (<code v-pre>.yaml</code> atau <code v-pre>.json</code>).</li>
+<li>Pasang paket Hugo dengan perintah.</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">$ sudo pacman -S hugo git</code></pre>
+</doc-codeblock></div>
+<p>Perintah ini akan melakukan pemasangan paket-paket dari Hugo dan juga Git.</p>
+<ol start="2">
+<li>Verifikasi Hugo dengan perintah</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">$ hugo version</code></pre>
+</doc-codeblock></div>
+<ol start="3">
+<li>Buat website teman-teman dengan perintah.</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">$ hugo new site nama-website-teman-teman &amp;&amp; cd nama-website-teman-teman</code></pre>
+</doc-codeblock></div>
+<p>Silahkan ganti <code v-pre>nama-website-teman-teman</code> dengan nama website yang diinginkan.</p>
+<ol start="4">
+<li>Harusnya saat ini teman-teman telah berada pada direktori website silahkan lakukan konfigurasi pada <code v-pre>config.toml</code> (<code v-pre>.yaml</code> atau <code v-pre>.json</code>).</li>
 <li>Memilih tema, saya rasa ini opsional. Apa yang saya suka belum tentu teman-teman demikian, untuk Instalasi tema silahkan merujuk pada dokumentasi yang disediakan, <a href="https://themes.gohugo.io/">disini</a>.</li>
 <li>Memulai Hugo dengan perintah <code v-pre>$ hugo server</code>. Disini Hugo akan dimuat pada peramban dengan alamat <code v-pre>http://localhost:1313</code>.</li>
 <li>Membuat dan menulis konten pertama dengan perintah <code v-pre>$ hugo new content/post/judul-konten-teman-teman.md</code>.</li>
@@ -206,7 +223,8 @@
         <span>Deploy Hugo Ke GitHub</span>
     </h3>
 </doc-anchor-target>
-<p>Setelah 7 langkah diatas selesai, teman-teman dapat memuat semua file dengan perintah <code v-pre>$ hugo</code> maka akan ada folder bernama <code v-pre>public/</code>. Isi dari folder <code v-pre>public/</code> lah yang akan digunakan untuk halaman GitHub teman-teman.</p>
+<p>Setelah 7 langkah diatas selesai, teman-teman dapat memuat semua file dengan perintah <code v-pre>$ hugo</code> maka akan ada folder bernama <code v-pre>public/</code>.</p>
+<p>Isi dari folder <code v-pre>public/</code> lah yang akan digunakan untuk halaman GitHub teman-teman.</p>
 <ol>
 <li>Teman-teman harus membuat sebuah repositori <strong>sesuai dengan nama pengguna</strong> dengan akhiran <code v-pre>.github.io</code>.</li>
 <li>Lakukan <em>clone</em> dengan perintah <code v-pre>$ git clone nama-repo-teman-teman.git</code> .</li>
