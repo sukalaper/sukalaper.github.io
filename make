@@ -36,7 +36,6 @@ txt2html() {
     sed -E "s|(#/)([^ \)]*)|\1<a href=/\2>\2</a>|g" |
     sed -E "s|(@/)([^ \)]*)|\1<a href=${pp##.}/\2>\2</a>|g" |
     sed -E "s|(\\$/)([^ \)]*)|\1<a href=$repo_url/\2>\2</a>|g" |
-    sed -E "s|(%/)([^ \)]*)|\1<a href=$repo_url/dylanaraps/\2>\2</a>|g" |
 
     # Convert [0] into HTML links.
     sed -E "s|^( *)\[([0-9\.]*)\]|\1<span id=\2>[\2]</span>|g" |
@@ -80,7 +79,7 @@ page() {
 }
 
 main() {
-    repo_url=https://github.com/sukalaper
+    repo_url=https://github.com/
 
     rm -rf docs
     mkdir -p docs
