@@ -1,0 +1,78 @@
+
+Kenalan Dengan RWD Table Patterns
+________________________________________________________________________________
+
+- Apa Itu RWD Table Patterns?                                              [1.0]
+- Mengapa Menggunakan RWD Table Patterns?                                  [2.0]
+
+
+[1.0] Apa Itu RWD Table Patterns?
+________________________________________________________________________________
+
+RWD-Table-Patterns adalah singkatan dari "Responsive Web Design Table Patterns". 
+Ini merujuk pada berbagai teknik dan strategi yang digunakan dalam desain 
+responsif web untuk menyajikan tabel data dengan baik di berbagai perangkat 
+dan ukuran layar.
+
+Desain responsif adalah pendekatan dalam pengembangan web yang memastikan bahwa 
+situs web dapat menyesuaikan tampilannya secara dinamis sesuai dengan ukuran 
+layar pengguna, sehingga memberikan pengalaman pengguna yang optimal tanpa harus 
+melakukan zoom in atau out atau menggulir ke samping secara horizontal.
+
+Terkadang, tabel data dapat menjadi tantangan dalam desain responsif karena 
+ukuran yang besar dan kompleksitasnya. RWD-Table-Patterns menyediakan berbagai 
+pendekatan, seperti membuat tabel dapat di-scroll secara horizontal, mengubah 
+tata letak tabel, menyembunyikan kolom atau mengelompokkan data dan penggunaan 
+teknik lainnya untuk memastikan bahwa tabel dapat diakses dan dibaca dengan 
+baik pada perangkat apa pun.
+
+
+[2.0] Mengapa Menggunakan RWD Table Patterns?
+________________________________________________________________________________
+
+Saya sendiri merasa cukup kesulitan jika ada sebuah kasus dimana saya sangat
+membutuhkan sebuah data skala besar dengan tampilan tabel yang responsif. 
+Tentunya, tujuan utama saya adalah agar pengguna dapat dengan cepat memahami, 
+mengolah serta membaca data dari tabel tersebut. 
+
+Bertemulah saya dengan satu repositori ini $/nadangergeo/RWD-Table-Patterns
+
+Kesan pertama membaca $/nadangergeo/RWD-Table-Patterns/blob/master/README.md 
+adalah.
+
+  "Sepertinya, ini bukan ditunjukan untuk pemula."
+  "Bagaimana menggunakannya? Oh, saya membutuhkan NPM."
+
+Dan lain-lain..
+
+Karena minimnya pengetahuan saya dan juga saya bukan seorang pengembang, tentu 
+ini terasa sangat membingungkan.
+
+  "Dokumentasi mengatakan saya harus meletakan "rwd-table.min.css" pada css/"
+  "Dimana folder css/ ? Saya bahkan belum membuatnya!"
+  "Dimana folder js/ ? Saya juga belum membuatnya!"
+
+Setelah meluangkan waktu untuk membaca sebuah dokumentasi serta melihat demo 
+yang diberikan, barulah saya memahami sedikit demi sedikit.
+
+Pada dokumentasi, dikatakan bahwa langkah awal instalasi adalah menggunakan NPM.
+
+  $ npm i RWD-Table-Patterns
+
+Namun saya bersikeras untuk tidak melakukannya! Saya kembali membaca 
+dokumentasi tersebut untuk memastikan cara lain.
+
+Akhirnya..
+
+Saya menemukannya!
+
+  1. Lakukan clone pada repositori tersebut.
+    $ git clone https://github.com/nadangergeo/RWD-Table-Patterns/
+  2. Masuk ke dalam folder dist/ dan disana ada terdapat dua folder.
+    1. css/ 
+    2. js/ 
+  3. Saya keluar dari dist/ kemudian masuk ke dalam docs/ 
+  4. Mengambil index.html didalam docs/ dan menyalinnya ke dalam dist/
+
+Dan semuanya selesai, saya hanya harus mengubah konfigurasinya sesuai dengan 
+data yang saya miliki. Itu bagus! Terimakasih banyak untuk $/nadangergeo !
