@@ -37,7 +37,8 @@ Beberapa teman yang pernah se-universitas cukup sering menanyakan seperti ini.
 
 Tulisan ini akan saya lanjutkan nanti..
 
-Catatan Kaki
+
+* Catatan Kaki
 ________________________________________________________________________________
 
 [1] https://wiki.archlinux.org/
