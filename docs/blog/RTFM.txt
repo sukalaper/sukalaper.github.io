@@ -1,0 +1,44 @@
+
+RTFM (Belum selesai)
+________________________________________________________________________________
+
+- Ikhtisar                                                                 [1.0]
+
+
+[1.0] Ikhtisar
+________________________________________________________________________________
+
+Tulisan ini saya kutip dari Arch Wiki [1] yang berjudul Arch Terminology [2].
+
+RTFM adalah singkatan dari "Read The Fucking Manual".
+
+Namun, pesan "RTFM" juga sering dikritik karena terlalu kasar dan tidak ramah. 
+Banyak yang menganggapnya sebagai sikap yang merendahkan dan tidak membantu bagi 
+mereka yang baru belajar atau mengalami kesulitan. Sebagai gantinya, mereka 
+menganjurkan pendekatan yang lebih ramah, yaitu "Baca panduan ramah".
+
+Saya bukan orang yang enggan untuk menanggapi pertanyaan-pertanyaan mendasar,
+pertanyaan yang sebenarnya mudah didapatkan atau bahkan jelas ada jawabannya 
+didepan mata.
+
+Saya hanya ingin lebih bijak menanggapi. Tentu saja, saya bukan seorang 
+pemrogram, pengembang perangkat lunak atau ahli. Jadi, jika saya memiliki 
+kesalahan jawaban, keliru soal pemahaman alangkah baiknya agar mengkoreksi 
+diri saya bukan berbalik untuk menghina saya. :(
+
+Tentu saja, ini saya tunjukan untuk diri saya sendiri, kadang ketika membaca 
+sebuah dokumentasi yang benar-benar bagus dan terstruktur pun saya masih merasa 
+kebingungan, keliru.
+
+Beberapa teman yang pernah se-universitas cukup sering menanyakan seperti ini.
+
+  "Gimana cara deklarasi variabel dengan tipe data string di C++?"
+  "Kok ini error ya?" (Tanpa disertai dengan foto)
+
+Tulisan ini akan saya lanjutkan nanti..
+
+Catatan Kaki
+________________________________________________________________________________
+
+[1] https://wiki.archlinux.org/
+[2] https://wiki.archlinux.org/title/arch_terminology

@@ -64,14 +64,17 @@ dokumentasi tersebut untuk memastikan cara lain.
 
 Akhirnya..
 
-Saya menemukannya!
-
   1. Lakukan clone pada repositori tersebut.
+
     $ git clone https://github.com/nadangergeo/RWD-Table-Patterns/
+  
   2. Masuk ke dalam folder dist/ dan disana ada terdapat dua folder.
+  
     1. css/ 
     2. js/ 
+  
   3. Saya keluar dari dist/ kemudian masuk ke dalam docs/ 
+  
   4. Mengambil index.html didalam docs/ dan menyalinnya ke dalam dist/
 
 Dan semuanya selesai, saya hanya harus mengubah konfigurasinya sesuai dengan 

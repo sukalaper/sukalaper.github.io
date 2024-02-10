@@ -6,46 +6,46 @@ ________________________________________________________________________________
 Kembali berpindah dari satu static site generators ke static site lainnya cukup
 membosankan (entah apa yang saya cari―― kesederhanaan? Kemudahan dokumentasi?) 
 Tidak-tidak, setiap static site generator memiliki dokumentasi yang sangat 
-bagus, namun karena minimnya pengalaman dan pengetahuan saya, itu tetap terasa 
+bagus, namun karena minimnya pengalaman dan pengetahuan saya itu tetap terasa 
 sulit.
-Namun, memulai memahami kembali kerangka dokumentasi yang berbeda adalah 
+
+Untuk memulai memahami kembali kerangka dokumentasi yang berbeda adalah 
 konsekuensi logis yang harus saya terima demi mencapai kemaslahatan. 
 
 Kebalikannya..
 
-Website ini sama sekali tidak memiliki dokumentasi apapun. 
-Namun ini disediakan di bawah lisensi MIT (seperti kebanyakan SSG lainnya) 
-oleh Dylan. 
-$/dylanaraps/blog/blob/master/make#L3 
+Website ini sama sekali tidak memiliki dokumentasi apapun! 
+
+Tetapi website ini berada di bawah lisensi MIT (seperti kebanyakan SSG lainnya) 
+oleh Dylan. $/dylanaraps/blog/blob/master/make#L3 
 Yang berarti ini adalah perangkat lunak yang bebas atau sangat minim permisif.
+
+  blog
+  ├── docs/
+  │   └── # Berisi file .txt yang telah di convert ke .html
+  ├── make.sh # Berisi skrip yang digunakan untuk mengkonversi .txt ke 
+  │             .html yang akan membuat sebuah folder docs/
+  ├── site/
+  │   └── # Berisi file .txt yang nantinya akan di convert ke .html 
+  │         dengan ./make
+  └── template.html
 
 Ini tidak gratis! Ada yang harus saya bayar; waktu. 
 
-Maksud saya kita tidak perlu membayar dengan uang. Kita perlu membayar dengan 
-menginvestasikan waktu untuk mencoba dan mempelajarinya.
+Tidak melulu soal uang, saya perlu membayar dengan menginvestasikan waktu 
+untuk mencoba dan mempelajarinya.
 
 Sumber kode website saya ambil tanpa rasa tahu malu dari $/dylanaraps 
 
 Terimakasih Dylan! Ngomong-ngomong, kapan selesai hiatus?
 
-blog
-├── docs/
-│   └── # Berisi file .txt yang telah di convert ke .html
-├── make.sh # Berisi skrip yang digunakan untuk mengkonversi .txt ke .html 
-│             yang akan membuat sebuah folder docs/
-├── site/
-│   └── # Berisi file .txt yang nantinya akan di convert ke .html 
-│         dengan ./make
-└── template.html
-
-Tidak ada Markdown, blok kode, pemberitahuan, tombol, kolom, panel. Tidak ada!
+Tidak ada Markdown, blok kode, pemberitahuan, tombol, kolom, panel, teks
+semantik, Tidak ada!
 Hanya layar hitam dengan garis-garis putih, tulisan putih (kadang biru untuk 
 referensi tautan).
 
-Menurut saya, ini bagus! Meningkatkan keterbacaan dan beberapa fungsi tanpa 
+Menurut saya ini bagus! Meningkatkan keterbacaan dan beberapa fungsi tanpa 
 distraksi ketika menulis, membuat catatan atau melampirkan tutorial yang sahih.
-
-Mungkin ini pelabuhan terakhir saya dalam berlayar mencari SSG yang sesuai.
 
 
 Kutipan

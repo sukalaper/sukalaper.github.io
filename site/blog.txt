@@ -2,5 +2,8 @@
 BLOG
 ________________________________________________________________________________
 
-@/blog/Membuat-Lingkungan-Virtual-Python-Pada-Direktori-Saat-Ini
-@/blog/Berkenalan-Dengan-RWD-Table-Patterns
+@/blog/Membuat-Lingkungan-Virtual-Python-Pada-Direktori-Saat-Ini       [02/2024]
+
+@/blog/Berkenalan-Dengan-RWD-Table-Patterns                            [02/2024]
+
+
