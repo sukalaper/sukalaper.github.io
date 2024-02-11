@@ -11,6 +11,7 @@ RTFM (Belum selesai)
 ________________________________________________________________________________
 
 - Ikhtisar                                                                 <a href=#1.0>[1.0]</a>
+- Sudut Pandang Mengenai RTFM                                              <a href=#2.0>[2.0]</a>
 
 
 <span id=1.0><a href=#1.0>[1.0]</a></span> Ikhtisar
@@ -18,32 +19,131 @@ ________________________________________________________________________________
 
 Tulisan ini saya kutip dari Arch Wiki <a href=#1>[1]</a> yang berjudul Arch Terminology <a href=#2>[2]</a>.
 
-RTFM adalah singkatan dari "Read The Fucking Manual".
+RTFM adalah singkatan dari Read The Fucking Manual <a href=#3>[3]</a>.
+
+Pesan sederhana ini dibalas, digunakan oleh pengguna baru Linux yang bertanya 
+tentang fungsionalitas suatu program ketika fungsi tersebut didefinisikan 
+dengan jelas dalam manual program.
+
+Singkatnya, semuanya sudah tertulis dan terdokumentasi jelas. Anda hanya harus
+membaca dengan panduan yang telah disediakan.
+
+  $ man [nama-program]
+
+  $ [nama-program] --help
+
+Akronim ini adalah ajakan untuk peduli diri, bukan penghinaan. 
+Ini sering digunakan ketika pengguna dianggap gagal melakukan upaya apa pun 
+untuk menemukan solusi atas masalahnya sendiri. Jika seseorang memberi tahu 
+Anda hal ini, mereka tidak mencoba menyinggung perasaan Anda; mereka hanya 
+merasa frustrasi karena Anda dianggap kurang berusaha.
 
 Namun, pesan "RTFM" juga sering dikritik karena terlalu kasar dan tidak ramah. 
-Banyak yang menganggapnya sebagai sikap yang merendahkan dan tidak membantu bagi 
-mereka yang baru belajar atau mengalami kesulitan. Sebagai gantinya, mereka 
-menganjurkan pendekatan yang lebih ramah, yaitu "Baca panduan ramah".
+Banyak yang menganggapnya sebagai sikap yang merendahkan dan tidak 
+membantu bagi mereka yang baru belajar atau mengalami kesulitan. 
+Sebagai gantinya, mereka menganjurkan pendekatan yang lebih ramah, yaitu 
+jika di terjemahkan ke dalam bahasa Indonesia adalah "Baca panduan ramah".
+
+
+<span id=2.0><a href=#2.0>[2.0]</a></span> Sudut Pandang Mengenai RTFM
+________________________________________________________________________________
 
 Saya bukan orang yang enggan untuk menanggapi pertanyaan-pertanyaan mendasar,
-pertanyaan yang sebenarnya mudah didapatkan atau bahkan jelas ada jawabannya 
+pertanyaan yang sebenarnya mudah didapatkan atau bahkan jawabannya tepat 
 didepan mata.
 
-Saya hanya ingin lebih bijak menanggapi. Tentu saja, saya bukan seorang 
-pemrogram, pengembang perangkat lunak atau ahli. Jadi, jika saya memiliki 
-kesalahan jawaban, keliru soal pemahaman alangkah baiknya agar mengkoreksi 
-diri saya bukan berbalik untuk menghina saya. :(
+Kita hidup pada era digital, kemudahan akses hanya dengan membuka ponsel bahkan 
+keluaran kesalahan program di tunjukan pada layar terminal. 
+Apapun dapat di cari dengan bantuan mesin pencarian (meskipun beberapa artikel 
+hanya berisi copy - paste dari satu artikel ke artikel lain).
 
-Tentu saja, ini saya tunjukan untuk diri saya sendiri, kadang ketika membaca 
-sebuah dokumentasi yang benar-benar bagus dan terstruktur pun saya masih merasa 
-kebingungan, keliru.
-
-Beberapa teman yang pernah se-universitas cukup sering menanyakan seperti ini.
+Beberapa teman "yang pernah" se-universitas cukup sering bertanya seperti ini.
 
   "Gimana cara deklarasi variabel dengan tipe data string di C++?"
   "Kok ini error ya?" (Tanpa disertai dengan foto)
+  "Kok ini salah? string var_string = '';"
+  "Bagaimana menetapkan konstanta?"
+  "Bagaimana membuat error handling pada kondisi if?"
+  "SSD apa yang bagus?" 
+  "Apakah DDR4 bisa dipasang dengan DDR3?"
 
-Tulisan ini akan saya lanjutkan nanti..
+Ini sangat pragmatis dan saya hanya ingin lebih bijak menanggapi secara 
+filosofis. Tentu saja bahwa saya bukan seorang pemrogram, pengembang perangkat 
+lunak atau ahli. Jadi, jika saya memiliki kesalahan jawaban, keliru soal 
+pemahaman alangkah baiknya agar mengkoreksi diri saya bukan berbalik untuk 
+menghina saya. 
+
+Jadi, apakah pertanyaan demi pertanyaan yang diajukan diatas dapat dikatakan 
+baik? Belum tentu. Ini sama sekali tidak seperti simbiosis mutualisme. Jika 
+kita membelah menjadi dua sudut pandang yang mana sisi pertama untuk saya 
+pribadi dan sisi kedua untuk teman saya.
+
+Tentu, saya sebagai sisi pertama merasa beruntung karena ini adalah proses 
+berkesinambungan dan tidak boleh dihentikan. Berbagi apa yang saya ketahui,
+lagi pula saya selalu merasa bahwa saya tidak dapat memukul rata pemahaman orang
+lain; ada yang mereka ketahui dan saya tidak begitu pun sebaliknya.
+Semua hal ini tentu membantu saya untuk mempelajari kembali diri saya sendiri.
+Oh ya, saya membuat beberapa catatan untuk setiap kendala yang saya temui. 
+Tujuannya adalah agar tidak ada waktu terbuang untuk mencari solusi atas 
+masalah yang sudah terdokumentasi. Catatan itu saya beri judul KEH
+(Known Error Handling).
+
+Sebaliknya, sebagai sisi kedua saya rasa tidak mungkin orang lain akan 
+membantu dalam masalah sepele, itu benar (Maaf, bukan bermaksud mematahkan 
+semangat belajar). 
+Saat kesalahan diketahui melalui keluaran terminal (misalnya) yang ada mereka 
+hanya akan di olok-olok karena kurangnya literasi.
+Nantinya itu hanya akan menjadi ketergantungan terhadap orang lain. Itu buruk!
+
+Namun, aturan dasarnya tetap sama. Pahami masalahnya, baca pesan kesalahannya
+dan lihat apakah bisa disimulasikan, gunakan mesin pencarian untuk setiap kasus
+keluaran kesalahan.
+Jika ingin bertanya. Ajukan pertanyaan yang tepat dan pastikan Anda sudah 
+berusaha untuk mencarinya terlebih dahulu. Sekali lagi, ajukan pertanyaan yang 
+tepat. Jangan bertanya untuk bertanya, tanyakan saja <a href=#4>[4]</a>.
+
+  "Hallo, adakah yang menggunakan i3wm <a href=#5>[5]</a> disini?"
+
+Saya berani bertaruh, jika Anda bertanya seperti itu pada forum yang berisi
+pengguna GNU/Linux, maka jawabannya adalah "ada".
+Namun, apa tujuan pertanyaan tersebut? Lebih baik langsung seperti ini.
+
+  "Hallo, saya sedang mencoba menggunakan i3wm dan saya ingin bertanya disini.
+   
+   Saya mencoba membuat sebuah skrip Bash untuk memberi notifikasi saat tombol
+   CapsLock ditekan. Namun, sepertinya skrip saya tidak berfungsi seperti yang
+   diharapkan.
+   
+   Saya telah membuat skrip dengan nama capslock-test.sh dan memberinya izin
+   eksekusi dengan perintah.
+   
+    $ chmod +x capslock-test.sh
+   
+   Berikut ini adalah isi dari skrip tersebut.
+  
+    #!/bin/bash
+
+    capslock_state=$(xset q | grep "Caps Lock" | awk '{print $4}')
+  
+    if [[ "$capslock_state" == "on" ]]; then
+      dunstify -u critical -t 2000 "CapsLock ON"
+    else
+      dunstify -u normal "CapsLock OFF"
+    fi
+   
+   Namun, setelah saya jalankan, tidak ada notifikasi yang muncul saat saya 
+   menekan CapsLock. Apakah ada yang bisa membantu saya memperbaiki masalah 
+   ini? 
+   Apa mungkin ada kesalahan logika dengan skrip saya?
+
+   Setiap bantuan akan sangat dihargai! Terima kasih!
+
+Dengan penyesuaian ini, pertanyaan tersebut menjadi lebih spesifik dan 
+memberikan konteks yang lebih jelas kepada pembaca. Hal ini dapat membantu 
+pembaca untuk memberikan jawaban yang lebih tepat dan membantu dalam memecahkan 
+masalah yang dihadapi.
+
+Ah, apakah ini keluar dari judul(?)
 
 
 * Catatan Kaki
@@ -51,6 +151,9 @@ ________________________________________________________________________________
 
 <span id=1><a href=#1>[1]</a></span> <a href=https://wiki.archlinux.org/>https://wiki.archlinux.org/</a>
 <span id=2><a href=#2>[2]</a></span> <a href=https://wiki.archlinux.org/title/arch_terminology>https://wiki.archlinux.org/title/arch_terminology</a>
+<span id=3><a href=#3>[3]</a></span> <a href=https://en.m.wikipedia.org/wiki/RTFM>https://en.m.wikipedia.org/wiki/RTFM</a>
+<span id=4><a href=#4>[4]</a></span> <a href=https://dontasktoask.com/>https://dontasktoask.com/</a>
+<span id=5><a href=#5>[5]</a></span> <a href=https://i3wm.org/>https://i3wm.org/</a>
 
 
                                         ________________________________________
