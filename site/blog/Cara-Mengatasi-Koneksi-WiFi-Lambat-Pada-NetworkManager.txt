@@ -1,0 +1,82 @@
+
+Cara Mengatasi Koneksi WiFi Lambat Pada Arch Linux
+________________________________________________________________________________
+
+- Ikhtisar                                                                 [1.0]
+
+
+[1.0]
+________________________________________________________________________________
+
+Pemberitahuan: Terhitung pada 09/02/2024 
+               Saya sudah beralih dari NetworkManager [1] ke iwd [2].
+
+Baru-baru ini, saya mengalami kecepatan koneksi yang sangat lambat. Saya telah 
+mencoba berbagai cara untuk mengatasi masalah ini, antara lain.
+
+  1. Restart router WiFi
+  2. Memastikan bahwa hanya perangkat saya yang terhubung ke jaringan
+  3. Mengganti mirror
+
+Dan sebagainya..
+
+Meskipun sudah melakukan langkah-langkah tersebut, masalah koneksi lambat masih 
+belum terselesaikan. Saya lakukan uji coba kecepatan dengan speedtest-cli [3] 
+yang mendapatkan keluaran sebagai berikut.
+
+  Retrieving speedtest.net configuration...
+  Testing from PT Xxx Xxx Indonesia (Xxx.Xxx.Xxx.Xx6)...
+  Retrieving speedtest.net server list...
+  Selecting best server based on ping...
+  Hosted by Xxx (Xxx) [0.76 km]: 18.713 ms
+  Testing download speed.....................................................
+  Download: 0.19 Mbit/s
+  Testing upload speed.......................................................
+  Upload: 0.37 Mbit/s
+
+Setelah berteman baik dengan Google, saya mendapati sebuah cara yaitu dengan 
+mematikan mode hemat daya yang tersedia pada NetworkManager [4].
+
+  $ sudo touch /etc/NetworkManager/conf.d/wifi-power-save.conf
+
+Perintah di atas akan membuat sebuah file baru bernama wifi-power-save.conf, 
+karena file tersebut masih kosong. Silahkan buat konfigurasi sebagai berikut.
+
+  $ vim wifi-power-save.conf
+
+  [connection]
+  wifi.powersave = 2
+
+Sedikit penjelasan mengenai value yang tersedia pada wifi.powersave.
+
+0 : Untuk menggunakan nilai bawaan yang biasanya telah di atur oleh perangkat.
+1 : -
+2 : Menonaktifkan mode hemat daya.
+3 : Mengaktifkan mode hemat daya.
+
+Nyalakan ulang layanan NetworkManager.
+
+  $ sudo systemctl restart NetworkManager.service
+
+Untuk melihat hasilnya, reboot perangkat.
+
+  Retrieving speedtest.net configuration...
+  Testing from PT Xxx Xxx Indonesia (Xxx.Xxx.Xxx.xx6)...
+  Retrieving speedtest.net server list...
+  Selecting best server based on ping...
+  Hosted by Xxx (Xxx) [0.76 km]: 3.213 ms
+  Testing download speed.....................................................
+  Download: 15.89 Mbit/s
+  Testing upload speed.......................................................
+  Upload: 19.93 Mbit/s
+
+Bagaimana? Jauh lebih baik bukan?
+
+
+* Referensi
+________________________________________________________________________________
+
+[1] https://wiki.archlinux.org/title/NetworkManager
+[2] https://wiki.archlinux.org/title/iwd
+[3] https://github.com/sivel/speedtest-cli
+[4] https://gist.github.com/jcberthon/ea8cfe278998968ba7c5a95344bc8b55

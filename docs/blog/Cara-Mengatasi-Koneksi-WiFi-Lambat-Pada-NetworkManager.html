@@ -1,0 +1,97 @@
+<!doctype html><html lang=en><link href=data:, rel=icon><title>Sukalaper - Cara-Mengatasi-Koneksi-WiFi-Lambat-Pada-NetworkManager</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><style>body{overflow-y:scroll;font:16px monospace,monospace}pre{margin:0;overflow-x:hidden}@media(max-width:999px){#c{display:block;font-size:1.99vw}}@media(prefers-color-scheme:dark){body{background:#000;color:#fff}a{color:#6CF}}</style><div style="display:table;margin:16px auto">
+<div id=c><pre>
++------------------------------------------------------------------------------+
+|                                                                              |
+|  <a href=/>Sukalaper - home</a>                                           @/<a href=/blog>blog</a>  @/<a href=/about>about</a>  |
+|                                                                              |
++------------------------------------------------------------------------------+
+
+
+Cara Mengatasi Koneksi WiFi Lambat Pada Arch Linux
+________________________________________________________________________________
+
+- Ikhtisar                                                                 <a href=#1.0>[1.0]</a>
+
+
+<span id=1.0><a href=#1.0>[1.0]</a></span>
+________________________________________________________________________________
+
+Pemberitahuan: Terhitung pada 09/02/2024 
+               Saya sudah beralih dari NetworkManager <a href=#1>[1]</a> ke iwd <a href=#2>[2]</a>.
+
+Baru-baru ini, saya mengalami kecepatan koneksi yang sangat lambat. Saya telah 
+mencoba berbagai cara untuk mengatasi masalah ini, antara lain.
+
+  1. Restart router WiFi
+  2. Memastikan bahwa hanya perangkat saya yang terhubung ke jaringan
+  3. Mengganti mirror
+
+Dan sebagainya..
+
+Meskipun sudah melakukan langkah-langkah tersebut, masalah koneksi lambat masih 
+belum terselesaikan. Saya lakukan uji coba kecepatan dengan speedtest-cli <a href=#3>[3]</a> 
+yang mendapatkan keluaran sebagai berikut.
+
+  Retrieving speedtest.net configuration...
+  Testing from PT Xxx Xxx Indonesia (Xxx.Xxx.Xxx.Xx6)...
+  Retrieving speedtest.net server list...
+  Selecting best server based on ping...
+  Hosted by Xxx (Xxx) [0.76 km]: 18.713 ms
+  Testing download speed.....................................................
+  Download: 0.19 Mbit/s
+  Testing upload speed.......................................................
+  Upload: 0.37 Mbit/s
+
+Setelah berteman baik dengan Google, saya mendapati sebuah cara yaitu dengan 
+mematikan mode hemat daya yang tersedia pada NetworkManager <a href=#4>[4]</a>.
+
+  $ sudo touch /etc/NetworkManager/conf.d/wifi-power-save.conf
+
+Perintah di atas akan membuat sebuah file baru bernama wifi-power-save.conf, 
+karena file tersebut masih kosong. Silahkan buat konfigurasi sebagai berikut.
+
+  $ vim wifi-power-save.conf
+
+  [connection]
+  wifi.powersave = 2
+
+Sedikit penjelasan mengenai value yang tersedia pada wifi.powersave.
+
+0 : Untuk menggunakan nilai bawaan yang biasanya telah di atur oleh perangkat.
+1 : -
+2 : Menonaktifkan mode hemat daya.
+3 : Mengaktifkan mode hemat daya.
+
+Nyalakan ulang layanan NetworkManager.
+
+  $ sudo systemctl restart NetworkManager.service
+
+Untuk melihat hasilnya, reboot perangkat.
+
+  Retrieving speedtest.net configuration...
+  Testing from PT Xxx Xxx Indonesia (Xxx.Xxx.Xxx.xx6)...
+  Retrieving speedtest.net server list...
+  Selecting best server based on ping...
+  Hosted by Xxx (Xxx) [0.76 km]: 3.213 ms
+  Testing download speed.....................................................
+  Download: 15.89 Mbit/s
+  Testing upload speed.......................................................
+  Upload: 19.93 Mbit/s
+
+Bagaimana? Jauh lebih baik bukan?
+
+
+* Referensi
+________________________________________________________________________________
+
+<span id=1><a href=#1>[1]</a></span> <a href=https://wiki.archlinux.org/title/NetworkManager>https://wiki.archlinux.org/title/NetworkManager</a>
+<span id=2><a href=#2>[2]</a></span> <a href=https://wiki.archlinux.org/title/iwd>https://wiki.archlinux.org/title/iwd</a>
+<span id=3><a href=#3>[3]</a></span> <a href=https://github.com/sivel/speedtest-cli>https://github.com/sivel/speedtest-cli</a>
+<span id=4><a href=#4>[4]</a></span> <a href=https://gist.github.com/jcberthon/ea8cfe278998968ba7c5a95344bc8b55>https://gist.github.com/jcberthon/ea8cfe278998968ba7c5a95344bc8b55</a>
+
+
+                                          ______________________________________
+
+                                          Sukalaper &copy; 2024, All rights reserved.
+
+</pre></div></div>

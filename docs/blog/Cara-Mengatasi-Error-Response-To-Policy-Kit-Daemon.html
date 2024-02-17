@@ -1,0 +1,69 @@
+<!doctype html><html lang=en><link href=data:, rel=icon><title>Sukalaper - Cara-Mengatasi-Error-Response-To-Policy-Kit-Daemon</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><style>body{overflow-y:scroll;font:16px monospace,monospace}pre{margin:0;overflow-x:hidden}@media(max-width:999px){#c{display:block;font-size:1.99vw}}@media(prefers-color-scheme:dark){body{background:#000;color:#fff}a{color:#6CF}}</style><div style="display:table;margin:16px auto">
+<div id=c><pre>
++------------------------------------------------------------------------------+
+|                                                                              |
+|  <a href=/>Sukalaper - home</a>                                           @/<a href=/blog>blog</a>  @/<a href=/about>about</a>  |
+|                                                                              |
++------------------------------------------------------------------------------+
+
+
+Cara Mengatasi Error Response To Policy Kit Daemon
+________________________________________________________________________________
+
+- Ikhtisar                                                                 <a href=#1.0>[1.0]</a>
+
+
+<span id=1.0><a href=#1.0>[1.0]</a></span> Ikhtisar
+________________________________________________________________________________
+
+Pesan kesalahan ini saya dapatkan ketika menjalankan perintah.
+
+  $ pkexec ls 
+
+yang menunjukan keluaran sebagai berikut.
+
+  ==== AUTHENTICATING FOR org.freedesktop.policykit.exec ====
+  Authentication is needed to run `/usr/bin/ls' as the super user
+  Authenticating as: anggiramadyansyah
+  Password:
+  polkit-agent-helper-1: error response to PolicyKit daemon: GDBus.Error:
+  org.freedesktop.PolicyKit1.Error.Failed: No session for cookie
+  ==== AUTHENTICATION FAILED ====
+  Error executing command as another user: Not authorized
+
+  This incident has been reported.
+
+Untuk mengatasi masalah seperti di atas, kita perlu mengetahui PID <a href=#1>[1]</a> dari 
+proses pada terminal dengan perintah. 
+
+  $ echo $$
+  2232
+
+PID ditunjukan dengan angka 2232. Setelahnya, kita harus membuka sebuah terminal
+baru dan dilanjutkan dengan perintah.
+
+  $ pkttyagent --process 2232
+
+Maka nantinya keluaran menunjukan seperti ini.
+
+  ==== AUTHENTICATING FOR org.freedesktop.policykit.exec ====
+  Authentication is needed to run `/usr/bin/ls' as the super user
+  Authenticating as: anggiramadyansyah
+  Password:
+  ==== AUTHENTICATION COMPLETE ====
+
+Keluaran menunjukan bahwa proses autentikasi telah berhasil.
+
+
+* Referensi
+________________________________________________________________________________
+
+<span id=1><a href=#1>[1]</a></span> <a href=https://www.tutorialspoint.com/what-is-a-pid-file-in-linux>https://www.tutorialspoint.com/what-is-a-pid-file-in-linux</a>
+
+
+
+                                          ______________________________________
+
+                                          Sukalaper &copy; 2024, All rights reserved.
+
+</pre></div></div>

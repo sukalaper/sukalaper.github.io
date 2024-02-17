@@ -1,0 +1,79 @@
+<!doctype html><html lang=en><link href=data:, rel=icon><title>Sukalaper - Cara-Copy-Paste-Pada-Vim-Ke-Program-Lain</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><style>body{overflow-y:scroll;font:16px monospace,monospace}pre{margin:0;overflow-x:hidden}@media(max-width:999px){#c{display:block;font-size:1.99vw}}@media(prefers-color-scheme:dark){body{background:#000;color:#fff}a{color:#6CF}}</style><div style="display:table;margin:16px auto">
+<div id=c><pre>
++------------------------------------------------------------------------------+
+|                                                                              |
+|  <a href=/>Sukalaper - home</a>                                           @/<a href=/blog>blog</a>  @/<a href=/about>about</a>  |
+|                                                                              |
++------------------------------------------------------------------------------+
+
+
+Cara Copy Paste Pada Vim Ke Program Lain
+________________________________________________________________________________
+
+- Ikhtisar                                                                 <a href=#1.0>[1.0]</a>
+
+
+<span id=1.0><a href=#1.0>[1.0]</a></span> Ikhtisar
+________________________________________________________________________________
+
+Pada beberapa waktu, saya cukup kesulitan untuk copy - paste pada Vim <a href=#1>[1]</a> 
+sehingga saya harus menggunakan perintah.
+  
+  $ cat xx.cpp | xclip -selection clipboard 
+
+Sebenenarnya perintah tersebut dapat saya buat sebagai alias <a href=#2>[2]</a> sehingga lebih 
+mudah untuk melakukan operasi yang saya inginkan namun saya merasa masih kurang 
+efisien jika saya ingin melakukan copy - paste beberapa kalimat saja yang ada 
+di dalam sebuah file.
+
+Akhirnya saya mencari sebuah solusi pada Google dan menemukan salah satu 
+referensi disini <a href=#3>[3]</a>.
+
+Jadi, langkah pertama kita harus melakukan identifikasi terlebih dahulu pada 
+Vim dengan perintah.
+  
+  $ vim --version | grep "clipboard"
+
+Jika keluaran menunjukan seperti ini.
+
+  $ vim --version | grep "clipboard"
+  +clipboard         +keymap            +printer           +vertsplit
+  +ex_extra          +mouse_netterm     +syntax            +xterm_clipboard
+
+Maka Vim sudah mendukung clipboard.
+
+Namun, jika keluaran menunjukan seperti ini.
+  
+  $ vim --version | grep "clipboard"
+  -clipboard         +keymap            +printer           +vertsplit
+  +ex_extra          +mouse_netterm     +syntax            -xterm_clipboard
+
+Maka teman-teman harus melakukan instalasi Gvim <a href=#4>[4]</a> yang mana wajib melakukan 
+uninstall terhadap Vim terlebih dahulu. 
+
+Karena disini saya menggunakan GNU/Linux berdistribusi Arch Linux, maka saya 
+cukup menuliskan perintah seperti ini.
+
+  $ sudo pacman -Rns vim
+  $ sudo pacman -S gvim
+
+Jika Gvim sudah terpasang, teman-teman dapat menambahkan konfigurasi ini pada 
+.vimrc 
+
+  set clipboard=unnamed,unnamedplus
+
+
+* Referensi
+________________________________________________________________________________
+
+<span id=1><a href=#1>[1]</a></span> <a href=https://www.vim.org/>https://www.vim.org/</a>
+<span id=2><a href=#2>[2]</a></span> <a href=https://phoenixnap.com/kb/linux-alias-command>https://phoenixnap.com/kb/linux-alias-command</a>
+<span id=3><a href=#3>[3]</a></span> <a href=https://urlis.net/wm88qmyo>https://urlis.net/wm88qmyo</a> 
+<span id=4><a href=#4>[4]</a></span> <a href=https://www.linuxadictos.com/id/versi-grafis-gvim-editor-teks-vim.html>https://www.linuxadictos.com/id/versi-grafis-gvim-editor-teks-vim.html</a> 
+
+
+                                          ______________________________________
+
+                                          Sukalaper &copy; 2024, All rights reserved.
+
+</pre></div></div>

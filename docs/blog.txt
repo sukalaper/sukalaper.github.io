@@ -7,3 +7,7 @@ ________________________________________________________________________________
 @/blog/Berkenalan-Dengan-RWD-Table-Patterns                            [02/2024]
 
 @/blog/RTFM                                                            [02/2024]
+
+@/blog/Cara-Mengatasi-Koneksi-WiFi-Lambat-Pada-NetworkManager          [02/2024]
+
+@/blog/Cara-Mengatasi-Error-Response-To-Policy-Kit-Daemon              [02/2024]

@@ -1,0 +1,54 @@
+
+Cara Mengatasi Error Response To Policy Kit Daemon
+________________________________________________________________________________
+
+- Ikhtisar                                                                 [1.0]
+
+
+[1.0] Ikhtisar
+________________________________________________________________________________
+
+Pesan kesalahan ini saya dapatkan ketika menjalankan perintah.
+
+  $ pkexec ls 
+
+yang menunjukan keluaran sebagai berikut.
+
+  ==== AUTHENTICATING FOR org.freedesktop.policykit.exec ====
+  Authentication is needed to run `/usr/bin/ls' as the super user
+  Authenticating as: anggiramadyansyah
+  Password:
+  polkit-agent-helper-1: error response to PolicyKit daemon: GDBus.Error:
+  org.freedesktop.PolicyKit1.Error.Failed: No session for cookie
+  ==== AUTHENTICATION FAILED ====
+  Error executing command as another user: Not authorized
+
+  This incident has been reported.
+
+Untuk mengatasi masalah seperti di atas, kita perlu mengetahui PID [1] dari 
+proses pada terminal dengan perintah. 
+
+  $ echo $$
+  2232
+
+PID ditunjukan dengan angka 2232. Setelahnya, kita harus membuka sebuah terminal
+baru dan dilanjutkan dengan perintah.
+
+  $ pkttyagent --process 2232
+
+Maka nantinya keluaran menunjukan seperti ini.
+
+  ==== AUTHENTICATING FOR org.freedesktop.policykit.exec ====
+  Authentication is needed to run `/usr/bin/ls' as the super user
+  Authenticating as: anggiramadyansyah
+  Password:
+  ==== AUTHENTICATION COMPLETE ====
+
+Keluaran menunjukan bahwa proses autentikasi telah berhasil.
+
+
+* Referensi
+________________________________________________________________________________
+
+[1] https://www.tutorialspoint.com/what-is-a-pid-file-in-linux
+
