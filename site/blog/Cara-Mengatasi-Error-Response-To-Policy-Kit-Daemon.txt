@@ -3,6 +3,7 @@ Cara Mengatasi Error Response To Policy Kit Daemon
 ________________________________________________________________________________
 
 - Ikhtisar                                                                 [1.0]
+- Referensi								   [2.0]
 
 
 [1.0] Ikhtisar
@@ -47,8 +48,7 @@ Maka nantinya keluaran menunjukan seperti ini.
 Keluaran menunjukan bahwa proses autentikasi telah berhasil.
 
 
-* Referensi
+[2.0] Referensi
 ________________________________________________________________________________
 
 [1] https://www.tutorialspoint.com/what-is-a-pid-file-in-linux
-

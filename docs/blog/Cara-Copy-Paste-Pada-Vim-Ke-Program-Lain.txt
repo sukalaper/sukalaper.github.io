@@ -3,6 +3,7 @@ Cara Copy Paste Pada Vim Ke Program Lain
 ________________________________________________________________________________
 
 - Ikhtisar                                                                 [1.0]
+- Referensi								   [2.0]
 
 
 [1.0] Ikhtisar
@@ -55,7 +56,7 @@ Jika Gvim sudah terpasang, teman-teman dapat menambahkan konfigurasi ini pada
   set clipboard=unnamed,unnamedplus
 
 
-* Referensi
+[2.0] Referensi
 ________________________________________________________________________________
 
 [1] https://www.vim.org/

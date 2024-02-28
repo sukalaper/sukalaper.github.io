@@ -3,9 +3,10 @@ Cara Mengatasi Koneksi WiFi Lambat Pada Arch Linux
 ________________________________________________________________________________
 
 - Ikhtisar                                                                 [1.0]
+- Referensi							   	   [2.0]
 
 
-[1.0]
+[1.0] Ikhtisar
 ________________________________________________________________________________
 
 Pemberitahuan: Terhitung pada 09/02/2024 
@@ -73,7 +74,7 @@ Untuk melihat hasilnya, reboot perangkat.
 Bagaimana? Jauh lebih baik bukan?
 
 
-* Referensi
+[2.0] Referensi
 ________________________________________________________________________________
 
 [1] https://wiki.archlinux.org/title/NetworkManager

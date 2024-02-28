@@ -1,0 +1,31 @@
+
+Menambahkan Extract Here Ke PCManFM
+________________________________________________________________________________
+
+- Ikhtisar 							           [1.0]
+- Referensi								   [2.0]
+
+
+[1.0] Ikhtisar
+________________________________________________________________________________
+
+Saya mempercayakan pengelola berkas pada PCManFM [1], namun saya merasa ada 
+sesuatu yang hilang. 
+Ketika bertemu dengan file kompres yang memiliki ekstensi .tar.gz .tar.gx dan 
+lainnya saya merasa kesulitan karena saya tidak bisa melakukan pilihan klik 
+kanan - extract here. Meskipun sebenarnya itu dapat diatasi melalui terminal.
+
+Setelah berteman baik dengan Google, ternyata PCManFM membutuhkan sebuah plugin 
+yang bernama xarchiver [2] yang dapat di pasang dengan.
+
+  $ sudo pacman -S xarchiver
+
+Setelah selesai, saya reload PCManFM dan fitur klik kanan extract here sudah 
+muncul.
+
+
+[2.0] Referensi 
+________________________________________________________________________________
+
+[1] https://wiki.archlinux.org/title/PCManFM
+[2] https://github.com/ib/xarchiver
