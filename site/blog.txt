@@ -12,6 +12,4 @@ ________________________________________________________________________________
 
 @/blog/Cara-Mengatasi-Error-Response-To-Policy-Kit-Daemon              [02/2024]
 
-@/blog/Menambahkan-Extrack-Here-Ke-PCManFM			       [03/2024]
-
 @/blog/Berpindah-Dari-Terminal-Alacritty-Ke-St-Terminal.txt            [03/2024]
