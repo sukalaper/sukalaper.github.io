@@ -2,9 +2,9 @@
 Berpindah Dari Terminal Alacritty Ke St Terminal
 ________________________________________________________________________________
 
-- Ikhtisar							                                                   [1.0]
-- Berkenalan Dengan St Terminal						                                 [2.0]
-- Referensi								                                                 [3.0]
+- Ikhtisar                                                                 [1.0]
+- Berkenalan Dengan St Terminal                                            [2.0]
+- Referensi                                                                [3.0]
 
 
 [1.0] Ikhtisar
