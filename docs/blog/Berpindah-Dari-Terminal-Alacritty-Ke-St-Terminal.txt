@@ -2,7 +2,7 @@
 Berpindah Dari Terminal Alacritty Ke St Terminal
 ________________________________________________________________________________
 
-- Ikhtisar								   [1.0]
+- Ikhtisar							           [1.0]
 - Berkenalan Dengan St Terminal						   [2.0]
 - Referensi								   [3.0]
 
@@ -121,3 +121,4 @@ ________________________________________________________________________________
 [1] https://st.suckless.org/
 [2] https://github.com/siduck/st
 [3] https://github.com/LukeSmithxyz/st
+
