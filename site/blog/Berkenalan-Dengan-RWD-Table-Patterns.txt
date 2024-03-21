@@ -1,5 +1,5 @@
 
-Kenalan Dengan RWD Table Patterns
+BerKenalan Dengan RWD Table Patterns
 ________________________________________________________________________________
 
 - Apa Itu RWD Table Patterns?                                              [1.0]

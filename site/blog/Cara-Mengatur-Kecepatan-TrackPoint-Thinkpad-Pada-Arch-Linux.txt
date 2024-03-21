@@ -1,0 +1,130 @@
+
+Cara Mengatur Kecepatan TrackPoint Thinkpad Pada Arch Linux
+________________________________________________________________________________
+
+- Apa Itu TrackPoint?                                                      [1.0]
+- Membuat Konfigurasi Pada Arch Linux                                      [2.0]
+- Referensi                                                                [3.0]
+
+
+[1.0] Apa Itu TrackPoint?
+________________________________________________________________________________
+
+Jika teman-teman menggunakan laptop bawaan IBM (sekarang Lenovo) pasti sudah 
+tidak asing lagi dengan "pentil merah" yang berada tepat di tengah-tengah
+keyboard.
+
+Ya, itu yang dinamakan TrackPoint. 
+
+Lalu, apa saja fungsi dari TrackPoint?
+
+  1. Navigasi sebagai pengganti kursor
+  2. Klik
+  3. Scroll
+
+Yang mungkin tidak hanya itu fungsinya. Saya lebih sering menggunakan TrackPoint 
+di banding mouse atau touchpad. Terutama untuk menggeser-geser sebuah window agar 
+memiliki tingkat ke-presisian yang tinggi.
+
+Penggunaan TrackPoint ini sebenarnya cukup meningkatkan efisiensi penggunaan 
+keyboard tanpa harus mengangkat tangan untuk menggunakan mouse atau sekedar
+elus-elus touchpad.
+
+Jadi, jika di gambarkan adalah hanya jari telunjuk sebelah kanan saya yang aktif 
+untuk menggerakan kursor dan sisanya tetap aktif berada di atas keyboard tanpa 
+terdistraksi oleh apapun.
+
+
+[2.0] Membuat Konfigurasi Pada Arch Linux
+________________________________________________________________________________
+
+Sebelumnya, kita memerlukan sebuah paket bernama.
+
+  1. xf86-input-evdev
+  2. xf86-input-libinput (Biasanya sudah terpasang secara default)
+  3. xorg-xinput 
+
+Instalasi semua paket dengan satu perintah.
+
+  $ sudo pacman -S xf86-input-evdev xf86-input-libinput xorg-xinput
+
+Jika instalasi selesai, silahkan teman-teman melihat daftar panduan dengan 
+perintah.
+
+  $ xinput --help
+
+untuk melihat daftar perangkat.
+
+  $ xinput --list
+  
+  ⎡ Virtual core pointer                   	id=2	[master pointer  (3)]
+  ⎜ ↳ Virtual core XTEST pointer           	id=4	[slave  pointer  (2)]
+  ⎜ ↳ ThinkPad Essential Wireless Mouse    	id=9	[slave  pointer  (2)]
+  ⎜ ↳ SynPS/2 Synaptics TouchPad           	id=11	[slave  pointer  (2)]
+  ⎜ ↳ TPPS/2 IBM TrackPoint                	id=12	[slave  pointer  (2)]
+  ⎣ Virtual core keyboard                  	id=3	[master keyboard (2)]
+    ↳ Virtual core XTEST keyboard           id=5	[slave  keyboard (3)]
+    ↳ Power Button                          id=6	[slave  keyboard (3)]
+    ↳ Video Bus                            	id=7	[slave  keyboard (3)]
+    ↳ Sleep Button                         	id=8	[slave  keyboard (3)]
+    ↳ AT Translated Set 2 keyboard         	id=10	[slave  keyboard (3)]
+    ↳ ThinkPad Extra Buttons               	id=13	[slave  keyboard (3)]
+
+Karena disini kita ingin melakukan konfigurasi pada TrackPoint, maka Keluaran 
+yang kita ambil adalah "TPPS/2 IBM TrackPoint".
+
+  $ xinput --list-props "TPPS/2 IBM TrackPoint"
+
+  Device 'TPPS/2 IBM TrackPoint':
+	  Device Enabled (186):	1
+	  Coordinate Transformation Matrix (188):	1.000000, 0.000000, 
+    0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 
+    1.000000
+      libinput Natural Scrolling Enabled (315):	0
+      libinput Natural Scrolling Enabled Default (316):	0
+      libinput Scroll Methods Available (317):	0, 0, 1
+      libinput Scroll Method Enabled (318):	0, 0, 1
+      libinput Scroll Method Enabled Default (319):	0, 0, 1
+      libinput Button Scrolling Button (320):	2
+      libinput Button Scrolling Button Default (321):	2
+      libinput Button Scrolling Button Lock Enabled (322):	0
+      libinput Button Scrolling Button Lock Enabled Default (323):	0
+      libinput Middle Emulation Enabled (324):	0
+      libinput Middle Emulation Enabled Default (325):	0
+   -> libinput Accel Speed (326):	0.000000
+      libinput Accel Speed Default (327):	0.000000
+      libinput Accel Profiles Available (328):	1, 1, 1
+      libinput Accel Profile Enabled (329):	1, 0, 0
+      libinput Accel Profile Enabled Default (330):	1, 0, 0
+      libinput Accel Custom Fallback Points (331):	<no items>
+      libinput Accel Custom Fallback Step (332):	0.000000
+      libinput Accel Custom Motion Points (333):	<no items>
+      libinput Accel Custom Motion Step (334):	0.000000
+      libinput Accel Custom Scroll Points (335):	<no items>
+      libinput Accel Custom Scroll Step (336):	0.000000
+      libinput Left Handed Enabled (337):	0
+      libinput Left Handed Enabled Default (338):	0
+      libinput Send Events Modes Available (300):	1, 0
+      libinput Send Events Mode Enabled (301):	0, 0
+      libinput Send Events Mode Enabled Default (302):	0, 0
+      Device Node (303):	"/dev/input/event16"
+      Device Product ID (304):	2, 10
+      libinput Drag Lock Buttons (339):	<no items>
+      libinput Horizontal Scroll Enabled (340):	1
+      libinput Scrolling Pixel Distance (341):	20
+      libinput Scrolling Pixel Distance Default (342):	15
+      libinput High Resolution Wheel Scroll Enabled (343):	1
+
+Perhatikan tanda panah yang saya berikan. Keluaran tersebut yang nantinya akan
+kita gunakan untuk mengubah kecepatan dari TrackPoint.
+
+  $ xinput set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Speed" 0.1
+
+Teman-teman dapat melakukan eksperimen pada nilai-nilai tersebut. Rentang nilai
+berkisar antara 0.1 - 1. 
+
+
+[3.0] Referensi
+________________________________________________________________________________
+
+1. https://wiki.archlinux.org/title/TrackPoint

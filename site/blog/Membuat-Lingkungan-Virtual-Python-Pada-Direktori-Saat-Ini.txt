@@ -73,6 +73,6 @@ proyek Python dengan aman di dalam lingkungan virtual yang terisolasi.
 
 Setelah selesai, keluar dari lingkungan virtual dengan perintah. 
 
-    $ deactive
+    $ deactivate
 
 Bagaimana? Mudah, bukan?

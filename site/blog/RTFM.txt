@@ -5,8 +5,8 @@ ________________________________________________________________________________
 - Ikhtisar                                                                 [1.0]
 - Sudut Pandang Mengenai RTFM                                              [2.0]
 - RTFM - Etika Bertanya                                                    [3.0]
-- Penutup								   [4.0]
-- Referensi								   [5.0]
+- Penutup                                                                  [4.0]
+- Referensi                                                                [5.0]
 
 
 [1.0] Ikhtisar

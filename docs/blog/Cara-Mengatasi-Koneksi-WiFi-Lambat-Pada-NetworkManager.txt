@@ -3,7 +3,7 @@ Cara Mengatasi Koneksi WiFi Lambat Pada Arch Linux
 ________________________________________________________________________________
 
 - Ikhtisar                                                                 [1.0]
-- Referensi							   	   [2.0]
+- Referensi                                                                [2.0]
 
 
 [1.0] Ikhtisar
