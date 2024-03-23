@@ -37,7 +37,7 @@ untuk memenuhi kebutuhan berkomputasi saya sehari-hari.
 [2.0] Berkenalan Dengan St Terminal
 ________________________________________________________________________________
 
-St adalah aplikasi terminal besutan Suckless [1] yang digadang-gadang cukup 
+St adalah aplikasi terminal besutan Suckless[1] yang digadang-gadang cukup 
 bahkan sangat cepat ketika dipanggil saat startup dan juga cukup kecil.
 
 Tentu saja, ketika membaca kalimat "sangat cepat dipanggil ketika startup" 
@@ -47,8 +47,8 @@ se-segera mungkin mencobanya.
 Setelah berteman baik dengan Google saya menemukan dua versi St terminal yang 
 siap pakai (tentunya ini adalah versi saya).
 
-  Siduck [2]
-  Luke Smith [3]
+  Siduck[2]
+  Luke Smith[3]
 
 Daripada repot-repot melalukan patching manual, lebih baik menggunakan yang 
 sudah ada. Kebetulan kebutuhan saya tercukupi oleh nomer dua.

@@ -10,7 +10,7 @@ ________________________________________________________________________________
 ________________________________________________________________________________
 
 Pemberitahuan: Terhitung pada 09/02/2024 
-               Saya sudah beralih dari NetworkManager [1] ke iwd [2].
+               Saya sudah beralih dari NetworkManager[1] ke iwd[2].
 
 Baru-baru ini, saya mengalami kecepatan koneksi yang sangat lambat. Saya telah 
 mencoba berbagai cara untuk mengatasi masalah ini, antara lain.
@@ -22,7 +22,7 @@ mencoba berbagai cara untuk mengatasi masalah ini, antara lain.
 Dan sebagainya..
 
 Meskipun sudah melakukan langkah-langkah tersebut, masalah koneksi lambat masih 
-belum terselesaikan. Saya lakukan uji coba kecepatan dengan speedtest-cli [3] 
+belum terselesaikan. Saya lakukan uji coba kecepatan dengan speedtest-cli[3] 
 yang mendapatkan keluaran sebagai berikut.
 
   Retrieving speedtest.net configuration...
@@ -36,7 +36,7 @@ yang mendapatkan keluaran sebagai berikut.
   Upload: 0.37 Mbit/s
 
 Setelah berteman baik dengan Google, saya mendapati sebuah cara yaitu dengan 
-mematikan mode hemat daya yang tersedia pada NetworkManager [4].
+mematikan mode hemat daya yang tersedia pada NetworkManager[4].
 
   $ sudo touch /etc/NetworkManager/conf.d/wifi-power-save.conf
 

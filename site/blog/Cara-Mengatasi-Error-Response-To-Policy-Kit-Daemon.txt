@@ -26,7 +26,7 @@ yang menunjukan keluaran sebagai berikut.
 
   This incident has been reported.
 
-Untuk mengatasi masalah seperti di atas, kita perlu mengetahui PID [1] dari 
+Untuk mengatasi masalah seperti di atas, kita perlu mengetahui PID[1] dari 
 proses pada terminal dengan perintah. 
 
   $ echo $$

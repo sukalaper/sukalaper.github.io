@@ -38,7 +38,7 @@ terdistraksi oleh apapun.
 [2.0] Membuat Konfigurasi Pada Arch Linux
 ________________________________________________________________________________
 
-Sebelumnya, kita memerlukan sebuah paket bernama.
+Sebelumnya, kita memerlukan paket bernama.
 
   1. xf86-input-evdev
   2. xf86-input-libinput (Biasanya sudah terpasang secara default)
@@ -63,8 +63,8 @@ untuk melihat daftar perangkat.
   ⎜ ↳ SynPS/2 Synaptics TouchPad           	id=11	[slave  pointer  (2)]
   ⎜ ↳ TPPS/2 IBM TrackPoint                	id=12	[slave  pointer  (2)]
   ⎣ Virtual core keyboard                  	id=3	[master keyboard (2)]
-    ↳ Virtual core XTEST keyboard           id=5	[slave  keyboard (3)]
-    ↳ Power Button                          id=6	[slave  keyboard (3)]
+    ↳ Virtual core XTEST keyboard               id=5	[slave  keyboard (3)]
+    ↳ Power Button                              id=6	[slave  keyboard (3)]
     ↳ Video Bus                            	id=7	[slave  keyboard (3)]
     ↳ Sleep Button                         	id=8	[slave  keyboard (3)]
     ↳ AT Translated Set 2 keyboard         	id=10	[slave  keyboard (3)]
@@ -76,10 +76,9 @@ yang kita ambil adalah "TPPS/2 IBM TrackPoint".
   $ xinput --list-props "TPPS/2 IBM TrackPoint"
 
   Device 'TPPS/2 IBM TrackPoint':
-	  Device Enabled (186):	1
-	  Coordinate Transformation Matrix (188):	1.000000, 0.000000, 
-    0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 
-    1.000000
+  Device Enabled (186):	1
+  Coordinate Transformation Matrix (188): 1.000000, 0.000000, 0.000000, 
+    0.000000, 1.000000, 0.000000, 0.000000, 0.000000,1.000000
       libinput Natural Scrolling Enabled (315):	0
       libinput Natural Scrolling Enabled Default (316):	0
       libinput Scroll Methods Available (317):	0, 0, 1

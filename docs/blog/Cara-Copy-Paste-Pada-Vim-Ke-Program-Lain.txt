@@ -9,18 +9,18 @@ ________________________________________________________________________________
 [1.0] Ikhtisar
 ________________________________________________________________________________
 
-Pada beberapa waktu, saya cukup kesulitan untuk copy - paste pada Vim [1] 
+Pada beberapa waktu, saya mengalami kesulitan untuk copy - paste teks di Vim[1] 
 sehingga saya harus menggunakan perintah.
   
   $ cat xx.cpp | xclip -selection clipboard 
 
-Sebenenarnya perintah tersebut dapat saya buat sebagai alias [2] sehingga lebih 
+Sebenenarnya perintah tersebut dapat saya buat sebagai alias[2] sehingga lebih 
 mudah untuk melakukan operasi yang saya inginkan namun saya merasa masih kurang 
 efisien jika saya ingin melakukan copy - paste beberapa kalimat saja yang ada 
 di dalam sebuah file.
 
 Akhirnya saya mencari sebuah solusi pada Google dan menemukan salah satu 
-referensi disini [3].
+referensi disini[3].
 
 Jadi, langkah pertama kita harus melakukan identifikasi terlebih dahulu pada 
 Vim dengan perintah.
@@ -41,7 +41,7 @@ Namun, jika keluaran menunjukan seperti ini.
   -clipboard         +keymap            +printer           +vertsplit
   +ex_extra          +mouse_netterm     +syntax            -xterm_clipboard
 
-Maka teman-teman harus melakukan instalasi Gvim [4] yang mana wajib melakukan 
+Maka teman-teman harus melakukan instalasi Gvim[4] yang mana wajib melakukan 
 uninstall terhadap Vim terlebih dahulu. 
 
 Karena disini saya menggunakan GNU/Linux berdistribusi Arch Linux, maka saya 

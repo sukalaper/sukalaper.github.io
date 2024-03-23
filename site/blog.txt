@@ -1,17 +1,16 @@
 
-BLOG
+
+                                                                      .-.
+                                                                     (o o) blog!
+                                                                     | O \
+                                                                      \   \
+                                                                       `~~~'
 ________________________________________________________________________________
 
-@/blog/Membuat-Lingkungan-Virtual-Python-Pada-Direktori-Saat-Ini       [02/2024]
-
 @/blog/Berkenalan-Dengan-RWD-Table-Patterns                            [02/2024]
-
-@/blog/RTFM                                                            [02/2024]
-
-@/blog/Cara-Mengatasi-Koneksi-WiFi-Lambat-Pada-NetworkManager          [02/2024]
-
+@/blog/Berpindah-Dari-Terminal-Alacritty-Ke-St-Terminal                [02/2024]
 @/blog/Cara-Mengatasi-Error-Response-To-Policy-Kit-Daemon              [02/2024]
-
-@/blog/Berpindah-Dari-Terminal-Alacritty-Ke-St-Terminal                [03/2024]
-
+@/blog/Cara-Mengatasi-Koneksi-WiFi-Lambat-Pada-NetworkManager          [02/2024]
 @/blog/Cara-Mengatur-Kecepatan-TrackPoint-Thinkpad-Pada-Arch-Linux     [03/2024]
+@/blog/Membuat-Lingkungan-Virtual-Python-Pada-Direktori-Saat-Ini       [03/2024]
+@/blog/RTFM                                                            [03/2024]
