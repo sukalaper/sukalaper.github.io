@@ -72,7 +72,6 @@ Jadi, kita dapat kita tetap dapat mengakses Reddit bahkan jika situs tersebut
 diblokir oleh penyedia layanan internet (ISP) atau pemerintahan. Ini bekerja
 karena sistem tidak lagi bergantung pada resolusi DNS eksternal untuk mengetahui
 alamat IP dari Reddit. 
-________________________________________________________________________________
 
 
 [3.0] Referensi
