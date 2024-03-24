@@ -18,20 +18,33 @@
                                                         paper! \  \.__.__.-._)
 ________________________________________________________________________________
 
-Jika suatu saat nanti engkau menemukan bagian dari diriku ada pada orang lain, 
-jangan berbicara tentangku padanya.
-Bicaralah tentang kalian dan tertawalah.
+- Some Text                                                                [1.0]
+- Note                                                                     [2.0]
 
-                                                                       [03/2024]
+
+[1.0] Some Text                                                        [03/2024]
+________________________________________________________________________________
+
+Jika 
+
+  Jika suatu saat nanti engkau menemukan bagian dari diriku ada pada 
+  orang lain, jangan berbicara tentangku padanya.
+  Bicaralah tentang kalian dan tertawalah.
+________________________________________________________________________________
+
+Alesana - The Thespian
+
+  Look at you, you miserable fool. Get off your knees, your prayers fall upon 
+  deaf ears. Gods turned his back on you, heavens gates are shut and now 
+  you're knocking on the devil's door.
+
+  I've been expecting you for some time, sir. Allow me to introduce myself.
+  I'm the one who pulls on all the strings, son.
+  You're lucky I don't kill you where you stand.
 ________________________________________________________________________________
 
 
-Look at you, you miserable fool. Get off your knees, your prayers fall upon 
-deaf ears. Gods turned his back on you, heavens gates are shut and now 
-you're knocking on the devil's door.
+[2.0] Note                                                             [01/1999]
+________________________________________________________________________________
 
-I've been expecting you for some time, sir. Allow me to introduce myself.
-I'm the one who pulls on all the strings, son.
-You're lucky I don't kill you where you stand.
-
-                                                                       [03/2024]
+It might be empty for the next few weeks.
