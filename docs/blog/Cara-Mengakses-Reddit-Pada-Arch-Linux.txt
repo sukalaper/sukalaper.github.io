@@ -22,7 +22,7 @@ tersebut diarahkan ke Reddit namun inilah hasilnya.
 
 <center>
   <img src="image/Cara-Mengakses-Reddit-Pada-Arch-Linux/reddit.png" 
-           style="width: 350px; height: auto; border-radius: 12px;"> 
+           style="width: 400px; height: auto; border-radius: 8px;"> 
 </center>
 
 
@@ -59,7 +59,7 @@ Kemudian simpan, lalu muat ulang peramban dan hasilnya akan seperti ini.
 
 <center>
   <img src="image/Cara-Mengakses-Reddit-Pada-Arch-Linux/reddit-2.png" 
-           style="width: 350px; height: auto; border-radius: 12px;"> 
+           style="width: 400px; height: auto; border-radius: 8px;"> 
 </center>
 
 Namun, bagaimana hal diatas bekerja? 

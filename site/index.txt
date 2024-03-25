@@ -40,11 +40,11 @@ yang valid menjadi lebih cepat.
 Mungkin, blog ini belum sepenuhnya responsif. Tapi, terimakasih banyak untuk
 $/dylanaraps !
 
-Sebaik-baiknya dokumentasi adalah yang langsung ditulis oleh pengembang secara
-langsung, sebelum membaca lebih jauh. Saya mohon maaf apabila banyak terdapat
-kesalahan dalam penulisan, penafian dan sebagainya untuk kedepan. Namun, saya 
-akan selalu menyertakan tautan referensi agar teman-teman dapat membaca 
-dokumentasi tersebut secara keseluruhan.
+Sebaik-baiknya dokumentasi adalah ditulis oleh pengembang secara langsung, 
+sebelum membaca lebih jauh. Saya mohon maaf apabila banyak terdapat kesalahan 
+dalam penulisan, penafian dan sebagainya untuk kedepan. Namun, saya akan selalu 
+menyertakan tautan referensi agar teman-teman dapat membaca dokumentasi tersebut 
+secara keseluruhan.
 
 Keindahan subjektif merayakan permasalahan yang tak terbantahkan namun dihargai, 
 menghadirkan konsekuensi logis yang bijak. Ide radikal melahirkan urgensi untuk 
@@ -65,7 +65,7 @@ ________________________________________________________________________________
 
   3. paper/         : -------------||-------------- catatan ditulis.
 
-  4. about/         : Deskripsi diri (haruskah?) meskipun bukan.
+  4. about/         : Deskripsi diri (haruskah?) 
 
 
 Referensi

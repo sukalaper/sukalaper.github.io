@@ -15,4 +15,4 @@ ________________________________________________________________________________
 @/blog/Membuat-Lingkungan-Virtual-Python-Pada-Direktori-Saat-Ini       [03/2024]
 @/blog/RTFM                                                            [03/2024]
 @/blog/Cara-Mengakses-Reddit-Pada-Arch-Linux                           [03/2024]
-
+@/blog/REISUB                                                          [03/2024]

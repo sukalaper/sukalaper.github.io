@@ -9,9 +9,6 @@ ________________________________________________________________________________
 [1.0] Ikhtisar
 ________________________________________________________________________________
 
-Pemberitahuan: Terhitung pada 09/02/2024 
-               Saya sudah beralih dari NetworkManager[1] ke iwd[2].
-
 Baru-baru ini, saya mengalami kecepatan koneksi yang sangat lambat. Saya telah 
 mencoba berbagai cara untuk mengatasi masalah ini, antara lain.
 
