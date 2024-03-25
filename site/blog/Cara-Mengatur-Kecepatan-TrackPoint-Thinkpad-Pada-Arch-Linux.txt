@@ -38,89 +38,63 @@ terdistraksi oleh apapun.
 [2.0] Membuat Konfigurasi Pada Arch Linux
 ________________________________________________________________________________
 
-Sebelumnya, kita memerlukan paket bernama.
+Teman-teman harus membuat sebuah file pada /etc/udev/rules.d/10-trackpoint.rules
+kemudian isi file tersebut dengan baris ini.
 
-  1. xf86-input-evdev
-  2. xf86-input-libinput (Biasanya sudah terpasang secara default)
-  3. xorg-xinput 
+  ACTION=="add", KERNEL=="serio2", SUBSYSTEM=="serio", DRIVERS=="psmouse", 
+  ATTR{sensitivity}="300", ATTR{speed}="300"
 
-Instalasi semua paket dengan satu perintah.
-
-  $ sudo pacman -S xf86-input-evdev xf86-input-libinput xorg-xinput
-
-Jika instalasi selesai, silahkan teman-teman melihat daftar panduan dengan 
-perintah.
-
-  $ xinput --help
-
-untuk melihat daftar perangkat.
-
-  $ xinput --list
+Perhatikan pada kedua baris ini.
   
-  ⎡ Virtual core pointer                   	id=2	[master pointer  (3)]
-  ⎜ ↳ Virtual core XTEST pointer           	id=4	[slave  pointer  (2)]
-  ⎜ ↳ ThinkPad Essential Wireless Mouse    	id=9	[slave  pointer  (2)]
-  ⎜ ↳ SynPS/2 Synaptics TouchPad           	id=11	[slave  pointer  (2)]
-  ⎜ ↳ TPPS/2 IBM TrackPoint                	id=12	[slave  pointer  (2)]
-  ⎣ Virtual core keyboard                  	id=3	[master keyboard (2)]
-    ↳ Virtual core XTEST keyboard               id=5	[slave  keyboard (3)]
-    ↳ Power Button                              id=6	[slave  keyboard (3)]
-    ↳ Video Bus                            	id=7	[slave  keyboard (3)]
-    ↳ Sleep Button                         	id=8	[slave  keyboard (3)]
-    ↳ AT Translated Set 2 keyboard         	id=10	[slave  keyboard (3)]
-    ↳ ThinkPad Extra Buttons               	id=13	[slave  keyboard (3)]
+  ATTR{sensitivity}="300"
+  ATTR{speed}="300"
 
-Karena disini kita ingin melakukan konfigurasi pada TrackPoint, maka Keluaran 
-yang kita ambil adalah "TPPS/2 IBM TrackPoint".
+Nilai tersebut dapat teman-teman ubah sesuai dengan preferensi teman-teman, saya
+membuat nilai tersebut menjadi.
 
-  $ xinput --list-props "TPPS/2 IBM TrackPoint"
+  ATTR{sensitivity}="100"
+  ATTR{speed}="100"
 
-  Device 'TPPS/2 IBM TrackPoint':
-  Device Enabled (186):	1
-  Coordinate Transformation Matrix (188): 1.000000, 0.000000, 0.000000, 
-    0.000000, 1.000000, 0.000000, 0.000000, 0.000000,1.000000
-      libinput Natural Scrolling Enabled (315):	0
-      libinput Natural Scrolling Enabled Default (316):	0
-      libinput Scroll Methods Available (317):	0, 0, 1
-      libinput Scroll Method Enabled (318):	0, 0, 1
-      libinput Scroll Method Enabled Default (319):	0, 0, 1
-      libinput Button Scrolling Button (320):	2
-      libinput Button Scrolling Button Default (321):	2
-      libinput Button Scrolling Button Lock Enabled (322):	0
-      libinput Button Scrolling Button Lock Enabled Default (323):	0
-      libinput Middle Emulation Enabled (324):	0
-      libinput Middle Emulation Enabled Default (325):	0
-   -> libinput Accel Speed (326):	0.000000
-      libinput Accel Speed Default (327):	0.000000
-      libinput Accel Profiles Available (328):	1, 1, 1
-      libinput Accel Profile Enabled (329):	1, 0, 0
-      libinput Accel Profile Enabled Default (330):	1, 0, 0
-      libinput Accel Custom Fallback Points (331):	<no items>
-      libinput Accel Custom Fallback Step (332):	0.000000
-      libinput Accel Custom Motion Points (333):	<no items>
-      libinput Accel Custom Motion Step (334):	0.000000
-      libinput Accel Custom Scroll Points (335):	<no items>
-      libinput Accel Custom Scroll Step (336):	0.000000
-      libinput Left Handed Enabled (337):	0
-      libinput Left Handed Enabled Default (338):	0
-      libinput Send Events Modes Available (300):	1, 0
-      libinput Send Events Mode Enabled (301):	0, 0
-      libinput Send Events Mode Enabled Default (302):	0, 0
-      Device Node (303):	"/dev/input/event16"
-      Device Product ID (304):	2, 10
-      libinput Drag Lock Buttons (339):	<no items>
-      libinput Horizontal Scroll Enabled (340):	1
-      libinput Scrolling Pixel Distance (341):	20
-      libinput Scrolling Pixel Distance Default (342):	15
-      libinput High Resolution Wheel Scroll Enabled (343):	1
+Tujuannya agar tidak terlalu cepat dan lebih akurat.
 
-Perhatikan tanda panah yang saya berikan. Keluaran tersebut yang nantinya akan
-kita gunakan untuk mengubah kecepatan dari TrackPoint.
+Setelah selesai, teman-teman dapat melakukan uji coba dengan perintah ini.
 
-  $ xinput set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Speed" 0.1
+  # udevadm control --reload
+  # udevadm test /sys/devices/platform/i8042/serio1/serio2
 
-Teman-teman dapat melakukan eksperimen pada nilai-nilai tersebut. Rentang nilai
-berkisar antara 0.1 - 1. 
+Yang nantinya akan terdapat keluaran kurang lebih seperti ini.
+
+  This program is for debugging only, it does not run any program
+  specified by a RUN key. It may show incorrect results, because
+  some values may be different, or not available at a simulation run.
+
+  Trying to open "/etc/systemd/hwdb/hwdb.bin"...
+  Trying to open "/etc/udev/hwdb.bin"...
+  Trying to open "/usr/lib/systemd/hwdb/hwdb.bin"...
+  Trying to open "/usr/lib/udev/hwdb.bin"...
+  === trie on-disk ===
+  tool version:          255
+  file size:        12356767 bytes
+  header size             80 bytes
+  strings            2580575 bytes
+  nodes              9776112 bytes
+  Loading kernel module index.
+  Using default interface naming scheme 'v255'.
+  Parsed configuration file "/usr/lib/systemd/network/99-default.link"
+  Created link configuration context.
+  Reading rules file: /usr/lib/udev/rules.d/01-md-raid-creating.rules
+  Reading rules file: /usr/lib/udev/rules.d/10-dm.rules
+  Reading rules file: /etc/udev/rules.d/10-trackpoint.rules
+  serio2: /etc/udev/rules.d/10-trackpoint.rules:1 ATTR '/sys/devices/platform/
+          i8042/serio1/serio2/sensitivity' writing '130'
+  serio2: /etc/udev/rules.d/10-trackpoint.rules:1 ATTR '/sys/devices/platform/
+          i8042/serio1/serio2/speed' writing '130'
+  serio2: /usr/lib/udev/rules.d/50-udev-default.rules:20 Importing properties 
+          from results of builtin command 'hwdb --subsystem=serio'
+  serio2: hwdb modalias key: "serio:ty05pr00id00ex00"
+  serio2: hwdb modalias key: "serio:ty01pr00id00ex00"
+
+Dan selesai. Semoga bermanfaat!
 
 
 [3.0] Referensi
