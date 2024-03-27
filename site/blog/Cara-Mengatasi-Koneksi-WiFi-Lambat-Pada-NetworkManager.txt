@@ -19,7 +19,7 @@ mencoba berbagai cara untuk mengatasi masalah ini, antara lain.
 Dan sebagainya..
 
 Meskipun sudah melakukan langkah-langkah tersebut, masalah koneksi lambat masih 
-belum terselesaikan. Saya lakukan uji coba kecepatan dengan speedtest-cli[3] 
+belum terselesaikan. Saya lakukan uji coba kecepatan dengan speedtest-cli[1] 
 yang mendapatkan keluaran sebagai berikut.
 
   Retrieving speedtest.net configuration...
@@ -33,7 +33,7 @@ yang mendapatkan keluaran sebagai berikut.
   Upload: 0.37 Mbit/s
 
 Setelah berteman baik dengan Google, saya mendapati sebuah cara yaitu dengan 
-mematikan mode hemat daya yang tersedia pada NetworkManager[4].
+mematikan mode hemat daya yang tersedia pada NetworkManager[2].
 
   $ sudo touch /etc/NetworkManager/conf.d/wifi-power-save.conf
 
@@ -74,7 +74,5 @@ Bagaimana? Jauh lebih baik bukan?
 [2.0] Referensi
 ________________________________________________________________________________
 
-[1] https://wiki.archlinux.org/title/NetworkManager
-[2] https://wiki.archlinux.org/title/iwd
-[3] https://github.com/sivel/speedtest-cli
-[4] https://gist.github.com/jcberthon/ea8cfe278998968ba7c5a95344bc8b55
+[1] https://github.com/sivel/speedtest-cli
+[2] https://gist.github.com/jcberthon/ea8cfe278998968ba7c5a95344bc8b55

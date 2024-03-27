@@ -10,6 +10,8 @@ ________________________________________________________________________________
 [1.0] Ikhtisar
 ________________________________________________________________________________
 
+  INFO: Terhitung sejak 24/03/2024 Saya sudah berpindah ke st milik $/siduck
+
 Terminal bukanlah "alat" asing bagi para pengguna Linux. Memilih terminal yang 
 sesuai adalah hal subjektif. Aturan dasarnya tetap sama; kembali ke preferensi 
 masing-masing pengguna, namun seringkali pengguna hanya mengikuti tren tanpa 
@@ -24,7 +26,7 @@ penuh.
 
 Tenang, kembali pada kalimat awal. Ini tentang preferensi pengguna dan saya 
 adalah pengguna yang memiliki keanehan untuk menjalankan aplikasi sekecil atau 
-setidak yang sangat minim penggunaan memori pada perangkat saya.
+setidaknya yang sangat minim pada penggunaan memori.
 
 Saya atau mungkin kebanyakan orang juga memiliki pendapat yang sama bahwa 
 meminimalisir penggunaan aplikasi "besar" dapat menaikan daya tahan baterai.
@@ -47,8 +49,8 @@ se-segera mungkin mencobanya.
 Setelah berteman baik dengan Google saya menemukan dua versi St terminal yang 
 siap pakai (tentunya ini adalah versi saya).
 
-  Siduck[2]
-  Luke Smith[3]
+  1. Siduck[2]
+  2. Luke Smith[3]
 
 Daripada repot-repot melalukan patching manual, lebih baik menggunakan yang 
 sudah ada. Kebetulan kebutuhan saya tercukupi oleh nomer dua.

@@ -12,9 +12,9 @@ ________________________________________________________________________________
 [1.0] Ikhtisar
 ________________________________________________________________________________
 
-Tulisan ini saya kutip dari Arch Wiki [1] yang berjudul Arch Terminology [2].
+Tulisan ini saya kutip dari Arch Wiki[1] yang berjudul Arch Terminology[2].
 
-RTFM adalah singkatan dari Read The Fucking Manual [3].
+RTFM adalah singkatan dari Read The Fucking Manual[3].
 
 Pesan sederhana ini dibalas, digunakan oleh pengguna baru Linux yang bertanya 
 tentang fungsionalitas suatu program ketika fungsi tersebut didefinisikan 
@@ -102,9 +102,9 @@ ________________________________________________________________________________
 
 Jika ingin bertanya. Ajukan pertanyaan yang tepat dan pastikan Anda sudah 
 berusaha untuk mencarinya terlebih dahulu. Sekali lagi, ajukan pertanyaan yang 
-tepat. Jangan bertanya untuk bertanya, tanyakan saja [4].
+tepat. Jangan bertanya untuk bertanya, tanyakan saja[4].
 
-  "Hallo, adakah yang menggunakan i3wm [5] disini?"
+  "Hallo, adakah yang menggunakan i3wm[5] disini?"
 
 Saya berani bertaruh, jika Anda bertanya seperti itu pada forum yang berisi
 pengguna GNU/Linux, maka jawabannya adalah ada!
