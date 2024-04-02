@@ -148,10 +148,10 @@ Bagaimana menggunakan kode diatas?
 Saya sendiri menggunakan alias[9] pada .bashrc[10] agar lebih cepat. Berikut ini
 adalah tangkapan layar dari program diatas.
 
-<center>
-  <img src="image/Membuat-Module-Statusbar-Sederhana-Pada-Arch-Linux/statbar.png" 
-           style="width: 400px; height: auto; border-radius: 8px;"> 
-</center>
+  <center>
+    <img src="image/Membuat-Module-Statusbar-Sederhana-Pada-Arch-Linux/statbar.png" 
+             style="width: 400px; height: auto; border-radius: 8px;"> 
+  </center>
 
 Sebagai informasi tambahan, glyph font diatas dimuat dengan sangat sempurna 
 diatas Simple Terminal[11] dan juga nerd font[12] dari FantasqueSans M[13].

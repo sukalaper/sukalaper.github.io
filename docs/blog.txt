@@ -17,3 +17,4 @@ ________________________________________________________________________________
 @/blog/Cara-Mengakses-Reddit-Pada-Arch-Linux                           [03/2024]
 @/blog/REISUB                                                          [03/2024]
 @/blog/Membuat-Module-Statusbar-Sederhana-Pada-Arch-Linux              [03/2024]
+@/blog/Akhirnya-Dual-Boot-Menjadi-Pilihan                              [04/2024]
