@@ -1,0 +1,56 @@
+
+Menggunakan Konfigurasi .vimrc Pada $HOME Di Lingkungan Root (/)
+________________________________________________________________________________
+
+- Ikhtisar                                                                 [1.0]
+
+
+[1.0] Ikhtisar
+________________________________________________________________________________
+
+Tulisan ini saya buat ketika saya agak kerepotan mengenai perbedaan konfigurasi
+.vimrc pada $HOME (/home/user/.vimrc) dan root (/root/.vimrc) yang mana ketika 
+saya melakukan pengeditan file yang berada pada jalur / konfigurasi pada .vimrc 
+yang telah saya konfigurasi di $HOME tidak akan di muat karena lingkungan 
+menggunakan sudo yang otomatis akan mencari konfigurasi .vimrc pada 
+/root/.vimrc.
+
+Sebenarnya, cara ini bisa diatasi dengan membuat sebuah symlink dengan cara.
+  
+  $ ln -s ~/.vimrc /root/.vimrc
+
+Namun saya rasa cara tersebut kurang aman dan melanggar prinsip isolasi dan 
+keamanan. Direktori root adalah lingkungan sistem yang sensitif dan menyimpan
+file konfigurasi disana bisa menjadi tindakan yang tidak perlu dan berpotensi
+beresiko.
+
+Sebagai gantinya, saya menggunakan perintah ini.
+
+  $ sudo visudo
+
+Dan meletakan baris ini pada bagian akhir file.
+
+  Defaults env_keep += "HOME"
+
+Kira-kira barisnya akan menjadi seperti ini.
+
+  ## Uncomment to allow any user to run sudo if they know the password
+  ## of the user they are running the command as (root by default).
+  # Defaults targetpw  # Ask for the password of the target user
+  # ALL ALL=(ALL:ALL) ALL  # WARNING: only use this together with 
+    'Defaults targetpw'
+
+  ## Read drop-in files from /etc/sudoers.d
+  @includedir /etc/sudoers.d
+
+  Defaults env_keep += "HOME"
+
+Jika teman-teman mengalami kendala saat melakukan perintah ini.
+
+  $ sudo visudo 
+  $ visudo: no editor found (editor path = /usr/bin/vi)
+
+Maka cukup lakukan cara ini.
+
+  $ export VISUAL=vim
+  $ sudo -E visudo

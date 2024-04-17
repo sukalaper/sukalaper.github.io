@@ -16,6 +16,12 @@ Tentu saja saya tidak bisa mengakses data pada 2.5 milik saya dan mau tidak mau
 saya harus membeli lagi kabel SSD 2.5 secara terpisah agar bisa mengakses 
 penyimpanan SSD 2.5 milik saya. Beruntungnya saya masih memiliki enclosure.
 
+Thinkpad kali ini berbekal M.2 yang bisa dibilang kecil, ukurannya hanya 128GB.
+Jadi saya harus pintar-pintar mengatur partisi untuk melakukan dual boot, dalam
+beberapa kasus pada Arch saya tidak memerlukan partisi yang besar, sebagian data 
+penting telah saya pisahkan pada HDD yang memang telah saya khususkan untuk 
+data-data pribadi.
+
 Kira-kira kurang lebih 1 tahun saya menggunakan cara ini.
 
   Thinkpad X270
@@ -24,23 +30,14 @@ Kira-kira kurang lebih 1 tahun saya menggunakan cara ini.
   └── Enclosure SSD 2.5
       └── Arch Linux
 
-  <center>
-    <img src="image/Cara-Dual-Boot-Windows-Dengan-Arch-Linux/preview.jpg" 
-             style="width: 400px; height: auto; border-radius: 8px;"> 
-  </center>
+  <img src="image/Akhirnya-Dual-Boot-Menjadi-Pilihan/preview.jpg" 
 
 Pilihan ini bertujuan untuk membiarkan M.2 beristirahat damai dengan Windows 11 
 didalamnya. Sejujurnya, ini merepotkan mengingat saya yang suka berpindah-pindah 
 ruang kerja dan harus jauh lebih berhati-hati. Enclosure ini sudah cukup sering 
 terjatuh hingga pada akhirnya kerusakan adalah akhir dari kisahnya. Dual boot
-adalah pilihan sementara sampai nanti saya memiliki rezeki lebih untuk menambah 
-ukuran penyimpanan.
-
-Thinkpad kali ini berbekal M.2 yang bisa dibilang kecil, ukurannya hanya 128GB.
-Jadi saya harus pintar-pintar mengatur partisi untuk melakukan dual boot, dalam
-beberapa kasus pada Arch saya tidak memerlukan partisi yang besar, sebagian data 
-penting telah saya pisahkan pada HDD yang memang telah saya khususkan untuk 
-data-data pribadi.
+adalah pilihan sementara sampai nanti saya memiliki rezeki lebih untuk membeli
+penyimpanan baru yang lebih besar.
 
 Jika teman-teman ingin melihat skema partisi saya saat ini, ini dia.
 

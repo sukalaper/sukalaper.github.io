@@ -13,11 +13,9 @@ ________________________________________________________________________________
 Dalam penggunaan GNU/Linux (singkatnya Linux) terkadang sistem dapat mengalami 
 kemungkinan kegagalan, kebekuan yang membutuhkan tindakan darurat. Tentu, 
 mematikannya secara paksa (menekan tombol power) bukan solusi yang tepat 
-terutama untuk jangka panjang. 
-Jadi, REISUB adalah solusi yang tepat. Ini adalah serangkaian tindakan darurat 
-yang digunakan untuk memulai ulang sistem Linux secara aman. 
-
-Apa kepanjangan REISUB?
+terutama untuk jangka panjang. Jadi, REISUB adalah solusi yang tepat. Ini adalah 
+serangkaian tindakan darurat yang digunakan untuk memulai ulang sistem Linux 
+secara aman. 
 
   REISUB: Reboot Even If System Utterly Broken
 
@@ -25,12 +23,24 @@ Apa kepanjangan REISUB?
 [2.0] Cara Konfigurasi REISUB Pada Arch Linux
 ________________________________________________________________________________
 
-Untuk mengaktifkan REISUB di Arch Linux, teman-teman perlu membuat file 
-konfigurasi di /etc/sysctl.d/99-sysctl.conf kemudian isi file tersebut dengan.
+Untuk mengaktifkan REISUB di Arch Linux, teman-teman perlu membuat dan mengisi 
+file konfigurasi terlebih dahulu. 
 
-  kernel.sysrq = 1
+  $ sudo sh -c 'echo "kernel.sysrq = 1" > /etc/sysctl.d/99-sysctl.conf
 
-Selalu ingat aturannya, jika file tersebut tidak ada. Buat secara manual.
+Saya akan jelaskan sedikit maksud dari perintah diatas.
+
+  1. sudo: Adalah perintah yang digunakan untuk menjalankan perintah berikutnya 
+  dengan hak akses superuser atau root. 
+
+  2. sh -c: Ini mengeksekusi perintah shell yang diberikan sebagai argumen.
+
+  3. echo "kernel.sysrq = 1" > /etc/sysctl.d/99-sysctl.conf: Ini adalah 
+  perintah yang akan dieksekusi oleh sh -c. Ini sebenarnya adalah perintah echo 
+  yang menuliskan string "kernel.sysrq = 1" ke dalam file 
+  /etc/sysctl.d/99-sysctl.conf. Operator > digunakan untuk mengarahkan output 
+  dari perintah echo ke dalam file yang ditentukan. Dalam hal ini, output dari 
+  echo akan ditulis ke dalam file /etc/sysctl.d/99-sysctl.conf.
 
 Setelah selesai, teman-teman dapat melakukan uji coba dengan cara menekan.
 
@@ -38,20 +48,20 @@ Setelah selesai, teman-teman dapat melakukan uji coba dengan cara menekan.
 
 Dalam kasus ini, mesin saya hanya memerlukan penekanan seperti ini.
 
-  Alt + PrtSC + R + E 
+  Alt + PrtSc + R + E 
 
-Kemudian, sistem saya langsung  dialihkan kembali ke TTY1[1] ini mungkin terjadi 
+Kemudian, sistem saya langsung dialihkan kembali ke TTY1[1] ini mungkin terjadi 
 mengingat perbedaan konfigurasi kernel dan pengaturan sistem. Dimana dalam 
 beberapa kasus kombinasi tombol ini dirancang untuk melakukan aksi 
 "emergency remount" pada sistem file dalam mode baca-tulis (read-write), yang 
 mana ini juga merupakan tindakan darurat.
 
-  Perlu diketahui bahwa "REISUB" itu sendiri hanyalah sebuah mnemonik, bukan 
+  <p class="quote">  
+  "Perlu diketahui bahwa "REISUB" itu sendiri hanyalah sebuah mnemonik, bukan 
   rekomendasi umum apa pun untuk urutan penekanan tombol guna mengambil kembali 
   kendali sistem yang tidak responsif. Anda tidak boleh menekan urutan ini 
-  secara membabi buta setiap kali tanpa mengetahui fungsi sebenarnya. 
-  
-  - Arch Wiki - Keyboard Shortcuts[2].
+  secara membabi buta setiap kali tanpa mengetahui fungsi sebenarnya[2]."
+  </p>
 
 
 [3.0] Referensi

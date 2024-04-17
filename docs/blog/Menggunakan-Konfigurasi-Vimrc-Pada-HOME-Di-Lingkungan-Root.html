@@ -1,0 +1,69 @@
+<!doctypehtml><html lang=en><link href=data:, rel=icon><title>Sukalaper - Menggunakan-Konfigurasi-Vimrc-Pada-HOME-Di-Lingkungan-Root</title><meta charset=utf-8><meta content=blog name=description><meta content="index, follow"name=robots><meta content="width=device-width,initial-scale=1"name=viewport><style>body{overflow-y:scroll;font:16px monospace,monospace}pre{margin:0;overflow-x:hidden}img{display:block;margin-left:auto;margin-right:auto;width:400px;max-width:100%;border-radius:8px}.blur-text{color:#000;filter:blur(4px)}.quote{margin-top:-10px;margin-bottom:-10px;border-left:3px solid #000}@media(max-width:999px){#c{display:block;font-size:2.02vw}}@media(prefers-color-scheme:dark){body{background:#000;color:#fff}a{color:#6cf}}</style><div style="display:table;margin:16px auto"><div id=c><pre>
++------------------------------------------------------------------------------+
+|                                                                              |
+|  <a href=/ >/home/sukalaper</a>                                      <a href=/blog>blog/</a>  <a href=/paper>paper/</a>  <a href=/about>about/</a>  |
+|                                                                              |
++------------------------------------------------------------------------------+
+
+
+Menggunakan Konfigurasi .vimrc Pada $HOME Di Lingkungan Root (/)
+________________________________________________________________________________
+
+- Ikhtisar                                                                 <a href=#1.0>[1.0]</a>
+
+
+<span id=1.0><a href=#1.0>[1.0]</a></span> Ikhtisar
+________________________________________________________________________________
+
+Tulisan ini saya buat ketika saya agak kerepotan mengenai perbedaan konfigurasi
+.vimrc pada $HOME (/home/user/.vimrc) dan root (/root/.vimrc) yang mana ketika 
+saya melakukan pengeditan file yang berada pada jalur / konfigurasi pada .vimrc 
+yang telah saya konfigurasi di $HOME tidak akan di muat karena lingkungan 
+menggunakan sudo yang otomatis akan mencari konfigurasi .vimrc pada 
+/root/.vimrc.
+
+Sebenarnya, cara ini bisa diatasi dengan membuat sebuah symlink dengan cara.
+  
+  $ ln -s ~/.vimrc /root/.vimrc
+
+Namun saya rasa cara tersebut kurang aman dan melanggar prinsip isolasi dan 
+keamanan. Direktori root adalah lingkungan sistem yang sensitif dan menyimpan
+file konfigurasi disana bisa menjadi tindakan yang tidak perlu dan berpotensi
+beresiko.
+
+Sebagai gantinya, saya menggunakan perintah ini.
+
+  $ sudo visudo
+
+Dan meletakan baris ini pada bagian akhir file.
+
+  Defaults env_keep += "HOME"
+
+Kira-kira barisnya akan menjadi seperti ini.
+
+  ## Uncomment to allow any user to run sudo if they know the password
+  ## of the user they are running the command as (root by default).
+  # Defaults targetpw  # Ask for the password of the target user
+  # ALL ALL=(ALL:ALL) ALL  # WARNING: only use this together with 
+    'Defaults targetpw'
+
+  ## Read drop-in files from /etc/sudoers.d
+  @includedir /etc/sudoers.d
+
+  Defaults env_keep += "HOME"
+
+Jika teman-teman mengalami kendala saat melakukan perintah ini.
+
+  $ sudo visudo 
+  $ visudo: no editor found (editor path = /usr/bin/vi)
+
+Maka cukup lakukan cara ini.
+
+  $ export VISUAL=vim
+  $ sudo -E visudo
+
+________________________________________________________________________________
+
+                                          Sukalaper © 2024, All rights reserved.
+
+</pre></div></div>

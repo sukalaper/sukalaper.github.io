@@ -10,13 +10,10 @@ ________________________________________________________________________________
 [1.0] Apa Itu TrackPoint?
 ________________________________________________________________________________
 
-Jika teman-teman menggunakan laptop bawaan IBM (sekarang Lenovo) pasti sudah 
-tidak asing lagi dengan "pentil merah" yang berada tepat di tengah-tengah
-keyboard.
+Jika teman-teman menggunakan laptop bawaan Lenovo (dulu IBM) pasti sudah tidak 
+asing lagi dengan "pentil merah" yang berada tepat di tengah-tengah keyboard.
 
-Ya, itu yang dinamakan TrackPoint. 
-
-Lalu, apa saja fungsi dari TrackPoint?
+Ya, itu yang dinamakan TrackPoint. Lalu, apa saja fungsi dari TrackPoint?
 
   1. Navigasi sebagai pengganti kursor
   2. Klik
@@ -94,7 +91,11 @@ Yang nantinya akan terdapat keluaran kurang lebih seperti ini.
   serio2: hwdb modalias key: "serio:ty05pr00id00ex00"
   serio2: hwdb modalias key: "serio:ty01pr00id00ex00"
 
-Dan selesai. Semoga bermanfaat!
+Selesai! Namun saya ingin perintah ini berfungsi setiap kali sistem boot 
+sayangnya saya gagal melakukan aktivasi pada systemctl akhirnya saya membuat 
+sebuah alias pada .bashrc sebagai berikut.
+
+    alias trck='sudo udevadm test /sys/devices/platform/i8042/serio1/serio2'
 
 
 [3.0] Referensi

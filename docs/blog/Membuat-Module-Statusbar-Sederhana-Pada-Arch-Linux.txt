@@ -39,8 +39,8 @@ meskipun ukurannya kecil.
 
 Jadi, saya rasa apa yang dikatakan $/dylanaraps benar adanya.
 
-  "Bash is actually quite powerful without relying on it, of course, 
-  if you understand it."
+  <strong>"Bash is actually quite powerful without relying on it, of course, 
+  if you understand it."</strong>
 
 Terlebih lagi, i3wm[7] memiliki fitur scratchpad[8] yang memungkinkan saya 
 untuk menggunakan module ini dengan lebih mudah untuk dibuka-tutup.

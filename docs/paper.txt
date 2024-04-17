@@ -24,12 +24,13 @@ ________________________________________________________________________________
 
 [1.0] Some Text                                                        [03/2024]
 ________________________________________________________________________________
-
+<p class="blur-text">
 Jika 
 
   Jika suatu saat nanti engkau menemukan bagian dari diriku ada pada 
   orang lain, jangan berbicara tentangku padanya.
   Bicaralah tentang kalian dan tertawalah.
+</p>
 ________________________________________________________________________________
 
 Alesana - The Thespian
