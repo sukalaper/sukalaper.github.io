@@ -18,8 +18,8 @@
                                                         paper! \  \.__.__.-._)
 ________________________________________________________________________________
 
-- Some Text                                                                [1.0]
-- Note                                                                     [2.0]
+- ??                                                                       [1.0]
+- Command Linux                                                            [2.0]
 
 
 [1.0] Some Text                                                        [03/2024]
@@ -44,7 +44,49 @@ Alesana - The Thespian
   You're lucky I don't kill you where you stand.
 
 
-[2.0] Note                                                             [01/1999]
+[2.0] Command Linux                                                    [01/1999]
 ________________________________________________________________________________
 
-It might be empty for the next few weeks~
+# Copy - paste file without text block 
+$ cat "$1" | xclip -selection clipboard
+
+# Pacman to txt 
+$ pacman -Qq > pacman.txt 
+
+# Enter reading mode using redshift settings 
+$ redshift -O 3700
+
+# View screen resolution 
+$ xdpyinfo | grep dimensions
+
+# Check vim startup speed 
+$ vim --startuptime vim_startup.log
+
+# Search for a specific word in a file within a directory 
+$ grep -r "word/you/want/to/search" .
+
+# Quickly delete multiple files with a specified extension 
+$ find /your/directory -type f -name "*.js" -delete
+
+# Quickly tidy up indentation (2 spaces) using vim 
+gg=G (At the beginning of the file) // Currently quite helpful with Prettier.
+
+# Perform cloning on a specific folder 
+$ git clone --single-branch --branch=backup --depth=1 
+https://github.com/sukalaper/dotfiles firefox-startpage 
+
+# Filtering output numbers with grep 
+$ grep -oP '\d+\.\d+' berkas.txt
+$ awk -F '[^0-9.]+' '/[0-9]+\.[0-9]+/ { print $2 }' berkas.txt
+
+# Find 
+$ find /path/to/search -type f -name "filename"
+$ find /home/user/Documents -type f -name "example.txt"
+$ find /path/to/search -type d -name "foldername"
+$ find /path/to/search -type f -name "*.extension"
+$ find /home/user/Documents -type f -name "*.txt"
+$ find /path/to/search -type f -size +10M
+$ find /path/to/search -type f -mtime -7
+
+# Ignore error message 
+$ command_name 2>/dev/null

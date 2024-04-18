@@ -1,4 +1,4 @@
-<!doctypehtml><html lang=en><link href=data:, rel=icon><title>Sukalaper - paper</title><meta charset=utf-8><meta content=blog name=description><meta content="index, follow"name=robots><meta content="width=device-width,initial-scale=1"name=viewport><style>body{overflow-y:scroll;font:16px monospace,monospace}pre{margin:0;overflow-x:hidden}img{display:block;margin-left:auto;margin-right:auto;width:400px;max-width:100%;border-radius:8px}.blur-text{color:#000;filter:blur(4px)}.quote{margin-top:-10px;margin-bottom:-10px;border-left:3px solid #000}@media(max-width:999px){#c{display:block;font-size:2.02vw}}@media(prefers-color-scheme:dark){body{background:#000;color:#fff}a{color:#6cf}}</style><div style="display:table;margin:16px auto"><div id=c><pre>
+<!doctypehtml><html lang=en><link href=data:, rel=icon><title>Sukalaper - paper</title><meta charset=utf-8><meta content=blog name=description><meta content="index, follow"name=robots><meta content="width=device-width,initial-scale=1"name=viewport><style>body{overflow-y:scroll;font:16px monospace,monospace}pre{margin:0;overflow-x:hidden}img{display:block;margin-left:auto;margin-right:auto;width:400px;max-width:100%;border-radius:8px}.blur-text{color:#000;filter:blur(4px)}.quote{margin-top:-10px;margin-bottom:-10px;border-left:3px solid #ccc}@media(max-width:999px){#c{display:block;font-size:2.02vw}}@media(prefers-color-scheme:white){body{background:#000;color:#fff}a{color:#6cf}}</style><div style="display:table;margin:16px auto"><div id=c><pre>
 +------------------------------------------------------------------------------+
 |                                                                              |
 |  <a href=/ >/home/sukalaper</a>                                      <a href=/blog>blog/</a>  <a href=/paper>paper/</a>  <a href=/about>about/</a>  |
@@ -25,8 +25,8 @@
                                                         paper! \  \.__.__.-._)
 ________________________________________________________________________________
 
-- Some Text                                                                <a href=#1.0>[1.0]</a>
-- Note                                                                     <a href=#2.0>[2.0]</a>
+- ??                                                                       <a href=#1.0>[1.0]</a>
+- Command Linux                                                            <a href=#2.0>[2.0]</a>
 
 
 <span id=1.0><a href=#1.0>[1.0]</a></span> Some Text                                                        [03/2024]
@@ -51,13 +51,57 @@ Alesana - The Thespian
   You're lucky I don't kill you where you stand.
 
 
-<span id=2.0><a href=#2.0>[2.0]</a></span> Note                                                             [01/1999]
+<span id=2.0><a href=#2.0>[2.0]</a></span> Command Linux                                                    [01/1999]
 ________________________________________________________________________________
 
-It might be empty for the next few weeks~
+# Copy - paste file without text block 
+$ cat "$1" | xclip -selection clipboard
+
+# Pacman to txt 
+$ pacman -Qq > pacman.txt 
+
+# Enter reading mode using redshift settings 
+$ redshift -O 3700
+
+# View screen resolution 
+$ xdpyinfo | grep dimensions
+
+# Check vim startup speed 
+$ vim --startuptime vim_startup.log
+
+# Search for a specific word in a file within a directory 
+$ grep -r "word/you/want/to/search" .
+
+# Quickly delete multiple files with a specified extension 
+$ find /your/directory -type f -name "*.js" -delete
+
+# Quickly tidy up indentation (2 spaces) using vim 
+gg=G (At the beginning of the file) // Currently quite helpful with Prettier.
+
+# Perform cloning on a specific folder 
+$ git clone --single-branch --branch=backup --depth=1 
+<a href=https://github.com/sukalaper/dotfiles>https://github.com/sukalaper/dotfiles</a> firefox-startpage 
+
+# Filtering output numbers with grep 
+$ grep -oP '\d+\.\d+' berkas.txt
+$ awk -F '[^0-9.]+' '/[0-9]+\.[0-9]+/ { print $2 }' berkas.txt
+
+# Find 
+$ find /path/to/search -type f -name "filename"
+$ find /home/user/Documents -type f -name "example.txt"
+$ find /path/to/search -type d -name "foldername"
+$ find /path/to/search -type f -name "*.extension"
+$ find /home/user/Documents -type f -name "*.txt"
+$ find /path/to/search -type f -size +10M
+$ find /path/to/search -type f -mtime -7
+
+# Ignore error message 
+$ command_name 2>/dev/null
 
 ________________________________________________________________________________
 
                                           Sukalaper © 2024, All rights reserved.
 
 </pre></div></div>
+
+
