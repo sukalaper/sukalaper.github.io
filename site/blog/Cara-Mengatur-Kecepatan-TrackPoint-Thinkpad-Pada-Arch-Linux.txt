@@ -19,9 +19,9 @@ Ya, itu yang dinamakan TrackPoint. Lalu, apa saja fungsi dari TrackPoint?
   2. Klik
   3. Scroll
 
-Yang mungkin tidak hanya itu fungsinya. Saya lebih sering menggunakan TrackPoint 
-di banding mouse atau touchpad. Terutama untuk menggeser-geser sebuah window agar 
-memiliki tingkat ke-presisian yang tinggi.
+Yang mungkin tidak hanya itu fungsinya. Saya lebih sering menggunakan 
+TrackPoint di banding mouse atau touchpad. Terutama untuk menggeser-geser 
+sebuah window agar memiliki tingkat ke-presisian yang tinggi.
 
 Penggunaan TrackPoint ini sebenarnya cukup meningkatkan efisiensi penggunaan 
 keyboard tanpa harus mengangkat tangan untuk menggunakan mouse atau sekedar

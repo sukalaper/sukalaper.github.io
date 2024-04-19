@@ -1,4 +1,4 @@
-<!doctypehtml><html lang=en><link href=data:, rel=icon><title>Sukalaper - home</title><meta charset=utf-8><meta content=blog name=description><meta content="index, follow"name=robots><meta content="width=device-width,initial-scale=1"name=viewport><style>body{overflow-y:scroll;font:16px monospace,monospace}pre{margin:0;overflow-x:hidden}img{display:block;margin-left:auto;margin-right:auto;width:400px;max-width:100%;border-radius:8px}.blur-text{color:#000;filter:blur(4px)}.quote{margin-top:-10px;margin-bottom:-10px;border-left:3px solid #ccc}@media(max-width:999px){#c{display:block;font-size:2.02vw}}@media(prefers-color-scheme:white){body{background:#000;color:#fff}a{color:#6cf}}</style><div style="display:table;margin:16px auto"><div id=c><pre>
+<!doctypehtml><html lang=en><link href=data:, rel=icon><title>Sukalaper - home</title><meta charset=utf-8><meta content=blog name=description><meta content="index, follow"name=robots><meta content="width=device-width,initial-scale=1"name=viewport><style>body{overflow-y:scroll;font:16px monospace,monospace}pre{margin:0;overflow-x:hidden}img{display:block;margin-left:auto;margin-right:auto;width:400px;max-width:100%;border-radius:8px}.blur-text{color:#000;filter:blur(4px)}.quote{margin-top:-10px;margin-bottom:-10px;border-left:4px solid #ccc}@media(max-width:999px){#c{display:block;font-size:2.02vw}}@media(prefers-color-scheme:light){body{background:#FFFBDA;color:#333;}a{color:#0066ff}}</style><div style="display:table;margin:16px auto"><div id=c><pre>
 +------------------------------------------------------------------------------+
 |                                                                              |
 |  <a href=/ >/home/sukalaper</a>                                      <a href=/blog>blog/</a>  <a href=/paper>paper/</a>  <a href=/about>about/</a>  |
@@ -33,7 +33,8 @@
                              oo o  oo o o  o oo  o )
                                                           #StopGenocideInGaza 🇵🇸
 
-Welcome $HOME Anyone
+
+Welcome $HOME Anyone!
 ________________________________________________________________________________
 
 Kembali berpindah dari satu static site generator ke static site lainnya cukup
@@ -50,26 +51,63 @@ dalam penulisan, penafian dan sebagainya untuk kedepan. Namun, saya akan selalu
 menyertakan tautan referensi agar teman-teman dapat membaca dokumentasi tersebut 
 secara keseluruhan.
 
-Keindahan subjektif merayakan permasalahan yang tak terbantahkan namun dihargai, 
-menghadirkan konsekuensi logis yang bijak. Ide radikal melahirkan urgensi untuk 
-mengambil langkah-langkah yang dibutuhkan, membuka pintu potensi pengalaman yang 
-lebih baik. Tidak melulu tertutup dan berlagak konservatif melainkan terbuka 
-pada kemungkinan, karena jika menggunakan sesuatu itu salah maka selamanya saya 
-tidak ingin benar.
+  <p class="quote">
+  Keindahan subjektif merayakan permasalahan yang tak terbantahkan namun 
+  dihargai, menghadirkan konsekuensi logis yang bijak. Ide radikal melahirkan 
+  urgensi untuk mengambil langkah-langkah yang dibutuhkan, membuka pintu 
+  potensi pengalaman yang lebih baik. Tidak melulu tertutup dan berlagak 
+  konservatif melainkan terbuka pada kemungkinan, karena jika menggunakan 
+  sesuatu itu salah maka selamanya saya tidak ingin benar.
+  </p>
 
 
-Bagian-bagian Dari Blog Ini
+Struktur Pohon Pada Blog Ini
 ________________________________________________________________________________
 
-  1. /home/sukalaper: Lokasi direktori awal pada saat teman-teman membaca ini, 
-                      asumsikan ini adalah lingkup Linux meskipun sebenarnya 
-                      bukan. Berfantasilah.
+  sukalaper.github.io/
+  ├── docs/
+  │   ├── 404.html
+  │   ├── 404.txt
+  │   ├── about.html
+  │   ├── about.txt
+  │   ├── blog/
+  │   │   ├── post
+  │   │   ├── post
+  │   │   ├── post
+  │   │   └── image/
+  │   │       ├── image
+  │   │       └── image
+  │   ├── blog.html
+  │   ├── blog.txt
+  │   ├── index.html
+  │   ├── index.txt
+  │   ├── paper.html
+  │   └── paper.txt
+  ├── make
+  ├── README.md
+  ├── site/
+  │   ├── 404.txt
+  │   ├── about.txt
+  │   ├── blog/
+  │   │   ├── post
+  │   │   ├── post
+  │   │   ├── post
+  │   │   └── image/
+  │   │       ├── image
+  │   │       └── image
+  │   ├── blog.txt
+  │   ├── index.txt
+  │   └── paper.txt
+  └── template.html
 
-  2. blog/          : Lokasi direktori dimana semua postingan ditulis.
-
-  3. paper/         : -------------||-------------- catatan ditulis.
-
-  4. about/         : Deskripsi diri (haruskah?) 
+Penjelasan singkat:
+  
+  1. docs/: File berisi salinan dari site/ namun dalam ekstensi .html
+  2. make: Sebuah file untuk melakukan convert dari .txt ke .html 
+  3. README.md: Pesan penghargaan kepada Dylan!
+  4. site/: sebuah teks mentah dalam format .txt yang nantinya akan di generate
+            dengan make agar menghasilkan folder docs/
+  5. template.html: Kerangka kode untuk membuat tampilan dalam blog ini.
 
 
 Referensi
