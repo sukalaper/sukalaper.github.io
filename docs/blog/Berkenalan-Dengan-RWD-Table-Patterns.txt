@@ -37,22 +37,6 @@ mengolah serta membaca data dari tabel tersebut.
 
 Bertemulah saya dengan satu repositori ini $/nadangergeo/RWD-Table-Patterns
 
-Karena minimnya pengetahuan saya dan juga saya bukan seorang pengembang, tentu 
-ini terasa agak membingungkan.
-
-Setelah meluangkan waktu untuk membaca sebuah dokumentasi serta melihat demo 
-yang diberikan, barulah saya memahami sedikit demi sedikit.
-
-Pada dokumentasi, dikatakan bahwa langkah awal instalasi adalah menggunakan 
-NPM.
-
-  $ npm i RWD-Table-Patterns
-
-Namun saya bersikeras untuk tidak melakukannya! Saya kembali membaca 
-dokumentasi tersebut untuk memastikan cara lain.
-
-Akhirnya saya menemukan caranya, yaitu.
-
   1. Lakukan clone pada repositori tersebut.
 
     $ git clone https://github.com/nadangergeo/RWD-Table-Patterns/
