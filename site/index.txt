@@ -53,7 +53,6 @@ secara keseluruhan.
   sesuatu itu salah maka selamanya saya tidak ingin benar.
   </p>
 
-
 Struktur Pohon Pada Blog Ini
 ________________________________________________________________________________
 
@@ -93,13 +92,11 @@ ________________________________________________________________________________
   │   └── paper.txt
   └── template.html
 
-Penjelasan singkat:
-  
-  1. docs/: File berisi salinan dari site/ namun dalam ekstensi .html
-  2. make: Sebuah file untuk melakukan convert dari .txt ke .html 
-  3. README.md: Pesan penghargaan kepada Dylan!
-  4. site/: sebuah teks mentah dalam format .txt yang nantinya akan di generate
-            dengan make agar menghasilkan folder docs/
+  1. docs/        : File berisi salinan dari site/ namun dalam ekstensi .html
+  2. make         : Sebuah file untuk melakukan convert dari .txt ke .html 
+  3. README.md    : Pesan penghargaan kepada Dylan!
+  4. site/        : sebuah teks mentah dalam format .txt yang nantinya akan di 
+                    generate dengan make agar menghasilkan folder docs/
   5. template.html: Kerangka kode untuk membuat tampilan dalam blog ini.
 
 
