@@ -24,44 +24,33 @@
                               d88bd8888b.  .d888d'.
                             8888988898988989898989\
                              oo o  oo o o  o oo  o )
-                                                          #StopGenocideInGaza 🇵🇸
-
-
-  <strong>
-                                                                      25/04/2024
-
-          INFO: Blog ini sedang dalam perbaikan agar terlihat lebih menarik atau 
-                setidaknya tidak berantakan.
-  </strong>
+                                                        #StopGenocideInGaza 🇵🇸
 
 Welcome $HOME Anyone!
 ________________________________________________________________________________
 
 Kembali berpindah dari satu static site generator ke static site lainnya cukup
 membosankan, entah apa yang saya cari―― kesederhanaan? Kemudahan dokumentasi?
+
 Untuk memulai memahami kembali kerangka dokumentasi yang berbeda adalah sebuah 
 konsekuensi logis yang harus saya terima demi mencapai kemaslahatan. 
 
 Mungkin, blog ini belum sepenuhnya responsif. Tapi, terimakasih banyak untuk
 $/dylanaraps !
 
-Sebaik-baiknya dokumentasi adalah ditulis oleh pengembang secara langsung, 
-sebelum membaca lebih jauh. Saya mohon maaf apabila banyak terdapat kesalahan 
-dalam penulisan, penafian dan sebagainya untuk kedepan. Namun, saya akan selalu 
-menyertakan tautan referensi agar teman-teman dapat membaca dokumentasi tersebut 
-secara keseluruhan.
+Sebaik-baiknya dokumentasi adalah dokumentasi yang ditulis oleh pengembang 
+secara langsung, sebelum membaca lebih jauh. Saya mohon maaf apabila banyak 
+terdapat kesalahan dalam penulisan, penafian dan sebagainya untuk kedepan. 
+Namun, saya akan selalu menyertakan tautan referensi.
 
   <p class="quote">
   Keindahan subjektif merayakan permasalahan yang tak terbantahkan namun 
   dihargai, menghadirkan konsekuensi logis yang bijak. Ide radikal melahirkan 
-  urgensi untuk mengambil langkah-langkah yang dibutuhkan, membuka pintu 
+  urgensi untuk mengambil langkah-langkah yang dibutuhkan untuk membuka pintu 
   potensi pengalaman yang lebih baik. Tidak melulu tertutup dan berlagak 
   konservatif melainkan terbuka pada kemungkinan, karena jika menggunakan 
   sesuatu itu salah maka selamanya saya tidak ingin benar.
   </p>
-
-Struktur Pohon Pada Blog Ini
-________________________________________________________________________________
 
   sukalaper.github.io/
   ├── docs/
@@ -71,10 +60,7 @@ ________________________________________________________________________________
   │   ├── about.txt
   │   ├── blog/
   │   │   ├── post
-  │   │   ├── post
-  │   │   ├── post
   │   │   └── image/
-  │   │       ├── image
   │   │       └── image
   │   ├── blog.html
   │   ├── blog.txt
@@ -89,22 +75,12 @@ ________________________________________________________________________________
   │   ├── about.txt
   │   ├── blog/
   │   │   ├── post
-  │   │   ├── post
-  │   │   ├── post
   │   │   └── image/
-  │   │       ├── image
   │   │       └── image
   │   ├── blog.txt
   │   ├── index.txt
   │   └── paper.txt
   └── template.html
-
-  1. docs/        : File berisi salinan dari site/ namun dalam ekstensi .html
-  2. make         : Sebuah file untuk melakukan convert dari .txt ke .html 
-  3. README.md    : Pesan penghargaan kepada Dylan!
-  4. site/        : sebuah teks mentah dalam format .txt yang nantinya akan di 
-                    generate dengan make agar menghasilkan folder docs/
-  5. template.html: Kerangka kode untuk membuat tampilan dalam blog ini.
 
 
 Referensi

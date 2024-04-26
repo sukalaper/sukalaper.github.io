@@ -31,7 +31,7 @@ menggunakan cara ini.
   └── Enclosure SSD 2.5
       └── Arch Linux
 
-  <img src="image/Akhirnya-Dual-Boot-Menjadi-Pilihan/preview.jpg" 
+  <img src="image/Akhirnya-Dual-Boot-Menjadi-Pilihan/preview.jpg">
 
 Pilihan ini bertujuan untuk membiarkan M.2 beristirahat damai dengan Windows 11 
 didalamnya. Sejujurnya, ini merepotkan mengingat saya yang suka berpindah-pindah 

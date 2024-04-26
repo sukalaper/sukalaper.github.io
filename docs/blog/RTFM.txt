@@ -12,31 +12,24 @@ ________________________________________________________________________________
 [1.0] Ikhtisar
 ________________________________________________________________________________
 
-Tulisan ini saya kutip dari Arch Wiki[1] yang berjudul Arch Terminology[2].
-
-  RTFM: dari Read The Fucking Manual[3].
-  
   <p class="quote">
-  "Akronim ini adalah ajakan untuk peduli diri, bukan penghinaan. 
-  Ini sering digunakan ketika pengguna dianggap gagal melakukan upaya apa pun 
-  untuk menemukan solusi atas masalahnya sendiri. Jika seseorang memberi tahu 
-  Anda hal ini, mereka tidak mencoba menyinggung perasaan Anda; mereka hanya 
-  merasa frustrasi karena Anda dianggap kurang berusaha."
+  RTFM: Read The Fucking Manual[3].
   </p>
 
-Pesan sederhana ini dibalas, digunakan oleh pengguna baru Linux yang bertanya 
-tentang fungsionalitas suatu program ketika fungsi tersebut dijelaskan dengan 
-jelas dalam manual program.
+Tulisan ini saya kutip dari Arch Wiki[1] yang berjudul Arch Terminology[2].
+  
+Akronim ini adalah ajakan untuk peduli diri, bukan penghinaan. Ini sering 
+digunakan ketika pengguna dianggap gagal melakukan upaya apa pun untuk menemukan 
+solusi atas masalahnya sendiri. Jika seseorang memberi tahu Anda hal ini, mereka 
+tidak mencoba menyinggung perasaan Anda; mereka hanya merasa frustrasi karena 
+Anda dianggap kurang berusaha.
+
+Pesan sederhana ini digunakan oleh pengguna baru Linux yang bertanya tentang 
+fungsionalitas suatu program ketika fungsi tersebut dijelaskan dengan jelas 
+dalam manual program.
 
   $ man [nama-program]
-
   $ [nama-program] --help
-
-Namun, pesan "RTFM" juga sering dikritik karena terlalu kasar dan tidak ramah. 
-Banyak yang menganggapnya sebagai sikap yang merendahkan dan tidak membantu bagi 
-mereka yang baru belajar atau mengalami kesulitan. Sebagai gantinya, mereka 
-menganjurkan pendekatan yang lebih ramah, yaitu jika di terjemahkan ke dalam 
-bahasa Indonesia adalah "Baca panduan ramah".
 
 
 [2.0] Sudut Pandang Mengenai RTFM
@@ -61,15 +54,15 @@ Beberapa teman "yang pernah" se-universitas cukup sering bertanya seperti ini.
   "SSD apa yang bagus?" 
   "Apakah DDR4 kompatibel dengan DDR3?"
 
-Ini sangat pragmatis dan saya hanya ingin lebih bijak menanggapi secara 
-filosofis. Tentu saja bahwa saya bukan seorang pemrogram, pengembang perangkat 
-lunak atau ahli. Jadi, jika saya memiliki kesalahan jawaban, keliru soal 
-pemahaman alangkah baiknya agar mengkoreksi diri saya daripada menghina saya. 
-
 Jadi, apakah pertanyaan demi pertanyaan yang diajukan diatas dapat dikatakan 
 baik? Ini sama sekali tidak seperti simbiosis mutualisme. Jika kita membelah 
 menjadi dua sudut pandang yang mana sisi pertama untuk saya pribadi dan sisi 
 kedua untuk teman saya.
+
+Ini sangat pragmatis dan saya hanya ingin lebih bijak menanggapi secara 
+filosofis. Tentu saja bahwa saya bukan seorang pemrogram, pengembang perangkat 
+lunak atau ahli. Jadi, jika saya memiliki kesalahan jawaban, keliru soal 
+pemahaman alangkah baiknya agar mengkoreksi diri saya daripada menghina saya. 
 
 Tentu, saya sebagai sisi pertama merasa beruntung karena ini adalah proses 
 berkesinambungan dan tidak boleh dihentikan. Berbagi apa yang saya ketahui,

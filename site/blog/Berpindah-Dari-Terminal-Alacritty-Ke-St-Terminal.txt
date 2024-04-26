@@ -10,8 +10,6 @@ ________________________________________________________________________________
 [1.0] Ikhtisar
 ________________________________________________________________________________
 
-  INFO: Terhitung sejak 24/03/2024 Saya sudah berpindah ke st milik $/siduck
-
 Terminal bukanlah "alat" asing bagi para pengguna Linux. Memilih terminal yang 
 sesuai adalah hal subjektif. Aturan dasarnya tetap sama; kembali ke preferensi 
 masing-masing pengguna, namun seringkali pengguna hanya mengikuti tren tanpa 

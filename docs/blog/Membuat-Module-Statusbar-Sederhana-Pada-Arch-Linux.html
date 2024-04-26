@@ -1,58 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<link href="data:," rel="icon">
-<title>Sukalaper - Membuat-Module-Statusbar-Sederhana-Pada-Arch-Linux</title>
-<meta charset="utf-8">
-<meta content="blog" name="description">
-<meta content="index, follow" name="robots">
-<meta content="width=device-width,initial-scale=1" name="viewport">
-<style>
-    body {
-        background: #fffbda;
-        color: #333;
-        overflow-y: scroll;
-        font: 16px monospace, monospace
-    }
-
-    a {
-        color: #06f
-    }
-
-    pre {
-        margin: 0;
-        overflow-x: hidden
-    }
-
-    img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 400px;
-        max-width: 100%;
-        border-radius: 8px
-    }
-
-    .blur-text {
-        color: #000;
-        filter: blur(4px)
-    }
-
-    .quote {
-        margin-top: -10px;
-        margin-bottom: -10px;
-        border-left: 4px solid #ccc
-    }
-
-    @media(max-width:999px) {
-        #c {
-            display: block;
-            font-size: 2.02vw
-        }
-    }
-</style>
-<div style="display:table;margin:16px auto">
-    <div id="c">
-        <pre>
+<!DOCTYPE html><html lang="en"><link href="data:," rel="icon"><title>Sukalaper - Membuat-Module-Statusbar-Sederhana-Pada-Arch-Linux</title><meta charset="utf-8"><meta content="blog" name="description"><meta content="index, follow" name="robots"><meta content="width=device-width,initial-scale=1" name="viewport"><style>body{background:#fffbda;color:#333;overflow-y:scroll;font:16px monospace,monospace}a{color:#06f}pre{margin:0;overflow-x:hidden}img{display:block;margin-left:auto;margin-right:auto;width:250px;max-width:auto;border-radius:8px}.blur-text{color:#000;filter:blur(4px)}.quote{margin-top:-10px;margin-bottom:-10px;border-left:4px solid #ccc}@media(max-width:999px){#c{display:block;font-size:2.02vw}}</style><div style="display:table;margin:16px auto"><div id="c"><pre>
 +------------------------------------------------------------------------------+
 |                                                                              |
 |  <a href="/">/home/sukalaper</a>                                      <a href="/blog">blog/</a>  <a href="/paper">paper/</a>  <a href="/about">about/</a>  |
@@ -94,25 +40,25 @@ Dan mungkin masih banyak lagi.
 <span id=2.0><a href=#2.0>[2.0]</a></span> Mengapa Membuat Module Statusbar Sendiri?
 ________________________________________________________________________________
 
-Sebenarnya, saya sendiri pernah menggunakan beberapa statusbar yang cukup 
-populer diatas. Namun, saya ingin mengurangi ketergantungan pada sebuah paket
-meskipun ukurannya kecil.
+Sebenarnya, saya pernah menggunakan beberapa statusbar yang cukup populer 
+diatas. Namun, saya ingin mengurangi ketergantungan pada sebuah paket. 
+Jadi, memanfaatkan bahasa bawaan yaitu Bash untuk membuat statusbar sederhana 
+sepertinya adalah ide yang tidak terlalu buruk.
 
-Jadi, saya rasa apa yang dikatakan $/<a href=https://github.com//dylanaraps>dylanaraps</a> benar adanya.
+  <p class="quote">
+  "Bash is actually quite powerful without relying on it, of course, if you 
+  understand it."
+  </p>
 
-  <strong>"Bash is actually quite powerful without relying on it, of course, 
-  if you understand it."</strong>
-
-Terlebih lagi, i3wm<a href=#7>[7]</a> memiliki fitur scratchpad<a href=#8>[8]</a> yang memungkinkan saya 
-untuk menggunakan module ini dengan lebih mudah untuk dibuka-tutup.
+Terlebih lagi, i3wm<a href=#7>[7]</a> yang saya gunakan memiliki fitur scratchpad<a href=#8>[8]</a> yang 
+memungkinkan saya untuk menggunakan module ini dengan lebih fleksibel.
 
 
 <span id=3.0><a href=#3.0>[3.0]</a></span> Konfigurasi Module Dengan Skrip Bash
 ________________________________________________________________________________
 
 Sebelumnya, saya tidak banyak pengalaman dalam menulis skrip Bash. Saya sangat
-terbuka untuk saran dari kesalahan logika atau apapun. Maaf banyak error 
-handling yang belum terealisasi.
+terbuka untuk saran dari kesalahan logika atau apapun.
 
   #!/bin/bash -e
 
@@ -124,15 +70,15 @@ handling yang belum terealisasi.
   # <a href=https://github.com/dylanaraps/pure-bash-bible>https://github.com/dylanaraps/pure-bash-bible</a>
   # <a href=https://www.nerdfonts.com/cheat-sheet>https://www.nerdfonts.com/cheat-sheet</a>
 
-  # Make your own status bar
     echo "An itsy bitsy status bar"
     echo "------------------------"
     
   # Battery
     # Get value from /sys/class/power_supply/capacity
+    # Battery 1
     bat1=$(cat /sys/class/power_supply/BAT0/capacity)
+    # Battery 2
     bat2=$(cat /sys/class/power_supply/BAT1/capacity)
-    # Print output 
     [[ -n $bat1 && -n $bat2 ]] && { echo  : $bat1; echo  : $bat2; } || 
     echo Seems like not correct path..
     
@@ -140,14 +86,12 @@ handling yang belum terealisasi.
     # Get value from /sys/class/power_supply/AC/online
     # If the value is 1, it is filled in and vice versa
     charger_status=$(cat /sys/class/power_supply/AC/online)
-    # Print output
     [[ $charger_status -eq 1 ]] && { echo 󰚥 : Charging; } || echo 󰚦 : 
     Discharging
     
   # Date
     # Get value from $date 
     date_now=$(date)
-    # Print output
     [[ -n $date_now ]] && { echo  : $date_now; } || echo  : 
     $date_now Something wrong..
     
@@ -159,7 +103,6 @@ handling yang belum terealisasi.
   # Brightness
     # Get value from brightnessctl
     bright_disp=$(brightnessctl i | grep -E -o '[0-9]{1,3}%')
-    # Print output
     [[ -n $bright_disp ]] && { echo 󰃠 : $bright_disp; } || 
     echo 󰃠 : Something wrong..
     
@@ -168,13 +111,11 @@ handling yang belum terealisasi.
     # So the first 1-3 sentences are used
     wifi_stat=$(nmcli connection show --active | awk '/wifi/ {print $1}' | 
     cut -d ' ' -f 1-3)
-    # Print output
     [[ -n $wifi_stat ]] && { echo  : $wifi_stat; } ||  echo  : not found!
     
   # Memory usage
     # Get value from ps_mem
     mem_usage=$(sudo ps_mem | tail -n 2 | sed 's/ //g' |  sed '/^=*$/<a href=https://github.com//d'>d'</a>)
-    # Print output
     [[ -n $mem_usage ]] && { echo 󰍛 : $mem_usage; } || echo 󰍛 : not found!
     
   # Uptime
@@ -182,40 +123,29 @@ handling yang belum terealisasi.
     # Until only hours:minutes are displayed
     time_active=$(uptime | awk -F 'up' '{print $2}' | awk -F ',' '{print $1}' | 
     sed 's/^[ \\t]*//')
-    # Print output
     [[ -n $time_active ]] && { echo  : $time_active; } || echo  : -
     
   # Sensors
   # Show fan speed
     # Get value fan from $sensors and trim the output
     temp_fan=$(sensors | grep -i "fan" | awk '{print $2}')
-    # Print output
     [[ -n $temp_fan ]] && { echo 󰈐 : $temp_fan RPM; } || echo 󰈐 : -
   # Show temperature
     # Get value temp from $sensors and trim the output
     temp_now=$(sensors | grep -i "temp1" | tail -n1 | awk '{print $2}')
     [[ -n $temp_now ]] && { echo 󰔄 : $temp_now; } || echo 󰔄 : -
 
-Bagaimana menggunakan kode diatas?
+Saya sendiri menggunakan bantuan alias<a href=#9>[9]</a> pada .bashrc<a href=#10>[10]</a> untuk menjalankan 
+kode ini agar lebih cepat. 
+  
+  alias wtc='watch -n 5 -t -d ~/.local/bin/stat-bar.sh'
+  
+Berikut ini adalah tangkapan layar dari program diatas.
 
-  1. Buat file dengan nama stat-bar.sh pada ~/.local/bin
-  2. isi file tersebut dengan kode diatas
-  3. Buat izin eksekusi skrip diatas dengan perintah.
-     $ sudo chmod +x stat-bar.sh
-  4. Jalankan skrip dengan perintah.
-     (Dengan asumsi teman-teman sudah berada pada ~/.local/bin)
-     $ ./stat-bar-.sh
-
-Saya sendiri menggunakan alias<a href=#9>[9]</a> pada .bashrc<a href=#10>[10]</a> agar lebih cepat. Berikut ini
-adalah tangkapan layar dari program diatas.
-
-  <center>
-    <img src="image/Membuat-Module-Statusbar-Sederhana-Pada-Arch-Linux/statbar.png" 
-             style="width: 400px; height: auto; border-radius: 8px;"> 
-  </center>
+  <img src="image/Membuat-Module-Statusbar-Sederhana-Pada-Arch-Linux/statbar.png">
 
 Sebagai informasi tambahan, glyph font diatas dimuat dengan sangat sempurna 
-diatas Simple Terminal<a href=#11>[11]</a> dan juga nerd font<a href=#12>[12]</a> dari FantasqueSans M<a href=#13>[13]</a>.
+diatas St<a href=#11>[11]</a> dan juga nerd font<a href=#12>[12]</a> dari FantasqueSans M<a href=#13>[13]</a>.
  
 Tanda blok putih di dalam teks menandakan perubahan status dengan interval 
 waktu yang telah saya tentukan dengan bantuan watch<a href=#14>[14]</a>.
@@ -243,6 +173,4 @@ ________________________________________________________________________________
 
                                           Sukalaper © 2024, All rights reserved.
 
-</pre>
-    </div>
-</div>
+</pre></div></div>

@@ -3,6 +3,7 @@ Menggunakan Konfigurasi .vimrc Pada $HOME Di Lingkungan Root (/)
 ________________________________________________________________________________
 
 - Ikhtisar                                                                 [1.0]
+- Referensi                                                                [2.0]
 
 
 [1.0] Ikhtisar
@@ -15,42 +16,30 @@ yang telah saya konfigurasi di $HOME tidak akan di muat karena lingkungan
 menggunakan sudo yang otomatis akan mencari konfigurasi .vimrc pada 
 /root/.vimrc.
 
-Sebenarnya, cara ini bisa diatasi dengan membuat sebuah symlink dengan cara.
-  
-  $ ln -s ~/.vimrc /root/.vimrc
+Akhirnya saya menemukan sebuah solusi sederhana dimana cukup membuat sebuah 
+symlink[1] dengan cara sebagai berikut.
 
-Namun saya rasa cara tersebut kurang aman dan melanggar prinsip isolasi dan 
-keamanan. Direktori root adalah lingkungan sistem yang sensitif dan menyimpan
-file konfigurasi disana bisa menjadi tindakan yang tidak perlu dan berpotensi
-beresiko.
+  $ ln -s ~/.vimrc /root/.vimrc 
+  $ sudo ln -s ~/.vim /root/
 
-Sebagai gantinya, saya menggunakan perintah ini.
+Untuk memastikan file dan folder berada didalam /root/ gunakan perintah ini.
 
-  $ sudo visudo
+  $ sudo -i
+  $ ls -la | grep vim
+  lrwxrwxrwx  1 root root    28 Apr 26 17:30 .vim -> $HOME/.vim
+  lrwxrwxrwx  1 root root    30 Apr 22 19:18 .vimrc -> $HOME/.vimrc
 
-Dan meletakan baris ini pada bagian akhir file.
+Itu artinya kita telah berhasil membuat symlink.
 
-  Defaults env_keep += "HOME"
+Yang mana artinya saat kita akan melakukan perubahan file di dalam jalur / maka 
+nantinya konfigurasi Vim yang dimuat dengan perintah.
 
-Kira-kira barisnya akan menjadi seperti ini.
+  $ sudo vim nama-file.xx
 
-  ## Uncomment to allow any user to run sudo if they know the password
-  ## of the user they are running the command as (root by default).
-  # Defaults targetpw  # Ask for the password of the target user
-  # ALL ALL=(ALL:ALL) ALL  # WARNING: only use this together with 
-    'Defaults targetpw'
+Akan menggunakan konfigurasi .vimrc dari $HOME. 
 
-  ## Read drop-in files from /etc/sudoers.d
-  @includedir /etc/sudoers.d
 
-  Defaults env_keep += "HOME"
+[2.0] Referensi
+________________________________________________________________________________
 
-Jika teman-teman mengalami kendala saat melakukan perintah ini.
-
-  $ sudo visudo 
-  $ visudo: no editor found (editor path = /usr/bin/vi)
-
-Maka cukup lakukan cara ini.
-
-  $ export VISUAL=vim
-  $ sudo -E visudo
+[1] https://www.geeksforgeeks.org/how-to-symlink-a-file-in-linux/

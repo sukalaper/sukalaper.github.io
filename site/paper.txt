@@ -19,10 +19,10 @@
 ________________________________________________________________________________
 
 - ??                                                                       [1.0]
-- Command Linux                                                            [2.0]
+- Command Linux Example                                                    [2.0]
 
 
-[1.0] Some Text                                                        [03/2024]
+[1.0] ??                                                               [03/2024]
 ________________________________________________________________________________
 <p class="blur-text">
 Jika 
@@ -44,7 +44,7 @@ Alesana - The Thespian
   You're lucky I don't kill you where you stand.
 
 
-[2.0] Command Linux                                                    [01/1999]
+[2.0] Command Linux Example                                            [01/1999]
 ________________________________________________________________________________
 
 # Copy - paste file without text block 

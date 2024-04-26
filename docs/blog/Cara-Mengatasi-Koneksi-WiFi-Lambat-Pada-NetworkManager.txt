@@ -29,8 +29,7 @@ yang mendapatkan keluaran sebagai berikut.
   Hosted by Xxx (Xxx) [0.76 km]: 18.713 ms
   Testing download speed.....................................................
   Download: 0.19 Mbit/s
-  Testing upload speed.......................................................
-  Upload: 0.37 Mbit/s
+  Testing upload speed.......................................................  Upload: 0.37 Mbit/s
 
 Setelah berteman baik dengan Google, saya mendapati sebuah cara yaitu dengan 
 mematikan mode hemat daya yang tersedia pada NetworkManager[2].
@@ -44,13 +43,6 @@ karena file tersebut masih kosong. Silahkan buat konfigurasi sebagai berikut.
 
   [connection]
   wifi.powersave = 2
-
-Sedikit penjelasan mengenai value yang tersedia pada wifi.powersave.
-
-0 : Untuk menggunakan nilai bawaan yang biasanya telah di atur oleh perangkat.
-1 : -
-2 : Menonaktifkan mode hemat daya.
-3 : Mengaktifkan mode hemat daya.
 
 Nyalakan ulang layanan NetworkManager.
 

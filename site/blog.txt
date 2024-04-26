@@ -7,15 +7,17 @@
                                                                        `~~~'
 ________________________________________________________________________________
 
-@/blog/Berkenalan-Dengan-RWD-Table-Patterns                            [02/2024]
-@/blog/Berpindah-Dari-Terminal-Alacritty-Ke-St-Terminal                [02/2024]
-@/blog/Cara-Mengatasi-Error-Response-To-Policy-Kit-Daemon              [02/2024]
-@/blog/Cara-Mengatasi-Koneksi-WiFi-Lambat-Pada-NetworkManager          [02/2024]
-@/blog/Cara-Mengatur-Kecepatan-TrackPoint-Thinkpad-Pada-Arch-Linux     [03/2024]
-@/blog/Membuat-Lingkungan-Virtual-Python-Pada-Direktori-Saat-Ini       [03/2024]
-@/blog/RTFM                                                            [03/2024]
-@/blog/Cara-Mengakses-Reddit-Pada-Arch-Linux                           [03/2024]
-@/blog/REISUB                                                          [03/2024]
-@/blog/Membuat-Module-Statusbar-Sederhana-Pada-Arch-Linux              [03/2024]
-@/blog/Akhirnya-Dual-Boot-Menjadi-Pilihan                              [04/2024]
-@/blog/Menggunakan-Konfigurasi-Vimrc-Pada-HOME-Di-Lingkungan-Root      [04/2024]
+@/blog/Berkenalan-Dengan-RWD-Table-Patterns
+@/blog/Berpindah-Dari-Terminal-Alacritty-Ke-St-Terminal 
+@/blog/Cara-Mengatasi-Error-Response-To-Policy-Kit-Daemon 
+@/blog/Cara-Mengatasi-Koneksi-WiFi-Lambat-Pada-NetworkManager
+@/blog/Cara-Mengatur-Kecepatan-TrackPoint-Thinkpad-Pada-Arch-Linux
+@/blog/Membuat-Lingkungan-Virtual-Python-Pada-Direktori-Saat-Ini
+@/blog/RTFM 
+@/blog/Cara-Mengakses-Reddit-Pada-Arch-Linux 
+@/blog/REISUB 
+@/blog/Membuat-Module-Statusbar-Sederhana-Pada-Arch-Linux 
+@/blog/Akhirnya-Dual-Boot-Menjadi-Pilihan 
+@/blog/Menggunakan-Konfigurasi-Vimrc-Pada-HOME-Di-Lingkungan-Root
+@/blog/Cara-Mengatasi-Fatal-The-Remote-End-Hung-Up-Unexpectedly-Pada-Git 
+@/blog/Radiasi-Dan-Dampaknya-Pada-Mutasi-Genetik

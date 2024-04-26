@@ -54,7 +54,7 @@ Melansir pada petunjuk ini[3] untuk GNU/Linux cukup tambahkan file ini pada
 
 Kemudian simpan, lalu muat ulang peramban dan hasilnya akan seperti ini.
 
-  <img src="image/Cara-Mengakses-Reddit-Pada-Arch-Linux/reddit-2.png" 
+  <img src="image/Cara-Mengakses-Reddit-Pada-Arch-Linux/reddit-2.png">
 
 Namun, bagaimana hal diatas bekerja? 
 
