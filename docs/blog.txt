@@ -21,3 +21,4 @@ ________________________________________________________________________________
 @/blog/Menggunakan-Konfigurasi-Vimrc-Pada-HOME-Di-Lingkungan-Root
 @/blog/Cara-Mengatasi-Fatal-The-Remote-End-Hung-Up-Unexpectedly-Pada-Git 
 @/blog/Radiasi-Dan-Dampaknya-Pada-Mutasi-Genetik
+@/blog/Cara-Mengganti-Tulisan-Pada-TTY

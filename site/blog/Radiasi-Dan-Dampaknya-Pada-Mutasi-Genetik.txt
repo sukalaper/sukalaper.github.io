@@ -5,8 +5,8 @@ ________________________________________________________________________________
 - Ikhtisar                                                                 [1.0]
 - Radiasi Skala Besar: Apa Yang Dimaksud?                                  [2.0]
 - Mekanisme Terjadinya Mutasi Genetik                                      [3.0]
-- Dampak pada Organisme Hidup                                              [4.0]
-- Implikasi pada Kesehatan Manusia                                         [5.0]
+- Dampak Pada Organisme Hidup                                              [4.0]
+- Implikasi Pada Kesehatan Manusia                                         [5.0]
 
 
 [1.0] Ikhtisar
@@ -39,7 +39,7 @@ Akibatnya, sel-sel tersebut mungkin mengalami mutasi yang bisa memiliki dampak
 jangka panjang pada organisme yang bersangkutan.
 
 
-[4.0] Dampak pada Organisme Hidup
+[4.0] Dampak Pada Organisme Hidup
 ________________________________________________________________________________
 
 Radiasi skala besar telah terbukti memiliki dampak serius pada organisme hidup, 
@@ -51,7 +51,7 @@ seperti warna kulit yang tidak biasa, jumlah anggota tubuh yang tidak standar
 dan gangguan perkembangan.
 
 
-[5.0] Implikasi pada Kesehatan Manusia
+[5.0] Implikasi Pada Kesehatan Manusia
 ________________________________________________________________________________
 
 Dampak radiasi skala besar tidak hanya berhenti pada tingkat ekologi tetapi juga 

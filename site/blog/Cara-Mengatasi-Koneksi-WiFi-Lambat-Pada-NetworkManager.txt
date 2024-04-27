@@ -29,7 +29,8 @@ yang mendapatkan keluaran sebagai berikut.
   Hosted by Xxx (Xxx) [0.76 km]: 18.713 ms
   Testing download speed.....................................................
   Download: 0.19 Mbit/s
-  Testing upload speed.......................................................  Upload: 0.37 Mbit/s
+  Testing upload speed.......................................................  
+  Upload: 0.37 Mbit/s
 
 Setelah berteman baik dengan Google, saya mendapati sebuah cara yaitu dengan 
 mematikan mode hemat daya yang tersedia pada NetworkManager[2].
