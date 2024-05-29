@@ -18,14 +18,8 @@
                                                         paper! \  \.__.__.-._)
 ________________________________________________________________________________
 
-- ??                                                                       [1.0]
-- Command Linux Example                                                    [2.0]
-
-
-[1.0] ??                                                               [03/2024]
-________________________________________________________________________________
 <p class="blur-text">
-Jika 
+                                                                            Jika 
 
   Jika suatu saat nanti engkau menemukan bagian dari diriku ada pada 
   orang lain, jangan berbicara tentangku padanya.
@@ -33,7 +27,7 @@ Jika
 </p>
 ________________________________________________________________________________
 
-Alesana - The Thespian
+                                                          Alesana - The Thespian
 
   Look at you, you miserable fool. Get off your knees, your prayers fall upon 
   deaf ears. Gods turned his back on you, heavens gates are shut and now 
@@ -42,51 +36,3 @@ Alesana - The Thespian
   I've been expecting you for some time, sir. Allow me to introduce myself.
   I'm the one who pulls on all the strings, son.
   You're lucky I don't kill you where you stand.
-
-
-[2.0] Command Linux Example                                            [01/1999]
-________________________________________________________________________________
-
-# Copy - paste file without text block 
-$ cat "$1" | xclip -selection clipboard
-
-# Pacman to txt 
-$ pacman -Qq > pacman.txt 
-
-# Enter reading mode using redshift settings 
-$ redshift -O 3700
-
-# View screen resolution 
-$ xdpyinfo | grep dimensions
-
-# Check vim startup speed 
-$ vim --startuptime vim_startup.log
-
-# Search for a specific word in a file within a directory 
-$ grep -r "word/you/want/to/search" .
-
-# Quickly delete multiple files with a specified extension 
-$ find /your/directory -type f -name "*.js" -delete
-
-# Quickly tidy up indentation (2 spaces) using vim 
-gg=G (At the beginning of the file) // Currently quite helpful with Prettier.
-
-# Perform cloning on a specific folder 
-$ git clone --single-branch --branch=backup --depth=1 
-https://github.com/sukalaper/dotfiles firefox-startpage 
-
-# Filtering output numbers with grep 
-$ grep -oP '\d+\.\d+' berkas.txt
-$ awk -F '[^0-9.]+' '/[0-9]+\.[0-9]+/ { print $2 }' berkas.txt
-
-# Find 
-$ find /path/to/search -type f -name "filename"
-$ find /home/user/Documents -type f -name "example.txt"
-$ find /path/to/search -type d -name "foldername"
-$ find /path/to/search -type f -name "*.extension"
-$ find /home/user/Documents -type f -name "*.txt"
-$ find /path/to/search -type f -size +10M
-$ find /path/to/search -type f -mtime -7
-
-# Ignore error message 
-$ command_name 2>/dev/null

@@ -1,1 +1,1 @@
-#### Big thanks, [Dylan Araps](https://github.com/dylanaraps)!
+### Big thanks, [Dylan Araps](https://github.com/dylanaraps)!

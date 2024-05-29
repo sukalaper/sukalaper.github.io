@@ -1,5 +1,6 @@
 
 
+                                                        #StopGenocideInGaza 🇵🇸
                                             \.
                                               ))   ((()))
                                            _.'/\ ())))))))
@@ -24,24 +25,29 @@
                               d88bd8888b.  .d888d'.
                             8888988898988989898989\
                              oo o  oo o o  o oo  o )
-                                                        #StopGenocideInGaza 🇵🇸
 
-Welcome $HOME Anyone!
+Welcome $HOME Anyone! .................................................... [1.0]
+Referensi ................................................................ [2.0]
+
+
+[1.0] Welcome $HOME Anyone!
 ________________________________________________________________________________
 
-Kembali berpindah dari satu static site generator ke static site lainnya cukup
-membosankan, entah apa yang saya cari―― kesederhanaan? Kemudahan dokumentasi?
+Kembali berpindah dari satu static site generator [1] ke static site lainnya 
+cukup membosankan, entah apa yang saya cari―― 
+Kesederhanaan? Kemudahan dokumentasi? Untuk memulai memahami kembali kerangka 
+dokumentasi yang berbeda adalah sebuah konsekuensi logis yang harus saya terima 
+demi mencapai kemaslahatan.
 
-Untuk memulai memahami kembali kerangka dokumentasi yang berbeda adalah sebuah 
-konsekuensi logis yang harus saya terima demi mencapai kemaslahatan. 
+Source code website ini berasal dari $/dylanaraps artikel-artikel ditulis 
+menggunakan Vim [2] dan di hosting menggunakan GitHub [3].
 
-Mungkin, blog ini belum sepenuhnya responsif. Tapi, terimakasih banyak untuk
-$/dylanaraps !
-
+Situs ini didedikasikan untuk kembali mempelajari diri saya sendiri.
 Sebaik-baiknya dokumentasi adalah dokumentasi yang ditulis oleh pengembang 
-secara langsung, sebelum membaca lebih jauh. Saya mohon maaf apabila banyak 
-terdapat kesalahan dalam penulisan, penafian dan sebagainya untuk kedepan. 
-Namun, saya akan selalu menyertakan tautan referensi.
+tersebut secara langsung, sebelum membaca lebih jauh saya mohon maaf apabila 
+terdapat banyak kesalahan dalam penulisan, penafian dan sebagainya untuk 
+kedepan. Namun, saya akan selalu menyertakan tautan referensi untuk dibaca 
+lebih lengkap.
 
   <p class="quote">
   Keindahan subjektif merayakan permasalahan yang tak terbantahkan namun 
@@ -49,44 +55,14 @@ Namun, saya akan selalu menyertakan tautan referensi.
   urgensi untuk mengambil langkah-langkah yang dibutuhkan untuk membuka pintu 
   potensi pengalaman yang lebih baik. Tidak melulu tertutup dan berlagak 
   konservatif melainkan terbuka pada kemungkinan, karena jika menggunakan 
-  sesuatu itu salah maka selamanya saya tidak ingin benar.
+  sesuatu itu salah maka selamanya saya tidak ingin benar [4].
   </p>
 
-  sukalaper.github.io/
-  ├── docs/
-  │   ├── 404.html
-  │   ├── 404.txt
-  │   ├── about.html
-  │   ├── about.txt
-  │   ├── blog/
-  │   │   ├── post
-  │   │   └── image/
-  │   │       └── image
-  │   ├── blog.html
-  │   ├── blog.txt
-  │   ├── index.html
-  │   ├── index.txt
-  │   ├── paper.html
-  │   └── paper.txt
-  ├── make
-  ├── README.md
-  ├── site/
-  │   ├── 404.txt
-  │   ├── about.txt
-  │   ├── blog/
-  │   │   ├── post
-  │   │   └── image/
-  │   │       └── image
-  │   ├── blog.txt
-  │   ├── index.txt
-  │   └── paper.txt
-  └── template.html
 
-
-Referensi
+[2.0] Referensi
 ________________________________________________________________________________
 
-1. https://jamstack.org/generators/
-2. https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Blog
-3. https://www.asciiart.eu
-4. https://github.com/nauvalazhar/pengantar-vi-improved
+[1] https://jamstack.org/generators/
+[2] https://www.vim.org/
+[3] https://github.com/
+[4] https://github.com/nauvalazhar/pengantar-vi-improved
