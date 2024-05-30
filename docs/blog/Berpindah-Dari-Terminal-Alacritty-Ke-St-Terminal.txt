@@ -1,0 +1,81 @@
+
+Berpindah Dari Terminal Alacritty Ke St Terminal
+________________________________________________________________________________
+
+- Ikhtisar                                                                 [1.0]
+- Berkenalan Dengan St Terminal                                            [2.0]
+- Referensi                                                                [3.0]
+
+
+[1.0] Ikhtisar
+________________________________________________________________________________
+
+Terminal bukanlah "alat" asing bagi para pengguna Linux. Memilih terminal yang 
+sesuai adalah hal subjektif. Aturan dasarnya tetap sama; kembali ke preferensi 
+masing-masing pengguna, namun seringkali pengguna hanya mengikuti tren tanpa 
+mempertimbangkan kebutuhan pribadi (jangan tersinggung, saya sedang berbicara 
+pada diri sendiri disini).
+
+Mengutip judul kali ini adalah hal yang saya lakukan dengan tingkat kesadaran 
+penuh.
+
+  "Apakah Alacritty tidak mumpuni?" 
+
+Tenang, kembali pada kalimat awal. Ini tentang preferensi pengguna dan saya 
+adalah pengguna yang memiliki keanehan untuk menjalankan aplikasi sekecil 
+mungkin dalam hal konsumsi memori.
+
+Saya atau kebanyakan pengguna juga mungkin memiliki pendapat yang sama bahwa 
+meminimalisir penggunaan aplikasi besar dapat menaikan daya tahan baterai.
+
+
+[2.0] Berkenalan Dengan St Terminal
+________________________________________________________________________________
+
+St adalah aplikasi terminal besutan Suckless[1] yang digadang-gadang cukup 
+bahkan sangat cepat ketika dipanggil saat startup dan juga cukup kecil.
+
+Setelah berteman baik dengan Google saya menemukan dua versi St terminal yang 
+siap pakai (tentunya ini adalah versi saya).
+
+  1. Siduck[2]
+  2. Luke Smith[3]
+
+Daripada repot-repot melalukan patching manual, lebih baik menggunakan yang 
+sudah ada. Kebetulan kebutuhan saya tercukupi oleh nomer dua.
+
+Instalasinya cukup mudah.
+
+  $ git clone https://github.com/LukeSmithxyz/st 
+  $ cd st 
+  $ sudo make install
+
+Setelahnya, St sudah terpasang dengan sempurna. Saya hanya perlu menyesuaikan 
+sedikit konfigurasi agar lebih selaras dengan preferensi saya.
+
+Dikutip dari dokumentasi yang diberikan Luke bahwa pengaturan dari St juga 
+menghormati .Xresources yang mana artinya jika kita mendefinisikan font 
+didalam .Xresources maka itu yang akan dimuat lebih dahulu di banding yang 
+ada pada config.h.
+
+Saya hanya perlu membuat pengaturan pada .Xresources seperti ini.
+
+  ! Font configuration
+    *.font: FantasqueSansM Nerd Font:pixelsize=19:antialias=true:autohint=true; 
+
+Sebagai tambahan informasi, tanda seru (!) adalah komentar dan akan diabaikan 
+pada .Xresources.
+
+Setelahnya, saya perlu memulai ulang .Xresources dengan perintah.
+  
+  $ xrdb merge ~/.Xresources && kill -USR1 $(pidof st)
+
+Teman-teman dapat membuat alias agar tidak perlu menulis sepanjang itu, xixi.
+
+
+[3.0] Referensi 
+________________________________________________________________________________
+
+[1] https://st.suckless.org/
+[2] https://github.com/siduck/st
+[3] https://github.com/LukeSmithxyz/st

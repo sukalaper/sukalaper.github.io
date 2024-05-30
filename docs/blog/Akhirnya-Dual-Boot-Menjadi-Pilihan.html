@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="en"><link href="data:," rel="icon"><title>Sukalaper - Akhirnya-Dual-Boot-Menjadi-Pilihan</title><meta charset="utf-8"><meta content="blog" name="description"><meta content="index, follow" name="robots"><meta content="width=device-width,initial-scale=1" name="viewport"><style>body{background:#fffbda;color:#333;overflow-y:scroll;font:16px monospace,monospace}a{color:#06f}pre{margin:0;overflow-x:hidden}img{display:block;margin-left:auto;margin-right:auto;width:250px;max-width:auto;border-radius:8px}.blur-text{color:#000;filter:blur(4px)}.quote{margin-top:-10px;margin-bottom:-10px;border-left:4px solid #ccc}@media(max-width:999px){#c{display:block;font-size:2.02vw}}</style><div style="display:table;margin:16px auto"><div id="c"><pre>
++------------------------------------------------------------------------------+
+|                                                                              |
+|  <a href="/">/home/sukalaper</a>                                      <a href="/blog">blog/</a>  <a href="/paper">paper/</a>  <a href="/about">about/</a>  |
+|                                                                              |
++------------------------------------------------------------------------------+
+
+
+Akhirnya, Dual Boot Menjadi Pilihan
+________________________________________________________________________________
+
+Ikhtisar ................................................................. <a href=#1.0>[1.0]</a>
+Referensi ................................................................ <a href=#2.0>[2.0]</a>
+
+
+<span id=1.0><a href=#1.0>[1.0]</a></span> Ikhtisar
+________________________________________________________________________________
+
+Sebagai laptop hopping (hopping saya ambil dari istilah distro hopping <a href=#1>[1]</a>) yang
+dapat diartikan sebagai "loncatan" atau bisa juga sebuah "ketidak-tetapan".
+
+Catatan ini adalah pengalaman saya menggunakan beberapa Thinkpad hingga akhirnya 
+mendapati unit yang memiliki SSD M.2 <a href=#2>[2]</a> yang sudah dilengkapi konverter bawaan. 
+Tentu saja karena hal ini saya tidak bisa mengakses data pada SSD 2.5 milik saya 
+dan mau tidak mau saya harus membeli lagi kabel SSD 2.5 secara terpisah agar 
+bisa mengakses penyimpanan SSD 2.5 tersebut. 
+Beruntungnya saya masih memiliki enclosure untuk SSD 2.5.
+
+Thinkpad kali ini berbekal M.2 yang bisa dibilang kecil, ukurannya hanya 128GB.
+Jadi saya harus pintar-pintar mengatur partisi untuk melakukan dual boot, dalam
+beberapa kasus pada Arch Linux saya tidak memerlukan partisi yang besar, 
+sebagian data penting telah saya pisahkan pada HDD yang memang telah saya 
+khususkan untuk data-data pribadi. Kira-kira kurang lebih 1 tahun saya 
+menggunakan cara ini.
+
+  Thinkpad X270
+  ├── M.2 SSD
+  │   └── Windows 11
+  └── Enclosure SSD 2.5
+      └── Arch Linux
+
+  <img src="image/Akhirnya-Dual-Boot-Menjadi-Pilihan/preview.jpg">
+
+Pilihan ini bertujuan untuk membiarkan M.2 beristirahat damai dengan Windows 11 
+didalamnya. Sejujurnya, ini merepotkan mengingat saya yang suka berpindah-pindah 
+ruang kerja dan harus jauh lebih berhati-hati. Enclosure ini sudah cukup sering 
+terjatuh hingga pada akhirnya kerusakan adalah akhir dari kisahnya. Dual boot
+adalah pilihan sementara sampai nanti saya memiliki rezeki lebih untuk membeli
+penyimpanan baru yang ukurannya lebih besar.
+
+Jika teman-teman ingin melihat skema partisi saya saat ini, ini dia.
+
+  NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+  sda      8:0    0 119.2G  0 disk 
+  ├─sda1   8:1    0   7.8G  0 part 
+  ├─sda2   8:2    0   100M  0 part 
+  ├─sda3   8:3    0    16M  0 part 
+  ├─sda4   8:4    0  91.1G  0 part 
+  ├─sda5   8:5    0   674M  0 part 
+  ├─sda6   8:6    0     1G  0 part /boot
+  └─sda7   8:7    0  18.5G  0 part /
+
+sda1 - sda5 adalah bagian dari Windows sedangkan sda6 - sda7 adalah bagian dari
+Arch.
+
+
+<span id=2.0><a href=#2.0>[2.0]</a></span> Referensi
+________________________________________________________________________________
+
+<span id=1><a href=#1>[1]</a></span> <a href=https://www.reddit.com/r/DistroHopping/>https://www.reddit.com/r/DistroHopping/</a>
+<span id=2><a href=#2>[2]</a></span> <a href=https://www.bhinneka.com/blog/jenis-ssd/>https://www.bhinneka.com/blog/jenis-ssd/</a>
+
+________________________________________________________________________________
+
+                                          Sukalaper © 2024, All rights reserved.
+
+</pre></div></div>

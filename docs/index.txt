@@ -1,0 +1,193 @@
+
+
++------------------------------------------------------------------------------+
+|                                          \.                                  |
+|                                            ))   ((()))                       |
+|           #StopGenocideInGaza           _.'/\ ())))))))                      |
+|                                __     .'_.'  ((( (((_:_)                     |
+|                                \'..._/ /      )))> (_:_)                     |
+|                                     / /--...__((\_ (((()                     |
+|                                    (_( _____ __(.-: /))))__                  |
+|                                    \__...___:.__   ) ) ____)                 |
+|                                    (_:        (_,   /.'                      |
+|                                   ( (          \   (        ___              |
+|                                    \ \        /)\   '.____.' . '.;;.         |
+|                                        '.\/  ____\   )_.' |    /\ (((()  ,   |
+|                                          )) ( _____.'|    \   (_ \ '((((())  |
+|                                          /'   \ \,. \ |     \___ ) '.  '::'  |
+|                                                \___\ \ \      / / '. \       |
+|                                                       \ )    ( '-,  \ \      |
+|                                ,     x               _/ /     \_/    \ \     |
+|                                8  8b            ____/__/_________mrf/__/     |
+|                              d8  88b.      .b /                              |
+|                            d88bd8888b.  .d888d'.                             |
+|                          8888988898988989898989\                             |
+|                           oo o  oo o o  o oo  o )                            |
++------------------------------------------------------------------------------+
+
+
+Welcome $HOME Anyone! .................................................... [1.0]
+Perubahan Dilakukan Pada Source Asli ..................................... [2.0]
+Referensi ................................................................ [3.0]
+
+
+[1.0] Welcome $HOME Anyone!
+________________________________________________________________________________
+
+Kembali berpindah dari satu static site generator [1] ke static site lainnya 
+cukup membosankan, entah apa yang saya cari―― 
+Kesederhanaan? Kemudahan dokumentasi? Untuk memulai memahami kembali kerangka 
+dokumentasi yang berbeda adalah sebuah konsekuensi logis yang harus saya terima 
+demi mencapai kemaslahatan.
+
+Source code website ini berasal dari $/dylanaraps artikel-artikel ditulis 
+menggunakan Vim [2] ASCII pada postingan ini dibuat dengan cinta [3] dan di 
+hosting menggunakan GitHub [4].
+
+Situs ini didedikasikan untuk kembali mempelajari diri saya sendiri.
+Sebaik-baiknya dokumentasi adalah dokumentasi yang ditulis oleh pengembang 
+tersebut secara langsung, sebelum membaca lebih jauh saya mohon maaf apabila 
+terdapat banyak kesalahan dalam penulisan, penafian dan sebagainya untuk 
+kedepan. Namun, saya akan selalu menyertakan tautan referensi untuk dibaca 
+lebih lengkap.
+
+  <p class="quote">
+  Keindahan subjektif merayakan permasalahan yang tak terbantahkan namun 
+  dihargai, menghadirkan konsekuensi logis yang bijak. Ide radikal melahirkan 
+  urgensi untuk mengambil langkah-langkah yang dibutuhkan untuk membuka pintu 
+  potensi pengalaman yang lebih baik. Tidak melulu tertutup dan berlagak 
+  konservatif melainkan terbuka pada kemungkinan, karena jika menggunakan 
+  sesuatu itu salah maka selamanya saya tidak ingin benar [5].
+  </p>
+
+
+[2.0] Perubahan Dilakukan Pada Source Asli 
+________________________________________________________________________________
+
+Saya melakukan sedikit perubahan dari website asli milik Dylan (sekarang sudah
+tidak aktif [6]) agar sesuai dengan preferensi saya.
+
+ > Tanda tambah (+) menandakan perubahan dilakukan dan sebaliknya.
+
+ <textarea 
+    style="width:100%; 
+    height:450px; 
+    background-color:#fffbda; 
+    font-family: Monospace;
+    font-size: min(1.99vw, 14px); 
+    border:none;"
+    rows="50" enabled
+  >
+ - <!doctype html>
+ + <!DOCTYPE html>
+
+ - <title>Dylan Araps - %%TITLE%%</title>
+ + <title>Sukalaper - %%TITLE%%</title>
+
+ - <style>
+     body {
+       overflow-y: scroll;
+       font: 16px monospace, monospace
+     }
+     pre {
+       margin: 0;
+       overflow-x: hidden
+     }
+     @media(max-width:999px) {
+       #c {
+        display: block;
+        font-size: 1.94vw
+       }
+     }
+     @media(prefers-color-scheme:dark) {
+       body {
+         background: #000;
+         color: #fff
+       }
+       a {
+         color: #6CF
+       }
+     }
+   </style>
+ + <style>
+     body {
+       background: #fffbda;
+       color: #333;
+       overflow-y: scroll;
+       font: 16px monospace, monospace;
+     }
+     a {
+       color: #06f;
+     }
+     pre {
+       margin: 0;
+       overflow-x: hidden;
+     }
+     img {
+       display: block;
+       margin-left: auto;
+       margin-right: auto;
+       width: 250px;
+       max-width: auto;
+       border-radius: 8px;
+     }
+     .blur-text {
+       color: #000;
+       filter: blur(4px);
+     }
+     .quote {
+       margin-top: -10px;
+       margin-bottom: -10px;
+       border-left: 4px solid #ccc;
+     }
+     @media (max-width: 999px) {
+       #c {
+         display: block;
+         font-size: 2.02vw;
+       }
+     }
+  </style>
+
+ - +-------------------------------------------------------------------------+
+   |                                                                         |
+   |  <a href=/>Dylan Araps</a>                                              |
+   | @/<a href=/arapsware>software</a>                       |
+   | @/<a href=/blog>blog</a>                                |
+   | @/<a href=/contact>contact</a>                          |
+   |                                                                         |
+   +-------------------------------------------------------------------------+
+
+   %%CONTENT%%
+
+
+   GPG 
+   <a href="https://keys.openpgp.org/search?q=
+                      ABF9BF8318B487DCE757C9D613295DAC2CF13B5C">
+                      ABF9BF8318B487DCE757C9D613295DAC2CF13B5C
+   </a>
+
+   Dylan Araps (C) 2021, All rights reserved.
+
+ + +--------------------------------------------------------------------------+
+   |                                                                          |
+   |  <a href="/">/home/sukalaper</a>                                         |
+   |  <a href="/blog">blog/</a>                                               | 
+   |  <a href="/paper">paper/</a>  <a href="/about">about/</a>                |
+   |                                                                          |
+   +--------------------------------------------------------------------------+
+
+
+
+                                          Sukalaper © 2024, All rights reserved.
+  </textarea>
+
+
+[3.0] Referensi
+________________________________________________________________________________
+
+[1] https://jamstack.org/generators/
+[2] https://www.vim.org/
+[3] https://www.asciiart.eu/
+[4] https://github.com/
+[5] https://github.com/nauvalazhar/pengantar-vi-improved
+[6] https://github.com/dylanaraps/blog/tree/master
