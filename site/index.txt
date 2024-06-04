@@ -26,9 +26,9 @@
 +------------------------------------------------------------------------------+
 
 
-Welcome $HOME Anyone! .................................................... [1.0]
-Perubahan Dilakukan Pada Source Asli ..................................... [2.0]
-Referensi ................................................................ [3.0]
+- Welcome $HOME Anyone! .................................................. [1.0]
+- Perubahan Dilakukan Pada Source Asli ................................... [2.0]
+- Referensi .............................................................. [3.0]
 
 
 [1.0] Welcome $HOME Anyone!
@@ -60,12 +60,16 @@ lebih lengkap.
   sesuatu itu salah maka selamanya saya tidak ingin benar [5].
   </p>
 
+<strong>UPDATE, 01/06/2024:</strong>
+Untuk waktu yang belum ditentukan, situs ini saya kelola diatas Termux [6]
+dengan sedikit konfigurasi yang akan saya jelaskan pada postingan selanjutnya.
+
 
 [2.0] Perubahan Dilakukan Pada Source Asli 
 ________________________________________________________________________________
 
 Saya melakukan sedikit perubahan dari website asli milik Dylan (sekarang sudah
-tidak aktif [6]) agar sesuai dengan preferensi saya.
+tidak aktif [7]) agar sesuai dengan preferensi saya.
 
  > Tanda tambah (+) menandakan perubahan dilakukan dan sebaliknya.
 
@@ -190,4 +194,5 @@ ________________________________________________________________________________
 [3] https://www.asciiart.eu/
 [4] https://github.com/
 [5] https://github.com/nauvalazhar/pengantar-vi-improved
-[6] https://github.com/dylanaraps/blog/tree/master
+[6] https://f-droid.org/id/packages/com.termux/
+[7] https://github.com/dylanaraps/blog/tree/master
