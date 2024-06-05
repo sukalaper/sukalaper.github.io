@@ -1,0 +1,198 @@
+
+Kelola Situs Di Atas Termux? 
+________________________________________________________________________________
+
+- Ikhtisar ............................................................... [1.0]
+- Konfigurasi Perangkat .................................................. [2.0]
+- Referensi .............................................................. [3.0]
+
+
+[1.0] Ikhtisar
+________________________________________________________________________________
+
+Keinginan menulis dan ide kadang bisa muncul kapan dan dimana saja. Maka dari
+itu, untuk mengelola situs ini saya memutuskan untuk menggunakan dua platfrom: 
+
+ 1. Laptop 
+ 2. Smartphone
+
+Meskipun sebenarnya menggunakan opsi nomer dua agak sedikit merepotkan, namun 
+saya harus tetap luwes agar tidak patah. Ini hanya soal waktu, lama-kelamaan 
+saya merasa akan terbiasa menulis postingan demi postingan pada blog ini 
+diatas smartphone.
+
+Lagipula, ini jauh lebih fleksibel ketika saya memiliki waktu atau ingin 
+memperbarui postingan pada blog ini tanpa perlu repot-repot untuk membuka
+laptop.
+
+
+[2.0] Konfigurasi Perangkat
+________________________________________________________________________________
+
+Karena perangkat saya memiliki keterbatasan untuk melakukan rooting [1] tentu 
+penggunaan Termux [2] akan terbatas.
+
+Termux adalah Emulator Terminal untuk Android yang memungkinkan untuk 
+menjalankan lingkungan GNU di perangkat Android. Selain itu, berbagai paket 
+perangkat lunak berbasis Linux juga dapat diinstal melalui manajer paket 
+aplikasi.
+
+Untuk melakukan konfigurasi pada situs ini, hal yang saya lakukan adalah: 
+
+ 1. Mengunduh Termux versi 0.118.0 [3] 
+ 2. Membuat konfigurasi serta melakukan instalasi paket-paket yang dibutuhkan
+ 3. Dll
+
+Setelah Termux selesai di unduh, saya melakukan instalasi, kira-kira begini 
+tampilan awal dari Termux: 
+
+ Welcome to Termux!
+
+ Community forum: https://termux.com/community
+ Gitter chat:     https://gitter.im/termux/termux
+ IRC channel:     #termux on libera.chat
+
+ Working with packages:
+
+ * Search packages:   pkg search <query>
+ * Install a package: pkg install <package>
+ * Upgrade packages:  pkg upgrade
+
+ Subscribing to additional repositories:
+
+ * Root:     pkg install root-repo
+ * X11:      pkg install x11-repo
+
+ Report issues at https://termux.com/issues 
+
+ $ _
+
+Setelahnya, saya menambahkan perintah ini: 
+
+ $ termux-setup-storage
+
+Untuk mengizinkan akses file pada perangkat milik saya [4] setelahnya, saya 
+melakukan pembaruan serta penambahan paket-paket yang saya butuhkan dengan 
+perintah: 
+
+ $ pkg update && pkg upgrade && pkg install git clang vim eza
+
+Setelah selesai, saya membuat dan menambahkan skrip pada .bashrc [5] seperti 
+ini: 
+
+ $ touch .bashrc
+
+ $ vim .bashrc
+
+ # ~/.bashrc
+
+ # If not running interactively, don't do anything
+  [[ $- != *i* ]] && return
+
+ # Remove Termux screen welcome
+  clear
+
+ # Nice username
+  PS1='sukalaper@home:\w\$ '
+
+ # Move to /sdcard default
+  cd /sdcard/Documents/
+
+ # Completion Case-Insensitive in Bash
+  bind 'set completion-ignore-case on'
+
+ # Auto correct
+  shopt -s cdspell
+
+ # Some Alias
+  alias ls='eza --icons'
+  alias rel='source .bashrc'
+  alias gc='git clone'
+  alias c='clear'
+
+Tujuannya adalah agar Termux lebih "mirip" dengan pengaturan-pengaturan yang 
+ada pada terminal saya. Sedikit konfigurasi pada .bashrc telah selesai, saatnya 
+berpindah untuk melakukan konfigurasi pada Vim [6] !
+
+Saya banyak menggunakan Vim plugin [7] untuk itu, saya harus melakukan
+instalasi pada vim-plug [8] terlebih dahulu dengan perintah: 
+
+ $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+Setelah selesai, saya menyalin konfigurasi .vimrc [9] milik saya [10] ke .vimrc
+yang ada pada perangkat ini. Konfigurasi telah selesai dibuat, namun saya masih
+ingin melakukan konfigurasi lain agar Termux saya menarik atau setidaknya tidak
+jelek. 
+
+Saya menemukan alat instalasi yang bagus dan mudah, ya. Sangat mudah pada 
+$/adi1090x/termux-style disana dokumentasinya cukup jelas. Jadi saya rasa, saya
+tidak perlu membuat dokumentasi yang sama disini.
+
+Semua telah siap, saya hanya perlu keluar dan masuk kembali ke Termux untuk 
+melihat perubahan yang terjadi. 
+
+Jika teman-teman ingat, saya menambahkan baris ini pada .bashrc: 
+  
+ # Move to /sdcard default 
+ cd /sdcard/Documents/
+
+Sebenarnya, ini hanya masalah preferensi. Saya terapkan ini karena saya telah 
+memisahkan file-file milik saya dan hanya menggunakan direktori dari Documents/ 
+untuk menyimpan file-file yang telah atau sedang saya kerjakan pada Termux.
+Ini juga jauh lebih cepat karena lokasi awal pada Termux adalah: 
+
+ $ pwd
+ /data/data/com.termux/files/home
+
+Dengan adanya baris yang telah saya tambahkan, ketika saya membuka Termux maka 
+saya langsung dialihkan ke sdcard/Documents/
+
+Semua telah siap! Saatnya melakukan clone pada repository saya: 
+
+ $ gc https://github.com/sukalaper/sukalaper.github.io.git
+
+Jika teman-teman ingat pada .bashrc milik saya, saya membuat alias seperti ini:
+
+ alias gc='git clone'
+
+Setelah git clone selesai, masuk pada direktori website: 
+ 
+ $ cd sukalaper.github.io/
+
+ $ ls -la 
+ drwxrwx---    - root  4 Jun 09:08  .git
+ drwxrwx---    - root  4 Jun 09:06  docs
+ .rw-rw---- 3.1k root  1 Jun 16:39  make
+ .rw-rw----   62 root  1 Jun 16:39  README.md
+ drwxrwx---    - root  4 Jun 09:04  site
+ .rw-rw---- 1.4k root  1 Jun 16:39  template.html
+
+Biasanya setelah menulis, saya perlu perintah ini untuk melakukan generate:
+
+ $ ./make 
+ bash: ./make: Permission denied
+
+Untuk alternatifnya, saya ubah menjadi seperti ini: 
+
+ $ bash make 
+ Generating docs..
+ -------------------------------------------------------------
+ CC ./index.txt
+
+Selesai, semoga bermanfaat! 
+
+
+[3.0] Referensi
+________________________________________________________________________________
+
+[1] https://www.vivo.com/ph/support/questionList?categoryId=54464
+[2] https://github.com/termux/termux-app
+[3] https://github.com/termux/termux-app/releases/tag/v0.118.0
+[4] https://wiki.termux.com/wiki/Termux-setup-storage
+[5] https://www.digitalocean.com/community/tutorials/bashrc-file-in-linux
+[6] https://www.vim.org/
+[7] https://vimawesome.com/
+[8] https://github.com/junegunn/vim-plug
+[9] https://engineering.purdue.edu/ece264/16au/static/.vimrc.html
+[10] https://github.com/sukalaper/dotfiles/blob/main/.vimrc

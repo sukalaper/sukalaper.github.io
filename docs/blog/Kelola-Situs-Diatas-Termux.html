@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="en"><link href="data:," rel="icon"><title>Sukalaper - Kelola-Situs-Diatas-Termux</title><meta charset="utf-8"><meta content="blog" name="description"><meta content="index, follow" name="robots"><meta content="width=device-width,initial-scale=1" name="viewport"><style>body{background:#fffbda;color:#333;overflow-y:scroll;font:16px monospace,monospace}a{color:#06f}pre{margin:0;overflow-x:hidden}img{display:block;margin-left:auto;margin-right:auto;width:250px;max-width:auto;border-radius:8px}.blur-text{color:#000;filter:blur(4px)}.quote{margin-top:-10px;margin-bottom:-10px;border-left:4px solid #ccc}@media(max-width:999px){#c{display:block;font-size:2.02vw}}</style><div style="display:table;margin:16px auto"><div id="c"><pre>
++------------------------------------------------------------------------------+
+|                                                                              |
+|  <a href="/">/home/sukalaper</a>                                      <a href="/blog">blog/</a>  <a href="/paper">paper/</a>  <a href="/about">about/</a>  |
+|                                                                              |
++------------------------------------------------------------------------------+
+
+
+Kelola Situs Di Atas Termux? 
+________________________________________________________________________________
+
+- Ikhtisar ............................................................... <a href=#1.0>[1.0]</a>
+- Konfigurasi Perangkat .................................................. <a href=#2.0>[2.0]</a>
+- Referensi .............................................................. <a href=#3.0>[3.0]</a>
+
+
+<span id=1.0><a href=#1.0>[1.0]</a></span> Ikhtisar
+________________________________________________________________________________
+
+Keinginan menulis dan ide kadang bisa muncul kapan dan dimana saja. Maka dari
+itu, untuk mengelola situs ini saya memutuskan untuk menggunakan dua platfrom: 
+
+ 1. Laptop 
+ 2. Smartphone
+
+Meskipun sebenarnya menggunakan opsi nomer dua agak sedikit merepotkan, namun 
+saya harus tetap luwes agar tidak patah. Ini hanya soal waktu, lama-kelamaan 
+saya merasa akan terbiasa menulis postingan demi postingan pada blog ini 
+diatas smartphone.
+
+Lagipula, ini jauh lebih fleksibel ketika saya memiliki waktu atau ingin 
+memperbarui postingan pada blog ini tanpa perlu repot-repot untuk membuka
+laptop.
+
+
+<span id=2.0><a href=#2.0>[2.0]</a></span> Konfigurasi Perangkat
+________________________________________________________________________________
+
+Karena perangkat saya memiliki keterbatasan untuk melakukan rooting <a href=#1>[1]</a> tentu 
+penggunaan Termux <a href=#2>[2]</a> akan terbatas.
+
+Termux adalah Emulator Terminal untuk Android yang memungkinkan untuk 
+menjalankan lingkungan GNU di perangkat Android. Selain itu, berbagai paket 
+perangkat lunak berbasis Linux juga dapat diinstal melalui manajer paket 
+aplikasi.
+
+Untuk melakukan konfigurasi pada situs ini, hal yang saya lakukan adalah: 
+
+ 1. Mengunduh Termux versi 0.118.0 <a href=#3>[3]</a> 
+ 2. Membuat konfigurasi serta melakukan instalasi paket-paket yang dibutuhkan
+ 3. Dll
+
+Setelah Termux selesai di unduh, saya melakukan instalasi, kira-kira begini 
+tampilan awal dari Termux: 
+
+ Welcome to Termux!
+
+ Community forum: <a href=https://termux.com/community>https://termux.com/community</a>
+ Gitter chat:     <a href=https://gitter.im/termux/termux>https://gitter.im/termux/termux</a>
+ IRC channel:     #termux on libera.chat
+
+ Working with packages:
+
+ * Search packages:   pkg search <query>
+ * Install a package: pkg install <package>
+ * Upgrade packages:  pkg upgrade
+
+ Subscribing to additional repositories:
+
+ * Root:     pkg install root-repo
+ * X11:      pkg install x11-repo
+
+ Report issues at <a href=https://termux.com/issues>https://termux.com/issues</a> 
+
+ $ _
+
+Setelahnya, saya menambahkan perintah ini: 
+
+ $ termux-setup-storage
+
+Untuk mengizinkan akses file pada perangkat milik saya <a href=#4>[4]</a> setelahnya, saya 
+melakukan pembaruan serta penambahan paket-paket yang saya butuhkan dengan 
+perintah: 
+
+ $ pkg update && pkg upgrade && pkg install git clang vim eza
+
+Setelah selesai, saya membuat dan menambahkan skrip pada .bashrc <a href=#5>[5]</a> seperti 
+ini: 
+
+ $ touch .bashrc
+
+ $ vim .bashrc
+
+ # ~/.bashrc
+
+ # If not running interactively, don't do anything
+  [[ $- != *i* ]] && return
+
+ # Remove Termux screen welcome
+  clear
+
+ # Nice username
+  PS1='sukalaper@home:\w\$ '
+
+ # Move to /sdcard default
+  cd /sdcard/Documents/
+
+ # Completion Case-Insensitive in Bash
+  bind 'set completion-ignore-case on'
+
+ # Auto correct
+  shopt -s cdspell
+
+ # Some Alias
+  alias ls='eza --icons'
+  alias rel='source .bashrc'
+  alias gc='git clone'
+  alias c='clear'
+
+Tujuannya adalah agar Termux lebih "mirip" dengan pengaturan-pengaturan yang 
+ada pada terminal saya. Sedikit konfigurasi pada .bashrc telah selesai, saatnya 
+berpindah untuk melakukan konfigurasi pada Vim <a href=#6>[6]</a> !
+
+Saya banyak menggunakan Vim plugin <a href=#7>[7]</a> untuk itu, saya harus melakukan
+instalasi pada vim-plug <a href=#8>[8]</a> terlebih dahulu dengan perintah: 
+
+ $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+   <a href=https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim>https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim</a>
+
+Setelah selesai, saya menyalin konfigurasi .vimrc <a href=#9>[9]</a> milik saya <a href=#10>[10]</a> ke .vimrc
+yang ada pada perangkat ini. Konfigurasi telah selesai dibuat, namun saya masih
+ingin melakukan konfigurasi lain agar Termux saya menarik atau setidaknya tidak
+jelek. 
+
+Saya menemukan alat instalasi yang bagus dan mudah, ya. Sangat mudah pada 
+$/<a href=https://github.com//adi1090x/termux-style>adi1090x/termux-style</a> disana dokumentasinya cukup jelas. Jadi saya rasa, saya
+tidak perlu membuat dokumentasi yang sama disini.
+
+Semua telah siap, saya hanya perlu keluar dan masuk kembali ke Termux untuk 
+melihat perubahan yang terjadi. 
+
+Jika teman-teman ingat, saya menambahkan baris ini pada .bashrc: 
+  
+ # Move to /sdcard default 
+ cd /sdcard/Documents/
+
+Sebenarnya, ini hanya masalah preferensi. Saya terapkan ini karena saya telah 
+memisahkan file-file milik saya dan hanya menggunakan direktori dari Documents/ 
+untuk menyimpan file-file yang telah atau sedang saya kerjakan pada Termux.
+Ini juga jauh lebih cepat karena lokasi awal pada Termux adalah: 
+
+ $ pwd
+ /data/data/com.termux/files/home
+
+Dengan adanya baris yang telah saya tambahkan, ketika saya membuka Termux maka 
+saya langsung dialihkan ke sdcard/Documents/
+
+Semua telah siap! Saatnya melakukan clone pada repository saya: 
+
+ $ gc <a href=https://github.com/sukalaper/sukalaper.github.io.git>https://github.com/sukalaper/sukalaper.github.io.git</a>
+
+Jika teman-teman ingat pada .bashrc milik saya, saya membuat alias seperti ini:
+
+ alias gc='git clone'
+
+Setelah git clone selesai, masuk pada direktori website: 
+ 
+ $ cd sukalaper.github.io/
+
+ $ ls -la 
+ drwxrwx---    - root  4 Jun 09:08  .git
+ drwxrwx---    - root  4 Jun 09:06  docs
+ .rw-rw---- 3.1k root  1 Jun 16:39  make
+ .rw-rw----   62 root  1 Jun 16:39  README.md
+ drwxrwx---    - root  4 Jun 09:04  site
+ .rw-rw---- 1.4k root  1 Jun 16:39  template.html
+
+Biasanya setelah menulis, saya perlu perintah ini untuk melakukan generate:
+
+ $ ./make 
+ bash: ./make: Permission denied
+
+Untuk alternatifnya, saya ubah menjadi seperti ini: 
+
+ $ bash make 
+ Generating docs..
+ -------------------------------------------------------------
+ CC ./index.txt
+
+Selesai, semoga bermanfaat! 
+
+
+<span id=3.0><a href=#3.0>[3.0]</a></span> Referensi
+________________________________________________________________________________
+
+<span id=1><a href=#1>[1]</a></span> <a href=https://www.vivo.com/ph/support/questionList?categoryId=54464>https://www.vivo.com/ph/support/questionList?categoryId=54464</a>
+<span id=2><a href=#2>[2]</a></span> <a href=https://github.com/termux/termux-app>https://github.com/termux/termux-app</a>
+<span id=3><a href=#3>[3]</a></span> <a href=https://github.com/termux/termux-app/releases/tag/v0.118.0>https://github.com/termux/termux-app/releases/tag/v0.118.0</a>
+<span id=4><a href=#4>[4]</a></span> <a href=https://wiki.termux.com/wiki/Termux-setup-storage>https://wiki.termux.com/wiki/Termux-setup-storage</a>
+<span id=5><a href=#5>[5]</a></span> <a href=https://www.digitalocean.com/community/tutorials/bashrc-file-in-linux>https://www.digitalocean.com/community/tutorials/bashrc-file-in-linux</a>
+<span id=6><a href=#6>[6]</a></span> <a href=https://www.vim.org/>https://www.vim.org/</a>
+<span id=7><a href=#7>[7]</a></span> <a href=https://vimawesome.com/>https://vimawesome.com/</a>
+<span id=8><a href=#8>[8]</a></span> <a href=https://github.com/junegunn/vim-plug>https://github.com/junegunn/vim-plug</a>
+<span id=9><a href=#9>[9]</a></span> <a href=https://engineering.purdue.edu/ece264/16au/static/.vimrc.html>https://engineering.purdue.edu/ece264/16au/static/.vimrc.html</a>
+<span id=10><a href=#10>[10]</a></span> <a href=https://github.com/sukalaper/dotfiles/blob/main/.vimrc>https://github.com/sukalaper/dotfiles/blob/main/.vimrc</a>
+
+________________________________________________________________________________
+
+                                          Sukalaper © 2024, All rights reserved.
+
+</pre></div></div>
