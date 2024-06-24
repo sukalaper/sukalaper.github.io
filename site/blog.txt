@@ -15,5 +15,3 @@ The website is currently undergoing further development in the upcoming weeks,
 with enhancing user readability being one of its key objectives. 
 Any fucking questions?</i>
 
-@/blog/Kelola-Situs-Diatas-Termux
-@/blog/Menambahkan-SSH-Pada-Git

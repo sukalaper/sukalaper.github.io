@@ -2,8 +2,8 @@
 
 +------------------------------------------------------------------------------+
 |                                                        ____,                 |
-|                                                       /.---|      paper!     |
-|                                                       `    |     ___         |
+| $ ls $HOME/paper/                                     /.---|      paper!     |
+|   [1] coretan  [2] pena                               `    |     ___         |
 |                                                           (=\.  /-. \        |
 |                                                            |\/\_|"|  |       |
 |                                                            |_\ |;-|  ;       |
@@ -19,23 +19,84 @@
 |                                                             \  \.__.__.-._)  |
 +------------------------------------------------------------------------------+
 
-<p class="blur-text">
+  [1] coretan
+
+  <p class="blur-text">
                                                                             Jika 
 
   Jika suatu saat nanti engkau menemukan bagian dari diriku ada pada 
   orang lain, jangan berbicara tentangku padanya.
-  Bicaralah tentang kalian dan tertawalah.
-</p>
+  Bicaralah tentang kalian dan tertawalah.</p>
 ________________________________________________________________________________
 
-                                                   Alesana - The Thespian .. [1]
+                                                      Alesana - The Thespian [1]
 
-  Look at you, you miserable fool. Get off your knees, your prayers fall upon 
+  <i>Look at you, you miserable fool. Get off your knees, your prayers fall upon 
   deaf ears. Gods turned his back on you, heavens gates are shut and now 
   you're knocking on the devil's door.
 
   I've been expecting you for some time, sir. Allow me to introduce myself.
   I'm the one who pulls on all the strings, son.
-  You're lucky I don't kill you where you stand.
+  You're lucky I don't kill you where you stand.</i>
 
   [1] https://youtu.be/8DOFsV0lxtQ?feature=shared
+________________________________________________________________________________
+
+                                                              Dinamika Kekuasaan 
+
+  Ketika kolusi dan nepotisme menjadi hak prerogatif pemerintahan.
+________________________________________________________________________________
+
+                                                               CVE-2024-4577 [1]
+
+  Engagement farming di beberapa sosial media emang berlebihan sih. Ngga perlu 
+  terlalu dalam dari sisi pengetahuan di suatu topik, cukup buat statemen yang 
+  plausible dan tentu saja bisa diterima oleh mainstream kayak menargetkan ke 
+  inkompetensi pemerintah dan teknologi yang digunakan.
+  
+  [1] https://nvd.nist.gov/vuln/detail/CVE-2024-4577
+________________________________________________________________________________
+
+  [2] pena
+
+                                                                Paleontologi [1]
+
+  Amonit (Ammonoidea) [2] adalah jenis cephalopoda laut yang bercangkang. Fosil
+  mereka cukup melimpah dan menunjukkan bahwa Amonit memiliki cangkang keras
+  berbentuk spiral yang bergaris dengan berbagai ukuran. Makhluk laut ini hidup
+  sekitar 400 hingga 65 juta tahun lalu, mereka punah bersamaan dengan para
+  dinosaurus pada peristiwa kepunahan massal Kapur-Paleogen akibat meteor
+  raksasa. Kerabat terdekat mereka yang masih hidup adalah gurita, cumi-cumi,
+  sotong dan nautilus.
+
+  Fosil Amonit merupakan hasil proses permineralisasi  oleh mineral silikat
+  (disebut pula sebagai proses silisifikasi). Terisinya pori-pori oleh mineral
+  kalsit, silika, fosfat, dan sebagainya tanpa mengubah bentuk struktur
+  cangkang atau tulang. Oleh sebab itu, fosil Amonit berkaitan erat dengan
+  batuan piroklastik atau yang bersifat silikaan baik yang berumur kuarter atau
+  lebih tua. Bentuk dan ukuran dari mineral pengisi akan sesuai dengan bentuk
+  dan ukuran semula cangkang Amonit, demikian pula pola jaringannya.
+
+  Lalu, bagimana ilmuan dan peneliti bisa mengetahui usia dari fosil-fosil yang
+  berusia jutaan hingga milyaran tahun?
+
+  Paleontolog lebih sering menggunakan morfologi fosil [3] , stratigrafi [4] dan 
+  penanggalan radiometrik untuk memahami usia dan evolusi mahluk purba.
+
+  Penanggalan radiokarbon (C-14) [5] nampaknya hanya efektif untuk bahan organik 
+  yang berumur hingga sekitar 50.000 tahun. Fosil Amonit jauh lebih tua sehingga 
+  harus menggunakan metode penanggalan radiometrik lain, seperti penanggalan 
+  dengan isotop Uranium-Lead (U-Pb) [6], Pottasium-Argon (K-Ar) [7] atau 
+  Argon-Argon (Ar-Ar) [8] yang bekerja dengan baik untuk bahan-bahan anorganik 
+  dan batuan vulkanik di sekitar fosil tersebut.
+
+  [1] https://id.m.wikipedia.org/wiki/Paleontologi
+  [2] https://id.m.wikipedia.org/wiki/Ammonit
+  [3] https://study.com/academy/lesson/fossils-morphology-classification.html
+  [4] https://id.m.wikipedia.org/wiki/Stratigrafi
+  [5] https://www.radiocarbon.com/about-carbon-dating.html
+  [6] https://en.m.wikipedia.org/wiki/Uranium%E2%80%93lead_dating
+  [7] https://en.m.wikipedia.org/wiki/K%E2%80%93Ar_dating
+  [8] https://en.m.wikipedia.org/wiki/Argon%E2%80%93argon_dating
+________________________________________________________________________________
+
