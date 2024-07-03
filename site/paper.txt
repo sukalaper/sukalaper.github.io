@@ -51,19 +51,19 @@ ________________________________________________________________________________
   <i>Are you okay? No, please next questions</i>.
 ________________________________________________________________________________
 
-                                                               CVE-2024-4577 [1]
+                                                               CVE-2024-4577 [2]
 
   Engagement farming di beberapa sosial media memang terkadang berlebihan. Tidak
   perlu terlalu dalam dari sisi pengetahuan di suatu topik, cukup buat statemen 
   yang plausible dan tentu saja bisa diterima oleh mainstream seperti 
   menargetkan ke inkompetensi pemerintah dan teknologi yang digunakan.
   
-  [1] https://nvd.nist.gov/vuln/detail/CVE-2024-4577
+  [2] https://nvd.nist.gov/vuln/detail/CVE-2024-4577
 ________________________________________________________________________________
 
-                                                                Paleontologi [1]
+                                                                Paleontologi [3]
 
-  Amonit (Ammonoidea) [2] adalah jenis cephalopoda laut yang bercangkang. Fosil
+  Amonit (Ammonoidea) [4] adalah jenis cephalopoda laut yang bercangkang. Fosil
   mereka cukup melimpah dan menunjukkan bahwa Amonit memiliki cangkang keras
   berbentuk spiral yang bergaris dengan berbagai ukuran. Makhluk laut ini hidup
   sekitar 400 hingga 65 juta tahun lalu, mereka punah bersamaan dengan para
@@ -82,27 +82,27 @@ ________________________________________________________________________________
   Lalu, bagimana ilmuan dan peneliti bisa mengetahui usia dari fosil-fosil yang
   berusia jutaan hingga milyaran tahun?
 
-  Paleontolog lebih sering menggunakan morfologi fosil [3] , stratigrafi [4] dan 
+  Paleontolog lebih sering menggunakan morfologi fosil [5] , stratigrafi [6] dan 
   penanggalan radiometrik untuk memahami usia dan evolusi mahluk purba.
 
-  Penanggalan radiokarbon (C-14) [5] nampaknya hanya efektif untuk bahan organik 
+  Penanggalan radiokarbon (C-14) [7] nampaknya hanya efektif untuk bahan organik 
   yang berumur hingga sekitar 50.000 tahun. Fosil Amonit jauh lebih tua sehingga 
   harus menggunakan metode penanggalan radiometrik lain, seperti penanggalan 
-  dengan isotop Uranium-Lead (U-Pb) [6], Pottasium-Argon (K-Ar) [7] atau 
-  Argon-Argon (Ar-Ar) [8] yang bekerja dengan baik untuk bahan-bahan anorganik 
+  dengan isotop Uranium-Lead (U-Pb) [8], Pottasium-Argon (K-Ar) [9] atau 
+  Argon-Argon (Ar-Ar) [10] yang bekerja dengan baik untuk bahan-bahan anorganik 
   dan batuan vulkanik di sekitar fosil tersebut.
 
-  [1] https://id.m.wikipedia.org/wiki/Paleontologi
-  [2] https://id.m.wikipedia.org/wiki/Ammonit
-  [3] https://study.com/academy/lesson/fossils-morphology-classification.html
-  [4] https://id.m.wikipedia.org/wiki/Stratigrafi
-  [5] https://www.radiocarbon.com/about-carbon-dating.html
-  [6] https://en.m.wikipedia.org/wiki/Uranium%E2%80%93lead_dating
-  [7] https://en.m.wikipedia.org/wiki/K%E2%80%93Ar_dating
-  [8] https://en.m.wikipedia.org/wiki/Argon%E2%80%93argon_dating
+  [3] https://id.m.wikipedia.org/wiki/Paleontologi
+  [4] https://id.m.wikipedia.org/wiki/Ammonit
+  [5] https://study.com/academy/lesson/fossils-morphology-classification.html
+  [6] https://id.m.wikipedia.org/wiki/Stratigrafi
+  [7] https://www.radiocarbon.com/about-carbon-dating.html
+  [8] https://en.m.wikipedia.org/wiki/Uranium%E2%80%93lead_dating
+  [9] https://en.m.wikipedia.org/wiki/K%E2%80%93Ar_dating
+  [10] https://en.m.wikipedia.org/wiki/Argon%E2%80%93argon_dating
 ________________________________________________________________________________
 
-                                 Perspektif Tradisional vs. Feminisme Modern [1]
+                                Perspektif Tradisional vs. Feminisme Modern [11]
 
   Jika narasi feminisme itu benar dan narasi tradisional itu salah, harusnya 
   wanita sudah punah dibawah "yang――katanya――penjajahan" laki-laki, dengan 
@@ -127,10 +127,10 @@ ________________________________________________________________________________
   seumur hidup malah keingingin tetap tampil cantik itu lahir dari kodrat 
   wanita itu sendiri.
 
-  [1] https://liternote.com/index.php/ln/article/view/14/21
+  [11] https://liternote.com/index.php/ln/article/view/14/21
 ________________________________________________________________________________
 
-                      Cara Meningkatkan Serotonin Di Otak Manusia Tanpa Obat [1]
+                     Cara Meningkatkan Serotonin Di Otak Manusia Tanpa Obat [12]
 
   Selama empat dekade terakhir, penelitian tentang sistem serotonergik telah 
   menjadi fokus utama dalam psikiatri biologis, terutama dalam konteks 
@@ -145,10 +145,10 @@ ________________________________________________________________________________
   dalam melawan gangguan mental dan fisik serta mengurangi risiko penyakit 
   seperti penyakit jantung koroner.
   
-  [1] https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2077351/
+  [12] https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2077351/
 ________________________________________________________________________________
 
-                                                              Terry A. Davis [1]
+                                                             Terry A. Davis [13]
 
   "<i>Well I'm King Terry and I learned how to purify myself in a horribly 
   impure environment. It's pretty rough living homeless in a field outside a 
@@ -156,7 +156,7 @@ ________________________________________________________________________________
   must have been an extreme shock to them to see such a horribly sick person 
   come in here and pollute everything. It was a lot of torture to snap me into 
   an ability to handle purity for this job.
-
+  
   There's a little castle over there. Let me see. Where's that castle? There it 
   is. Oh no!
 
@@ -173,4 +173,26 @@ ________________________________________________________________________________
   I think maybe I'm just like a little bizarre little person who walks back and 
   forth. Whatever. You know. Haha.</i>"
 
-  Belum selesai.
+  Terry adalah satu-satunya (atau setidaknya itu yang saya ketahui) pemrogram 
+  yang membuat sistem operasi [14] dan juga bahasa pemrograman [15] secara 
+  mandiri dalam keadaan sakit (Skizofrenia).
+
+  Sistem operasinya berisi senilai 119.667 baris kode yang dibuat menggunakan 
+  Holy-C (varian dari bahasa pemrograman C). Beberapa baris kodenya <b>mungkin</b>
+  kurang atau bahkan tidak masuk akal mengingat ini dibuat oleh penderita Skizo. 
+
+  <p class="quote">
+  TempleOS lebih sederhana daripada Linux dan Anda dapat bersenang-senang 
+  berjam-jam mengutak-atiknya karena semua memori dan port dapat diakses. 
+  Memori dipetakan identitasnya setiap saat, jadi Anda dapat mengubah memori 
+  tugas apapun dari tugas lainnya. Anda dapat mengakses semua disk blok juga. 
+  Saya bersenang-senang menggunakan editor blok disk C64 untuk memodifikasi 
+  direktori untuk membatalkan penghapusan file, ketika saya masih kecil. 
+  Mungkin, Anda ingin bermain dengan blok mentah basis data, atau membuat 
+  sistem berkas Anda sendiri? [16]
+  </p>
+
+  [13] https://youtu.be/oH41gGBVpkE?feature=shared
+  [14] https://id.m.wikipedia.org/wiki/TempleOS
+  [15] https://holyc-lang.com/
+  [16] https://tinkeros.github.io/WbTempleOS/
