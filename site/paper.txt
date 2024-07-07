@@ -2,7 +2,7 @@
 
 +------------------------------------------------------------------------------+
 |                                                        ____,                 |
-|                                                       /.---|      paper!     |
+|                                                       /.---|                 |
 |                                                       `    |     ___         |
 |                                                           (=\.  /-. \        |
 |                                                            |\/\_|"|  |       |
@@ -20,8 +20,7 @@
 +------------------------------------------------------------------------------+
 
 
-  <p class="blur-text">
-                                                                            Jika 
+  <p class="blur-text">                                                     Jika 
 
   Jika suatu saat nanti engkau menemukan bagian dari diriku ada pada 
   orang lain, jangan berbicara tentangku padanya.
@@ -30,13 +29,13 @@ ________________________________________________________________________________
 
                                                       ALESANA - THE THESPIAN [1]
 
-  <i>Look at you, you miserable fool. Get off your knees, your prayers fall upon 
+  Look at you, you miserable fool. Get off your knees, your prayers fall upon 
   deaf ears. Gods turned his back on you, heavens gates are shut and now 
   you're knocking on the devil's door.
 
   I've been expecting you for some time, sir. Allow me to introduce myself.
   I'm the one who pulls on all the strings, son.
-  You're lucky I don't kill you where you stand.</i>
+  You're lucky I don't kill you where you stand.
 
   [1] https://youtu.be/8DOFsV0lxtQ?feature=shared
 ________________________________________________________________________________
@@ -48,7 +47,7 @@ ________________________________________________________________________________
 
                                                                               HI
 
-  <i>Are you okay? No, please next questions</i>.
+  Are you okay? No, please next questions.
 ________________________________________________________________________________
 
                                                                CVE-2024-4577 [2]
@@ -106,7 +105,8 @@ ________________________________________________________________________________
 
   Jika narasi feminisme itu benar dan narasi tradisional itu salah, harusnya 
   wanita sudah punah dibawah "yang――katanya――penjajahan" laki-laki, dengan 
-  mengesampingkan fakta wanita-wanita yang bahagia bersama laki-laki yang tepat. 
+  mengesampingkan fakta wanita-wanita yang bahagia bersama laki-laki yang 
+  tepat. 
 
   Sepanjang sejarah kedua gender terus tumbuh dengan kodrat dan lika-likunya 
   masing-masing pada setiap zaman. Pada masa pemburu pengumpul, laki-laki 
@@ -132,7 +132,6 @@ ________________________________________________________________________________
 
                      CARA MENINGKATKAN SEROTONIN DI OTAK MANUSIA TANPA OBAT [12]
 
-  <p class="quote">
   Selama empat dekade terakhir, penelitian tentang sistem serotonergik telah 
   menjadi fokus utama dalam psikiatri biologis, terutama dalam konteks 
   pengobatan depresi. Penelitian menunjukkan bahwa polimorfisme dalam 
@@ -144,49 +143,41 @@ ________________________________________________________________________________
   Selain itu, suasana hati positif, termasuk faktor perlindungan seperti 
   kebahagiaan dan kesejahteraan, juga diidentifikasi sebagai faktor yang 
   penting dalam melawan gangguan mental dan fisik serta mengurangi risiko 
-  penyakit seperti penyakit jantung koroner.
-  </p> 
+  penyakit seperti penyakit jantung koroner. 
 
   [12] https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2077351/
 ________________________________________________________________________________
 
                                                              TERRY A. DAVIS [13]
 
-  "<i>Well I'm King Terry and I learned how to purify myself in a horribly 
+  "Well I'm King Terry and I learned how to purify myself in a horribly 
   impure environment. It's pretty rough living homeless in a field outside a 
   little town and coming into their library. And it's a very pure town and it 
   must have been an extreme shock to them to see such a horribly sick person 
   come in here and pollute everything. It was a lot of torture to snap me into 
   an ability to handle purity for this job.
-  
   There's a little castle over there. Let me see. Where's that castle? There it 
   is. Oh no!
-
   So that's the little castle.
-
   I really like this library.
-
   So I come here and use their computer and smoke out here. They must have been 
   freaking out because such an impure person was in their presence. Oh well. I 
   was clearly... now I used to have a respect for purity so...
-
   So well, it's good to be king! Hahaha. Wait. Maybe.
-
   I think maybe I'm just like a little bizarre little person who walks back and 
-  forth. Whatever. You know. Haha.</i>"
+  forth. Whatever. You know. Haha."
 
   Terry adalah satu-satunya (atau setidaknya itu yang saya ketahui) pemrogram 
   yang membuat sistem operasi (didalamnya terdapat compiler, bootloader, kernel, 
   window manager, perpustakaan grafis untuk permainan dimana total akumulasi 
   hanya sekitar 1,4 MB) [14] dan juga bahasa pemrograman [15] secara 
-  mandiri dalam keadaan sakit (Skizofrenia).
+  mandiri dalam keadaan sakit (skizofrenia).
 
   Sistem operasinya berisi senilai 119.667 baris kode yang dibuat menggunakan 
-  Holy-C (varian dari bahasa pemrograman C). Beberapa baris kodenya <b>mungkin</b>
+  Holy-C (varian dari bahasa pemrograman C). Beberapa baris kodenya mungkin
   kurang atau bahkan tidak masuk akal mengingat ini dibuat oleh penderita
   skizofrenia.
 
-  <p class="quote">
   TempleOS lebih sederhana daripada Linux dan Anda dapat bersenang-senang 
   berjam-jam mengutak-atiknya karena semua memori dan port dapat diakses. 
   Memori dipetakan identitasnya setiap saat, jadi Anda dapat mengubah memori 
@@ -195,7 +186,6 @@ ________________________________________________________________________________
   direktori untuk membatalkan penghapusan file, ketika saya masih kecil. 
   Mungkin, Anda ingin bermain dengan blok mentah basis data, atau membuat 
   sistem berkas Anda sendiri? [16]
-  </p>
 
   [13] https://youtu.be/oH41gGBVpkE?feature=shared
   [14] https://id.m.wikipedia.org/wiki/TempleOS
@@ -205,7 +195,6 @@ ________________________________________________________________________________
 
                           MENGAPA ILUSI POSITIF YANG DISENGAJA ITU PENTING? [17]
 
-  <p class="quote">
   Kita sering mendengar kalimat “Saya bukan pesimis, tetapi saya realis” yang 
   belum tentu mengandung konotasi yang ingin kita bahas di sini. Namun, bagi 
   orang yang kita sebutkan tadi, realisme setara dengan nihilisme yang 
@@ -258,7 +247,6 @@ ________________________________________________________________________________
   kita sendiri berdasarkan konjungsi semua atribut yang kita temukan dalam 
   jaringan ini. Ingatlah konsep/alat itu untuk saat ini, kita akan memolesnya 
   nanti dan ingat bahwa ini hanyalah alat bantu untuk membantu memahami "diri".
-  </p>
 
   [17] https://bitly.cx/yc7e
 ________________________________________________________________________________
@@ -266,7 +254,6 @@ ________________________________________________________________________________
                           PENGARUH TERAPI AUDIO MUROTTAL AL-QUR'AN TERHADAP SKOR 
                                HALUSINASI PADA PASIENHALUSINASI PENDENGARAN [18]
 
-  <p class="quote">
   Skizofrenia merupakan masalah serius dalam kesehatan jiwa yang butuh perhatian 
   penuh. Salah satu tanda dan gejala nyata dari skizofrenia adalah halusinasi.
   Jumlah penderita Skizofrenia diseluruh dunia menurut World Health Organization 
@@ -288,15 +275,13 @@ ________________________________________________________________________________
   didapatkan sebelum diberikan terapi audio murottal Al-Qur'an skor rata-rata 
   14,50, sesudah diberikan terapi audio murottal Al-Qur'an skor rata-rata 
   11,16. Hasil uji statistik wilcoxon didapatkan nilai 
-  p value = 0,000 &lt;? 0,05. 
-  </p>
+  p value = 0,000 &lt;? 0,05.
 
   [18] https://bitly.cx/wHJI
 ________________________________________________________________________________
 
                                  WIJI THUKUL BIAR JADI MIMPI BURUK PRESIDEN [19]
 
-  <p class="quote">
   Wiji Thukul menolak gagasan bahwa “seniman harus menjauhi politik”.
   Menurutnya sikap alergi politik adalah tidak betul, sebab ”dengan tidak tahu 
   soal politik kita mudah saja dipermainkan,” sementara seniman itu 
@@ -307,7 +292,6 @@ ________________________________________________________________________________
   “Ketika rakyat sadar politik dan berpolitik, maka mereka tidak hanya menjadi
   bola tendangan yang hanya dipermainkan kaki-kaki penguasa, ditendang kesana 
   kemari,” ujar Thukul (wawancara UNIBA Solo, 11 maret 1993).
-  </p>
 
   [19] https://tirto.id/wiji-thukul-biar-jadi-mimpi-buruk-presiden-gjcs
 ________________________________________________________________________________
