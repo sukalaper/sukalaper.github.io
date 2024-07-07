@@ -142,9 +142,9 @@ ________________________________________________________________________________
   serotonin juga menjanjikan sebagai cara potensial untuk mencegah depresi. 
 
   Selain itu, suasana hati positif, termasuk faktor perlindungan seperti 
-  kebahagiaan dan kesejahteraan, juga diidentifikasi sebagai faktor yang penting 
-  dalam melawan gangguan mental dan fisik serta mengurangi risiko penyakit 
-  seperti penyakit jantung koroner.
+  kebahagiaan dan kesejahteraan, juga diidentifikasi sebagai faktor yang 
+  penting dalam melawan gangguan mental dan fisik serta mengurangi risiko 
+  penyakit seperti penyakit jantung koroner.
   </p> 
 
   [12] https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2077351/
@@ -176,12 +176,15 @@ ________________________________________________________________________________
   forth. Whatever. You know. Haha.</i>"
 
   Terry adalah satu-satunya (atau setidaknya itu yang saya ketahui) pemrogram 
-  yang membuat sistem operasi [14] dan juga bahasa pemrograman [15] secara 
+  yang membuat sistem operasi (didalamnya terdapat compiler, bootloader, kernel, 
+  window manager, perpustakaan grafis untuk permainan dimana total akumulasi 
+  hanya sekitar 1,4 MB) [14] dan juga bahasa pemrograman [15] secara 
   mandiri dalam keadaan sakit (Skizofrenia).
 
   Sistem operasinya berisi senilai 119.667 baris kode yang dibuat menggunakan 
   Holy-C (varian dari bahasa pemrograman C). Beberapa baris kodenya <b>mungkin</b>
-  kurang atau bahkan tidak masuk akal mengingat ini dibuat oleh penderita Skizo. 
+  kurang atau bahkan tidak masuk akal mengingat ini dibuat oleh penderita
+  skizofrenia.
 
   <p class="quote">
   TempleOS lebih sederhana daripada Linux dan Anda dapat bersenang-senang 
@@ -286,15 +289,6 @@ ________________________________________________________________________________
   14,50, sesudah diberikan terapi audio murottal Al-Qur'an skor rata-rata 
   11,16. Hasil uji statistik wilcoxon didapatkan nilai 
   p value = 0,000 &lt;? 0,05. 
-  
-  Kesimpulan: ada pengaruh terapi audio murottal Al-Qur'an Terhadap Skor 
-  Halusinasi pada pasien halusinasi pendengaran di Yayasan Mitra Mulia Husada 
-  Palembang. 
-
-  Saran: Diharapkan pihak Yayasan Mitra Mulia Husada Provinsi Sumatera Selatan 
-  agar dapat memasukkan terapi audio murottal Al-Qur'an sebagai salah satu 
-  penatalaksanaan secara non psikofarmakologis dalam memberikan pelayanan 
-  keperawatan kepada pasien halusinasi.
   </p>
 
   [18] https://bitly.cx/wHJI
@@ -316,3 +310,8 @@ ________________________________________________________________________________
   </p>
 
   [19] https://tirto.id/wiji-thukul-biar-jadi-mimpi-buruk-presiden-gjcs
+________________________________________________________________________________
+
+                                           READ THE FUCKING MANUAL, ALWAYS! [19]
+
+  Belum selesai.
