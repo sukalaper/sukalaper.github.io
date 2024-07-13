@@ -44,24 +44,21 @@ Source code website ini berasal dari $/dylanaraps artikel-artikel ditulis
 menggunakan Vim [2] ASCII pada postingan ini dibuat dengan cinta [3] dan di 
 hosting menggunakan GitHub [4].
 
-Situs ini didedikasikan untuk kembali mempelajari diri saya sendiri.
+Situs ini di dedikasikan untuk kembali mempelajari diri saya sendiri.
 Sebaik-baiknya dokumentasi adalah dokumentasi yang ditulis oleh pengembang 
 tersebut secara langsung, sebelum membaca lebih jauh saya mohon maaf apabila 
 terdapat banyak kesalahan dalam penulisan, penafian dan sebagainya untuk 
 kedepan. Namun, saya akan selalu menyertakan tautan referensi untuk dibaca 
 lebih lengkap.
 
-  <p class="quote">
-  Keindahan subjektif merayakan permasalahan yang tak terbantahkan namun 
-  dihargai, menghadirkan konsekuensi logis yang bijak. Ide radikal melahirkan 
-  urgensi untuk mengambil langkah-langkah yang dibutuhkan untuk membuka pintu 
-  potensi pengalaman yang lebih baik. Tidak melulu tertutup dan berlagak 
-  konservatif melainkan terbuka pada kemungkinan, karena jika menggunakan 
-  sesuatu itu salah maka selamanya saya tidak ingin benar [5].
-  </p>
+Keindahan subjektif merayakan permasalahan yang tak terbantahkan namun 
+dihargai, menghadirkan konsekuensi logis yang bijak. Ide radikal melahirkan 
+urgensi untuk mengambil langkah-langkah yang dibutuhkan untuk membuka pintu 
+potensi pengalaman yang lebih baik. Tidak melulu tertutup dan berlagak 
+konservatif melainkan terbuka pada kemungkinan, karena jika menggunakan 
+sesuatu itu salah maka selamanya saya tidak ingin benar [5].
 
-<strong>UPDATE, 01/06/2024:</strong>
-Untuk waktu yang belum ditentukan, situs ini saya kelola diatas Termux [6]
+Untuk waktu yang belum ditentukan, situs ini di kelola dengan Termux [6]
 dengan sedikit konfigurasi yang akan saya jelaskan pada postingan selanjutnya.
 
 
@@ -69,9 +66,8 @@ dengan sedikit konfigurasi yang akan saya jelaskan pada postingan selanjutnya.
 ________________________________________________________________________________
 
 Saya melakukan sedikit perubahan dari website asli milik Dylan (sekarang sudah
-tidak aktif [7]) agar sesuai dengan preferensi saya.
-
- > Tanda tambah (+) menandakan perubahan dilakukan dan sebaliknya.
+tidak aktif [7]). Tanda tambah (+) menandakan perubahan dilakukan dan 
+sebaliknya.
 
  <textarea 
     style="width:100%; 

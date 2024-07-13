@@ -1,15 +1,15 @@
 
 
 +------------------------------------------------------------------------------+
-|                                                                 .-.          |
-|                                                                (o o)         |
-|                                                                | O \         |
-|                                                                 \   \        |
-|                                                                  `~~~'       |
+|                                                                        .-.   |
+|                                                                       (o o)  |
+|                                                                       | O \  |
+|                                                                        \   \ |
+|                                                                         `~~~'|
 +------------------------------------------------------------------------------+
 
-________________________________________________________________________________
 
-The website is currently undergoing further development in the upcoming weeks, 
-with enhancing user readability being one of its key objectives. 
-Any fucking questions?
+- Membuat Module Statusbar Sederhana Pada Arch Linux .................... <a href=/blog/Cara-Mengatasi-Error-Response-To-Policy-Kit-Daemon>[001]</a>
+- Cara Mengatasi Error Response To Policy Kit Daemon .................... <a href=/blog/Cara-Mengatasi-Error-Response-To-Policy-Kit-Daemon>[002]</a>
+- Cara Mengatur Kecepatan TrackPoint Thinkpad Pada Arch Linux ........... <a href=/blog/Cara-Mengatur-Kecepatan-TrackPoint-Thinkpad-Pada-Arch-Linux>[003]</a>
+- Kelola Situs Di Atas Termux? .......................................... <a href=/blog/Kelola-Situs-Diatas-Termux>[003]</a>

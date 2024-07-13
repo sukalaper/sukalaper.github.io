@@ -1,30 +1,30 @@
 
 
 +------------------------------------------------------------------------------+
-|                                                        ____,                 |
-|                                                       /.---|                 |
-|                                                       `    |     ___         |
-|                                                           (=\.  /-. \        |
-|                                                            |\/\_|"|  |       |
-|                                                            |_\ |;-|  ;       |
-|                                                            | / \| |_/ \      |
-|                                                            | )/\/      \     |
-|                                                            | ( '|  \   |     |
-|                                                            |    \_ /   \     |
-|                                                            |    /  \_.--\    |
-|                                                            \    |    (|\`    |
-|                                                             |   |     \      |
-|                                                             |   |      '.    |
-|                                                             |  /         \   |
-|                                                             \  \.__.__.-._)  |
+|                                                          ____,               |
+|                                                         /.---|               |
+|                                                         `    |     ___       |
+|                                                             (=\.  /-. \      |
+|                                                              |\/\_|"|  |     |
+|                                                              |_\ |;-|  ;     |
+|                                                              | / \| |_/ \    |
+|                                                              | )/\/      \   |
+|                                                              | ( '|  \   |   |
+|                                                              |    \_ /   \   |
+|                                                              |    /  \_.--\  |
+|                                                              \    |    (|\`  |
+|                                                               |   |     \    |
+|                                                               |   |      '.  |
+|                                                               |  /         \ |
+|                                                               \  \.__.__.-._)|
 +------------------------------------------------------------------------------+
 
 
-  <p class="blur-text">                                                     Jika 
+                                                                            Jika 
 
   Jika suatu saat nanti engkau menemukan bagian dari diriku ada pada 
   orang lain, jangan berbicara tentangku padanya.
-  Bicaralah tentang kalian dan tertawalah.</p>
+  Bicaralah tentang kalian dan tertawalah.
 ________________________________________________________________________________
 
                                                       ALESANA - THE THESPIAN [1]
@@ -252,7 +252,7 @@ ________________________________________________________________________________
 ________________________________________________________________________________
 
                           PENGARUH TERAPI AUDIO MUROTTAL AL-QUR'AN TERHADAP SKOR 
-                               HALUSINASI PADA PASIENHALUSINASI PENDENGARAN [18]
+                              HALUSINASI PADA PASIEN HALUSINASI PENDENGARAN [18]
 
   Skizofrenia merupakan masalah serius dalam kesehatan jiwa yang butuh perhatian 
   penuh. Salah satu tanda dan gejala nyata dari skizofrenia adalah halusinasi.
@@ -294,8 +294,3 @@ ________________________________________________________________________________
   kemari,” ujar Thukul (wawancara UNIBA Solo, 11 maret 1993).
 
   [19] https://tirto.id/wiji-thukul-biar-jadi-mimpi-buruk-presiden-gjcs
-________________________________________________________________________________
-
-                                           READ THE FUCKING MANUAL, ALWAYS! [19]
-
-  Belum selesai.
