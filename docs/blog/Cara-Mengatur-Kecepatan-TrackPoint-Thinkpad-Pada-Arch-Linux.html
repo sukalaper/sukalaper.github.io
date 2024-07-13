@@ -9,9 +9,9 @@
 Cara Mengatur Kecepatan TrackPoint Thinkpad Pada Arch Linux
 ________________________________________________________________________________
 
-- Apa Itu TrackPoint?                                                      <a href=#1.0>[1.0]</a>
-- Membuat Konfigurasi Pada Arch Linux                                      <a href=#2.0>[2.0]</a>
-- Referensi                                                                <a href=#3.0>[3.0]</a>
+- Apa Itu TrackPoint? .................................................... <a href=#1.0>[1.0]</a>
+- Membuat File Konfigurasi Pada Arch Linux ............................... <a href=#2.0>[2.0]</a>
+- Referensi .............................................................. <a href=#3.0>[3.0]</a>
 
 
 <span id=1.0><a href=#1.0>[1.0]</a></span> Apa Itu TrackPoint?
@@ -26,47 +26,49 @@ Ya, itu yang dinamakan TrackPoint. Lalu, apa saja fungsi dari TrackPoint?
   2. Klik
   3. Scroll
 
-Yang mungkin tidak hanya itu fungsinya. Saya lebih sering menggunakan 
-TrackPoint di banding mouse atau touchpad. Terutama untuk menggeser-geser 
-sebuah window agar memiliki tingkat ke-presisian yang tinggi.
+Yang mungkin tidak hanya itu. Saya lebih sering menggunakan TrackPoint di 
+banding mouse atau touchpad. Terutama untuk menggeser-geser sebuah window agar 
+memiliki tingkat ke-presisian yang tinggi. Penggunaan TrackPoint ini sebenarnya 
+cukup meningkatkan efisiensi penggunaan keyboard tanpa harus mengangkat tangan 
+untuk menggunakan mouse atau sekedar elus-elus Touchpad untuk melakukan 
+gerakan navigasi.
 
-Penggunaan TrackPoint ini sebenarnya cukup meningkatkan efisiensi penggunaan 
-keyboard tanpa harus mengangkat tangan untuk menggunakan mouse atau sekedar
-elus-elus touchpad.
-
-Jadi, jika di gambarkan adalah hanya jari telunjuk sebelah kanan saya yang aktif 
+Jika di gambarkan adalah hanya jari telunjuk sebelah kanan saya yang aktif 
 untuk menggerakan kursor dan sisanya tetap aktif berada di atas keyboard tanpa 
 terdistraksi oleh apapun.
 
 
-<span id=2.0><a href=#2.0>[2.0]</a></span> Membuat Konfigurasi Pada Arch Linux
+<span id=2.0><a href=#2.0>[2.0]</a></span> Membuat File Konfigurasi Pada Arch Linux
 ________________________________________________________________________________
 
 Teman-teman harus membuat sebuah file pada /etc/udev/rules.d/10-trackpoint.rules
-kemudian isi file tersebut dengan baris ini.
+<span id=1><a href=#1>[1]</a></span> dengan perintah: 
+
+  $ sudo touch /etc/udev/rules.d/10-trackpoint.rules
+
+kemudian isi file tersebut dengan baris ini:
 
   ACTION=="add", KERNEL=="serio2", SUBSYSTEM=="serio", DRIVERS=="psmouse", 
   ATTR{sensitivity}="300", ATTR{speed}="300"
 
-Perhatikan pada kedua baris ini.
+Sebelum menuju ke tahap selanjutnya, perhatikan pada kedua kode ini:
   
   ATTR{sensitivity}="300"
   ATTR{speed}="300"
 
 Nilai tersebut dapat teman-teman ubah sesuai dengan preferensi teman-teman, saya
-membuat nilai tersebut menjadi.
+membuat nilai tersebut menjadi:
 
   ATTR{sensitivity}="100"
   ATTR{speed}="100"
 
-Tujuannya agar tidak terlalu cepat dan lebih akurat.
-
-Setelah selesai, teman-teman dapat melakukan uji coba dengan perintah ini.
+Tujuannya agar tidak terlalu cepat dan lebih akurat. Setelah selesai, 
+teman-teman dapat melakukan uji coba dengan perintah ini:
 
   # udevadm control --reload
   # udevadm test /sys/devices/platform/i8042/serio1/serio2
 
-Yang nantinya akan terdapat keluaran kurang lebih seperti ini.
+Yang nantinya akan terdapat keluaran kurang lebih seperti ini:
 
   This program is for debugging only, it does not run any program
   specified by a RUN key. It may show incorrect results, because
@@ -98,17 +100,18 @@ Yang nantinya akan terdapat keluaran kurang lebih seperti ini.
   serio2: hwdb modalias key: "serio:ty05pr00id00ex00"
   serio2: hwdb modalias key: "serio:ty01pr00id00ex00"
 
-Selesai! Namun saya ingin perintah ini berfungsi setiap kali sistem boot 
-sayangnya saya gagal melakukan aktivasi pada systemctl akhirnya saya membuat 
-sebuah alias pada .bashrc sebagai berikut.
+Selesai! 
 
-    alias trck='sudo udevadm test /sys/devices/platform/i8042/serio1/serio2'
+Namun saya ingin perintah ini lebih cepat untuk di ketik dengan cara membuat 
+sebuah alias pada .bashrc dengan sebagai berikut:
+
+  alias trck='sudo udevadm test /sys/devices/platform/i8042/serio1/serio2'
 
 
 <span id=3.0><a href=#3.0>[3.0]</a></span> Referensi
 ________________________________________________________________________________
 
-1. <a href=https://wiki.archlinux.org/title/TrackPoint>https://wiki.archlinux.org/title/TrackPoint</a>
+<span id=1><a href=#1>[1]</a></span> <a href=https://wiki.archlinux.org/title/TrackPoint>https://wiki.archlinux.org/title/TrackPoint</a>
 
 ________________________________________________________________________________
 

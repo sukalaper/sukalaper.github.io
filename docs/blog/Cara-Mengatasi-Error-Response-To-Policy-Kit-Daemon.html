@@ -9,18 +9,19 @@
 Cara Mengatasi Error Response To Policy Kit Daemon
 ________________________________________________________________________________
 
-- Ikhtisar                                                                 <a href=#1.0>[1.0]</a>
-- Referensi                                                                <a href=#2.0>[2.0]</a>
+- Ikhtisar ............................................................... <a href=#1.0>[1.0]</a>
+- Referensi .............................................................. <a href=#2.0>[2.0]</a>
 
 
 <span id=1.0><a href=#1.0>[1.0]</a></span> Ikhtisar
 ________________________________________________________________________________
 
-Pesan kesalahan ini saya dapatkan ketika menjalankan perintah.
+Pesan kesalahan ini saya dapatkan ketika ingin melihat konten direktori dengan 
+hak akses administrator dengan perintah:
 
   $ pkexec ls 
 
-yang menunjukan keluaran sebagai berikut.
+Namun keluaran menunjukan sebagai berikut:
 
   ==== AUTHENTICATING FOR org.freedesktop.policykit.exec ====
   Authentication is needed to run `/usr/bin/ls' as the super user
@@ -33,18 +34,21 @@ yang menunjukan keluaran sebagai berikut.
 
   This incident has been reported.
 
-Untuk mengatasi masalah seperti di atas, kita perlu mengetahui PID<a href=#1>[1]</a> dari 
-proses pada terminal dengan perintah. 
+Untuk mengatasi masalah seperti di atas, kita perlu mengetahui terlebih dahulu
+PID <a href=#1>[1]</a> pada terminal dengan perintah:
 
   $ echo $$
   2232
 
 PID ditunjukan dengan angka 2232. Setelahnya, kita harus membuka sebuah terminal
-baru dan dilanjutkan dengan perintah.
+baru dan dilanjutkan dengan perintah:
 
   $ pkttyagent --process 2232
 
-Maka nantinya keluaran menunjukan seperti ini.
+Yang mana perintah diatas bertujuan untuk skenario di mana suatu proses 
+membutuhkan hak akses tambahan dan otentikasi harus dilakukan melalui terminal 
+yang terkait dengan proses tersebut dan nantinya keluaran menunjukan seperti 
+ini:
 
   ==== AUTHENTICATING FOR org.freedesktop.policykit.exec ====
   Authentication is needed to run `/usr/bin/ls' as the super user
