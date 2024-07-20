@@ -2,13 +2,9 @@
 Kelola Situs Di Atas Termux? 
 ________________________________________________________________________________
 
-- Ikhtisar ............................................................... [1.0]
-- Konfigurasi Perangkat .................................................. [2.0]
-- Referensi .............................................................. [3.0]
+- Konfigurasi Perangkat .................................................. [1.0]
+- Referensi .............................................................. [2.0]
 
-
-[1.0] Ikhtisar
-________________________________________________________________________________
 
 Keinginan untuk menulis dan sebuah ide kadang bisa muncul kapan dan dimana saja. 
 Maka dari itu, untuk mengelola situs ini saya memutuskan untuk menggunakan dua 
@@ -19,14 +15,14 @@ platfrom:
 
 Meskipun sebenarnya menggunakan opsi nomer dua agak sedikit merepotkan, namun 
 saya harus tetap luwes agar tidak patah. Ini hanya perihal waktu, lama-kelamaan 
-saya akan terbiasa.
+akan terbiasa.
 
 Mengingat smartphone adalah benda yang memiliki portabilitas tinggi dan jauh 
 lebih fleksibel ketika saya memiliki ide, waktu dan ingin memperbarui postingan 
 pada blog ini tanpa perlu repot-repot untuk membuka laptop.
 
 
-[2.0] Konfigurasi Perangkat
+[1.0] Konfigurasi Perangkat
 ________________________________________________________________________________
 
 Karena perangkat saya memiliki keterbatasan untuk melakukan rooting [1] tentu 
@@ -71,7 +67,7 @@ Setelahnya, saya menambahkan perintah ini:
 
  $ termux-setup-storage
 
-Untuk mengizinkan akses file pada perangkat milik saya [4] setelahnya, saya 
+Untuk mengizinkan akses file pada perangkat milik saya [4] selanjut nya, saya 
 melakukan pembaruan serta penambahan paket-paket yang saya butuhkan dengan 
 perintah: 
 
@@ -85,25 +81,18 @@ ini:
  $ vim .bashrc
 
  # ~/.bashrc
-
  # If not running interactively, don't do anything
   [[ $- != *i* ]] && return
-
  # Remove Termux screen welcome
   clear
-
  # Nice username
   PS1='sukalaper@home:\w\$ '
-
  # Move to /sdcard default
   cd /sdcard/Documents/
-
  # Completion Case-Insensitive in Bash
   bind 'set completion-ignore-case on'
-
  # Auto correct
   shopt -s cdspell
-
  # Some Alias
   alias ls='eza --icons'
   alias rel='source .bashrc'
@@ -112,7 +101,7 @@ ini:
 
 Tujuannya adalah agar Termux lebih "mirip" dengan pengaturan-pengaturan yang 
 ada pada terminal saya. Sedikit konfigurasi pada .bashrc telah selesai, saatnya 
-berpindah untuk melakukan konfigurasi pada Vim [6] !
+berpindah untuk melakukan konfigurasi pada Vim [6].
 
 Saya banyak menggunakan Vim plugin [7] untuk itu, saya harus melakukan
 instalasi pada vim-plug [8] terlebih dahulu dengan perintah: 
@@ -126,8 +115,8 @@ ingin melakukan konfigurasi lain agar Termux saya menarik atau setidaknya tidak
 jelek. 
 
 Saya menemukan alat instalasi yang bagus dan mudah, ya. Sangat mudah pada 
-$/adi1090x/termux-style disana dokumentasinya cukup jelas. Jadi saya rasa, saya
-tidak perlu membuat dokumentasi yang sama disini.
+$/adi1090x/termux-style disana dokumentasinya cukup jelas. Jadi saya rasa, tidak 
+perlu membuat dokumentasi yang sama disini.
 
 Jika teman-teman ingat, saya menambahkan baris ini pada .bashrc: 
   
@@ -148,10 +137,6 @@ saya langsung dialihkan ke sdcard/Documents/
 Semua telah siap! Saatnya melakukan clone pada repository saya: 
 
  $ gc https://github.com/sukalaper/sukalaper.github.io.git
-
-Jika teman-teman ingat pada .bashrc milik saya, saya membuat alias seperti ini:
-
- alias gc='git clone'
 
 Setelah git clone selesai, masuk pada direktori website: 
  
@@ -180,7 +165,7 @@ Untuk alternatifnya, saya ubah menjadi seperti ini:
 Selesai, semoga bermanfaat! 
 
 
-[3.0] Referensi
+[2.0] Referensi
 ________________________________________________________________________________
 
 [1] https://www.vivo.com/ph/support/questionList?categoryId=54464

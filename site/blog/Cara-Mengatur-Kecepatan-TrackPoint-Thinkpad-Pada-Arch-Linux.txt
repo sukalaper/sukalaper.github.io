@@ -12,18 +12,17 @@ ________________________________________________________________________________
 
 Jika teman-teman menggunakan laptop bawaan Lenovo (dulu IBM) pasti sudah tidak 
 asing lagi dengan "pentil merah" yang berada tepat di tengah-tengah keyboard.
-
-Ya, itu yang dinamakan TrackPoint. Lalu, apa saja fungsi dari TrackPoint?
+Ya, itu yang dinamakan trackpoint. Lalu, apa saja fungsi dari trackpoint?
 
   1. Navigasi sebagai pengganti kursor
   2. Klik
   3. Scroll
 
-Yang mungkin tidak hanya itu. Saya lebih sering menggunakan TrackPoint di 
+Yang mungkin tidak hanya itu. Saya lebih sering menggunakan trackpoint di 
 banding mouse atau touchpad. Terutama untuk menggeser-geser sebuah window agar 
-memiliki tingkat ke-presisian yang tinggi. Penggunaan TrackPoint ini sebenarnya 
+memiliki tingkat ke-presisian yang tinggi. Penggunaan trackpoint ini sebenarnya 
 cukup meningkatkan efisiensi penggunaan keyboard tanpa harus mengangkat tangan 
-untuk menggunakan mouse atau sekedar elus-elus Touchpad untuk melakukan 
+untuk menggunakan mouse atau sekedar elus-elus touchpad untuk melakukan 
 gerakan navigasi.
 
 Jika di gambarkan adalah hanya jari telunjuk sebelah kanan saya yang aktif 
@@ -44,7 +43,7 @@ kemudian isi file tersebut dengan baris ini:
   ACTION=="add", KERNEL=="serio2", SUBSYSTEM=="serio", DRIVERS=="psmouse", 
   ATTR{sensitivity}="300", ATTR{speed}="300"
 
-Sebelum menuju ke tahap selanjutnya, perhatikan pada kedua kode ini:
+Sebelum menuju ke tahap selanjutnya, perhatikan pada kedua nilai ini:
   
   ATTR{sensitivity}="300"
   ATTR{speed}="300"
@@ -55,8 +54,8 @@ membuat nilai tersebut menjadi:
   ATTR{sensitivity}="100"
   ATTR{speed}="100"
 
-Tujuannya agar tidak terlalu cepat dan lebih akurat. Setelah selesai, 
-teman-teman dapat melakukan uji coba dengan perintah ini:
+Tujuannya agar tidak terlalu cepat dan lebih akurat. Setelah selesai, teman-
+teman dapat melakukan uji coba dengan perintah ini:
 
   # udevadm control --reload
   # udevadm test /sys/devices/platform/i8042/serio1/serio2
@@ -96,7 +95,7 @@ Yang nantinya akan terdapat keluaran kurang lebih seperti ini:
 Selesai! 
 
 Namun saya ingin perintah ini lebih cepat untuk di ketik dengan cara membuat 
-sebuah alias pada .bashrc dengan sebagai berikut:
+sebuah alias pada .bashrc:
 
   alias trck='sudo udevadm test /sys/devices/platform/i8042/serio1/serio2'
 

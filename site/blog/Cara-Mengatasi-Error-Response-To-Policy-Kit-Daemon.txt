@@ -2,20 +2,13 @@
 Cara Mengatasi Error Response To Policy Kit Daemon
 ________________________________________________________________________________
 
-- Ikhtisar ............................................................... [1.0]
-- Referensi .............................................................. [2.0]
+- Referensi .............................................................. [1.0]
 
-
-[1.0] Ikhtisar
-________________________________________________________________________________
 
 Pesan kesalahan ini saya dapatkan ketika ingin melihat konten direktori dengan 
-hak akses administrator dengan perintah:
+hak akses administrator yang menggunakan perintah:
 
   $ pkexec ls 
-
-Namun keluaran menunjukan sebagai berikut:
-
   ==== AUTHENTICATING FOR org.freedesktop.policykit.exec ====
   Authentication is needed to run `/usr/bin/ls' as the super user
   Authenticating as: anggiramadyansyah
@@ -28,20 +21,19 @@ Namun keluaran menunjukan sebagai berikut:
   This incident has been reported.
 
 Untuk mengatasi masalah seperti di atas, kita perlu mengetahui terlebih dahulu
-PID [1] pada terminal dengan perintah:
+PID [1] pada terminal saat ini:
 
   $ echo $$
   2232
 
 PID ditunjukan dengan angka 2232. Setelahnya, kita harus membuka sebuah terminal
-baru dan dilanjutkan dengan perintah:
+baru dan dilanjutkan dengan:
 
   $ pkttyagent --process 2232
 
-Yang mana perintah diatas bertujuan untuk skenario di mana suatu proses 
-membutuhkan hak akses tambahan dan otentikasi harus dilakukan melalui terminal 
-yang terkait dengan proses tersebut dan nantinya keluaran menunjukan seperti 
-ini:
+Yang mana perintah diatas adalah untuk skenario di mana suatu proses membutuhkan 
+hak akses tambahan dan otentikasi harus dilakukan melalui terminal yang terkait 
+dengan proses tersebut, nantinya keluaran akan menunjukan seperti ini:
 
   ==== AUTHENTICATING FOR org.freedesktop.policykit.exec ====
   Authentication is needed to run `/usr/bin/ls' as the super user
@@ -49,10 +41,10 @@ ini:
   Password:
   ==== AUTHENTICATION COMPLETE ====
 
-Keluaran menunjukan bahwa proses autentikasi telah berhasil.
+Keluaran menandakan bahwa proses autentikasi telah berhasil.
 
 
-[2.0] Referensi
+[1.0] Referensi
 ________________________________________________________________________________
 
 [1] https://www.tutorialspoint.com/what-is-a-pid-file-in-linux

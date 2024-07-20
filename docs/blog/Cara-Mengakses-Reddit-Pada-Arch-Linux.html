@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><link href="data:," rel="icon"><title>Sukalaper - Cara-Mengakses-Reddit-Pada-Arch-Linux</title><meta charset="utf-8"><meta content="blog" name="description"><meta content="index, follow" name="robots"><meta content="width=device-width,initial-scale=1" name="viewport"><style>body{background:#fffbda;color:#333;overflow-y:scroll;font:16px monospace,monospace}a{color:#06f}pre{margin:0;overflow-x:hidden;}img{display:block;margin-left:auto;margin-right:auto;width:250px;max-width:auto;border-radius:8px}.blur-text{color:#000;filter:blur(4px)}.quote{margin-top:-10px;margin-bottom:-10px;overflow-x:hidden;border-left:3px solid #ccc}@media(max-width:999px){#c{display:block;font-size:2.02vw}}</style><div style="display:table;margin:16px auto"><div id="c"><pre>
+<!DOCTYPE html><html lang="en"><link href="data:," rel="icon"><title>Sukalaper - Cara-Mengakses-Reddit-Pada-Arch-Linux</title><meta charset="utf-8"><meta content="Sukalaper blog, sukalaper, blog teknologi, programming, GNU/Linux, paper" name="description"><meta content="index, follow" name="robots"><meta content="width=device-width,initial-scale=1" name="viewport"><style>body{background:#fffbda;color:#333;overflow-y:scroll;font:16px monospace,monospace}a{color:#06f}pre{margin:0;overflow-x:hidden;}img{display:block;margin-left:auto;margin-right:auto;width:250px;max-width:auto;border-radius:8px}.blur-text{color:#000;filter:blur(4px)}.quote{margin-top:-10px;margin-bottom:-10px;overflow-x:hidden;border-left:3px solid #ccc}@media(max-width:999px){#c{display:block;font-size:2.02vw}}</style><div style="display:table;margin:16px auto"><div id="c"><pre>
 +------------------------------------------------------------------------------+
 |                                                                              |
 |  <a href="/">/home/sukalaper</a>                                      <a href="/blog">blog/</a>  <a href="/paper">paper/</a>  <a href="/about">about/</a>  |
@@ -9,32 +9,22 @@
 Cara Mengakses Reddit Pada Arch Linux
 ________________________________________________________________________________
 
-- Ikhtisar                                                                 <a href=#1.0>[1.0]</a>
-- Cara Mengakses Reddit                                                    <a href=#2.0>[2.0]</a>
-- Referensi                                                                <a href=#3.0>[3.0]</a>
+- Cara Mengakses Reddit .................................................. <a href=#1.0>[1.0]</a>
+- Referensi .............................................................. <a href=#2.0>[2.0]</a>
 
-
-<span id=1.0><a href=#1.0>[1.0]</a></span> Ikhtisar
-________________________________________________________________________________
-
-Sebagai peselancar internet (saya jarang mengakses Deepweb<a href=#1>[1]</a> jadi saya tidak 
-menyebut diri saya sebagai penyelam, peselancar adalah penafian yang (mungkin)
-lebih tepat) saya cukup sering melihat beberapa artikel di Reddit<a href=#2>[2]</a>. Sayangnya
-pemerintah memblokir akses ke situs tersebut karena cukup banyak konten negatif.
-Padahal menurut saya X leb....
 
 Saat saya sedang mencari referensi untuk penggunaan salah satu alat pengelola 
 jaringan pada GNU/Linux, saya mendapat sebuah jawaban pada salah satu situs 
-tersebut diarahkan ke Reddit namun inilah hasilnya.
+tersebut dan diarahkan ke Reddit namun inilah hasilnya:
 
   <img src="image/Cara-Mengakses-Reddit-Pada-Arch-Linux/reddit.png">
 
 
-<span id=2.0><a href=#2.0>[2.0]</a></span> Cara Mengakses Reddit
+<span id=1.0><a href=#1.0>[1.0]</a></span> Cara Mengakses Reddit
 ________________________________________________________________________________
 
-Melansir pada petunjuk ini<a href=#3>[3]</a> untuk GNU/Linux cukup tambahkan file ini pada 
-/etc/hosts.
+Melansir dari situs ini <a href=#1>[1]</a> untuk dapat menjelajahi Reddit di GNU/Linux cukup 
+tambahkan file ini pada /etc/hosts:
 
   $ sudo vim /etc/hosts
   
@@ -59,7 +49,7 @@ Melansir pada petunjuk ini<a href=#3>[3]</a> untuk GNU/Linux cukup tambahkan fil
   151.101.193.140   about.reddit.com
   52.203.76.9       out.reddit.com
 
-Kemudian simpan, lalu muat ulang peramban dan hasilnya akan seperti ini.
+Kemudian simpan, lalu muat ulang peramban dan hasilnya akan seperti ini:
 
   <img src="image/Cara-Mengakses-Reddit-Pada-Arch-Linux/reddit-2.png">
 
@@ -69,6 +59,7 @@ Mungkin dapat dikatakan ini adalah sebuah skenario "pemalsuan" resolusi DNS
 secara lokal. Dengan kata lain, isi file yang baru kita tambahkan tadi akan 
 memberi instruksi pada sistem untuk mengarahkan permintaan yang kita lakukan 
 untuk mengarahkan alamat IP yang telah ditentukan. 
+
 Jadi, kita dapat kita tetap dapat mengakses Reddit bahkan jika situs tersebut 
 diblokir oleh penyedia layanan internet (ISP) atau pemerintahan. Ini bekerja
 karena sistem tidak lagi bergantung pada resolusi DNS eksternal untuk mengetahui
@@ -78,9 +69,7 @@ alamat IP dari Reddit.
 <span id=3.0><a href=#3.0>[3.0]</a></span> Referensi
 ________________________________________________________________________________
 
-<span id=1><a href=#1>[1]</a></span> <a href=https://www.techtarget.com/whatis/definition/deep-Web>https://www.techtarget.com/whatis/definition/deep-Web</a>
-<span id=2><a href=#2>[2]</a></span> <a href=https://www.reddit.com/>https://www.reddit.com/</a>
-<span id=3><a href=#3>[3]</a></span> <a href=https://medium.com/jasonganub/how-to-access-reddit-in-indonesia-d185bb532380>https://medium.com/jasonganub/how-to-access-reddit-in-indonesia-d185bb532380</a>
+<span id=1><a href=#1>[1]</a></span> <a href=https://medium.com/jasonganub/how-to-access-reddit-in-indonesia-d185bb532380>https://medium.com/jasonganub/how-to-access-reddit-in-indonesia-d185bb532380</a>
 
 ________________________________________________________________________________
 

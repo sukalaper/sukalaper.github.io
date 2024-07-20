@@ -17,7 +17,6 @@ status jaringan. Biasanya terletak di bagian bawah atau atas layar, statusbar
 memberikan pemantauan real-time yang membantu pengguna memahami kinerja sistem. 
 Dengan memanfaatkan widget dan plugin, pengguna dapat menyesuaikan statusbar 
 sesuai kebutuhan.
-
 Ada banyak beberapa statusbar yang cukup populer dan sering di gunakan oleh 
 pengguna window manager [1] beberapa diantaranya adalah:
 
@@ -34,22 +33,22 @@ Dan mungkin masih banyak lagi..
 ________________________________________________________________________________
 
 Sebelumnya, saya pernah menggunakan beberapa statusbar yang cukup populer di 
-atas. Namun, saya ingin mengurangi ketergantungan pada sebuah paket. 
+atas. Namun, saya merasa ingin mengurangi ketergantungan pada sebuah paket. 
 Jadi, memanfaatkan Bash untuk membuat statusbar sederhana sepertinya adalah ide 
 yang tidak terlalu buruk.
 
 "Bash is actually quite powerful without relying on it, of course, if you 
 understand it."
 
-Terlebih lagi i3wm [7] yang saya gunakan memiliki fitur scratchpad [8] dan 
+Terlebih lagi, i3wm [7] yang saya gunakan memiliki fitur scratchpad [8] dan 
 memungkinkan untuk menggunakan module ini dengan lebih fleksibel.
 
 
 [3.0] Konfigurasi Module Dengan Skrip Bash
 ________________________________________________________________________________
 
-Sebelumnya, saya tidak banyak pengalaman dalam menulis Bash. Mohon maaf untuk 
-kesalahan logika atau error handling yang kurang tepat.
+Saya tidak banyak pengalaman dalam menulis Bash. Mohon maaf untuk kesalahan 
+logika atau error handling yang kurang tepat.
 
   <textarea 
     style="width:100%; 
@@ -141,14 +140,6 @@ kode ini agar lebih cepat.
   
   alias wtc='watch -n 5 -t -d ~/.local/bin/stat-bar.sh'
   
-  <img src="image/Membuat-Module-Statusbar-Sederhana-Pada-Arch-Linux/statbar.png">
-
-Sebagai informasi tambahan, glyph font diatas dimuat dengan sangat sempurna 
-diatas St terminal [11] dan juga nerd font [12] dari FantasqueSans M [13].
- 
-Tanda blok putih di dalam teks menandakan perubahan status dengan interval 
-waktu yang telah saya tentukan dengan bantuan watch [14].
-
 
 [4.0] Referensi
 ________________________________________________________________________________
@@ -163,7 +154,3 @@ ________________________________________________________________________________
 [8] https://i3wm.org/docs/userguide.html#_scratchpad
 [9] https://phoenixnap.com/kb/linux-alias-command
 [10] https://phoenixnap.com/kb/bashrc
-[11] https://st.suckless.org/
-[12] https://www.nerdfonts.com/
-[13] https://www.programmingfonts.org/#fantasque-sans
-[14] https://phoenixnap.com/kb/linux-watch-command
