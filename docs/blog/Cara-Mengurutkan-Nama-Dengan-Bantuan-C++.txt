@@ -1,0 +1,43 @@
+
+Cara Mengurutkan Nama Dengan Bantuan C++
+________________________________________________________________________________
+
+- Membuat Program Sederhana Untuk Melakukan Sorting ...................... [1.0]
+
+Cara ini saya lakukan ketika hendak membuat sebuah grup WhatsApp untuk 
+teman-teman angkatan saya, namun pada sebuah platfrom urutan nama tersebut 
+tersedia secara acak.
+
+Jadi, bagaimana membuat sebuah bahasa pemrograman C++ untuk mengurutkan sebuah
+nama berdasarkan abjad?
+
+
+[1.0] Membuat Program Sederhana Untuk Melakukan Sorting
+________________________________________________________________________________
+
+Saya melakukan sebuah pendekatan yang paling sederhana, dengan array [1] dan 
+fungsi dari pustaka standar C++ seperti std::sort [2] dari pustaka 
+<algoritm> [3].
+
+  #include <iostream>
+  #include <algorithm> // Untuk std::sort
+  #include <string>    // Untuk std::string
+
+  int main() {
+    // Daftar nama
+    std::string names[] = {"Roni", "Martin", "Risa", "Loka", "Ino", "Ani", "Febri"};
+    
+    // Menghitung jumlah nama
+    int size = sizeof(names) / sizeof(names[0]);
+
+    // Mengurutkan nama berdasarkan abjad
+    std::sort(names, names + size);
+
+    // Menampilkan hasil pengurutan
+    std::cout << "Nama-nama yang sudah diurutkan:" << std::endl;
+    for (int i = 0; i < size; ++i) {
+        std::cout << names[i] << std::endl;
+    }
+
+    return 0;
+  }
