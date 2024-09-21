@@ -8,6 +8,7 @@
 |                                                                         `~~~'|
 +------------------------------------------------------------------------------+
 
+<<<<<<< HEAD
 <i class="fas fa-thumbtack"></i> [Arch Linux]
   - Cara Efektif Mengatasi Error Response To Policy Kit Daemon .......... <a href="blog/01.html">[#001]</a>
   - Cara Mengatur Kecepatan TrackPoint Thinkpad Pada Arch Linux ......... <a href="blog/02.html">[#002]</a>
@@ -18,3 +19,14 @@
 
 <i class="fas fa-book"></i> [Another Post]
   - 
+=======
+
+- Membuat Module Statusbar Sederhana Pada Arch Linux .................... <a href="blog/Membuat-Module-Statusbar-Sederhana-Pada-Arch-Linux.html">[#001]</a>
+- Cara Mengatasi Error Response To Policy Kit Daemon .................... <a href="blog/Cara-Mengatasi-Error-Response-To-Policy-Kit-Daemon.html">[#002]</a>
+- Cara Mengatur Kecepatan TrackPoint Thinkpad Pada Arch Linux ........... <a href="blog/Cara-Mengatur-Kecepatan-TrackPoint-Thinkpad-Pada-Arch-Linux.html">[#003]</a>
+- Kelola Situs Di Atas Termux? .......................................... <a href="blog/Kelola-Situs-Diatas-Termux.html">[#004]</a>
+- REISUB ................................................................ <a href="blog/REISUB.html">[#005]</a>
+- Cara Mengakses Reddit Pada Arch Linux ................................. <a href="blog/Cara-Mengakses-Reddit-Pada-Arch-Linux.html">[#006]</a>
+- Mengunduh File Di Netlify Dengan Bantuan HTTrack ...................... <a href="blog/Mengunduh-File-Di-Netlify-Dengan-Bantuan-HTTRACK.html">[#007]</a>
+- Mengatur Redshift Ketika Uptime Telah 2 Jam ........................... <a href="blog/Mengatur-Redshift-Ketika-Uptime-Telah-2-Jam.html">[#008]</a>
+>>>>>>> 51f3224b5741b7aa77a7d4587d566316685788d3
