@@ -1,4 +1,41 @@
-<!DOCTYPE html><html lang="en"><link href="data:," rel="icon"><title>Sukalaper - 02</title><meta charset="utf-8"><meta content="Sukalaper blog, sukalaper, blog teknologi, programming, GNU/Linux, paper" name="description"><meta content="index, follow" name="robots"><meta content="width=device-width,initial-scale=1" name="viewport"><style>body{background:#fffbda;color:#333;overflow-y:scroll;font:16px monospace,monospace}a{color:#06f}pre{margin:0;overflow-x:hidden}img{display:block;margin-left:auto;margin-right:auto;width:100%;max-width:100%;border-radius:8px}@media (max-width:480px){img{width:150px}}@media (min-width:481px) and (max-width:600px){img{width:200px}}@media (min-width:601px) and (max-width:900px){img{width:400px}}@media (min-width:901px){img{width:600px}}@media(max-width:999px){#c{display:block;font-size:1.96vw}}</style><div style="display:table;margin:16px auto"><div id="c"><pre>
+<!DOCTYPE html>
+<html lang="en">
+<link href="data:," rel="icon">
+<title>Sukalaper - 02</title>
+<meta charset="utf-8">
+<meta content="Sukalaper blog, sukalaper, blog teknologi, programming, GNU/Linux, paper" name="description">
+<meta content="index, follow" name="robots">
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<style>
+  body {
+    background: #fffbda;
+    color: #333;
+    overflow-y: scroll;
+    font: 16px monospace, monospace
+  }
+  a {
+    color: #06f
+  }
+  pre {
+    margin: 0;
+    overflow-x: hidden
+  }
+  img {
+    display: table-cell;
+    max-width: 999px;
+    max-width: 75ch;
+    border-radius: 6px;
+  }
+  @media(max-width:999px) {
+    #c {
+      display: block;
+      font-size: 1.953vw
+    }
+  }
+</style>
+<div style="display:table;margin:16px auto">
+    <div id="c">
+        <pre>
 +------------------------------------------------------------------------------+
 |                                                                              |
 |  <a href="/">/home/sukalaper</a>                                      <a href="/blog">blog/</a>  <a href="/paper">paper/</a>  <a href="/about">about/</a>  |
@@ -8,8 +45,6 @@
 
 Cara Mengatur Kecepatan TrackPoint Thinkpad Pada Arch Linux
 ________________________________________________________________________________
-
-- Referensi .............................................................. <a href=#1.0>[1.0]</a>
 
 Jika teman-teman menggunakan laptop bawaan Lenovo (dulu IBM) pasti sudah tidak 
 asing lagi dengan "pentil merah" yang berada tepat di tengah-tengah keyboard.
@@ -34,8 +69,8 @@ terdistraksi oleh apapun <a href=#1>[1]</a>.
 
 Lalu bagaimana cara mengatur kecepatan trackpoint pada Arch Linux?
 
-Teman-teman harus membuat sebuah file pada  /etc/udev/rules.d/
-                                            10-trackpoint.rules <a href=#1>[1]</a> 
+Teman-teman harus membuat sebuah file pada /etc/udev/rules.d/
+                                           10-trackpoint.rules <a href=#1>[1]</a> 
   dengan perintah : 
 
   $ sudo touch /etc/udev/rules.d/10-trackpoint.rules
@@ -99,9 +134,6 @@ membuat sebuah alias pada .bashrc :
 
   alias trck='sudo udevadm test /sys/devices/platform/i8042/serio1/serio2'
 
-<span id=1.0><a href=#1.0>[1.0]</a></span> Referensi
-________________________________________________________________________________
-
 <span id=1><a href=#1>[1]</a></span> <a href=https://www.youtube.com/watch?v=H9ya4dUZfTQ>https://www.youtube.com/watch?v=H9ya4dUZfTQ</a>
 <span id=2><a href=#2>[2]</a></span> <a href=https://wiki.archlinux.org/title/TrackPoint>https://wiki.archlinux.org/title/TrackPoint</a>
 
@@ -109,4 +141,8 @@ ________________________________________________________________________________
 
                                           Sukalaper © 2024, All rights reserved.
 
-      </pre></div></div></html>
+      </pre>
+    </div>
+</div>
+
+</html>

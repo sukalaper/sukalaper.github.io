@@ -8,7 +8,7 @@
 |                                                                         `~~~'|
 +------------------------------------------------------------------------------+
 
-📌[Arch Linux]
+[Arch Linux]
   - Cara Efektif Mengatasi Error Response To Policy Kit Daemon .......... <a href="blog/01.html">[#001]</a>
   - Cara Mengatur Kecepatan TrackPoint Thinkpad Pada Arch Linux ......... <a href="blog/02.html">[#002]</a>
   - Cara Mengakses Reddit Pada Arch Linux ............................... <a href="blog/03.html">[#003]</a>
@@ -16,4 +16,5 @@
   - Membuat Dual Booting Sistem Operasi Windows Dan Arch Linux .......... <a href="blog/05.html">[#005]</a>
   - Mengubah Tulisan Default TTY Di Arch Linux .......................... <a href="blog/06.html">[#006]</a>
 
-📚[Another Post]
+[Another Post]
+  - Program Sederhana Mengurutkan Nama Berdasarkan Abjad Dengan C++ ..... <a href="blog/07.html">[#007]</a>

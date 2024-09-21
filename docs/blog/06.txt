@@ -2,8 +2,6 @@
 Mengubah Tulisan Default TTY Di Arch Linux
 ________________________________________________________________________________
 
-- Referensi                                                                [1.0]
-
 Saya tidak menggunakan manajer tampilan[1] pada sistem saya dan hanya 
 mengandalkan TTY[2]. Mengapa? Terkadang sebuah kesederhanaan adalah kunci. 
 Dengan langsung terhubung dengan terminal teks saya merasa memiliki kendali 
@@ -27,7 +25,6 @@ ke dunia tanpa hambatan dengan TTY.
 Umumnya, TTY akan menampilkan pesan yang kurang lebih seperti ini :
   
   Arch Linux 6.8.7-arch1-1 (-)
-
   user login: _
 
 Saya ingin mengubah kalimat pada Arch Linux 6.8.7-arch1-1 (-), lalu bagaimana 
@@ -42,11 +39,7 @@ caranya?
 Maka hasilnya akan seperti ini nantinya pada TTY :
 
   Hallo!
-
   user login: _
-
-[1.0] Referensi
-________________________________________________________________________________
 
 [1] https://en.wikipedia.org/wiki/GNOME_Display_Manager
 [2] https://itsfoss.com/what-is-tty-in-linux/

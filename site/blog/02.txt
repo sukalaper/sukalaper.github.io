@@ -2,8 +2,6 @@
 Cara Mengatur Kecepatan TrackPoint Thinkpad Pada Arch Linux
 ________________________________________________________________________________
 
-- Referensi .............................................................. [1.0]
-
 Jika teman-teman menggunakan laptop bawaan Lenovo (dulu IBM) pasti sudah tidak 
 asing lagi dengan "pentil merah" yang berada tepat di tengah-tengah keyboard.
 Ya, itu yang dinamakan trackpoint. Lalu, apa saja fungsi dari trackpoint?
@@ -27,8 +25,8 @@ terdistraksi oleh apapun [1].
 
 Lalu bagaimana cara mengatur kecepatan trackpoint pada Arch Linux?
 
-Teman-teman harus membuat sebuah file pada  /etc/udev/rules.d/
-                                            10-trackpoint.rules [1] 
+Teman-teman harus membuat sebuah file pada /etc/udev/rules.d/
+                                           10-trackpoint.rules [1] 
   dengan perintah : 
 
   $ sudo touch /etc/udev/rules.d/10-trackpoint.rules
@@ -91,9 +89,6 @@ Namun saya ingin perintah menjadi automasi di banding untuk di ketik dengan cara
 membuat sebuah alias pada .bashrc :
 
   alias trck='sudo udevadm test /sys/devices/platform/i8042/serio1/serio2'
-
-[1.0] Referensi
-________________________________________________________________________________
 
 [1] https://www.youtube.com/watch?v=H9ya4dUZfTQ
 [2] https://wiki.archlinux.org/title/TrackPoint

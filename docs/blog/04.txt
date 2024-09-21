@@ -2,8 +2,6 @@
 Membuat Module Statusbar Sederhana Pada Arch Linux
 ________________________________________________________________________________
 
-- Referensi .............................................................. [1.0]
-
 Statusbar pada GNU/Linux adalah elemen antarmuka grafis yang menampilkan 
 informasi penting tentang sistem seperti penggunaan CPU, penggunaan memori dan 
 status jaringan. Biasanya terletak di bagian bawah atau atas layar, statusbar 
@@ -37,19 +35,9 @@ understand it."
 Terlebih lagi, i3wm [7] yang saya gunakan memiliki fitur scratchpad [8] dan 
 memungkinkan untuk menggunakan module ini dengan lebih fleksibel.
 
-Saya tidak banyak pengalaman dalam menulis Bash. Mohon maaf untuk kesalahan 
-logika atau error handling yang kurang tepat.
+Tidak banyak pengalaman dalam menulis Bash. Mohon maaf untuk kesalahan logika 
+atau error handling yang kurang tepat.
 
-  <textarea 
-    style="width:95%; 
-    height:450px; 
-    background-color:#fffbda; 
-    font-family: Monospace;
-    font-size: min(1.99vw, 14px); 
-    border:none;"
-    rows="50" 
-    readonly
-  >
   #!/bin/bash -e
 
   # The MIT License (MIT)
@@ -124,7 +112,6 @@ logika atau error handling yang kurang tepat.
     # Get value temp from $sensors and trim the output
     temp_now=$(sensors | grep -i "temp1" | tail -n1 | awk '{print $2}')
     [[ -n $temp_now ]] && { echo 󰔄 : $temp_now; } || echo 󰔄 : -
-  </textarea> 
 
 Saya sendiri menggunakan bantuan alias [9] pada .bashrc [10] untuk menjalankan 
 kode ini agar lebih cepat. 
@@ -133,13 +120,10 @@ kode ini agar lebih cepat.
 
 Berikut adalah tangkapan layar dari skrip tersebut :
 
-  <image src="image/Membuat-Module-Statusbar-Sederhana-Pada-Arch-Linux/statbar.png">
+  <image src="image/04/statbar.png">
 
 Kata yang memiliki latar belakang putih menandakan perubahan yang sedang 
 terjadi.
-
-[1.0] Referensi
-________________________________________________________________________________
 
 [1] https://en.wikipedia.org/wiki/Window_manager
 [2] https://github.com/polybar/polybar
