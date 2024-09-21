@@ -26,6 +26,13 @@
 +------------------------------------------------------------------------------+
 
 
+<<<<<<< HEAD
+Welcome $HOME Anyone!
+________________________________________________________________________________
+
+Kembali berpindah dari satu static site generator [1] ke static site lainnya 
+cukup membosankan―― 
+=======
 - Welcome $HOME Anyone! .................................................. [1.0]
 - Perubahan Dilakukan Pada Source Asli ................................... [2.0]
 - Referensi .............................................................. [3.0]
@@ -36,6 +43,7 @@ ________________________________________________________________________________
 
 Kembali berpindah dari satu static site generator [1] ke static site lainnya 
 cukup membosankan, entah apa yang di cari―― 
+>>>>>>> 51f3224b5741b7aa77a7d4587d566316685788d3
 Kesederhanaan? Kemudahan dokumentasi? Untuk memulai memahami kembali kerangka 
 dokumentasi yang berbeda adalah sebuah konsekuensi logis yang harus dk terima 
 demi mencapai kemaslahatan.
@@ -51,6 +59,13 @@ potensi pengalaman yang lebih baik. Tidak melulu tertutup dan berlagak
 konservatif melainkan terbuka pada kemungkinan, karena jika menggunakan 
 sesuatu itu salah maka selamanya saya tidak ingin benar [5]."
 
+<<<<<<< HEAD
+Sedikit perubahan dari website asli milik Dylan (sekarang tidak aktif [7]). 
+Tanda tambah (+) menandakan perubahan dilakukan dan sebalik nya :
+
+ <textarea 
+    style="width:95%; 
+=======
 Untuk waktu yang belum ditentukan, situs ini di kelola dengan Termux [6]
 dengan sedikit konfigurasi yang akan di jelaskan pada postingan selanjut nya.
 
@@ -63,12 +78,18 @@ Tanda tambah (+) menandakan perubahan dilakukan dan sebalik nya.
 
  <textarea 
     style="width:100%; 
+>>>>>>> 51f3224b5741b7aa77a7d4587d566316685788d3
     height:450px; 
     background-color:#fffbda; 
     font-family: Monospace;
     font-size: min(1.99vw, 14px); 
     border:none;"
+<<<<<<< HEAD
+    rows="50" 
+    readonly
+=======
     rows="50" enabled
+>>>>>>> 51f3224b5741b7aa77a7d4587d566316685788d3
   >
  - <!doctype html>
  + <!DOCTYPE html>
@@ -173,10 +194,13 @@ Tanda tambah (+) menandakan perubahan dilakukan dan sebalik nya.
                                           Sukalaper © 2024, All rights reserved.
   </textarea>
 
+<<<<<<< HEAD
+=======
 
 [3.0] Referensi
 ________________________________________________________________________________
 
+>>>>>>> 51f3224b5741b7aa77a7d4587d566316685788d3
 [1] https://jamstack.org/generators/
 [2] https://www.vim.org/
 [3] https://www.asciiart.eu/

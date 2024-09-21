@@ -1,0 +1,155 @@
+
+RTFM (Belum selesai)
+________________________________________________________________________________
+
+- Ikhtisar                                                                 [1.0]
+- Sudut Pandang Mengenai RTFM                                              [2.0]
+- RTFM - Etika Bertanya                                                    [3.0]
+- Penutup                                                                  [4.0]
+- Referensi                                                                [5.0]
+
+
+[1.0] Ikhtisar
+________________________________________________________________________________
+
+  <p class="quote">
+  RTFM: Read The Fucking Manual[3].
+  </p>
+
+Tulisan ini saya kutip dari Arch Wiki[1] yang berjudul Arch Terminology[2].
+  
+Akronim ini adalah ajakan untuk peduli diri, bukan penghinaan. Ini sering 
+digunakan ketika pengguna dianggap gagal melakukan upaya apa pun untuk menemukan 
+solusi atas masalahnya sendiri. Jika seseorang memberi tahu Anda hal ini, mereka 
+tidak mencoba menyinggung perasaan Anda; mereka hanya merasa frustrasi karena 
+Anda dianggap kurang berusaha.
+
+Pesan sederhana ini digunakan oleh pengguna baru Linux yang bertanya tentang 
+fungsionalitas suatu program ketika fungsi tersebut dijelaskan dengan jelas 
+dalam manual program.
+
+  $ man [nama-program]
+  $ [nama-program] --help
+
+
+[2.0] Sudut Pandang Mengenai RTFM
+________________________________________________________________________________
+
+Saya bukan orang yang enggan untuk menanggapi pertanyaan-pertanyaan mendasar,
+pertanyaan yang sebenarnya mudah didapatkan atau bahkan jawabannya tepat didepan 
+mata.
+
+Kita hidup pada era digital, kemudahan akses hanya dengan membuka ponsel bahkan 
+keluaran kesalahan program di tunjukan pada layar terminal (stderr). Apapun 
+dapat di cari dengan bantuan mesin pencarian (meskipun beberapa artikel hanya 
+berisi salinan dari satu artikel ke artikel lain).
+
+Beberapa teman "yang pernah" se-universitas cukup sering bertanya seperti ini.
+
+  "Gimana cara deklarasi variabel dengan tipe data string di C++?"
+  "Kok ini error ya?" (Tanpa disertai dengan foto)
+  "Mengapa ini dianggap salah? string var_string = '';"
+  "Bagaimana menetapkan konstanta?"
+  "Bagaimana membuat penanganan kesalahan pada kondisi if-else?"
+  "SSD apa yang bagus?" 
+  "Apakah DDR4 kompatibel dengan DDR3?"
+
+Jadi, apakah pertanyaan demi pertanyaan yang diajukan diatas dapat dikatakan 
+baik? Ini sama sekali tidak seperti simbiosis mutualisme. Jika kita membelah 
+menjadi dua sudut pandang yang mana sisi pertama untuk saya pribadi dan sisi 
+kedua untuk teman saya.
+
+Ini sangat pragmatis dan saya hanya ingin lebih bijak menanggapi secara 
+filosofis. Tentu saja bahwa saya bukan seorang pemrogram, pengembang perangkat 
+lunak atau ahli. Jadi, jika saya memiliki kesalahan jawaban, keliru soal 
+pemahaman alangkah baiknya agar mengkoreksi diri saya daripada menghina saya. 
+
+Tentu, saya sebagai sisi pertama merasa beruntung karena ini adalah proses 
+berkesinambungan dan tidak boleh dihentikan. Berbagi apa yang saya ketahui,
+lagi pula saya selalu merasa bahwa saya tidak dapat memukul rata pemahaman orang 
+lain; ada yang mereka ketahui dan saya tidak begitu pun sebaliknya. Semua hal 
+ini tentu membantu saya untuk mempelajari kembali diri saya sendiri.
+
+Oh ya, saya membuat beberapa catatan untuk setiap kendala yang saya temui. 
+Tujuannya adalah agar tidak ada waktu terbuang untuk mencari solusi atas masalah 
+yang sudah terdokumentasi. Catatan berjudul KEH (Known Error Handling).
+
+Sebaliknya, sebagai sisi kedua saya rasa tidak mungkin orang lain akan membantu 
+dalam masalah sepele, itu benar. Maaf, bukan bermaksud mematahkan semangat 
+belajar. 
+
+Misal, saat kesalahan diketahui melalui keluaran terminal yang ada mereka hanya 
+akan di olok-olok karena kurangnya literasi. 
+
+Namun, aturan dasarnya tetap sama. Pahami masalahnya, baca pesan kesalahannya
+dan lihat apakah bisa disimulasikan, gunakan mesin pencarian untuk setiap kasus
+keluaran kesalahan.
+
+
+[3.0] RTFM - Etika Bertanya
+________________________________________________________________________________
+
+Jika ingin bertanya. Ajukan pertanyaan yang tepat dan pastikan Anda sudah 
+berusaha untuk mencarinya terlebih dahulu. Sekali lagi, ajukan pertanyaan yang 
+tepat. Jangan bertanya untuk bertanya, tanyakan saja[4].
+
+  "Hallo, adakah yang menggunakan i3wm[5] disini?"
+
+Saya berani bertaruh, jika Anda bertanya seperti itu pada forum yang berisi
+pengguna GNU/Linux, maka jawabannya adalah ada!
+
+Namun, apa tujuan pertanyaan tersebut? Lebih baik langsung ke pokok permasalahan 
+seperti ini.
+
+  "Permisi, saya sedang mencoba menggunakan i3wm dan saya ingin bertanya disini.
+   
+   Saya mencoba membuat sebuah skrip Bash untuk memberi notifikasi saat tombol
+   CapsLock ditekan. Namun, sepertinya skrip saya tidak berfungsi seperti yang
+   diharapkan.
+   
+   Saya telah membuat skrip dengan nama capslock-test.sh dan memberinya izin
+   eksekusi dengan perintah.
+   
+    $ chmod +x capslock-test.sh
+   
+   Berikut ini adalah isi dari skrip tersebut.
+  
+    #!/bin/bash
+
+    capslock_state=$(xset q | grep "Caps Lock" | awk '{print $4}')
+  
+    if [[ "$capslock_state" == "on" ]]; then
+      dunstify -u critical -t 2000 "CapsLock ON"
+    else
+      dunstify -u normal "CapsLock OFF"
+    fi
+   
+   Namun, setelah saya jalankan, tidak ada notifikasi yang muncul saat saya 
+   menekan CapsLock. Apakah ada yang bisa membantu saya memperbaiki masalah 
+   ini? 
+   Apa mungkin ada kesalahan logika dengan skrip saya?
+
+   Setiap bantuan akan sangat dihargai! Terima kasih!
+
+Dengan penyesuaian ini, pertanyaan tersebut menjadi lebih spesifik dan 
+memberikan konteks yang lebih jelas kepada pembaca. Hal ini dapat membantu 
+pembaca untuk memberikan jawaban yang lebih tepat dan membantu dalam memecahkan 
+masalah yang dihadapi.
+
+
+[4.0] Penutup
+________________________________________________________________________________
+
+Literasi disertai dengan usaha yang cukup tentunya akan membuahkan hasil, ini 
+bersifat mutlak dan tidak dapat dibantah! Tidak perduli apapun profesi 
+teman-teman, ini universal. Semoga sukses dengan apa yang sedang dilakukan! 
+
+
+[5.0] Referensi
+________________________________________________________________________________
+
+[1] https://wiki.archlinux.org/
+[2] https://wiki.archlinux.org/title/arch_terminology
+[3] https://en.m.wikipedia.org/wiki/RTFM
+[4] https://dontasktoask.com/
+[5] https://i3wm.org/

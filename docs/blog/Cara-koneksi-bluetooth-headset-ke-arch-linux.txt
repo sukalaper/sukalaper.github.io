@@ -1,0 +1,24 @@
+Cara Koneksi Bluetooth Headset Ke Arch Linux
+________________________________________________________________________________
+
+Langkah untuk melakukan koneksi bluetooth headset pada Arch Linux agak sedikit
+tricky (menurut Saya).
+
+  1. Pasang paket-paket bluetooth
+     $ sudo pacman -S bluez bluez-utils
+
+  2. Load modul btusb (opsional)
+     $ sudo modprobe btusb
+
+  3. Aktifkan layanan bluetooth pada systemctl
+     $ sudo systemctl start bluetooth
+     $ sudo systemctl enable bluetooth
+
+  4. Pasang paket tambahan bluetooth. Pipewire tidak bekerja pada mesin ini.
+     $ sudo pacman -S pulseaudio pulseaudio-bluetooth 
+
+  5. Restart layanan pulseaudio
+     $ pulseaudio --kill
+     $ pulseaudio --start 
+
+  6. 
