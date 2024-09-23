@@ -2,40 +2,32 @@
 Membuat Module Statusbar Sederhana Pada Arch Linux
 ________________________________________________________________________________
 
-- Apa Itu Statusbar? ..................................................... [1.0]
-- Mengapa Membuat Module Statusbar Sendiri? .............................. [2.0]
-- Konfigurasi Module Dengan Skrip Bash ................................... [3.0]
-- Referensi .............................................................. [4.0]
-
-
-[1.0] Apa Itu Statusbar?
-________________________________________________________________________________
-
 Statusbar pada GNU/Linux adalah elemen antarmuka grafis yang menampilkan 
 informasi penting tentang sistem seperti penggunaan CPU, penggunaan memori dan 
 status jaringan. Biasanya terletak di bagian bawah atau atas layar, statusbar 
 memberikan pemantauan real-time yang membantu pengguna memahami kinerja sistem. 
 Dengan memanfaatkan widget dan plugin, pengguna dapat menyesuaikan statusbar 
 sesuai kebutuhan.
+
 Ada banyak beberapa statusbar yang cukup populer dan sering di gunakan oleh 
-pengguna window manager [1] beberapa diantaranya adalah:
+pengguna window manager [1] beberapa diantaranya adalah :
 
   1. Polybar [2]
+
   2. Tint2 [3]
+ 
   3. i3status [4]
+ 
   4. Dzen2 [5]
+ 
   5. Lemonbar [6]
 
 Dan mungkin masih banyak lagi..
 
-
-[2.0] Mengapa Membuat Module Statusbar Sendiri?
-________________________________________________________________________________
-
 Sebelumnya, saya pernah menggunakan beberapa statusbar yang cukup populer di 
 atas. Namun, saya merasa ingin mengurangi ketergantungan pada sebuah paket. 
-Jadi, memanfaatkan Bash untuk membuat statusbar sederhana sepertinya adalah ide 
-yang tidak terlalu buruk.
+Jadi, memanfaatkan Bash untuk membuat statusbar sederhana sepertinya adalah 
+ide yang tidak terlalu buruk.
 
 "Bash is actually quite powerful without relying on it, of course, if you 
 understand it."
@@ -43,22 +35,9 @@ understand it."
 Terlebih lagi, i3wm [7] yang saya gunakan memiliki fitur scratchpad [8] dan 
 memungkinkan untuk menggunakan module ini dengan lebih fleksibel.
 
+Tidak banyak pengalaman dalam menulis Bash. Mohon maaf untuk kesalahan logika 
+atau error handling yang kurang tepat.
 
-[3.0] Konfigurasi Module Dengan Skrip Bash
-________________________________________________________________________________
-
-Saya tidak banyak pengalaman dalam menulis Bash. Mohon maaf untuk kesalahan 
-logika atau error handling yang kurang tepat.
-
-  <textarea 
-    style="width:100%; 
-    height:450px; 
-    background-color:#fffbda; 
-    font-family: Monospace;
-    font-size: min(1.99vw, 14px); 
-    border:none;"
-    rows="50" enabled
-  >
   #!/bin/bash -e
 
   # The MIT License (MIT)
@@ -133,16 +112,18 @@ logika atau error handling yang kurang tepat.
     # Get value temp from $sensors and trim the output
     temp_now=$(sensors | grep -i "temp1" | tail -n1 | awk '{print $2}')
     [[ -n $temp_now ]] && { echo 󰔄 : $temp_now; } || echo 󰔄 : -
-  </textarea> 
 
 Saya sendiri menggunakan bantuan alias [9] pada .bashrc [10] untuk menjalankan 
 kode ini agar lebih cepat. 
   
   alias wtc='watch -n 5 -t -d ~/.local/bin/stat-bar.sh'
-  
 
-[4.0] Referensi
-________________________________________________________________________________
+Berikut adalah tangkapan layar dari skrip tersebut :
+
+  <image src="../image/arch-linux/04/statbar.png">
+
+Kata yang memiliki latar belakang putih menandakan perubahan yang sedang 
+terjadi.
 
 [1] https://en.wikipedia.org/wiki/Window_manager
 [2] https://github.com/polybar/polybar

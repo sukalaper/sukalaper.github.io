@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="data:," rel="icon">
+<title>Sukalaper - 07</title>
+<meta charset="utf-8">
+<meta content="Sukalaper blog, sukalaper, blog teknologi, programming, GNU/Linux, paper" name="description">
+<meta content="index, follow" name="robots">
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<style>
+  body {
+    background: #fffbda;
+    color: #333;
+    overflow-y: scroll;
+    font: 16px monospace, monospace
+  }
+  a {
+    color: #06f
+  }
+  pre {
+    margin: 0;
+    overflow-x: hidden
+  }
+  img {
+    display: table-cell;
+    max-width: 999px;
+    max-width: 75ch;
+    border-radius: 6px;
+  }
+  @media(max-width:999px) {
+    #c {
+      display: block;
+      font-size: 1.953vw
+    }
+  }
+</style>
+<div style="display:table;margin:16px auto">
+    <div id="c">
+        <pre>
++------------------------------------------------------------------------------+
+|                                                                              |
+|  <a href="/">/home/sukalaper</a>                                      <a href="/blog">blog/</a>  <a href="/paper">paper/</a>  <a href="/about">about/</a>  |
+|                                                                              |
++------------------------------------------------------------------------------+
+
+
+Membuat Sebuah Skrip Penyorotan Sintaksis Sederhana Dengan Bantuan Bash
+________________________________________________________________________________
+
+Dalam penggunaan terminal, kita tidak lepas dari menulis dan melihat sebuah 
+file. Tentu saja saya sering menggunakan perintah ini :
+  
+  $ cat my-file.txt 
+    Are you okay? No, next questions.
+
+  $ cat NumberGuessingGame.h
+    #ifndef NUMBERGUESSINGGAME_H
+    #define NUMBERGUESSINGGAME_H
+
+    class NumberGuessingGame {
+    private:
+      int secretNumber;
+      int maxAttempts;
+      int attempts;
+
+    public:
+      NumberGuessingGame(int difficulty);
+      void play();
+    };
+
+    #endif // NUMBERGUESSINGGAME_H
+
+Perintah tersebut digunakan untuk melihat isi sebuah file. Namun, itu menjadi
+membosankan karena tidak ada pewarnaan sintaksis. Sangat subjektif, bukan?
+
+Alih-alih memasang paket bantuan seperti : 
+
+  1. bat <a href=#1>[1]</a>
+  
+  2. pygmentize <a href=#2>[2]</a>
+
+Mengapa tidak mengandalkan bantuan dari Bash dan grep (grep --color)? 
+
+  1. Buat sebuah file pada .local/bin dengan nama highlight.sh
+
+  2. Isi file tersebut dengan baris ini :
+     #!/bin/bash
+     cat "$1" | grep --color=always -E 'function|if|else|return|for|while|#include
+                                        |int|float|char|void|\b[A-Z]+\b|$'
+
+  3. Beri hak akses pada file tersebut :
+     $ chmod +x ~/.local/bin/highlight.sh
+
+Jika teman-teman sudah melakukan konfigurasi $PATH pada ~/.local/bin maka 
+teman-teman cukup gabungan perintah seperti ini :
+
+  $ highlight contoh.cpp 
+
+Maka keluaran kurang lebih akan seperti ini :
+
+  <img src="../image/arch-linux/07/highlight.png">
+
+<span id=1><a href=#1>[1]</a></span> <a href=https://github.com/sharkdp/bat>https://github.com/sharkdp/bat</a>
+<span id=2><a href=#2>[2]</a></span> <a href=https://pygments.org/>https://pygments.org/</a>
+
+________________________________________________________________________________
+
+                                          Sukalaper © 2024, All rights reserved.
+
+      </pre>
+    </div>
+</div>
+
+</html>
