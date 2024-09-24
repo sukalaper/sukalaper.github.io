@@ -18,4 +18,4 @@
   - Skrip Penyorotan Sintaksis Sederhana Dengan Bash Pada Arch Linux .... <a href="blog/arch-linux/07.html">[#007]</a>
 
 [Another Post]
-  - Program Sederhana Mengurutkan Nama Berdasarkan Abjad Dengan C++ ..... <a href="blog/another-post/01.html">[#007]</a>
+  - Program Sederhana Mengurutkan Nama Berdasarkan Abjad Dengan C++ ..... <a href="blog/another-post/01.html">[#008]</a>
