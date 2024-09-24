@@ -84,8 +84,9 @@ Mengapa tidak mengandalkan bantuan dari Bash dan grep (grep --color)?
 
   2. Isi file tersebut dengan baris ini :
      #!/bin/bash
-     cat "$1" | grep --color=always -E 'function|if|else|return|for|while|#include
-                                        |int|float|char|void|\b[A-Z]+\b|$'
+     cat "$1" | grep --color=always -E 'ifndef|define||function|if|else|
+                                        return|for|while|#include|int|
+                                        float|char|void|\b[A-Z]+\b|$'
 
   3. Beri hak akses pada file tersebut :
      $ chmod +x ~/.local/bin/highlight.sh
@@ -98,6 +99,8 @@ teman-teman cukup gabungan perintah seperti ini :
 Maka keluaran kurang lebih akan seperti ini :
 
   <img src="../image/arch-linux/07/highlight.png">
+
+Ya lumayan lah yaa.
 
 <span id=1><a href=#1>[1]</a></span> <a href=https://github.com/sharkdp/bat>https://github.com/sharkdp/bat</a>
 <span id=2><a href=#2>[2]</a></span> <a href=https://pygments.org/>https://pygments.org/</a>
