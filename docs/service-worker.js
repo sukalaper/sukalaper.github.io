@@ -3,7 +3,7 @@ self.addEventListener('install', (event) => {
     caches.open('sukalaper-cache').then((cache) => {
       return cache.addAll([
         '/',
-        'blog/'
+        'blog/',
       ]);
     })
   );
