@@ -2,8 +2,8 @@
 Mengubah Tulisan Default TTY Di Arch Linux
 ________________________________________________________________________________
 
-Saya tidak menggunakan manajer tampilan[1] pada sistem saya dan hanya 
-mengandalkan TTY[2]. Mengapa? Terkadang sebuah kesederhanaan adalah kunci. 
+Saya tidak menggunakan manajer tampilan [1] pada sistem saya dan hanya 
+mengandalkan TTY [2]. Mengapa? Terkadang sebuah kesederhanaan adalah kunci. 
 Dengan langsung terhubung dengan terminal teks saya merasa memiliki kendali 
 penuh atas sistem saya. Terlihat subjektif namun itu ada nya.
 

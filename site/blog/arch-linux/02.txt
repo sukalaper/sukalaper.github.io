@@ -26,7 +26,7 @@ terdistraksi oleh apapun [1].
 Lalu bagaimana cara mengatur kecepatan trackpoint pada Arch Linux?
 
 Teman-teman harus membuat sebuah file pada /etc/udev/rules.d/
-                                           10-trackpoint.rules [1] 
+                                           10-trackpoint.rules [2] 
   dengan perintah : 
 
   $ sudo touch /etc/udev/rules.d/10-trackpoint.rules

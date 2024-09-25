@@ -91,6 +91,8 @@ main() {
     printf '%s\n' "CC $page"
     page "$page"
   done
+
+  cp manifest.json service-worker.js docs/
 }
 
 main "$@"
