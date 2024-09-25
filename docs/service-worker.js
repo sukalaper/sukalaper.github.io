@@ -4,7 +4,6 @@ self.addEventListener('install', (event) => {
       return cache.addAll([
         '/',
         'docs/',
-        // tambahkan file lainnya yang perlu dicache
       ]);
     })
   );
