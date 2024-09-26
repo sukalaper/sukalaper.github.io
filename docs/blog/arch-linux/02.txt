@@ -90,5 +90,77 @@ membuat sebuah alias pada .bashrc :
 
   alias trck='sudo udevadm test /sys/devices/platform/i8042/serio1/serio2'
 
+UPDATE: 26/09/2024
+
+Pada Arch Linux dengan versi kernel 6.10.10-arch1-1 ada cara yang lebih mudah,
+gunakan perintah dari xinput :
+
+  $ xinput list
+    ⎡ Virtual core pointer                  id=2	[master pointer  (3)]
+    ⎜   ↳ Virtual core XTEST pointer        id=4	[slave  pointer  (2)]
+    ⎜   ↳ SynPS/2 Synaptics TouchPad        id=10	[slave  pointer  (2)]
+    ⎜   ↳ TPPS/2 IBM TrackPoint             id=11	[slave  pointer  (2)]
+    ⎣ Virtual core keyboard                 id=3	[master keyboard (2)]
+        ↳ Virtual core XTEST keyboard       id=5	[slave  keyboard (3)]
+        ↳ Power Button                      id=6	[slave  keyboard (3)]
+        ↳ Video Bus                         id=7	[slave  keyboard (3)]
+        ↳ Sleep Button                      id=8	[slave  keyboard (3)]
+        ↳ AT Translated Set 2 keyboard      id=9	[slave  keyboard (3)]
+        ↳ ThinkPad Extra Buttons            id=12	[slave  keyboard (3)]
+
+Dari keluaran tersebut, perhatikan id pada TPPS/2 IBM TrackPoint yang bernilai
+11.
+
+  $ xinput list-props 11
+    Device 'TPPS/2 IBM TrackPoint':
+	  Device Enabled (183):	1
+	  Coordinate Transformation Matrix (185):	1.000000, 0.000000, 0.000000, 
+                                            0.000000, 1.000000, 0.000000, 
+                                            0.000000, 0.000000, 1.000000
+    libinput Natural Scrolling Enabled (320):	0
+    libinput Natural Scrolling Enabled Default (321):	0
+    libinput Scroll Methods Available (324):	0, 0, 1
+    libinput Scroll Method Enabled (325):	0, 0, 1
+    libinput Scroll Method Enabled Default (326):	0, 0, 1
+    libinput Button Scrolling Button (350):	2
+    libinput Button Scrolling Button Default (351):	2
+    libinput Button Scrolling Button Lock Enabled (352):	0
+    libinput Button Scrolling Button Lock Enabled Default (353):	0
+    libinput Middle Emulation Enabled (330):	0
+    libinput Middle Emulation Enabled Default (331):	0
+    libinput Accel Speed (332):	-0.660000 // Fokus kita pada baris ini
+    libinput Accel Speed Default (333):	0.000000
+    libinput Accel Profiles Available (334):	1, 1, 1
+    libinput Accel Profile Enabled (335):	1, 0, 0
+    libinput Accel Profile Enabled Default (336):	1, 0, 0
+    libinput Accel Custom Fallback Points (337):	<no items>
+    libinput Accel Custom Fallback Step (338):	0.000000
+    libinput Accel Custom Motion Points (339):	<no items>
+    libinput Accel Custom Motion Step (340):	0.000000
+    libinput Accel Custom Scroll Points (341):	<no items>
+    libinput Accel Custom Scroll Step (342):	0.000000
+    libinput Left Handed Enabled (343):	0
+    libinput Left Handed Enabled Default (344):	0
+    libinput Send Events Modes Available (297):	1, 0
+    libinput Send Events Mode Enabled (298):	0, 0
+    libinput Send Events Mode Enabled Default (299):	0, 0
+    Device Node (300):	"/dev/input/event15"
+    Device Product ID (301):	2, 10
+    libinput Drag Lock Buttons (345):	<no items>
+    libinput Horizontal Scroll Enabled (346):	1
+    libinput Scrolling Pixel Distance (347):	15
+    libinput Scrolling Pixel Distance Default (348):	15
+    libinput High Resolution Wheel Scroll Enabled (349):	1
+
+Perhatikan pada keluaran yang saya beri tanda komentar (//) dan gunakan 
+perintah ini :
+
+  $ xinput set-prop 11 "libinput Accel Speed" -0.66 
+
+Nilai dari -0.66 dapat teman-teman sesuaikan dengan kebutuhan teman-teman, 
+karena saya menggunakan i3wm [3] maka saat ini saya menambahkan skrip tersebut
+ke dalam ~/.config/i3/config agar di muat setiap kali i3wm di jalankan.
+
 [1] https://www.youtube.com/watch?v=H9ya4dUZfTQ
 [2] https://wiki.archlinux.org/title/TrackPoint
+[3] https://i3wm.org/

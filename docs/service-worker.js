@@ -1,4 +1,3 @@
-
 self.addEventListener('install', (event) => {
   const filesToCache = [
     'index.html',
@@ -29,14 +28,14 @@ self.addEventListener('install', (event) => {
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request).then((response) => {
-      return response || fetch(event.request).then((networkResponse) => {
-        if (networkResponse.ok && networkResponse.headers.get('content-type').includes('text/html')) {
-          caches.open('sukalaper-cache').then((cache) => {
-            cache.put(event.request, networkResponse.clone());
-          });
-        }
-        return networkResponse;
-      });
+      if (response) {
+        return response; // Jika ada di cache, kembalikan respons dari cache
+      } else {
+        return fetch(event.request).catch(() => {
+          // Jika fetch gagal, kembalikan halaman fallback 
+          return caches.match('404.html');
+        });
+      }
     })
   );
 });
