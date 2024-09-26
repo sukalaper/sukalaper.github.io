@@ -50,13 +50,13 @@ Mengapa tidak mengandalkan bantuan dari Bash dan grep (grep --color)?
 Jika teman-teman sudah melakukan konfigurasi $PATH pada ~/.local/bin maka 
 teman-teman cukup gabungan perintah seperti ini :
 
-  $ highlight contoh.cpp 
+  $ highlight NumberGuessingGame.h
 
 Maka keluaran kurang lebih akan seperti ini :
 
   <img src="../image/arch-linux/07/highlight.png">
 
-Ya lumayan lah yaa.
+Ya lumayan lah yaa. Meski gak sebagus $ bat atau $ pygmentize -f
 
 [1] https://github.com/sharkdp/bat
 [2] https://pygments.org/

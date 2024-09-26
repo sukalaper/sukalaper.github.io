@@ -93,7 +93,6 @@ main() {
   done
 
   cp manifest.json service-worker.js docs/
-  cp -r fontawesome-free-6.6.0 docs/
 }
 
 main "$@"

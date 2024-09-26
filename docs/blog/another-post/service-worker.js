@@ -1,22 +1,11 @@
 
 self.addEventListener('install', (event) => {
   const filesToCache = [
-    'index.html',
-    'about.html',
-    'blog.html',
-    'paper.html',
-    '404.html',
+    '/',
   ];
 
   const blogPosts = [
-    'blog/another-post/01.html',
-    'blog/arch-linux/01.html',
-    'blog/arch-linux/02.html',
-    'blog/arch-linux/03.html',
-    'blog/arch-linux/04.html',
-    'blog/arch-linux/05.html',
-    'blog/arch-linux/06.html',
-    'blog/arch-linux/07.html',
+    '/',
   ];
 
   event.waitUntil(
