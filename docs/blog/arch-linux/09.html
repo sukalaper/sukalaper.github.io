@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <link href="data:," rel="icon">
-<title>Sukalaper - 01</title>
+<title>Sukalaper - 09</title>
 <meta charset="utf-8">
 <meta content="Sukalaper blog, sukalaper, blog teknologi, programming, GNU/Linux, paper" name="description">
 <meta content="index, follow" name="robots">
@@ -59,51 +59,42 @@
 +------------------------------------------------------------------------------+
 
 
-Cara Sederhana Mengatasi Error Response To Policy Kit Daemon Pada Arch Linux
+Konfigurasi REISUB Pada Arch Linux
 ________________________________________________________________________________
 
-Pesan kesalahan ini saya dapatkan ketika ingin melihat konten direktori dengan 
-hak akses administrator yang menggunakan perintah :
+REISUB: Reboot Even If System Utterly Broken.
 
-  $ pkexec ls 
+Dalam penggunaan GNU/Linux (singkatnya Linux) terkadang sistem dapat mengalami 
+kemungkinan kegagalan, kebekuan yang membutuhkan tindakan darurat. Tentu, 
+mematikannya secara paksa (menekan tombol power) bukan solusi yang tepat 
+terutama untuk jangka panjang. 
 
-Namun keluaran terminal menunjukan ini :
+Untuk mengaktifkan REISUB di Arch Linux, teman-teman perlu membuat dan mengisi 
+file konfigurasi terlebih dahulu :
 
-  ==== AUTHENTICATING FOR org.freedesktop.policykit.exec ====
-  Authentication is needed to run `/usr/bin/ls' as the super user
-  Authenticating as: $HOME
-  Password: **********
-  polkit-agent-helper-1: error response to PolicyKit daemon: GDBus.Error:
-  org.freedesktop.PolicyKit1.Error.Failed: No session for cookie
-  ==== AUTHENTICATION FAILED ====
-  Error executing command as another user: Not authorized
-  This incident has been reported.
+  $ sudo sh -c 'echo "kernel.sysrq = 1" > /etc/sysctl.d/99-sysctl.conf
 
-Apakah saya salah memasukan kata sandi? Tidak! Tetapi untuk mengatasi masalah 
-seperti di atas, kita perlu mengetahui terlebih dahulu PID <a href=#1>[1]</a> pada terminal saat 
-ini dengan perintah :
+Setelah selesai, teman-teman dapat melakukan uji coba dengan cara menekan :
 
-  $ echo $$
-  2232
+  Alt + PrtSc + R + E + I + S + U + B
 
-PID ditunjukan dengan angka 2232. Setelahnya, kita harus membuka sebuah terminal
-baru dan dilanjutkan dengan :
+Dalam kasus ini, mesin saya hanya memerlukan penekanan seperti ini :
 
-  $ pkttyagent --process 2232
+  Alt + PrtSc + R + E 
 
-Yang mana perintah diatas adalah skenario suatu proses membutuhkan hak akses 
-tambahan dan otentikasi harus dilakukan melalui terminal yang terkait dengan 
-proses tersebut, nantinya keluaran akan menunjukan seperti ini :
+Kemudian, sistem saya langsung dialihkan kembali ke TTY1 <a href=#1>[1]</a> ini mungkin 
+terjadi mengingat perbedaan konfigurasi kernel dan pengaturan sistem. Dimana 
+dalam beberapa kasus kombinasi tombol ini dirancang untuk melakukan aksi 
+emergency remount pada sistem file dalam mode baca-tulis (read-write) yang mana 
+ini juga merupakan tindakan darurat.
 
-  ==== AUTHENTICATING FOR org.freedesktop.policykit.exec ====
-  Authentication is needed to run `/usr/bin/ls' as the super user
-  Authenticating as: $HOME
-  Password: **********
-  ==== AUTHENTICATION COMPLETE ====
+"Perlu diketahui bahwa REISUB itu sendiri hanyalah sebuah mnemonik, bukan 
+rekomendasi umum apa pun untuk urutan penekanan tombol guna mengambil kembali 
+kendali sistem yang tidak responsif. Anda tidak boleh menekan urutan ini 
+secara membabi buta setiap kali tanpa mengetahui fungsi sebenarnya <a href=#2>[2]</a>."
 
-Keluaran tersebut menandakan bahwa proses autentikasi telah berhasil.
-
-<span id=1><a href=#1>[1]</a></span> <a href=https://www.tutorialspoint.com/what-is-a-pid-file-in-linux>https://www.tutorialspoint.com/what-is-a-pid-file-in-linux</a>
+<span id=1><a href=#1>[1]</a></span> <a href=https://itsfoss.com/what-is-tty-in-linux/>https://itsfoss.com/what-is-tty-in-linux/</a> 
+<span id=2><a href=#2>[2]</a></span> <a href=https://wiki.archlinux.org/title/keyboard_shortcuts>https://wiki.archlinux.org/title/keyboard_shortcuts</a> 
 
 ________________________________________________________________________________
 

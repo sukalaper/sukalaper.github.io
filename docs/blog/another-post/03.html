@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <link href="data:," rel="icon">
-<title>Sukalaper - 01</title>
+<title>Sukalaper - 03</title>
 <meta charset="utf-8">
 <meta content="Sukalaper blog, sukalaper, blog teknologi, programming, GNU/Linux, paper" name="description">
 <meta content="index, follow" name="robots">
@@ -59,51 +59,39 @@
 +------------------------------------------------------------------------------+
 
 
-Cara Sederhana Mengatasi Error Response To Policy Kit Daemon Pada Arch Linux
+Cara Mengatasi Fatal The Remote End Hung Up Unexpectedly Pada Git
 ________________________________________________________________________________
 
-Pesan kesalahan ini saya dapatkan ketika ingin melihat konten direktori dengan 
-hak akses administrator yang menggunakan perintah :
+Saat saya ingin melakukan push pada salah satu repository milik saya, keluaran
+pada Git menunjukan seperti ini :
 
-  $ pkexec ls 
+  Counting objects: 2649, done.
+  Delta compression uses up to 2 threads.
+  Compressing objects: 100% (1280/1280), done.
+  error: RPC failed; result=22, HTTP code = 413 | 116 KiB/s   
+  fatal: The remote end hung up unexpectedly
+  Writing objects: 100% (2504/2504), 449.61 MiB | 4.19 MiB/s, done.
+  Total 2504 (delta 1309), reused 2242 (delta 1216)
+  fatal: The remote end hung up unexpectedly
+  Everything up-to-date
 
-Namun keluaran terminal menunjukan ini :
+Awalnya saya pikir ini adalah kesalahan dari koneksi yang tidak stabil, 
+ternyata bukan. Ini terjadi karena pengaturan buffer git/https. Masalah ini 
+umumnya terkait dengan pengaturan buffer Git untuk transfer data melalui HTTP. 
+Secara default, buffer ini mungkin terlalu kecil untuk menangani data yang di 
+kirim.
 
-  ==== AUTHENTICATING FOR org.freedesktop.policykit.exec ====
-  Authentication is needed to run `/usr/bin/ls' as the super user
-  Authenticating as: $HOME
-  Password: **********
-  polkit-agent-helper-1: error response to PolicyKit daemon: GDBus.Error:
-  org.freedesktop.PolicyKit1.Error.Failed: No session for cookie
-  ==== AUTHENTICATION FAILED ====
-  Error executing command as another user: Not authorized
-  This incident has been reported.
+Cara mengatasinya dengan meningkatkan ukuran buffer menggunakan perintah :
 
-Apakah saya salah memasukan kata sandi? Tidak! Tetapi untuk mengatasi masalah 
-seperti di atas, kita perlu mengetahui terlebih dahulu PID <a href=#1>[1]</a> pada terminal saat 
-ini dengan perintah :
+  $ git config http.postBuffer 524288000
 
-  $ echo $$
-  2232
+Setelahnya, gunakan kembali perintah Git seperti biasa :
 
-PID ditunjukan dengan angka 2232. Setelahnya, kita harus membuka sebuah terminal
-baru dan dilanjutkan dengan :
+  $ git add .
+  $ git commit -m "feat: xx"
+  $ git push -u origin xx
 
-  $ pkttyagent --process 2232
-
-Yang mana perintah diatas adalah skenario suatu proses membutuhkan hak akses 
-tambahan dan otentikasi harus dilakukan melalui terminal yang terkait dengan 
-proses tersebut, nantinya keluaran akan menunjukan seperti ini :
-
-  ==== AUTHENTICATING FOR org.freedesktop.policykit.exec ====
-  Authentication is needed to run `/usr/bin/ls' as the super user
-  Authenticating as: $HOME
-  Password: **********
-  ==== AUTHENTICATION COMPLETE ====
-
-Keluaran tersebut menandakan bahwa proses autentikasi telah berhasil.
-
-<span id=1><a href=#1>[1]</a></span> <a href=https://www.tutorialspoint.com/what-is-a-pid-file-in-linux>https://www.tutorialspoint.com/what-is-a-pid-file-in-linux</a>
+Dan semua akan berfungsi semestinya.
 
 ________________________________________________________________________________
 

@@ -23,7 +23,7 @@
     margin: 0;
     overflow-x: hidden;
   }
-  img {
+  img, video {
     display: table-cell;
     max-width: 999px;
     max-width: 75ch;
@@ -169,12 +169,15 @@ gunakan perintah dari xinput :
         ↳ ThinkPad Extra Buttons            id=12	[slave  keyboard (3)]
 
 Dari keluaran tersebut, perhatikan id pada TPPS/2 IBM TrackPoint yang bernilai
-11.
+11 :
 
   $ xinput list-props 11
     Device 'TPPS/2 IBM TrackPoint':
 	  Device Enabled (183):	1
-	  Coordinate Transformation Matrix (185):	1.000000, 0.000000, 0.000000, 
+	  Coordinate Transformation Matrix (185):	
+                                            1.000000, 
+                                            0.000000, 
+                                            0.000000, 
                                             0.000000, 1.000000, 0.000000, 
                                             0.000000, 0.000000, 1.000000
     libinput Natural Scrolling Enabled (320):	0

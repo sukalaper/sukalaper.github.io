@@ -17,6 +17,7 @@ Partisi sda5 dan sda6 adalah bagian dari Arch Linux. Bagaimana membuatnya?
 
   1. Gunakan alat Disk Management untuk melihat partisi. Saya asumsikan isi nya 
      adalah kurang lebih seperti ini :
+
      Disk 0/
      ├── 100 MB Healthy (EFI System Partition)
      ├── 119.4 GB Disk C:
@@ -28,6 +29,7 @@ Partisi sda5 dan sda6 adalah bagian dari Arch Linux. Bagaimana membuatnya?
      hanya 35000 (baca: 35GB)
   
   4. Kemudian nanti nya akan ada partisi baru seperti ini :
+
      Disk 0/
      ├── 100 MB Healthy (EFI System Partition)  
      ├── 93.7 GB Disk C:                        
@@ -80,27 +82,36 @@ Tidak ada GUI, tidak ada. Hanya sebuah terminal. Sudah siap?!
 
   1. Bagi sebaian orang, mungkin ukuran font terlihat sangat kecil. Ini dapat 
      di sesuaikan dengan perintah : 
+     
      $ setfont ter-132b
 
   2. Hubungkan ke internet dengan iwctl REPL :
+     
      $ iwctl station wlan0 connect [nama-perangkat] --passphrase "kata-sandi"
 
   3. Periksa apakah sudah terhubung dengan jaringan :
+     
      $ ping archlinux.org -c 3
 
   4. Perbarui sistem waktu dengan :
+     
      $ timedatectl 
 
   5. Melihat, membuat dan memformat partisi :
+     
      $ lsblk 
+     
      Biasa nya, sistem akan berada pada /dev/sda namun ini menyesuaikan, 
      konfigurasi mungkin akan berbeda-beda.
+     
      $ cfdsik /dev/sda 
+     
      Pada tahapan ini, teman-teman akan melihat sebuah partisi kosong 35GB yang
      telah di buat. Isi 33.2 GB sebagai Linux filesystem dan 1GB sebagai EFI
      (Ya, terlihat berlebihan) setelah nya teman-teman write partisi tersebut.
   
   6. Periksa hasil partisi :
+     
      $ lsblk
      sda      8:0    0 119.2G  0 disk
      ├─sda1   8:1    0   100M  0 part
@@ -109,79 +120,125 @@ Tidak ada GUI, tidak ada. Hanya sebuah terminal. Sudah siap?!
      ├─sda4   8:4    0   530M  0 part
      ├─sda5   8:5    0  33.2G  0 part
      └─sda6   8:6    0  1003M  0 part 
+     
      Ingat, fokus kita hanya pada sda5 dan sda6.
 
   7. Format partisi :
+     
      $ mkfs.fat -F32 /dev/sda6
+     
      $ mkfs.ext4 /dev/sda5
 
   8. Mount partisi :
+     
      $ mount /dev/sda5 /mnt 
+     
      $ mkdir /mnt/boot
+     
      $ mount /dev/sda6 /mnt/boot 
 
   9. Perbarui mirror agar pemasangan paket lebih cepat : 
+     
      $ sudo reflector --country Indonesia --sort rate --number 5 --save 
        /etc/pacman.d/mirrorlist --verbose
 
   10. Pasang paket-paket yang di butuhkan : 
+      
       $ pacstrap -K /mnt base linux linux-firmware linux-headers base-devel 
       intel-ucode vim dhcpcd iwd
+      
       Jika teman-teman menggunakan AMD, gunakan perintah ini :
+      
       $ pacstrap -K /mnt base linux linux-firmware linux-headers base-devel 
       amd-ucode vim dhcpcd iwd
 
   11. Buat FSTAB : 
+      
       $ genfstab -U /mnt >> /mnt/etc/fstab
 
   12. Gunakan chroot :
+      
       $ arch-chroot /mnt
 
   13. Perbarui zona waktu : 
+      
       $ ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+      
       $ hwclock --systohc
 
   14. Lokalisasi : 
       $ vim /etc/locale.gen 
+      
       Cari dan hapus komentar (#) pada bagian #en_US.UTF-8 UTF-8
+      
       $ locale-gen
+      
       $ echo LANG=en_US.UTF-8 > /etc/locale.conf
+      
       $ export LANG=en_US.UTF-8
 
   15. Tambahkan pengguna dan kata sandi :
+      
       $ passwd 
+      
       $ useradd -m [username-teman-teman]
+      
       $ usermod -aG wheel,storage,power
+      
       $ visudo 
+      
       Cari dan hapus komentar (#) pada #$%wheel ALL=(ALL:ALL) ALL
+      
       $ echo [username-teman-teman] > /etc/hostname
+      
       $ vim /etc/hosts
+      
       Pada bagian ini, tambahkan :
+      
       127.0.0.1     localhost
       ::1           localhost
       127.0.1.1     [username-teman-teman].localdomain localhost
 
   16. Mounting direktori boot, konfigurasi dan instalasi bootloader :
+      
       $ mkdir /boot/efi
+      
       $ mount /dev/sda6
+      
       $ pacman -S grub efibootmgr os-prober mtools dosfstools
+      
       $ vim /etc/default/grub 
+      
       Cari dan hapus komentar (#) pada #GRUB_DISABLE_OS_PROBER=false
+      
       $ grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck
+      
       $ grub-mkconfig -o /boot/grub/grub.cfg
+      
       Pastikan bootloader Windows terdeteksi dengan ada nya keluaran :
+      
       Found Windows Boot Manager on /dev/sda1/efi/Microsoft/Boot/bootmgfw.efi
+      
       Jika tidak ada, pasang paket dari fuse3 dengan perintah :
+      
       $ pacman -S fuse3 
+      
       Kemudian jalankan kembali :
+      
       $ grub-mkconfig -o /boot/grub/grub.cfg
 
   17. Mengaktifkan dan mengakhiri instalasi : 
+      
       $ systemctl start iwd dhcpcd 
+      
       $ systemctl enable dhcpcd iwd
+      
       $ exit 
+      
       $ umount -lR /mnt
+      
       $ reboot 
+      
       Pada tahapan ini, cabut media instalasi kemudian tunggu hasil nya. 
 
 Akhir kata, saya mengucapkan selamat menjadi anggota Arch Linux dan jangan lupa

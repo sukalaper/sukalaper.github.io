@@ -9,6 +9,7 @@ self.addEventListener('install', (event) => {
 
   const blogPosts = [
     'blog/another-post/01.html',
+    'blog/another-post/02.html',
     'blog/arch-linux/01.html',
     'blog/arch-linux/02.html',
     'blog/arch-linux/03.html',
@@ -29,10 +30,9 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request).then((response) => {
       if (response) {
-        return response; // Jika ada di cache, kembalikan respons dari cache
+        return response; 
       } else {
         return fetch(event.request).catch(() => {
-          // Jika fetch gagal, kembalikan halaman fallback 
           return caches.match('404.html');
         });
       }
