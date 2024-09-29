@@ -5,6 +5,13 @@
   "display": "standalone",
   "background_color": "#fffbda",
   "theme_color": "#333",
+  "icons": [
+    {
+      "src": "icons.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ],
   "scope": "/docs/",
   "orientation": "portrait",
   "lang": "id"
