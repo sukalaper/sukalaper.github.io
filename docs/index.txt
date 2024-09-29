@@ -42,6 +42,9 @@ potensi pengalaman yang lebih baik. Tidak melulu tertutup dan berlagak
 konservatif melainkan terbuka pada kemungkinan, karena jika menggunakan 
 sesuatu itu salah maka selamanya saya tidak ingin benar [5]."
 
+"Dalam era digital, militansi bukan hanya tentang kekuatan fisik, tetapi juga 
+tentang dominasi informasi dan kontrol teknologi."
+
 [1] https://jamstack.org/generators/
 [2] https://www.vim.org/
 [3] https://www.asciiart.eu/

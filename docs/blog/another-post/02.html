@@ -194,13 +194,21 @@ Semoga teman-teman paham ya. Lalu bagaimana mengintegrasikan situs ini ke PWA?
      {
        "name": "Sukalaper Blog",
        "short_name": "Sukalaper Blog",
-       "start_url": "docs/",
+       "start_url": "index.html",
        "display": "standalone",
        "background_color": "#fffbda",
-       "theme_color": "#333"
+       "theme_color": "#333",
+       "icons": [
+         {
+           "src": "icons.webp",
+           "sizes": "512x512",
+           "type": "image/webp"
+         }
+       ],
+       "scope": "/",
+       "orientation": "portrait",
+       "lang": "id"
      }
-
-     Ikon memang belum sempat saya definisikan.
 
   4. Pada template.html saya tambahkan :
       
