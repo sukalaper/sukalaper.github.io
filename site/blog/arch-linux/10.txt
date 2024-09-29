@@ -1,0 +1,71 @@
+
+Mengunduh File Di Netlify Dengan Bantuan HTTrack Pada Arch Linux
+________________________________________________________________________________
+
+Ketika menggunakan layanan Netlify [1] untuk menyimpan beberapa proyek dummy [2]
+saya ingin mengunduh kembali file tersebut untuk saya lakukan refaktorisasi [3] 
+sayang nya, Netlify tidak menyediakan fitur tersebut. 
+
+Akhir nya, saya memilih menggunakan sebuah alat bernama HTTrack [4].
+
+Karena saya menggunakan Arch Linux [5] maka HTTrack dapat di pasang dengan 
+perintah :
+
+  $ sudo pacman -S httrack
+
+Selanjut nya, gunakan HTTrack dengan alamat situs yang ingin saya ambil sumber 
+kode nya dengan perintah :
+
+  $ httrack "http://example.netlify.app" -O ~/my_website
+
+Dari perintah di atas, HTTrack akan mengambil dan menyimpan sumber kode tersebut
+pada direktori bernama my_website. Jika direktori my_website belum ada, maka 
+HTTrack akan otomatis membuat nya.
+
+Kurang lengkap rasa nya, saya ingin memberikan beberapa kombinasi perintah dari
+HTTrack yang mungkin berguna untuk teman-teman :
+
+  1. $ httrack "http://example.com" -O ~/my_website -r3
+
+     Perintah di atas akan mengatur kedalaman dari sebuah unduhan hingga 3 
+     level, bagaimana maksud nya? Berikut adalah sebuah struktur pohon yang 
+     akan saya berikan sebagai gambaran singkat :
+
+     http://example.com (Level 0)
+     ├── http://example.com/page1 (Level 1)
+     ├── http://example.com/page2 (Level 1)
+     │   └── http://example.com/page2/subpage1 (Level 2)
+     │       └── http://example.com/page2/subpage1/subsubpage1 (Level 3)
+     └── http://example.com/page3 (Level 1)
+
+     Jadi, dengan menggunakan opsi -r3, HTTrack akan mengikuti dan mengunduh 
+     halaman-halaman hingga kedalaman 3 level dari halaman utama, yang mencakup 
+     semua halaman yang dapat diakses langsung dan halaman-halaman yang dapat 
+     diakses dari link-link tersebut hingga level yang ditentukan.
+
+  2. $ httrack "http://example.com" 
+     -O ~/my_website -%v -%e0 -%p "*.html" -%p "*.jpg"
+
+     Perintah di atas akan mengunduh file tertentu (.html dan .jpg).
+
+  3. $ httrack "http://example.com" -O ~/my_website -%P0 "/private/*" "/tmp/*"
+
+     Perintah di atas akan mengabaikan file dan folder yang di unduh atau 
+     menghindari konten tertentu (/private dan /tmp).
+
+  4. $ httrack "http://example.com" 
+     -O ~/my_website --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) 
+     AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
+
+     Perintah ini mengunduh situs web dari http://example.com ke direktori 
+     my_website sambil meniru permintaan dari browser Google Chrome versi 58 
+     pada Windows 10 dengan mengatur header User-Agent [6]. Ini membantu dalam 
+     mengakses konten yang mungkin dibatasi atau menghindari pemblokiran yang 
+     berbasis User-Agent.
+
+[1] https://www.netlify.com/
+[2] https://www.wallstreetmojo.com/dummy-activity/
+[3] https://id.wikipedia.org/wiki/Refaktorisasi_kode
+[4] https://www.httrack.com/
+[5] https://archlinux.org/
+[6] https://cmlabs.co/id-id/seo-terms/user-agent-adalah

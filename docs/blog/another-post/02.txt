@@ -2,11 +2,10 @@
 Mengintegrasikan Situs Ini Ke Progressive Web Application (PWA)
 ________________________________________________________________________________
 
-PWA? Apa itu PWA?
-PWA atau Progressive Web App, adalah jenis aplikasi yang menggabungkan fitur 
-terbaik dari website dan aplikasi mobile. PWA dapat diakses melalui browser, 
-tetapi juga bisa diinstal di perangkat seperti aplikasi biasa. Beberapa 
-keunggulannya :
+PWA? Apa itu PWA? PWA atau Progressive Web App, adalah jenis aplikasi yang 
+menggabungkan fitur terbaik dari website dan aplikasi mobile. PWA dapat diakses 
+melalui browser, tetapi juga bisa diinstal di perangkat seperti aplikasi biasa. 
+Beberapa keunggulan nya :
 
   1. PWA dapat berfungsi tanpa koneksi internet
   
@@ -81,11 +80,11 @@ Pada root direktori situs ini. Maka hasil nya akan menjadi seperti ini :
 
 Semoga teman-teman paham ya. Lalu bagaimana mengintegrasikan situs ini ke PWA?
 
-  1. Saya buat 2 buah file pada root direktori situs ini :
+  1. Saya buat 2 file pada root direktori situs ini :
      
      $ touch service-worker.js manifest.json
 
-  2. service-worker.js saya isi dengan kode ini :
+  2. Untuk service-worker.js saya isi dengan kode ini :
      
      self.addEventListener('install', (event) => {
        const filesToCache = [
@@ -142,8 +141,8 @@ Semoga teman-teman paham ya. Lalu bagaimana mengintegrasikan situs ini ke PWA?
      Ikon memang belum sempat saya definisikan.
 
   4. Pada template.html saya tambahkan :
-     
-     <script>
+      
+      &lt;script&gt;
        if ('serviceWorker' in navigator) {
          window.addEventListener('load', () => {
            navigator.serviceWorker.register('service-worker.js')
@@ -156,7 +155,7 @@ Semoga teman-teman paham ya. Lalu bagaimana mengintegrasikan situs ini ke PWA?
              });
          });
        }
-     </script>
+      &lt;script&gt;
 
   5. Karena manifest.json dan service-worker.js berada pada root direktori maka
      saya menambahkan sebuah kode sederhana pada make agar ketika saya 
@@ -164,7 +163,7 @@ Semoga teman-teman paham ya. Lalu bagaimana mengintegrasikan situs ini ke PWA?
      
      $ bash make 
      
-     otomatis kedua file tersebut ikut di salin pada docs/ dengan perintah :
+     otomatis kedua file tersebut ikut di salin pada docs/ dengan baris :
      
      cp manifest.json service-worker.js docs/
 
@@ -176,7 +175,7 @@ instalasi paket dari NPM (Pengguna Vscode dapat menggunakan live-server) :
     15 packages are looking for funding
       run `npm fund` for details
 
-Jalankan perintah di terminal dengan : 
+Jalankan http-server pada root direktori dengan perintah : 
 
   $ http-server 
     Starting up http-server, serving ./
@@ -204,3 +203,5 @@ situs ini.
     <source src="../image/another-post/02/video.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
+
+Huray! Situs saya sudah mendukung PWA. Mudah bukan?

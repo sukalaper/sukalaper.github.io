@@ -16,7 +16,7 @@ pada Git menunjukan seperti ini :
   Everything up-to-date
 
 Awalnya saya pikir ini adalah kesalahan dari koneksi yang tidak stabil, 
-ternyata bukan. Ini terjadi karena pengaturan buffer git/https. Masalah ini 
+ternyata bukan. Ini terjadi karena pengaturan buffer Git / HTTPS. Masalah ini 
 umumnya terkait dengan pengaturan buffer Git untuk transfer data melalui HTTP. 
 Secara default, buffer ini mungkin terlalu kecil untuk menangani data yang di 
 kirim.

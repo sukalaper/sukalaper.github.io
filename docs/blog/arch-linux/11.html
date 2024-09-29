@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <link href="data:," rel="icon">
-<title>Sukalaper - 07</title>
+<title>Sukalaper - 11</title>
 <meta charset="utf-8">
 <meta content="Sukalaper blog, sukalaper, blog teknologi, programming, GNU/Linux, paper" name="description">
 <meta content="index, follow" name="robots">
@@ -59,69 +59,76 @@
 +------------------------------------------------------------------------------+
 
 
-Membuat Sebuah Skrip Penyorotan Sintaksis Sederhana Dengan Bantuan Bash
+Cara Membuat Lingkungan Virtual Python Di Arch Linux
 ________________________________________________________________________________
 
-Dalam penggunaan terminal, kita tidak lepas dari menulis dan melihat sebuah 
-file. Tentu saja saya sering menggunakan perintah ini :
-  
-  $ cat my-file.txt 
-    Are you okay? No, next questions.
+Pada saat menjalankan sebuah proyek yang memerlukan dependensi dari Python, 
+saya mendapat keluaran seperti ini :
 
-  $ cat NumberGuessingGame.h
-    #ifndef NUMBERGUESSINGGAME_H
-    #define NUMBERGUESSINGGAME_H
+  error: externally-managed-environment
 
-    class NumberGuessingGame {
-    private:
-      int secretNumber;
-      int maxAttempts;
-      int attempts;
+  × This environment is externally managed
+  ╰─> To install Python packages system-wide, try 'pacman -S
+      python-xyz', where xyz is the package you are trying to
+      install.
 
-    public:
-      NumberGuessingGame(int difficulty);
-      void play();
-    };
+      If you wish to install a non-Arch-packaged Python package,
+      create a virtual environment using 'python -m venv path/to/venv'.
+      Then use path/to/venv/bin/python and path/to/venv/bin/pip.
 
-    #endif // NUMBERGUESSINGGAME_H
+      If you wish to install a non-Arch packaged Python application,
+      it may be easiest to use 'pipx install xyz', which will manage a
+      virtual environment for you. Make sure you have python-pipx
+      installed via pacman.
 
-Perintah tersebut digunakan untuk melihat isi sebuah file. Namun, itu menjadi
-membosankan karena tidak ada pewarnaan sintaksis. Sangat subjektif, bukan?
+      note: If you believe this is a mistake, please contact your Python 
+      installation or OS distribution provider. You can override this, 
+      at the risk of breaking your Python installation or OS, 
+      by passing --break-system-packages.
+      hint: See PEP 668 for the detailed specification.
+    
+Pesan ini menunjukkan bahwa teman-teman berada dalam lingkungan yang dikelola 
+secara eksternal dan tidak dapat menginstal paket Python secara langsung.
 
-Alih-alih memasang paket bantuan seperti : 
+Langkah yang harus dilakukan adalah membuat sebuah lingkungan virtual pada 
+direktori saat ini dengan perintah :
 
-  1. bat <a href=#1>[1]</a>
-  
-  2. pygmentize <a href=#2>[2]</a>
+  $ python -m venv .
 
-Mengapa tidak mengandalkan bantuan dari Bash dan grep (grep --color)? 
+Setelahnya akan ada direktori bernama bin/ (atau Scripts/ di Windows) 
+didalam nya :
 
-  1. Buat sebuah file pada .local/bin dengan nama highlight.sh
+  example-x
+  ├── bin 
+  ├── CHANGELOG.txt
+  ├── Docs
+  ├── include
+  ├── lib
+  ├── circle-x.py
+  └── requirements.txt
 
-  2. Isi file tersebut dengan baris ini :
-     
-     #!/bin/bash
-     cat "$1" | grep --color=always -E 'ifndef|define||function|if|else|
-                                        return|for|while|#include|int|
-                                        float|char|void|\b[A-Z]+\b|$'
+Selanjutnya saatnya mengaktifkan lingkungan virtual tersebut dengan perintah :
 
-  3. Beri hak akses pada file tersebut :
-     
-     $ chmod +x ~/.local/bin/highlight.sh
+  $ source ./bin/activate
 
-Jika teman-teman sudah melakukan konfigurasi $PATH pada ~/.local/bin maka 
-teman-teman cukup gabungan perintah seperti ini :
+Harusnya, shell saat ini akan berubah untuk menunjukan bahwa kita telah 
+berhasil berada didalam lingkungan virtual. 
 
-  $ highlight NumberGuessingGame.h
+  (circle-X) sukalaper :: ~/Documents/example-x ‹master*› »
 
-Maka keluaran kurang lebih akan seperti ini :
+Sekarang teman-teman dapat melanjutkan dengan melakukan instalasi 
+paket-paket yang dibutuhkan dengan contoh perintah.
 
-  <img src="../image/arch-linux/07/highlight.png">
+  $ pip install -r requirements.txt
 
-Ya lumayan lah yaa. Meski gak sebagus $ bat atau $ pygmentize -f
+Dengan langkah-langkah ini, seharusnya teman-teman dapat mengelola dependensi 
+proyek Python dengan aman di dalam lingkungan virtual yang terisolasi.
 
-<span id=1><a href=#1>[1]</a></span> <a href=https://github.com/sharkdp/bat>https://github.com/sharkdp/bat</a>
-<span id=2><a href=#2>[2]</a></span> <a href=https://pygments.org/>https://pygments.org/</a>
+Setelah selesai, keluar dari lingkungan virtual dengan perintah :
+
+  $ deactivate
+
+Bagaimana? Mudah, bukan?
 
 ________________________________________________________________________________
 

@@ -84,8 +84,7 @@ telah mencapai 2 jam?
      $ sudo systemctl start redshift-delay.timer
 
 Dan selesai! Dengan langkah-langkah di atas, Redshift akan dijalankan otomatis 
-setelah uptime sistem mencapai 2 jam. Timer systemd ini memastikan bahwa skrip 
-start-redshift.sh dijalankan setelah waktu yang ditentukan.
+setelah uptime sistem mencapai 2 jam. 
 
 [1] https://github.com/jonls/redshift
 [2] https://www.site24x7.com/learn/linux/uptime.html 

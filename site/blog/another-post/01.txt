@@ -1,5 +1,5 @@
 
-Cara Mengurutkan Nama Dengan Bantuan C++
+Program Sederhana Mengurutkan Nama Berdasarkan Abjad Dengan C++
 ________________________________________________________________________________
 
 Cara ini saya lakukan ketika hendak membuat sebuah grup WhatsApp untuk teman-
@@ -9,8 +9,8 @@ acak.
 Jadi, bagaimana membuat sebuah bahasa pemrograman C++ untuk mengurutkan sebuah
 nama berdasarkan abjad?
 
-Saya melakukan sebuah pendekatan yang paling sederhana, dengan array [1] dan 
-fungsi dari pustaka standar C++ seperti std::sort dari pustaka <algoritm>.
+Saya melakukan sebuah pendekatan sederhana, dengan array [1] dan fungsi dari 
+pustaka standar C++ seperti std::sort [2] dari pustaka <algoritm> [3].
 
   #include <iostream>
   #include <algorithm> 
@@ -37,3 +37,7 @@ fungsi dari pustaka standar C++ seperti std::sort dari pustaka <algoritm>.
 Apa tujuan kode ini di buat? Sederhana nya, untuk mengingat kembali nama-nama
 tersebut apakah sudah ada di grup WhatsApp jika ada maka saya tidak perlu 
 menambahkan kembali dan sebalik nya.
+
+[1] https://en.cppreference.com/w/c/language/array
+[2] https://en.cppreference.com/w/cpp/algorithm/sort
+[3] https://en.cppreference.com/w/cpp/header/algorithm

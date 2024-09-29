@@ -217,7 +217,7 @@ Tidak ada GUI, tidak ada. Hanya sebuah terminal. Sudah siap?!
       
       Pastikan bootloader Windows terdeteksi dengan ada nya keluaran :
       
-      Found Windows Boot Manager on /dev/sda1/efi/Microsoft/Boot/bootmgfw.efi
+      $ Found Windows Boot Manager on /dev/sda1/efi/Microsoft/Boot/bootmgfw.efi
       
       Jika tidak ada, pasang paket dari fuse3 dengan perintah :
       

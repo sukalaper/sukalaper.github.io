@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <link href="data:," rel="icon">
-<title>Sukalaper - 07</title>
+<title>Sukalaper - 04</title>
 <meta charset="utf-8">
 <meta content="Sukalaper blog, sukalaper, blog teknologi, programming, GNU/Linux, paper" name="description">
 <meta content="index, follow" name="robots">
@@ -59,69 +59,44 @@
 +------------------------------------------------------------------------------+
 
 
-Membuat Sebuah Skrip Penyorotan Sintaksis Sederhana Dengan Bantuan Bash
+Seberapa Penting Memilih SSD Ternama Untuk Media Penyimpanan?
 ________________________________________________________________________________
 
-Dalam penggunaan terminal, kita tidak lepas dari menulis dan melihat sebuah 
-file. Tentu saja saya sering menggunakan perintah ini :
-  
-  $ cat my-file.txt 
-    Are you okay? No, next questions.
+Dalam dunia yang semakin tergantung pada teknologi, data adalah salah satu aset 
+paling berharga yang kita miliki. Baik itu dokumen penting, foto kenangan atau 
+proyek bisnis, melindungi data tersebut adalah suatu keharusan. 
 
-  $ cat NumberGuessingGame.h
-    #ifndef NUMBERGUESSINGGAME_H
-    #define NUMBERGUESSINGGAME_H
+Salah satu langkah yang sering diabaikan dalam melindungi data adalah pemilihan 
+perangkat penyimpanan yang tepat, khususnya Solid State Drive (SSD). 
 
-    class NumberGuessingGame {
-    private:
-      int secretNumber;
-      int maxAttempts;
-      int attempts;
+Dalam postingan kali ini, kita akan membahas seberapa pentingnya memilih SSD 
+bermerek <a href=#1>[1]</a> terutama untuk data yang sifatnya krusial.
 
-    public:
-      NumberGuessingGame(int difficulty);
-      void play();
-    };
+  1. Kualitas dan keandalan
 
-    #endif // NUMBERGUESSINGGAME_H
+     SSD dari merek ternama umumnya dibuat dengan komponen berkualitas tinggi 
+     dan melalui pengujian yang lebih ketat. Ini artinya, risiko kerusakan atau 
+     kehilangan data akibat kegagalan perangkat jauh lebih rendah. Data yang 
+     krusial seharusnya disimpan pada perangkat yang dapat diandalkan.
 
-Perintah tersebut digunakan untuk melihat isi sebuah file. Namun, itu menjadi
-membosankan karena tidak ada pewarnaan sintaksis. Sangat subjektif, bukan?
+  2. Dukungan dan garansi
 
-Alih-alih memasang paket bantuan seperti : 
+     Merek-merek terkemuka biasanya menawarkan dukungan pelanggan yang lebih 
+     baik dan garansi yang lebih panjang. Jika teman-teman mengalami masalah, 
+     teman-teman memiliki akses ke layanan pelanggan yang siap membantu serta 
+     jaminan bahwa produk akan diganti atau diperbaiki jika ada kerusakan.
 
-  1. bat <a href=#1>[1]</a>
-  
-  2. pygmentize <a href=#2>[2]</a>
+  3. Kinerja yang unggul
 
-Mengapa tidak mengandalkan bantuan dari Bash dan grep (grep --color)? 
+     Kecepatan baca dan tulis SSD bermerek sering kali lebih baik dibandingkan 
+     dengan SSD tanpa merek. Kinerja yang lebih cepat sangat penting, terutama 
+     untuk aplikasi yang memerlukan akses data instan.
 
-  1. Buat sebuah file pada .local/bin dengan nama highlight.sh
+Yang mungkin masih banyak hal-hal lain. Meskipun SSD tanpa merek mungkin 
+terlihat menggiurkan dengan harga yang lebih murah, investasi dalam SSD 
+bermerek untuk data krusial adalah keputusan yang lebih bijaksana. Percayalah!
 
-  2. Isi file tersebut dengan baris ini :
-     
-     #!/bin/bash
-     cat "$1" | grep --color=always -E 'ifndef|define||function|if|else|
-                                        return|for|while|#include|int|
-                                        float|char|void|\b[A-Z]+\b|$'
-
-  3. Beri hak akses pada file tersebut :
-     
-     $ chmod +x ~/.local/bin/highlight.sh
-
-Jika teman-teman sudah melakukan konfigurasi $PATH pada ~/.local/bin maka 
-teman-teman cukup gabungan perintah seperti ini :
-
-  $ highlight NumberGuessingGame.h
-
-Maka keluaran kurang lebih akan seperti ini :
-
-  <img src="../image/arch-linux/07/highlight.png">
-
-Ya lumayan lah yaa. Meski gak sebagus $ bat atau $ pygmentize -f
-
-<span id=1><a href=#1>[1]</a></span> <a href=https://github.com/sharkdp/bat>https://github.com/sharkdp/bat</a>
-<span id=2><a href=#2>[2]</a></span> <a href=https://pygments.org/>https://pygments.org/</a>
+<span id=1><a href=#1>[1]</a></span> <a href=https://shorturl.at/cjrwY>https://shorturl.at/cjrwY</a>
 
 ________________________________________________________________________________
 

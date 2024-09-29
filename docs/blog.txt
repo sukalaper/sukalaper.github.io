@@ -18,8 +18,12 @@
   - Skrip Penyorotan Sintaksis Sederhana Dengan Bash Pada Arch Linux .... <a href="blog/arch-linux/07.html">[#007]</a>
   - Mengatur Redshift Ketika Uptime Telah 2 Jam Di Arch Linux ........... <a href="blog/arch-linux/08.html">[#008]</a>
   - Konfigurasi REISUB Pada Arch Linux .................................. <a href="blog/arch-linux/09.html">[#009]</a>
+  - Mengunduh File Di Netlify Dengan Bantuan HTTrack Pada Arch Linux .... <a href="blog/arch-linux/10.html">[#010]</a>
+  - Cara Membuat Lingkungan Virtual Python Di Arch Linux ................ <a href="blog/arch-linux/11.html">[#011]</a>
 
 [Another Post]
-  - Program Sederhana Mengurutkan Nama Berdasarkan Abjad Dengan C++ ..... <a href="blog/another-post/01.html">[#010]</a>
-  - Mengintegrasikan Situs Ini Ke Progressive Web Application (PWA) ..... <a href="blog/another-post/02.html">[#011]</a>
-  - Cara Mengatasi Fatal The Remote End Hung Up Unexpectedly Pada Git ... <a href="blog/another-post/03.html">[#012]</a>
+  - Program Sederhana Mengurutkan Nama Berdasarkan Abjad Dengan C++ ..... <a href="blog/another-post/01.html">[#012]</a>
+  - Mengintegrasikan Situs Ini Ke Progressive Web Application (PWA) ..... <a href="blog/another-post/02.html">[#013]</a>
+  - Cara Mengatasi Fatal The Remote End Hung Up Unexpectedly Pada Git ... <a href="blog/another-post/03.html">[#014]</a>
+  - Seberapa Penting Memilih SSD Ternama Untuk Media Penyimpanan? ....... <a href="blog/another-post/04.html">[#015]</a> 
+  - Linux Dan Elitisme .................................................. <a href="blog/another-post/05.html">[#016]</a>
