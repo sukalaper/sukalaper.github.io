@@ -1,8 +1,11 @@
 {
   "name": "Sukalaper Blog",
   "short_name": "Sukalaper Blog",
-  "start_url": ".",
+  "start_url": "/docs/index.html",
   "display": "standalone",
   "background_color": "#fffbda",
-  "theme_color": "#333"
+  "theme_color": "#333",
+  "scope": "/docs/",
+  "orientation": "portrait",
+  "lang": "id"
 }
