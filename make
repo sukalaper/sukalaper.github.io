@@ -92,7 +92,7 @@ main() {
     page "$page"
   done
 
-  cp manifest.json service-worker.js icons.webp docs/
+  cp manifest.json service-worker.js icons.webp CNAME docs/
 }
 
 main "$@"
