@@ -26,6 +26,8 @@
 +------------------------------------------------------------------------------+
 
 
+                               Welcome $HOME Anyone!
+
 Kembali berpindah dari satu static site generator [1] ke static site lainnya 
 cukup membosankan―― 
 Untuk memulai memahami kembali kerangka dokumentasi yang berbeda adalah sebuah 

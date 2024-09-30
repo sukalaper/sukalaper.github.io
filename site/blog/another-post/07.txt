@@ -1,0 +1,116 @@
+
+Single Responsibility Principle (SRP)
+________________________________________________________________________________
+
+Single Responsibility Principle (SRP) adalah salah satu prinsip dari SOLID [1] 
+yang menyatakan bahwa sebuah kelas harus memiliki satu alasan untuk berubah, 
+yaitu harus memiliki satu tanggung jawab atau fungsi yang jelas. 
+Ini membantu dalam menjaga kode agar lebih terorganisir, mudah dipahami dan 
+lebih mudah untuk dirawat.
+
+Saya jelaskan dengan metafora. 
+
+Katakanlah suatu hari teman-teman ingin mencari barang di kamar. Sekarang 
+bayangkan untuk 2 kasus : 
+
+  1. Kasus A :
+
+     Kamar teman-teman sangat rapi dan bersih 
+
+  2. Kasus B :
+
+     Kamar teman-teman sangat berantakan dan kotor
+
+Pada kasus mana teman-teman dapat menemukan barang yang teman-teman cari? Tentu, 
+kasus A. Jadi ini juga berlaku untuk pengkodean, tidak ada pengecualian.
+
+Kali ini saya akan membuat contoh penerapan SRP dengan bahasa pemrograman C++.
+
+  1. Contoh kode yang mematuhi SRP :
+     
+     #include &lt;iostream&gt;
+     #include &lt;string&gt;
+
+     class Pengguna {
+     public:
+       Pengguna(const std::string& nama) : nama(nama) {}
+    
+       std::string dapatNama() const {
+        return nama;
+       }
+    
+     private:
+       std::string nama;
+     };
+
+     class PengelolaPengguna {
+     public:
+       void tambahPengguna(const Pengguna& pengguna) {
+         std::cout << "Pengguna " << pengguna.dapatNama() << " ditambahkan." << 
+         std::endl;
+       }
+     };
+
+     class Penyimpanan {
+     public:
+       void simpanData(const std::string& data) {
+         std::cout << "Data " << data << " disimpan." << std::endl;
+       }
+     };
+
+     int main() {
+       Pengguna pengguna("Budi");
+       PengelolaPengguna pengelola;
+       pengelola.tambahPengguna(pengguna);
+
+       Penyimpanan penyimpanan;
+       penyimpanan.simpanData("Informasi pengguna Budi");
+
+       return 0;
+     }
+
+  2. Contoh kode yang tidak mematuhi SRP :
+
+     #include &lt;iostream&gt;
+     #include &lt;string&gt;
+
+     class PenggunaSistem {
+     public:
+       PenggunaSistem(const std::string& nama) : nama(nama) {}
+
+       void tampilkanPengguna() {
+         std::cout << "Pengguna: " << nama << std::endl;
+       }
+
+       void simpanData() {
+         std::cout << "Data pengguna " << nama << " disimpan." << std::endl;
+       }
+
+     private:
+       std::string nama;
+     };
+
+     int main() {
+       PenggunaSistem pengguna("Budi");
+       pengguna.tampilkanPengguna();
+       pengguna.simpanData();
+
+       return 0;
+     }
+
+Lalu apa perbedaan kode pada nomor 1 dan nomor 2?
+
+  1. Pengguna untuk mengelola data pengguna, PengelolaPengguna untuk menambah 
+     pengguna dan Penyimpanan untuk menyimpan data. Dengan pemisahan ini, 
+     setiap kelas mudah untuk diuji dan diubah tanpa mempengaruhi yang lain
+
+  2. Kelas PenggunaSistem memiliki lebih dari satu tanggung jawab 
+     (menampilkan pengguna dan menyimpan data) sehingga jika ada perubahan 
+     dalam salah satu fungsionalitas, kelas tersebut harus diubah yang bisa 
+     mengakibatkan bug atau kompleksitas lebih
+
+Untuk penggunaan jangka panjang yang memiliki kemungkinan lebih kompleks, 
+penggunaan metode SRP sangat di sarankan. 
+________________________________________________________________________________
+
+[1] https://en.wikipedia.org/wiki/SOLID

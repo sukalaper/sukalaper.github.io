@@ -13,6 +13,8 @@ self.addEventListener('install', (event) => {
     'blog/another-post/03.html',
     'blog/another-post/04.html',
     'blog/another-post/05.html',
+    'blog/another-post/06.html',
+    'blog/another-post/07.html',
     'blog/arch-linux/01.html',
     'blog/arch-linux/02.html',
     'blog/arch-linux/03.html',

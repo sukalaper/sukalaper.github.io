@@ -27,3 +27,5 @@
   - Cara Mengatasi Fatal The Remote End Hung Up Unexpectedly Pada Git ... <a href="blog/another-post/03.html">[#014]</a>
   - Seberapa Penting Memilih SSD Ternama Untuk Media Penyimpanan? ....... <a href="blog/another-post/04.html">[#015]</a> 
   - Linux Dan Elitisme .................................................. <a href="blog/another-post/05.html">[#016]</a>
+  - Mengapa Haskell? .................................................... <a href="blog/another-post/06.html">[#017]</a>
+  - Single Responsibility Principle (SRP) [Berlanjut] ................... <a href="blog/another-post/07.html">[#018]</a>
