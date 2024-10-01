@@ -10,7 +10,7 @@ yang deklaratif dan kuat dalam tipe data. Saya baru menyentuh Haskell selama
 beberapa Minggu karena melihat teman-teman yang menggunakan XMonad [2]. 
 
 Kesan pertama adalah banyak nya "kode cerdas" karena Haskell memperbolehkan dan
-sering kali menghasilkan kode yang lebih sulit di pahami oleh saya (pemula).
+sering kali menghasilkan kode yang lebih sulit di pahami oleh saya.
 
 Apa contoh nya?
 
@@ -73,10 +73,10 @@ Bingung? Saya bahas kode tersebut baris per baris :
      (^2) pada setiap elemen dalam list xs
 
        map adalah fungsi yang mengambil dua argumen: sebuah fungsi (dalam hal 
-      ini, (^2) yang berarti "kuadrat") dan sebuah list (xs)
+       ini, (^2) yang berarti "kuadrat") dan sebuah list (xs)
 
        Hasil dari map adalah list baru yang berisi kuadrat dari setiap elemen di 
-      xs
+       xs
 
   4. total = sum squares
 
@@ -113,6 +113,8 @@ Bingung? Saya bahas kode tersebut baris per baris :
 
      Ketika sumSquares dipanggil dengan daftar tersebut, ia akan menghitung 
      kuadrat dari setiap angka (1, 4, 9, 16) dan kemudian menjumlahkan hasilnya 
+
+   <img src="../image/another-post/06/kuadrat.png">
 
 Sampai sini sudah ada gambaran untuk menulis Haskell pertama teman-teman?
 
@@ -165,7 +167,6 @@ Analogi sederhana :
    menggunakan peralatan dan memahami langkah-langkah dalam resep tersebut."
 
 Tetap semangat dan jangan pernah berhenti belajar!
-________________________________________________________________________________
 
 [1] https://www.haskell.org/
 [2] https://xmonad.org/

@@ -12,9 +12,9 @@ nama berdasarkan abjad?
 Saya melakukan sebuah pendekatan sederhana, dengan array [1] dan fungsi dari 
 pustaka standar C++ seperti std::sort [2] dari pustaka <algoritm> [3].
   
-  #include <iostream>
-  #include <algorithm> 
-  #include <string>    
+  #include &lt;iostream&gt;
+  #include &lt;algorithm&gt;
+  #include &lt;string&gt;
 
   void sortAndPrintNames(std::string names[], int size) {
     std::sort(names, names + size); 

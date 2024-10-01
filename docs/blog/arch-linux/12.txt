@@ -1,0 +1,55 @@
+
+Cara Enkripsi File .txt Dengan GPG Di Arch Linux 
+________________________________________________________________________________
+
+Enkripsi file adalah proses mengubah informasi menjadi format yang tidak dapat 
+dibaca tanpa kunci atau password tertentu. Fungsi utama enkripsi file adalah 
+untuk melindungi data agar hanya bisa diakses oleh orang yang berwenang.
+
+Sedangkan GPG [1] (GNU Privacy Guard) adalah alat yang digunakan untuk 
+mengenkripsi dan menandatangani data.
+
+Lalu bagaimana melakukan enkripsi file dengan format .txt di Arch Linux?
+
+  1. Buat sebuah dummy file dengan format .txt 
+
+     $ echo "Ini sebuah teks" > my-file.txt
+
+  2. Pasang gnupg :
+     
+     $ sudo pacman -S gnupg 
+
+  3. Gunakan gnupg untuk mengenkripsi file tersebut :
+
+     $ gpg -c my-file.txt 
+
+     Setelah menjalankan perintah ini, teman-teman akan di minta untuk 
+     memasukan sebuah kata sandi dan nanti nya file yang telah di enkripsi akan
+     di simpan menjadi my-file.txt.gpg
+
+  4. Untuk melakukan dekripsi pada my-file.txt.gpg gunakan :
+
+     $ gpg -d my-file.txt.gpg
+
+Perlu di ingat, file asli (my-file.txt) akan tetap ada dan dapat di baca karena 
+proses enkripsi dengan GPG hanya menghasilkan salinan terenkripsi dari file 
+tersebut. Jadi, GPG sendiri tidak menghapus atau mengganti file asli.
+
+Dan jika teman-teman lupa dengan kata sandi GPG maka tidak ada cara untuk 
+memulihkan nya. GPG menggunakan enkripsi simetris yang berarti kata sandi yang 
+teman-teman buat digunakan untuk mengunci dan membuka file. Jika kata sandi 
+tersebut hilang, file terenkripsi tidak dapat didekripsi.
+
+GPG juga menggunakan sesi terkait dan cache (gpg-agent) yang dapat di periksa 
+dengan :
+
+  $ gpgconf --list-dirs agent-socket
+
+    Jika perintah ini mengembalikan path, itu menunjukkan bahwa gpg-agent aktif.
+
+Jika teman-teman ingin melihat berapa lama kata sandi di simpan dalma cache, 
+teman-teman bisa memeriksa pengaturan cache dengan :
+
+  $ gpgconf --list-options gpg-agent
+
+[1] https://gnupg.org/

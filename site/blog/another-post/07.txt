@@ -1,5 +1,5 @@
 
-Single Responsibility Principle (SRP)
+Clean Code - Single Responsibility Principle (SRP)
 ________________________________________________________________________________
 
 Single Responsibility Principle (SRP) adalah salah satu prinsip dari SOLID [1] 
@@ -8,8 +8,10 @@ yaitu harus memiliki satu tanggung jawab atau fungsi yang jelas.
 Ini membantu dalam menjaga kode agar lebih terorganisir, mudah dipahami dan 
 lebih mudah untuk dirawat.
 
-Saya jelaskan dengan metafora. 
+Sedangkan clean code adalah sebuah praktik kode bersih dan dapat di pahami oleh 
+seluruh tim tanpa harus berpikir berulang-ulang kali.
 
+Saya jelaskan dengan metafora. 
 Katakanlah suatu hari teman-teman ingin mencari barang di kamar. Sekarang 
 bayangkan untuk 2 kasus : 
 
@@ -24,7 +26,67 @@ bayangkan untuk 2 kasus :
 Pada kasus mana teman-teman dapat menemukan barang yang teman-teman cari? Tentu, 
 kasus A. Jadi ini juga berlaku untuk pengkodean, tidak ada pengecualian.
 
-Kali ini saya akan membuat contoh penerapan SRP dengan bahasa pemrograman C++.
+Kali ini saya akan membuat contoh penerapan SRP dengan bahasa pemrograman C++ 
+jadi konvensi penamaan camelCase [2] akan di gunakan di sini.
+
+Apa itu konvensi penamaan atau naming conventions? 
+
+  Naming Convention       Example Format
+  -----------------       --------------
+  Camel Case              CamelCase 
+  Snake Case              snake_case
+  Kebab Case              kebab-case 
+  Flat Case               flatcase 
+  Upper Flat Case         UPPERFLATCASE
+  Train Case              Train-Case
+  Cobol Case              COBOL-CASE
+
+Meskipun konvensi ini bukan aturan ketat, mengikuti konvensi yang sesuai dapat
+membantu meningkatkan keterbacaan kode.
+
+Bagaimana menulis kode bersih? 
+
+  1. Konsisten dalam gaya penulisan variable 
+
+  2. Jangan takut untuk menggunakan nama yang panjang (S&K berlaku) : 
+
+     Tipe    Buruk                        Bagus        
+     ----    -----                        -----        
+     int     tktCnt                       ticketCount 
+     string  studentUniversitasIndonesia  studentUiId (Singkatan popular
+                                                       dapat di gunakan)
+     boolean selesai                      isFinished
+
+  3. Jangan gunakan angka ajaib :
+
+     Buruk                                
+     -----
+     int totalSleepingHours = sleepingHoursPerDay * 5; // Apa itu 5?
+
+     Bagus 
+     -----
+     const int JUMLAHHARIPERMINGGU = 5;
+     int totalSleepingHours = sleepingHoursPerDay * JUMLAHHARIPERMINGGU;
+
+  4. Cara menggunakan boolean dengan benar :
+
+     Tidak terlalu buruk 
+     -------------------
+     bool sedangSenang;
+     if(sedangSenang == true) printf("Saya senang!);
+
+     bool sedangSedih;
+     if(sedangSedih == false) printf("Saya tidak sedih!);
+
+     Cara yang bagus
+     ---------------
+     bool sedangSenang;
+     if(sedangSenang) printf("Saya senang!");
+
+     bool sedangSedih;
+     if(!sedangSedih) printf("Saya tidak sedih!);
+
+Lalu, bagaiamana dengan SRP?
 
   1. Contoh kode yang mematuhi SRP :
      
@@ -111,6 +173,6 @@ Lalu apa perbedaan kode pada nomor 1 dan nomor 2?
 
 Untuk penggunaan jangka panjang yang memiliki kemungkinan lebih kompleks, 
 penggunaan metode SRP sangat di sarankan. 
-________________________________________________________________________________
 
 [1] https://en.wikipedia.org/wiki/SOLID
+[2] https://id.wikipedia.org/wiki/CamelCase

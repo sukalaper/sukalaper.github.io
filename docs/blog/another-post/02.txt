@@ -185,7 +185,7 @@ instalasi paket dari NPM (Pengguna Vscode dapat menggunakan live-server) :
 
 Jalankan http-server pada root direktori dengan perintah : 
 
-  $ http-server 
+  $ http-server --cors
     Starting up http-server, serving ./
     http-server version: 14.1.1
 
