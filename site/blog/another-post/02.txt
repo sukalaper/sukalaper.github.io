@@ -31,22 +31,22 @@ lebih adalah sebagai berikut :
 Sebelum memulai, saya akan jelaskan masing-masing dari direktori maupun file 
 yang ada di atas. 
 
-  1. docs/ 
+  1. docs/ :
      
      Direktori ini berisi hasil file dari site/ yang telah di generate menjadi
      .html
 
-  2. make
+  2. make :
      
      Ini adalah sebuah file (Bash scripting) yang melakukan konversi dari .txt 
      ke .html (site/ -> docs/)
 
-  3. site/ 
+  3. site/ :
      
      Ini adalah sebuah direktori berisi konten-konten dengan ekstensi .txt yang 
      akan di generate oleh make
 
-  4. template.html 
+  4. template.html :
      
      Sederhana nya, ini adalah kerangka dari situs ini 
 

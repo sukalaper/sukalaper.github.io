@@ -53,7 +53,17 @@ membantu meningkatkan keterbacaan kode.
 
 Bagaimana menulis kode bersih? 
 
-  1. Konsisten dalam gaya penulisan variable 
+  1. Konsisten dalam gaya penulisan variable dalam sebuah kode :
+
+     Konsisten                     Tidak konsisten 
+     ---------                     ---------------
+     userName                      user_name
+     totalAmount                   totalamount
+     ticketCount                   TicketCount
+     isLoggedIn                    IsloggedIn
+     userProfilePicture            UserProfilePicture
+     maxRetryAttempts              max-retry-attempts
+
 
   2. Jangan takut untuk menggunakan nama yang panjang (S&K berlaku) : 
 
@@ -62,7 +72,7 @@ Bagaimana menulis kode bersih?
      int     tktCnt                       ticketCount 
      string  studentUniversitasIndonesia  studentUiId (Singkatan popular
                                                        dapat di gunakan)
-     boolean selesai                      isFinished
+     boolean finished                     isFinished
 
   3. Jangan gunakan angka ajaib :
 
@@ -92,6 +102,32 @@ Bagaimana menulis kode bersih?
 
      bool sedangSedih;
      if(!sedangSedih) printf("Saya tidak sedih!);
+
+  5. Nama fungsi harus bermakna :
+
+     Buruk     Baik
+     -----     ----
+     menu()    displayMenu()
+     check()   checkBalance()
+
+  6. Pengulangan tak terbatas dengan break untuk input pengguna :
+
+     Buruk 
+     -----
+     bool is_done = false;
+     while(!is_done) {
+       int input = get_input();
+       if(input == 0) is_done = true;
+       else print(input);
+     }
+
+     Baik
+     ----
+     while(true) {
+       int input = get_input();
+       if (input == 0) break;
+       else print(input);
+     }
 
 Lalu, bagaiamana dengan SRP?
 
