@@ -2,15 +2,14 @@
 Mengapa Haskell?
 ________________________________________________________________________________
 
-TL;DR: Haskell dengan tetek bengek nya. Ini adalah sebuah pengalaman kecil, sama
-       sekali bukan tandingan dokumentasi resmi.
+TL;DR: Haskell, pengalaman kecil dan segala tetek bengek nya.
 
 Haskell [1] adalah bahasa pemrograman fungsional yang terkenal dengan sifatnya 
 yang deklaratif dan kuat dalam tipe data. Saya baru menyentuh Haskell selama 
 beberapa Minggu karena melihat teman-teman yang menggunakan XMonad [2]. 
 
 Kesan pertama adalah banyak nya "kode cerdas" karena Haskell memperbolehkan dan
-sering kali menghasilkan kode yang lebih sulit di pahami oleh saya.
+sering kali menghasilkan kode yang lebih sulit di pahami.
 
 Apa contoh nya?
 

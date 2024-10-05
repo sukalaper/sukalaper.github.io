@@ -6,11 +6,11 @@ Cara ini saya lakukan ketika hendak membuat sebuah grup WhatsApp untuk teman-
 teman angkatan, namun pada sebuah platfrom urutan nama tersebut tersedia secara 
 acak.
 
-Jadi, bagaimana membuat sebuah bahasa pemrograman C++ untuk mengurutkan sebuah
-nama berdasarkan abjad?
+Inisiatif (sekaligus untuk mengasah keterampilan) saya coba buat dengan bahasa
+pemrograman C++.
 
-Saya melakukan sebuah pendekatan sederhana, dengan array [1] dan fungsi dari 
-pustaka standar C++ seperti std::sort [2] dari pustaka <algoritm> [3].
+Melakukan sebuah pendekatan sederhana dengan array [1] dan fungsi dari pustaka 
+standar C++ seperti std::sort [2] dari pustaka <algoritm> [3].
   
   #include &lt;iostream&gt;
   #include &lt;algorithm&gt;
@@ -40,6 +40,8 @@ pustaka standar C++ seperti std::sort [2] dari pustaka <algoritm> [3].
 Apa tujuan kode ini di buat? Sederhana nya, untuk mengingat kembali nama-nama
 tersebut apakah sudah ada di grup WhatsApp jika ada maka saya tidak perlu 
 menambahkan kembali dan sebalik nya.
+
+Apa terlihat rumit? :D
 
 [1] https://en.cppreference.com/w/c/language/array
 [2] https://en.cppreference.com/w/cpp/algorithm/sort

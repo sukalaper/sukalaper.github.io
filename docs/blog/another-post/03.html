@@ -22,11 +22,14 @@ pada Git menunjukan seperti ini :
   fatal: The remote end hung up unexpectedly
   Everything up-to-date
 
-Awalnya saya pikir ini adalah kesalahan dari koneksi yang tidak stabil, 
-ternyata bukan. Ini terjadi karena pengaturan buffer Git / HTTPS. Masalah ini 
-umumnya terkait dengan pengaturan buffer Git untuk transfer data melalui HTTP. 
-Secara default, buffer ini mungkin terlalu kecil untuk menangani data yang di 
-kirim.
+Awalnya saya pikir ini adalah kesalahan dari koneksi yang tidak stabil ternyata 
+bukan. 
+
+Ini terjadi karena pengaturan buffer Git / HTTPS. 
+
+Masalah ini umumnya terkait dengan pengaturan buffer Git untuk transfer data 
+melalui HTTP. Secara default, buffer ini mungkin terlalu kecil untuk menangani 
+data yang di kirim.
 
 Cara mengatasinya dengan meningkatkan ukuran buffer menggunakan perintah :
 
@@ -36,7 +39,7 @@ Setelahnya, gunakan kembali perintah Git seperti biasa :
 
   $ git add .
  
-  $ git commit -m "feat: xx"
+  $ git commit -m "add: xx"
   
   $ git push -u origin xx
 

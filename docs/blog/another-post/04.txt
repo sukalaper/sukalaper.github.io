@@ -17,20 +17,20 @@ bermerek [1] terutama untuk data yang sifatnya krusial.
      SSD dari merek ternama umumnya dibuat dengan komponen berkualitas tinggi 
      dan melalui pengujian yang lebih ketat. Ini artinya, risiko kerusakan atau 
      kehilangan data akibat kegagalan perangkat jauh lebih rendah. Data yang 
-     krusial seharusnya disimpan pada perangkat yang dapat diandalkan.
+     krusial seharusnya disimpan pada perangkat yang dapat diandalkan
 
   2. Dukungan dan garansi
 
      Merek-merek terkemuka biasanya menawarkan dukungan pelanggan yang lebih 
      baik dan garansi yang lebih panjang. Jika teman-teman mengalami masalah, 
      teman-teman memiliki akses ke layanan pelanggan yang siap membantu serta 
-     jaminan bahwa produk akan diganti atau diperbaiki jika ada kerusakan.
+     jaminan bahwa produk akan diganti atau diperbaiki jika ada kerusakan
 
   3. Kinerja yang unggul
 
      Kecepatan baca dan tulis SSD bermerek sering kali lebih baik dibandingkan 
      dengan SSD tanpa merek. Kinerja yang lebih cepat sangat penting, terutama 
-     untuk aplikasi yang memerlukan akses data instan.
+     untuk aplikasi yang memerlukan akses data instan
 
 Yang mungkin masih banyak hal-hal lain. Meskipun SSD tanpa merek mungkin 
 terlihat menggiurkan dengan harga yang lebih murah, investasi dalam SSD 

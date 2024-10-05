@@ -176,7 +176,7 @@ Semoga teman-teman paham ya. Lalu bagaimana mengintegrasikan situs ini ke PWA?
      cp manifest.json service-worker.js docs/
 
 Karena uji coba PWA membutuhkan HTTPS saat di jalankan. Lakukan sebuah 
-instalasi paket dari NPM (Pengguna Vscode dapat menggunakan live-server) : 
+instalasi paket dari NPM (pengguna Vscode dapat menggunakan live-server) : 
 
   $ sudo npm install -g http-server 
     changed 46 packages in 10s
@@ -190,7 +190,7 @@ Jalankan http-server pada root direktori dengan perintah :
     http-server version: 14.1.1
 
     http-server settings:
-    CORS: disabled
+    CORS: enabled
     Cache: 3600 seconds
     Connection Timeout: 120 seconds
     Directory Listings: visible

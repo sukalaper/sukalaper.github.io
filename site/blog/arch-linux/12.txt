@@ -47,7 +47,7 @@ dengan :
 
     Jika perintah ini mengembalikan path, itu menunjukkan bahwa gpg-agent aktif.
 
-Jika teman-teman ingin melihat berapa lama kata sandi di simpan dalma cache, 
+Jika teman-teman ingin melihat berapa lama kata sandi di simpan dalam cache, 
 teman-teman bisa memeriksa pengaturan cache dengan :
 
   $ gpgconf --list-options gpg-agent
