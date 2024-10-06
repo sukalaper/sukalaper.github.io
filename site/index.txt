@@ -11,12 +11,12 @@
 Terhitung sejak 06/10/2024 21:44 PM, situs sedang
 dalam pemeliharaan.
 
-Ke..Kembali berpindah static site generator [1] ke 
-static site lainnya―― 
+Ke..Kembali berpindah static site generator [1] 
+ke static site lainnya―― 
 Untuk memulai memahami kembali kerangka 
-dokumentasi yang berbeda adalah sebuah konsekuensi 
-logis yang harus di terima demi mencapai 
-kemaslahatan.
+dokumentasi yang berbeda adalah sebuah 
+konsekuensi logis yang harus di terima demi 
+mencapai kemaslahatan.
 
 Source code website ini berasal dari $/dylanaraps 
 artikel-artikel ditulis menggunakan Vim [2] ASCII 
