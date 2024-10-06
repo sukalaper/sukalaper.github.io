@@ -1,32 +1,8 @@
 
-
-+------------------------------------------------------------------------------+
-|                                                                        .-.   |
-|                                                                       (o o)  |
-|                                                                       | O \  |
-|                                                                        \   \ |
-|                                                                         `~~~'|
-+------------------------------------------------------------------------------+
-
-[Arch Linux] 
-  - Cara Mengatasi Error Response To Policy Kit Daemon Pada Arch Linux .. <a href="blog/arch-linux/01.html">[#001]</a>
-  - Cara Mengatur Kecepatan Trackpoint Thinkpad Pada Arch Linux ......... <a href="blog/arch-linux/02.html">[#002]</a>
-  - Cara Mengakses Reddit Pada Arch Linux ............................... <a href="blog/arch-linux/03.html">[#003]</a>
-  - Membuat Module Statusbar Sederhana Pada Arch Linux .................. <a href="blog/arch-linux/04.html">[#004]</a>
-  - Membuat Dual Booting Sistem Operasi Windows Dan Arch Linux .......... <a href="blog/arch-linux/05.html">[#005]</a>
-  - Mengubah Tulisan Default TTY Di Arch Linux .......................... <a href="blog/arch-linux/06.html">[#006]</a>
-  - Skrip Penyorotan Sintaksis Sederhana Dengan Bash Pada Arch Linux .... <a href="blog/arch-linux/07.html">[#007]</a>
-  - Mengatur Redshift Ketika Uptime Telah 2 Jam Di Arch Linux ........... <a href="blog/arch-linux/08.html">[#008]</a>
-  - Konfigurasi REISUB Pada Arch Linux .................................. <a href="blog/arch-linux/09.html">[#009]</a>
-  - Mengunduh File Di Netlify Dengan Bantuan HTTrack Pada Arch Linux .... <a href="blog/arch-linux/10.html">[#010]</a>
-  - Cara Membuat Lingkungan Virtual Python Di Arch Linux ................ <a href="blog/arch-linux/11.html">[#011]</a>
-  - Cara Enkripsi File .txt Dengan GPG Di Arch Linux .................... <a href="blog/arch-linux/12.html">[#012]</a>
-
-[Another Post]
-  - Program Sederhana Mengurutkan Nama Berdasarkan Abjad Dengan C++ ..... <a href="blog/another-post/01.html">[#013]</a>
-  - Mengintegrasikan Situs Ini Ke Progressive Web Application (PWA) ..... <a href="blog/another-post/02.html">[#014]</a>
-  - Cara Mengatasi Fatal The Remote End Hung Up Unexpectedly Pada Git ... <a href="blog/another-post/03.html">[#015]</a>
-  - Seberapa Penting Memilih SSD Ternama Untuk Media Penyimpanan? ....... <a href="blog/another-post/04.html">[#016]</a> 
-  - Linux Dan Elitisme .................................................. <a href="blog/another-post/05.html">[#017]</a>
-  - Mengapa Haskell? .................................................... <a href="blog/another-post/06.html">[#018]</a>
-  - Single Responsibility Principle (SRP) [Berlanjut] ................... <a href="blog/another-post/07.html">[#019]</a>
++------------------------------------------------+
+|                                          .-.   |
+|                                         (o o)  |
+|                                         | O \  |
+|                                          \   \ |
+|                                           `~~~'|
++------------------------------------------------+

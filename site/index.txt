@@ -1,53 +1,46 @@
 
++------------------------------------------------+
+|                                        _______ |
+|                                        ||  .'| |
+|                                        ||,`  | |
+|                                        |     | |
+|                                        |_____| |
+|                                       _|_( )_|_|
++------------------------------------------------+
 
-+------------------------------------------------------------------------------+
-|                                          \.                                  |
-|                                            ))   ((()))                       |
-|           #StopGenocideInGaza           _.'/\ ())))))))                      |
-|                                __     .'_.'  ((( (((_:_)                     |
-|                                \'..._/ /      )))> (_:_)                     |
-|                                     / /--...__((\_ (((()                     |
-|                                    (_( _____ __(.-: /))))__                  |
-|                                    \__...___:.__   ) ) ____)                 |
-|                                    (_:        (_,   /.'                      |
-|                                   ( (          \   (        ___              |
-|                                    \ \        /)\   '.____.' . '.;;.         |
-|                                        '.\/  ____\   )_.' |    /\ (((()  ,   |
-|                                          )) ( _____.'|    \   (_ \ '((((())  |
-|                                          /'   \ \,. \ |     \___ ) '.  '::'  |
-|                                                \___\ \ \      / / '. \       |
-|                                                       \ )    ( '-,  \ \      |
-|                                ,     x               _/ /     \_/    \ \     |
-|                                8  8b            ____/__/_________mrf/__/     |
-|                              d8  88b.      .b /                              |
-|                            d88bd8888b.  .d888d'.                             |
-|                          8888988898988989898989\                             |
-|                           oo o  oo o o  o oo  o )                            |
-+------------------------------------------------------------------------------+
+Terhitung sejak 06/10/2024 21:44 PM, situs sedang
+dalam pemeliharaan.
 
+Ke..Kembali berpindah static site generator [1] ke 
+static site lainnya―― 
+Untuk memulai memahami kembali kerangka 
+dokumentasi yang berbeda adalah sebuah konsekuensi 
+logis yang harus di terima demi mencapai 
+kemaslahatan.
 
-Kembali berpindah static site generator [1] ke static site lainnya―― 
-Untuk memulai memahami kembali kerangka dokumentasi yang berbeda adalah sebuah 
-konsekuensi logis yang harus di terima demi mencapai kemaslahatan.
-
-Source code website ini berasal dari $/dylanaraps artikel-artikel ditulis 
-menggunakan Vim [2] ASCII pada postingan ini dibuat dengan cinta [3] dan di 
+Source code website ini berasal dari $/dylanaraps 
+artikel-artikel ditulis menggunakan Vim [2] ASCII 
+pada postingan ini dibuat dengan cinta [3] dan di 
 hosting menggunakan GitHub [4].
 
-"Keindahan subjektif merayakan permasalahan yang tak terbantahkan namun 
-dihargai, menghadirkan konsekuensi logis yang bijak. Ide radikal melahirkan 
-urgensi untuk mengambil langkah-langkah yang dibutuhkan untuk membuka pintu 
-potensi pengalaman yang lebih baik. Tidak melulu tertutup dan berlagak 
-konservatif melainkan terbuka pada kemungkinan, karena jika menggunakan 
-sesuatu itu salah maka selamanya saya tidak ingin benar [5]."
-
-"Dalam era digital, militansi bukan hanya tentang kekuatan fisik, tetapi juga 
-tentang dominasi informasi dan kontrol teknologi."
+"Keindahan subjektif merayakan permasalahan yang 
+tak terbantahkan namun dihargai, menghadirkan 
+konsekuensi logis yang bijak. Ide radikal 
+melahirkan urgensi untuk mengambil 
+langkah-langkah yang dibutuhkan untuk membuka 
+pintu potensi pengalaman yang lebih baik. 
+Tidak melulu tertutup dan berlagak konservatif 
+melainkan terbuka pada kemungkinan, karena jika 
+menggunakan sesuatu itu salah maka selamanya saya 
+tidak ingin benar [5] dalam era digital, 
+militansi bukan hanya tentang kekuatan fisik, 
+tetapi juga tentang dominasi informasi dan 
+kontrol teknologi."
 
 [1] https://jamstack.org/generators/
 [2] https://www.vim.org/
 [3] https://www.asciiart.eu/
 [4] https://github.com/
-[5] https://github.com/nauvalazhar/pengantar-vi-improved
+[5] https://shorturl.at/KYLZ1
 [6] https://f-droid.org/id/packages/com.termux/
-[7] https://github.com/dylanaraps/blog/tree/master
+[7] https://github.com/dylanaraps/blog/
