@@ -8,10 +8,10 @@
 |                                       _|_( )_|_|
 +------------------------------------------------+
 
-Terhitung sejak 06/10/2024 21:44 PM, situs sedang
-dalam pemeliharaan.
+&#9432; Terhitung sejak 06/10/2024 21:44 PM, situs 
+sedang dalam refaktor dan pemeliharaan.
 
-Ke..Kembali berpindah static site generator [1] 
+Ke...Kembali berpindah static site generator [1] 
 ke static site lainnya―― 
 Untuk memulai memahami kembali kerangka 
 dokumentasi yang berbeda adalah sebuah 
@@ -19,9 +19,11 @@ konsekuensi logis yang harus di terima demi
 mencapai kemaslahatan.
 
 Source code website ini berasal dari $/dylanaraps 
-artikel-artikel ditulis menggunakan Vim [2] ASCII 
-pada postingan ini dibuat dengan cinta [3] dan di 
-hosting menggunakan GitHub [4].
+artikel-artikel ditulis menggunakan Vim [2] 
+ASCII [3] pada postingan ini dibuat dengan cinta
+rambu pemberitahuan serta peringatan postingan di 
+sediakan oleh Compart [4] serta hosting 
+menggunakan layanan GitHub [5].
 
 "Keindahan subjektif merayakan permasalahan yang 
 tak terbantahkan namun dihargai, menghadirkan 
@@ -32,7 +34,7 @@ pintu potensi pengalaman yang lebih baik.
 Tidak melulu tertutup dan berlagak konservatif 
 melainkan terbuka pada kemungkinan, karena jika 
 menggunakan sesuatu itu salah maka selamanya saya 
-tidak ingin benar [5] dalam era digital, 
+tidak ingin benar [6] dalam era digital, 
 militansi bukan hanya tentang kekuatan fisik, 
 tetapi juga tentang dominasi informasi dan 
 kontrol teknologi."
@@ -41,6 +43,5 @@ kontrol teknologi."
 [2] https://www.vim.org/
 [3] https://www.asciiart.eu/
 [4] https://github.com/
-[5] https://shorturl.at/KYLZ1
-[6] https://f-droid.org/id/packages/com.termux/
-[7] https://github.com/dylanaraps/blog/
+[5] https://www.compart.com/en/unicode/
+[6] https://shorturl.at/KYLZ1

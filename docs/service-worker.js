@@ -8,24 +8,7 @@ self.addEventListener('install', (event) => {
   ];
 
   const blogPosts = [
-    'blog/another-post/01.html',
-    'blog/another-post/02.html',
-    'blog/another-post/03.html',
-    'blog/another-post/04.html',
-    'blog/another-post/05.html',
-    'blog/another-post/06.html',
-    'blog/another-post/07.html',
-    'blog/arch-linux/01.html',
-    'blog/arch-linux/02.html',
-    'blog/arch-linux/03.html',
-    'blog/arch-linux/04.html',
-    'blog/arch-linux/05.html',
-    'blog/arch-linux/06.html',
-    'blog/arch-linux/07.html',
-    'blog/arch-linux/08.html',
-    'blog/arch-linux/09.html',
-    'blog/arch-linux/10.html',
-    'blog/arch-linux/11.html',
+    //
   ];
 
   event.waitUntil(
