@@ -8,7 +8,8 @@ self.addEventListener('install', (event) => {
   ];
 
   const blogPosts = [
-    //
+    'p/01.html',
+    'p/02.html',
   ];
 
   event.waitUntil(

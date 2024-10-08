@@ -1,0 +1,62 @@
+Flash Drive: V-geN Avatar 16 GB
+__________________________________________________
+
+&#9432; Saya tidak berafiliasi dengan Tokopedia maupun 
+V-geN.
+
+Hendak membeli sebuah flash drive (flash disk) di 
+salah satu e-commerce. Pilihan dan anggaran jatuh 
+kepada V-geN Avatar 16 GB. 
+
+Spesifikasi dari flash drive tersebut adalah 
+sebagai berikut :
+
+  1. Size : 46 x 17 x 5 mm
+  2. Volume : +/- 5.0gr
+  3. Voltage : 2.7V – 3.3V
+  4. Garansi : Limited Lifetime Warranty
+  5. Data Transfer Rate : Read +/- 29 MB/sec
+                          Write +/- 15 MB/sec
+
+Jelas bahwa ini masih menggunakan USB 2.0 karena
+biasa nya USB 2.0 hanya mendukung kecepatan 
+transfer maksimum teoritis hingga 60 MB/sec, 
+tetapi dalam penggunaan praktis sering kali lebih 
+rendah.
+
+Berbeda dengan USB 3.0 dan 3.1 yang memiliki 
+kecepatan transfer jauh lebih tinggi (ratusan MB).
+
+Flash drive ini saya gunakan untuk memutar musik 
+kesukaan Ibu dan juga sesekali saya pergunakan 
+untuk burn ISO jika ada permintaan instalasi 
+sebuah sistem operasi.
+
+DVD milik saya hanya mendukung FAT32 berbeda jika
+saya melakukan burn ISO yang biasa nya mendukung 
+NTFS. Jadi, saya harus berpindah antar file 
+terlebih dahulu ketika ingin melakukan nya.
+
+Sebagai informasi tambahan, flash drive USB 2.0 
+dapat digunakan pada port USB 3.0/3.1 dan 
+sebaliknya. USB memiliki kompatibilitas mundur 
+(backward compatibility) dan kompatibilitas maju 
+(forward compatibility) yang berarti perangkat 
+USB versi lebih lama bisa digunakan pada port USB 
+versi yang lebih baru dan sebaliknya.
+
+Perlu di ingat, kecepatan transfer data akan 
+terbatas oleh perangkat dengan versi lebih rendah. 
+Jika teman-teman menggunakan flash drive USB 2.
+0 di port USB 3.0, kecepatan transfer akan tetap 
+pada batas USB 2.0, sekitar 480 Mbps (atau sekitar 
+60 MB/s teoritis). Demikian pula, jika flash drive 
+USB 3.0 digunakan di port USB 2.0, kecepatan akan 
+dibatasi oleh port USB 2.0.
+
+Berjalan hampir 4 bulan dan semua nya masih 
+berfungsi dengan normal. Flash drive ini masih 
+bisa di bilang cukup untuk menangani kebutuhan 
+saya, dengan harga yang tergolong murah namun 
+dengan build quality yang lumayan bagus 
+(menurut saya).
