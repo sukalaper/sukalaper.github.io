@@ -14,7 +14,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Blog Sukalaper - Teknologi, Programming, dan GNU/Linux" />
     <meta name="twitter:description" content="Sukalaper blog, sukalaper, blog teknologi, programming, GNU/Linux, paper" />
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="manifest.json" />
     <style>
       body {
         background: #fffbda;
@@ -88,7 +88,7 @@ __________________________________________________
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
           navigator.serviceWorker
-            .register("/service-worker.js")
+            .register("../service-worker.js")
             .then((registration) => {
               console.log("Service Worker registered with scope:", registration.scope);
             })
