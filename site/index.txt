@@ -1,43 +1,39 @@
 
-+------------------------------------------------+
-|                                        _______ |
-|                                        ||  .'| |
-|                                        ||,`  | |
-|                                        |     | |
-|                                        |_____| |
-|                                       _|_( )_|_|
-+------------------------------------------------+
++----------------------------------------------------------+
+|                                                  _______ |
+|                                                  ||  .'| |
+|                                                  ||,`  | |
+|                                                  |     | |
+|                                                  |_____| |
+|                                                 _|_( )_|_|
++----------------------------------------------------------+
 
-&#9432; Terhitung sejak 06/10/2024 21:44 PM, situs 
-sedang dalam refaktor dan pemeliharaan.
+&#9432; Terhitung sejak 06/10/2024 21:44 PM, situs sedang 
+dalam refaktor dan pemeliharaan.
 
-Ke...Kembali berpindah static site generator [1] 
-ke static site lainnya―― 
-Untuk memulai memahami kembali kerangka 
-dokumentasi yang berbeda adalah sebuah 
-konsekuensi logis yang harus di terima demi 
-mencapai kemaslahatan.
+Ke...Kembali berpindah static site generator [1] ke static 
+site lainnya―― 
 
-Source code website ini berasal dari $/dylanaraps 
-artikel-artikel ditulis menggunakan Vim [2] 
-ASCII [3] pada postingan ini dibuat dengan cinta
-rambu pemberitahuan serta peringatan postingan di 
-sediakan oleh Compart [4] serta hosting 
+Untuk memulai memahami kembali kerangka dokumentasi yang 
+berbeda adalah sebuah konsekuensi logis yang harus di terima 
+demi mencapai kemaslahatan.
+
+Source code website ini berasal dari $/dylanaraps artikel-
+artikel ditulis menggunakan Vim [2] ASCII [3] pada postingan 
+ini dibuat dengan cinta rambu pemberitahuan serta peringatan 
+postingan di sediakan oleh Compart [4] serta hosting 
 menggunakan layanan GitHub [5].
 
-"Keindahan subjektif merayakan permasalahan yang 
-tak terbantahkan namun dihargai, menghadirkan 
-konsekuensi logis yang bijak. Ide radikal 
-melahirkan urgensi untuk mengambil 
-langkah-langkah yang dibutuhkan untuk membuka 
-pintu potensi pengalaman yang lebih baik. 
-Tidak melulu tertutup dan berlagak konservatif 
-melainkan terbuka pada kemungkinan, karena jika 
-menggunakan sesuatu itu salah maka selamanya saya 
-tidak ingin benar [6] dalam era digital, 
-militansi bukan hanya tentang kekuatan fisik, 
-tetapi juga tentang dominasi informasi dan 
-kontrol teknologi."
+"Keindahan subjektif merayakan permasalahan yang tak 
+terbantahkan namun dihargai, menghadirkan konsekuensi logis 
+yang bijak. Ide radikal melahirkan urgensi untuk mengambil 
+langkah-langkah yang dibutuhkan untuk membuka pintu potensi 
+pengalaman yang lebih baik. Tidak melulu tertutup dan 
+berlagak konservatif melainkan terbuka pada kemungkinan, 
+karena jika menggunakan sesuatu itu salah maka selamanya 
+saya tidak ingin benar [6] dalam era digital, militansi 
+bukan hanya tentang kekuatan fisik, tetapi juga tentang 
+dominasi informasi dan kontrol teknologi."
 
 [1] https://jamstack.org/generators/
 [2] https://www.vim.org/
