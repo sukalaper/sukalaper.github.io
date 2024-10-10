@@ -1,10 +1,11 @@
 
-Konfigurasi Dual Booting Windows 10 Dengan Arch Linux
-______________________________________________________
+Konfigurasi Dual Boot Windows 10 Dengan Arch Linux
+____________________________________________________
 
 Panduan singkat untuk melakukan dual boot Windows 10 
-dengan Arch Linux, Di sini saya "datang" dari Windows 
-10 yang memiliki rincian partisi seperti ini :
+dengan Arch Linux, Di sini saya "datang" dari 
+Windows 10 yang memiliki rincian partisi seperti 
+ini :
 
   sda      8:0    0 119.2G  0 disk
   ├─sda1   8:1    0   100M  0 part
@@ -17,8 +18,9 @@ dengan Arch Linux, Di sini saya "datang" dari Windows
 Partisi sda5 dan sda6 adalah bagian dari Arch Linux. 
 Bagaimana membuatnya?
  
-1. Gunakan alat Disk Management untuk melihat partisi. 
-   Asumsi isi nya adalah kurang lebih seperti ini :
+1. Gunakan alat Disk Management untuk melihat 
+   partisi. Asumsi isi nya adalah kurang lebih 
+   seperti ini :
   
   Disk 0/
   ├── 100 MB Healthy (EFI System Partition)
@@ -28,8 +30,8 @@ Bagaimana membuatnya?
 2. Gunakan klik kanan pada Disk C: kemudian pilih 
    bagian "Shrink Volume"
   
-3. Pada bagian "Enter the amount of space to shrink in 
-   MB:" saya mengambil hanya 35000 (baca: 35GB)
+3. Pada bagian "Enter the amount of space to shrink 
+   in MB:" saya mengambil hanya 35000 (baca: 35GB)
   
 4. Kemudian nanti nya akan ada partisi baru seperti 
    ini :
@@ -46,8 +48,8 @@ selanjut nya.
 &#128712; Teman-teman wajib menggunakan UEFI mode dan 
 "datang" dari sistem operasi Windows. Mengapa? Pada 
 beberapa kasus Windows update sering kali menimpa 
-bootloader yang mungkin dapat mengakibatkan kesalahan 
-konfigurasi.
+bootloader yang mungkin dapat mengakibatkan 
+kesalahan konfigurasi.
 
 Persyaratan penting sebelum melakukan dual boot :
 
@@ -63,8 +65,8 @@ Alat-alat untuk membuat media instalasi :
 3. Alat <a href="https://etcher.balena.io/">balenaEtcher</a> 
 
 Di sini saya tidak membuat cara untuk memburn ISO - 
-melakukan boot lingkungan tersebut. Teman-teman dapat 
-menggunakan Google atau YouTube.
+melakukan boot lingkungan tersebut. Teman-teman 
+dapat menggunakan Google atau YouTube.
 
 Selanjutnya, mungkin saat ini sudah berada pada menu 
 dari instalasi Arch Linux di tandai dengan ada nya 
@@ -74,15 +76,17 @@ kalimat :
 
   archiso login: root (automatic login)
 
-  To install Arch Linux follow the installation guide:
+  To install Arch Linux follow the installation
+                                   guide:
 
-  https://wiki.archlinux.org/title/installation_guide
+  https://wiki.archlinux.org/title
+                            /installation_guide
 
   For Wi-Fi, authenticate to the wireless network 
-  using the iwctl utility. For mobile broadband (WWAN) 
-  modems, connect with the nmcli utility. Ethernet, 
-  WLAN and WWAN interfaces using DHCP should work 
-  automatically.
+  using the iwctl utility. For mobile broadband 
+  (WWAN) modems, connect with the nmcli utility. 
+  Ethernet, WLAN and WWAN interfaces using DHCP 
+  should work automatically.
  
   After connecting to the internet, the installation 
   guide can be accessed via the convenience script 
@@ -103,8 +107,8 @@ Tidak ada GUI, tidak ada. Hanya sebuah terminal.
    $ iwctl station wlan0 connect [nama-perangkat] 
                         --passphrase "kata-sandi"
 
-3. Periksa apakah sudah terhubung dengan jaringan saat 
-   ini :
+3. Periksa apakah sudah terhubung dengan jaringan 
+   saat ini :
      
    $ ping archlinux.org -c 3
 
@@ -116,8 +120,9 @@ Tidak ada GUI, tidak ada. Hanya sebuah terminal.
      
    $ lsblk 
       
-Biasa nya, sistem akan berada pada /dev/sda namun ini 
-menyesuaikan, konfigurasi mungkin akan berbeda-beda.
+Biasa nya, sistem akan berada pada /dev/sda namun 
+ini menyesuaikan, konfigurasi mungkin akan 
+berbeda-beda.
      
    $ cfdsik /dev/sda 
       
@@ -218,8 +223,8 @@ Pada bagian ini, tambahkan :
    127.0.1.1     [username-teman-teman].localdomain 
                                         localhost
  
-16. Mounting direktori boot, konfigurasi dan instalasi 
-bootloader :
+16. Mounting direktori boot, konfigurasi dan 
+    instalasi bootloader :
       
    $ mkdir /boot/efi
    $ mount /dev/sda6
@@ -234,8 +239,8 @@ Cari dan hapus komentar (#) pada
      --bootloader-id=grub_uefi --recheck
    $ grub-mkconfig -o /boot/grub/grub.cfg
       
-Pastikan bootloader Windows terdeteksi dengan ada nya 
-keluaran :
+Pastikan bootloader Windows terdeteksi dengan ada 
+nya keluaran :
        
    $ Found Windows Boot Manager on /dev/sda1/efi
                                    /Microsoft
