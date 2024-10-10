@@ -1,4 +1,3 @@
-
 Konfigurasi Dual Boot Windows 10 Dengan Arch Linux
 ____________________________________________________
 

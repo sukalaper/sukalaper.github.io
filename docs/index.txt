@@ -1,11 +1,11 @@
-+----------------------------------------------------+
-|                                            _______ |
-|                                            ||  .'| |
-|                                            ||,`  | |
-|                                            |     | |
-|                                            |_____| |
-|                                           _|_( )_|_|
-+----------------------------------------------------+
++--------------------------------------------------+
+|                                          _______ |
+|                                          ||  .'| |
+|                                          ||,`  | |
+|                                          |     | |
+|                                          |_____| |
+|                                         _|_( )_|_|
++--------------------------------------------------+
 
 &#9432; Terhitung sejak 06/10/2024 21:44 PM, situs sedang 
 dalam refaktor dan pemeliharaan.
@@ -18,35 +18,37 @@ yang berbeda adalah sebuah konsekuensi logis yang
 harus di terima demi mencapai kemaslahatan.
 
 Source code website ini berasal dari $/dylanaraps 
-artikel-artikel ditulis menggunakan Vim [2] ASCII [3] 
-pada postingan ini dibuat dengan cinta rambu 
-pemberitahuan serta peringatan postingan di sediakan 
-oleh Compart [4] serta hosting menggunakan layanan 
-GitHub [5].
+artikel-artikel ditulis menggunakan Vim [2] 
+ASCII [3] pada postingan ini dibuat dengan cinta 
+rambu pemberitahuan serta peringatan postingan di 
+sediakan oleh Compart [4] serta hosting menggunakan 
+layanan GitHub [5].
 
-"Keindahan subjektif merayakan permasalahan yang tak 
-terbantahkan namun dihargai, menghadirkan konsekuensi 
-logis yang bijak. Ide radikal melahirkan urgensi untuk 
-mengambil langkah-langkah yang dibutuhkan untuk 
-membuka pintu potensi pengalaman yang lebih baik. 
-Tidak melulu tertutup dan berlagak konservatif 
-melainkan terbuka pada kemungkinan, karena jika 
-menggunakan sesuatu itu salah maka selamanya saya 
-tidak ingin benar [6] dalam era digital, militansi 
-bukan hanya tentang kekuatan fisik, tetapi juga 
-tentang dominasi informasi dan kontrol teknologi."
+"Keindahan subjektif merayakan permasalahan 
+yang tak terbantahkan namun dihargai, menghadirkan 
+konsekuensi logis yang bijak. Ide radikal 
+melahirkan urgensi untuk mengambil langkah-langkah 
+yang dibutuhkan untuk membuka pintu potensi 
+pengalaman yang lebih baik. Tidak melulu tertutup 
+dan berlagak konservatif melainkan terbuka pada 
+kemungkinan, karena jika menggunakan sesuatu itu 
+salah maka selamanya saya tidak ingin benar [6] 
+dalam era digital, militansi bukan hanya tentang 
+kekuatan fisik, tetapi juga tentang dominasi 
+informasi dan kontrol teknologi."
 
 TODO AF :
  
-  &#9633; Add a CSS declaration for code, terminal command 
-     so that newlines are not required when writing :
+  &#9633; Add a CSS declaration for code, terminal 
+     command so that newlines are not required when 
+     writing :
 
-    - $ find /path/to/directory -type f -name "*.log" 
-      -mtime -7 -exec grep -i "error" {} \; | sort 
-      | uniq -c | sort -nr 
-      | awk '{print "Found " $1 " occurrences of error 
-      in " $2}' | mail -s "Weekly Error Report" 
-      user@example.com
+    - $ find /path/to/directory -type f -name 
+        "*.log" -mtime -7 -exec grep -i "error" {} 
+        \; | sort uniq -c | sort -nr 
+        | awk '{print "Found " $1 " occurrences of 
+        error in " $2}' | mail -s "Weekly Error 
+        Report" user@example.com
 
     + <code>$ find /path/to/directory -type f -name "*.log" -mtime -7 -exec grep -i "error" {} \; | sort | uniq -c | sort -nr | awk '{print "Found " $1 " occurrences of error in " $2}' | mail -s "Weekly Error Report" user@example.com</code>
   
