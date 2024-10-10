@@ -1,17 +1,94 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Sukalaper - 01</title><link href="data:," rel="icon"><meta content="Sukalaper blog, sukalaper, blog teknologi, programming, GNU/Linux, paper" name="description"><meta name="robots" content="index, follow"><meta content="width=device-width,initial-scale=1" name="viewport"><meta property="og:title" content="Blog Sukalaper - Teknologi, Programming, dan GNU/Linux"><meta property="og:description" content="Sukalaper blog, sukalaper, blog teknologi, programming, GNU/Linux, paper"><meta property="og:url" content="https://sukalaper.my.id"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Blog Sukalaper - Teknologi, Programming, dan GNU/Linux"><meta name="twitter:description" content="Sukalaper blog, sukalaper, blog teknologi, programming, GNU/Linux, paper"><link rel="manifest" href="/manifest.json"><style>body{background:#fffbda;color:#333;overflow-y:scroll;font:16px monospace,monospace;transition:background .3s,color .3s}a{color:#06f}pre{margin:0;overflow-x:hidden}img,video{display:block;max-width:47ch;border-radius:5px;margin:0 auto}@media (max-width:999px){#c{display:block;font-size:2.6vw}}body.dark-mode{background:#333;color:#fffbda}body.dark-mode a{color:#9cf}#toggle-mode{text-decoration:underline;cursor:pointer}</style></head><body><div style="display:table;margin:16px auto"><div id="c"><pre>
-+----------------------------------------------------------+
-|                                                          |
-|  <a href="/">$HOME</a>           <a href="/about">about</a>    <a href="/blog">blog/</a>    <a href="/paper">paper</a>    <span id="toggle-mode" style="cursor:pointer" onclick="toggleDarkMode()">view-mode.sh</span> |
-|                                                          |
-+----------------------------------------------------------+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sukalaper - 01</title>
+    <link href="data:," rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta content="Sukalaper blog, sukalaper, blog teknologi, programming, GNU/Linux, paper" name="description">
+    <meta name="robots" content="index, follow">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta property="og:title" content="Blog Sukalaper - Teknologi, Programming, dan GNU/Linux">
+    <meta property="og:description" content="Sukalaper blog, sukalaper, blog teknologi, programming, GNU/Linux, paper">
+    <meta property="og:url" content="https://sukalaper.my.id">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog Sukalaper - Teknologi, Programming, dan GNU/Linux">
+    <meta name="twitter:description" content="Sukalaper blog, sukalaper, blog teknologi, programming, GNU/Linux, paper">
+    <link rel="manifest" href="/manifest.json">
+    <style>
+        body {
+            background: #fffbda;
+            color: #333;
+            overflow-y: scroll;
+            font: 16px monospace, monospace;
+            transition: background .3s, color .3s
+        }
+
+        a {
+            color: #06f
+        }
+
+        pre {
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        code {
+            position: absolute;
+            overflow-x: scroll;
+            max-width: 80%;
+            width: 80%;
+        }
+
+        img,
+        video {
+            display: block;
+            max-width: 47ch;
+            border-radius: 5px;
+            margin: 0 auto
+        }
+
+        @media (max-width:999px) {
+            #c {
+                display: block;
+                font-size: 3vw
+            }
+        }
+
+        body.dark-mode {
+            background: #333;
+            color: #fffbda
+        }
+
+        body.dark-mode a {
+            color: #9cf
+        }
+
+        #toggle-mode {
+            text-decoration: underline;
+            cursor: pointer
+        }
+    </style>
+</head>
+
+<body>
+    <div style="display:table;margin:16px auto">
+        <div id="c">
+            <pre>
++-----------------------------------------------------+
+|                                                     |
+|  <a href="/">$HOME</a>           <a href="/about">about</a>  <a href="/blog">blog/</a>  <a href="/paper">paper</a>  <span id="toggle-mode" style="cursor:pointer" onclick="toggleDarkMode()">view-mode.sh</span>  |
+|                                                     |
++-----------------------------------------------------+
 
 
 Konfigurasi Dual Booting Windows 10 Dengan Arch Linux
-____________________________________________________________
+_______________________________________________________
 
-Panduan singkat untuk melakukan dual boot Windows 10 dengan 
-Arch Linux, Di sini saya "datang" dari Windows 10 yang 
-memiliki rincian partisi seperti ini :
+Panduan singkat untuk melakukan dual boot Windows 10 
+dengan Arch Linux, Di sini saya "datang" dari Windows 
+10 yang memiliki rincian partisi seperti ini :
 
   sda      8:0    0 119.2G  0 disk
   ├─sda1   8:1    0   100M  0 part
@@ -32,13 +109,14 @@ Bagaimana membuatnya?
   ├── 119.4 GB Disk C: // Partisi tunggal
   └── 500 MB  Healthy (Recovery Partition)
   
-2. Gunakan klik kanan pada Disk C: kemudian pilih bagian 
-   "Shrink Volume"
+2. Gunakan klik kanan pada Disk C: kemudian pilih 
+   bagian "Shrink Volume"
   
-3. Pada bagian "Enter the amount of space to shrink in MB:" 
-   saya mengambil hanya 35000 (baca: 35GB)
+3. Pada bagian "Enter the amount of space to shrink in 
+   MB:" saya mengambil hanya 35000 (baca: 35GB)
   
-4. Kemudian nanti nya akan ada partisi baru seperti ini :
+4. Kemudian nanti nya akan ada partisi baru seperti 
+   ini :
 
   Disk 0/
   ├── 100 MB Healthy (EFI System Partition)  
@@ -46,18 +124,19 @@ Bagaimana membuatnya?
   ├── 500 MB Healthy (Recovery Partition)     
   └── 35 GB Unallocated                        
  
-Biarkan partisi tersebut kosong dan masuk ke tahap selanjut 
-nya.
+Biarkan partisi tersebut kosong dan masuk ke tahap 
+selanjut nya.
 
-&#128712; Teman-teman wajib menggunakan UEFI mode dan "datang" dari 
-sistem operasi Windows. Mengapa? Pada beberapa kasus Windows 
-update sering kali menimpa bootloader yang mungkin dapat 
-mengakibatkan kesalahan konfigurasi.
+&#128712; Teman-teman wajib menggunakan UEFI mode dan 
+"datang" dari sistem operasi Windows. Mengapa? Pada 
+beberapa kasus Windows update sering kali menimpa 
+bootloader yang mungkin dapat mengakibatkan kesalahan 
+konfigurasi.
 
 Persyaratan penting sebelum melakukan dual boot :
 
-1. Matikan secure boot pada BIOS. Ini dapat di aktifkan 
-   kembali setelah instalasi
+1. Matikan secure boot pada BIOS. Ini dapat di 
+   aktifkan kembali setelah instalasi
 2. Matikan fast boot pada Windows
 3. Matikan hibernasi pada Windows
 
@@ -71,8 +150,9 @@ Di sini saya tidak membuat cara untuk memburn ISO -
 melakukan boot lingkungan tersebut. Teman-teman dapat 
 menggunakan Google atau YouTube.
 
-Selanjutnya, mungkin saat ini sudah berada pada menu dari 
-instalasi Arch Linux di tandai dengan ada nya kalimat :
+Selanjutnya, mungkin saat ini sudah berada pada menu 
+dari instalasi Arch Linux di tandai dengan ada nya 
+kalimat :
 
   Welcome to Arch Linux!
 
@@ -82,21 +162,23 @@ instalasi Arch Linux di tandai dengan ada nya kalimat :
 
   <a href=https://wiki.archlinux.org/title/installation_guide>https://wiki.archlinux.org/title/installation_guide</a>
 
-  For Wi-Fi, authenticate to the wireless network using the 
-  iwctl utility. For mobile broadband (WWAN) modems, connect 
-  with the nmcli utility. Ethernet, WLAN and WWAN interfaces 
-  using DHCP should work automatically.
+  For Wi-Fi, authenticate to the wireless network 
+  using the iwctl utility. For mobile broadband (WWAN) 
+  modems, connect with the nmcli utility. Ethernet, 
+  WLAN and WWAN interfaces using DHCP should work 
+  automatically.
  
-  After connecting to the internet, the installation guide 
-  can be accessed via the convenience script 
+  After connecting to the internet, the installation 
+  guide can be accessed via the convenience script 
   installation_guide.
 
   root@archiso ~ # _
 
 Tidak ada GUI, tidak ada. Hanya sebuah terminal. 
 
-1. Bagi sebagian orang, mungkin ukuran font terlihat sangat 
-   kecil. Ini dapat di sesuaikan dengan perintah : 
+1. Bagi sebagian orang, mungkin ukuran font terlihat 
+   sangat kecil. Ini dapat di sesuaikan dengan 
+   perintah : 
     
    $ setfont ter-132b
 
@@ -105,7 +187,8 @@ Tidak ada GUI, tidak ada. Hanya sebuah terminal.
    $ iwctl station wlan0 connect [nama-perangkat] 
                         --passphrase "kata-sandi"
 
-3. Periksa apakah sudah terhubung dengan jaringan saat ini :
+3. Periksa apakah sudah terhubung dengan jaringan saat 
+   ini :
      
    $ ping archlinux.org -c 3
 
@@ -122,10 +205,11 @@ menyesuaikan, konfigurasi mungkin akan berbeda-beda.
      
    $ cfdsik /dev/sda 
       
-Pada tahapan ini, teman-teman akan melihat sebuah partisi 
-kosong 35GB yang telah di buat. Isi 33.2 GB sebagai Linux 
-filesystem dan 1GB sebagai EFI(ya, terlihat berlebihan) 
-setelah nya teman-teman write partisi tersebut.
+Pada tahapan ini, teman-teman akan melihat sebuah 
+partisi kosong 35GB yang telah di buat. Isi 33.2 GB 
+sebagai Linux filesystem dan 1GB sebagai EFI(ya, 
+terlihat berlebihan) setelah nya teman-teman write 
+partisi tersebut.
   
 6. Periksa hasil partisi :
      
@@ -155,7 +239,8 @@ Ingat, fokus kita hanya pada sda5 dan sda6.
    cepat : 
      
    $ sudo reflector --country Indonesia --sort rate 
-                                        --number 5 --save 
+                                        --number 5 
+                                        --save 
                                         /etc/pacman.d
                                         /mirrorlist 
                                         --verbose
@@ -163,12 +248,14 @@ Ingat, fokus kita hanya pada sda5 dan sda6.
 10. Pasang paket-paket yang di butuhkan : 
 
    $ pacstrap -K /mnt base linux linux-firmware 
-     linux-headers base-devel intel-ucode vim dhcpcd iwd
+     linux-headers base-devel intel-ucode vim dhcpcd 
+     iwd
      
 Jika teman-teman menggunakan AMD, gunakan ini :
       
    $ pacstrap -K /mnt base linux linux-firmware 
-     linux-headers base-devel amd-ucode vim dhcpcd iwd
+     linux-headers base-devel amd-ucode vim dhcpcd 
+     iwd
 
 11. Buat FSTAB : 
       
@@ -180,15 +267,16 @@ Jika teman-teman menggunakan AMD, gunakan ini :
 
 13. Perbarui zona waktu : 
      
-   $ ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+   $ ln -sf /usr/share/zoneinfo/Asia/Jakarta 
+                               /etc/localtime
    $ hwclock --systohc
 
 14. Lokalisasi : 
 
    $ vim /etc/locale.gen 
       
-Cari dan hapus komentar (#) pada bagian #en_US.UTF-8 UTF-8 
-kemudian lanjut dengan :
+Cari dan hapus komentar (#) pada bagian #en_US.UTF-8 
+UTF-8 kemudian lanjut dengan :
       
    $ locale-gen
    $ echo LANG=en_US.UTF-8 > /etc/locale.conf
@@ -201,8 +289,8 @@ kemudian lanjut dengan :
    $ usermod -aG wheel,storage,power
    $ visudo 
       
-Cari dan hapus komentar (#) pada #$%wheel ALL=(ALL:ALL) ALL 
-dan lanjut dengan :
+Cari dan hapus komentar (#) pada #$%wheel 
+ALL=(ALL:ALL) ALL dan lanjut dengan :
       
    $ echo [username-teman-teman] > /etc/hostname
    $ vim /etc/hosts
@@ -219,7 +307,8 @@ bootloader :
       
    $ mkdir /boot/efi
    $ mount /dev/sda6
-   $ pacman -S grub efibootmgr os-prober mtools dosfstools
+   $ pacman -S grub efibootmgr os-prober mtools 
+     dosfstools
    $ vim /etc/default/grub 
       
 Cari dan hapus komentar (#) pada 
@@ -237,7 +326,8 @@ keluaran :
                                    /Boot
                                    /bootmgfw.efi
       
-Jika tidak ada, pasang paket dari fuse3 dengan perintah :
+Jika tidak ada, pasang paket dari fuse3 dengan 
+perintah :
       
    $ pacman -S fuse3 
       
@@ -253,42 +343,52 @@ Kemudian jalankan kembali :
    $ umount -lR /mnt
    $ reboot 
 
-Pada tahapan ini, cabut media instalasi kemudian tunggu 
-hasil nya. 
+Pada tahapan ini, cabut media instalasi kemudian 
+tunggu hasil nya. 
 
 Akhir kata, saya mengucapkan selamat menjadi Archer 
-(pengguna Arch Linux) dan jangan lupa mengucapkan "I uSe 
-ArCh BtW"~
-____________________________________________________________
+(pengguna Arch Linux) dan jangan lupa mengucapkan 
+"I uSe ArCh BtW"~
+_______________________________________________________
 
-                      Sukalaper © 2024, All rights reserved.
+                 Sukalaper © 2024, All rights reserved.
 
-      </pre></div></div><script>if ("serviceWorker" in navigator) {
-      window.addEventListener("load", () => {
-        navigator.serviceWorker
-          .register("/service-worker.js")
-          .then((registration) => {
-            console.log("Service Worker registered with scope:", registration.scope);
-          })
-          .catch((error) => {
-            console.error("Service Worker registration failed:", error);
-          });
-      });
-    }
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
-      updateToggleText();
-      localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
-    }
-    function updateToggleText() {
-      const toggleText = document.getElementById("toggle-mode");
-      toggleText.innerText = document.body.classList.contains("dark-mode") ? "view-mode.sh" : "read-mode.sh";
-      toggleText.style.color = document.body.classList.contains("dark-mode") ? "#9cf" : "#06f";
-    }
-    window.onload = function () {
-      const darkModePreference = localStorage.getItem("darkMode") === "true";
-      if (darkModePreference) {
-        document.body.classList.add("dark-mode");
-      }
-      updateToggleText();
-    };</script></body></html>
+      </pre>
+        </div>
+    </div>
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker
+                    .register("/service-worker.js")
+                    .then((registration) => {
+                        console.log("Service Worker registered with scope:", registration.scope);
+                    })
+                    .catch((error) => {
+                        console.error("Service Worker registration failed:", error);
+                    });
+            });
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+            updateToggleText();
+            localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
+        }
+
+        function updateToggleText() {
+            const toggleText = document.getElementById("toggle-mode");
+            toggleText.innerText = document.body.classList.contains("dark-mode") ? "view-mode.sh" : "read-mode.sh";
+            toggleText.style.color = document.body.classList.contains("dark-mode") ? "#9cf" : "#06f";
+        }
+        window.onload = function() {
+            const darkModePreference = localStorage.getItem("darkMode") === "true";
+            if (darkModePreference) {
+                document.body.classList.add("dark-mode");
+            }
+            updateToggleText();
+        };
+    </script>
+</body>
+
+</html>

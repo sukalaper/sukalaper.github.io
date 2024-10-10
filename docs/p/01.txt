@@ -1,10 +1,10 @@
 
 Konfigurasi Dual Booting Windows 10 Dengan Arch Linux
-____________________________________________________________
+_______________________________________________________
 
-Panduan singkat untuk melakukan dual boot Windows 10 dengan 
-Arch Linux, Di sini saya "datang" dari Windows 10 yang 
-memiliki rincian partisi seperti ini :
+Panduan singkat untuk melakukan dual boot Windows 10 
+dengan Arch Linux, Di sini saya "datang" dari Windows 
+10 yang memiliki rincian partisi seperti ini :
 
   sda      8:0    0 119.2G  0 disk
   ├─sda1   8:1    0   100M  0 part
@@ -25,13 +25,14 @@ Bagaimana membuatnya?
   ├── 119.4 GB Disk C: // Partisi tunggal
   └── 500 MB  Healthy (Recovery Partition)
   
-2. Gunakan klik kanan pada Disk C: kemudian pilih bagian 
-   "Shrink Volume"
+2. Gunakan klik kanan pada Disk C: kemudian pilih 
+   bagian "Shrink Volume"
   
-3. Pada bagian "Enter the amount of space to shrink in MB:" 
-   saya mengambil hanya 35000 (baca: 35GB)
+3. Pada bagian "Enter the amount of space to shrink in 
+   MB:" saya mengambil hanya 35000 (baca: 35GB)
   
-4. Kemudian nanti nya akan ada partisi baru seperti ini :
+4. Kemudian nanti nya akan ada partisi baru seperti 
+   ini :
 
   Disk 0/
   ├── 100 MB Healthy (EFI System Partition)  
@@ -39,18 +40,19 @@ Bagaimana membuatnya?
   ├── 500 MB Healthy (Recovery Partition)     
   └── 35 GB Unallocated                        
  
-Biarkan partisi tersebut kosong dan masuk ke tahap selanjut 
-nya.
+Biarkan partisi tersebut kosong dan masuk ke tahap 
+selanjut nya.
 
-&#128712; Teman-teman wajib menggunakan UEFI mode dan "datang" dari 
-sistem operasi Windows. Mengapa? Pada beberapa kasus Windows 
-update sering kali menimpa bootloader yang mungkin dapat 
-mengakibatkan kesalahan konfigurasi.
+&#128712; Teman-teman wajib menggunakan UEFI mode dan 
+"datang" dari sistem operasi Windows. Mengapa? Pada 
+beberapa kasus Windows update sering kali menimpa 
+bootloader yang mungkin dapat mengakibatkan kesalahan 
+konfigurasi.
 
 Persyaratan penting sebelum melakukan dual boot :
 
-1. Matikan secure boot pada BIOS. Ini dapat di aktifkan 
-   kembali setelah instalasi
+1. Matikan secure boot pada BIOS. Ini dapat di 
+   aktifkan kembali setelah instalasi
 2. Matikan fast boot pada Windows
 3. Matikan hibernasi pada Windows
 
@@ -64,8 +66,9 @@ Di sini saya tidak membuat cara untuk memburn ISO -
 melakukan boot lingkungan tersebut. Teman-teman dapat 
 menggunakan Google atau YouTube.
 
-Selanjutnya, mungkin saat ini sudah berada pada menu dari 
-instalasi Arch Linux di tandai dengan ada nya kalimat :
+Selanjutnya, mungkin saat ini sudah berada pada menu 
+dari instalasi Arch Linux di tandai dengan ada nya 
+kalimat :
 
   Welcome to Arch Linux!
 
@@ -75,21 +78,23 @@ instalasi Arch Linux di tandai dengan ada nya kalimat :
 
   https://wiki.archlinux.org/title/installation_guide
 
-  For Wi-Fi, authenticate to the wireless network using the 
-  iwctl utility. For mobile broadband (WWAN) modems, connect 
-  with the nmcli utility. Ethernet, WLAN and WWAN interfaces 
-  using DHCP should work automatically.
+  For Wi-Fi, authenticate to the wireless network 
+  using the iwctl utility. For mobile broadband (WWAN) 
+  modems, connect with the nmcli utility. Ethernet, 
+  WLAN and WWAN interfaces using DHCP should work 
+  automatically.
  
-  After connecting to the internet, the installation guide 
-  can be accessed via the convenience script 
+  After connecting to the internet, the installation 
+  guide can be accessed via the convenience script 
   installation_guide.
 
   root@archiso ~ # _
 
 Tidak ada GUI, tidak ada. Hanya sebuah terminal. 
 
-1. Bagi sebagian orang, mungkin ukuran font terlihat sangat 
-   kecil. Ini dapat di sesuaikan dengan perintah : 
+1. Bagi sebagian orang, mungkin ukuran font terlihat 
+   sangat kecil. Ini dapat di sesuaikan dengan 
+   perintah : 
     
    $ setfont ter-132b
 
@@ -98,7 +103,8 @@ Tidak ada GUI, tidak ada. Hanya sebuah terminal.
    $ iwctl station wlan0 connect [nama-perangkat] 
                         --passphrase "kata-sandi"
 
-3. Periksa apakah sudah terhubung dengan jaringan saat ini :
+3. Periksa apakah sudah terhubung dengan jaringan saat 
+   ini :
      
    $ ping archlinux.org -c 3
 
@@ -115,10 +121,11 @@ menyesuaikan, konfigurasi mungkin akan berbeda-beda.
      
    $ cfdsik /dev/sda 
       
-Pada tahapan ini, teman-teman akan melihat sebuah partisi 
-kosong 35GB yang telah di buat. Isi 33.2 GB sebagai Linux 
-filesystem dan 1GB sebagai EFI(ya, terlihat berlebihan) 
-setelah nya teman-teman write partisi tersebut.
+Pada tahapan ini, teman-teman akan melihat sebuah 
+partisi kosong 35GB yang telah di buat. Isi 33.2 GB 
+sebagai Linux filesystem dan 1GB sebagai EFI(ya, 
+terlihat berlebihan) setelah nya teman-teman write 
+partisi tersebut.
   
 6. Periksa hasil partisi :
      
@@ -148,7 +155,8 @@ Ingat, fokus kita hanya pada sda5 dan sda6.
    cepat : 
      
    $ sudo reflector --country Indonesia --sort rate 
-                                        --number 5 --save 
+                                        --number 5 
+                                        --save 
                                         /etc/pacman.d
                                         /mirrorlist 
                                         --verbose
@@ -156,12 +164,14 @@ Ingat, fokus kita hanya pada sda5 dan sda6.
 10. Pasang paket-paket yang di butuhkan : 
 
    $ pacstrap -K /mnt base linux linux-firmware 
-     linux-headers base-devel intel-ucode vim dhcpcd iwd
+     linux-headers base-devel intel-ucode vim dhcpcd 
+     iwd
      
 Jika teman-teman menggunakan AMD, gunakan ini :
       
    $ pacstrap -K /mnt base linux linux-firmware 
-     linux-headers base-devel amd-ucode vim dhcpcd iwd
+     linux-headers base-devel amd-ucode vim dhcpcd 
+     iwd
 
 11. Buat FSTAB : 
       
@@ -173,15 +183,16 @@ Jika teman-teman menggunakan AMD, gunakan ini :
 
 13. Perbarui zona waktu : 
      
-   $ ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+   $ ln -sf /usr/share/zoneinfo/Asia/Jakarta 
+                               /etc/localtime
    $ hwclock --systohc
 
 14. Lokalisasi : 
 
    $ vim /etc/locale.gen 
       
-Cari dan hapus komentar (#) pada bagian #en_US.UTF-8 UTF-8 
-kemudian lanjut dengan :
+Cari dan hapus komentar (#) pada bagian #en_US.UTF-8 
+UTF-8 kemudian lanjut dengan :
       
    $ locale-gen
    $ echo LANG=en_US.UTF-8 > /etc/locale.conf
@@ -194,8 +205,8 @@ kemudian lanjut dengan :
    $ usermod -aG wheel,storage,power
    $ visudo 
       
-Cari dan hapus komentar (#) pada #$%wheel ALL=(ALL:ALL) ALL 
-dan lanjut dengan :
+Cari dan hapus komentar (#) pada #$%wheel 
+ALL=(ALL:ALL) ALL dan lanjut dengan :
       
    $ echo [username-teman-teman] > /etc/hostname
    $ vim /etc/hosts
@@ -212,7 +223,8 @@ bootloader :
       
    $ mkdir /boot/efi
    $ mount /dev/sda6
-   $ pacman -S grub efibootmgr os-prober mtools dosfstools
+   $ pacman -S grub efibootmgr os-prober mtools 
+     dosfstools
    $ vim /etc/default/grub 
       
 Cari dan hapus komentar (#) pada 
@@ -230,7 +242,8 @@ keluaran :
                                    /Boot
                                    /bootmgfw.efi
       
-Jika tidak ada, pasang paket dari fuse3 dengan perintah :
+Jika tidak ada, pasang paket dari fuse3 dengan 
+perintah :
       
    $ pacman -S fuse3 
       
@@ -246,9 +259,9 @@ Kemudian jalankan kembali :
    $ umount -lR /mnt
    $ reboot 
 
-Pada tahapan ini, cabut media instalasi kemudian tunggu 
-hasil nya. 
+Pada tahapan ini, cabut media instalasi kemudian 
+tunggu hasil nya. 
 
 Akhir kata, saya mengucapkan selamat menjadi Archer 
-(pengguna Arch Linux) dan jangan lupa mengucapkan "I uSe 
-ArCh BtW"~
+(pengguna Arch Linux) dan jangan lupa mengucapkan 
+"I uSe ArCh BtW"~
