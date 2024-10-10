@@ -1,6 +1,6 @@
 
 Konfigurasi Dual Booting Windows 10 Dengan Arch Linux
-_______________________________________________________
+______________________________________________________
 
 Panduan singkat untuk melakukan dual boot Windows 10 
 dengan Arch Linux, Di sini saya "datang" dari Windows 
