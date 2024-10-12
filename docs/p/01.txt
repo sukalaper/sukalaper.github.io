@@ -59,9 +59,9 @@ Persyaratan penting sebelum melakukan dual boot :
 
 Alat-alat untuk membuat media instalasi :
 
-1. Siapkan ISO terbaru dari <a href="https://archlinux.org/download/">Arch Linux</a> 
+1. Siapkan ISO terbaru dari Arch Linux [1]
 2. Sebuah flash drive berukuran 4 GB atau lebih
-3. Alat <a href="https://etcher.balena.io/">balenaEtcher</a> 
+3. Alat balenaEtcher [2]
 
 Di sini saya tidak membuat cara untuk memburn ISO - 
 melakukan boot lingkungan tersebut. Teman-teman 
@@ -70,16 +70,13 @@ dapat menggunakan Google atau YouTube.
 Selanjutnya, mungkin saat ini sudah berada pada menu 
 dari instalasi Arch Linux di tandai dengan ada nya 
 kalimat :
-
+  
   Welcome to Arch Linux!
 
   archiso login: root (automatic login)
 
-  To install Arch Linux follow the installation
-                                   guide:
-
-  https://wiki.archlinux.org/title
-                            /installation_guide
+  To install Arch Linux follow the installation 
+  guide:
 
   For Wi-Fi, authenticate to the wireless network 
   using the iwctl utility. For mobile broadband 
@@ -104,7 +101,7 @@ Tidak ada GUI, tidak ada. Hanya sebuah terminal.
 2. Hubungkan ke internet dengan iwctl REPL :
      
    $ iwctl station wlan0 connect [nama-perangkat] 
-                        --passphrase "kata-sandi"
+     --passphrase "kata-sandi"
 
 3. Periksa apakah sudah terhubung dengan jaringan 
    saat ini :
@@ -159,11 +156,8 @@ Ingat, fokus kita hanya pada sda5 dan sda6.
    cepat : 
      
    $ sudo reflector --country Indonesia --sort rate 
-                                        --number 5 
-                                        --save 
-                                        /etc/pacman.d
-                                        /mirrorlist 
-                                        --verbose
+     --number 5 --save /etc/pacman.d/mirrorlist 
+     --verbose
 
 10. Pasang paket-paket yang di butuhkan : 
 
@@ -188,7 +182,7 @@ Jika teman-teman menggunakan AMD, gunakan ini :
 13. Perbarui zona waktu : 
      
    $ ln -sf /usr/share/zoneinfo/Asia/Jakarta 
-                               /etc/localtime
+     /etc/localtime
    $ hwclock --systohc
 
 14. Lokalisasi : 
@@ -220,7 +214,7 @@ Pada bagian ini, tambahkan :
    127.0.0.1     localhost
    ::1           localhost
    127.0.1.1     [username-teman-teman].localdomain 
-                                        localhost
+                 localhost
  
 16. Mounting direktori boot, konfigurasi dan 
     instalasi bootloader :
@@ -241,10 +235,8 @@ Cari dan hapus komentar (#) pada
 Pastikan bootloader Windows terdeteksi dengan ada 
 nya keluaran :
        
-   $ Found Windows Boot Manager on /dev/sda1/efi
-                                   /Microsoft
-                                   /Boot
-                                   /bootmgfw.efi
+  Found Windows Boot Manager on /dev/sda1/efi
+  /Microsoft/Boot/bootmgfw.efi
       
 Jika tidak ada, pasang paket dari fuse3 dengan 
 perintah :

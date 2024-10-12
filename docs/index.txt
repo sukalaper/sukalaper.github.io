@@ -7,7 +7,7 @@
 |                                         _|_( )_|_|
 +--------------------------------------------------+
 
-&#9432; Terhitung sejak 06/10/2024 21:44 PM, situs sedang 
+Terhitung sejak 06/10/2024 21:44 PM, situs sedang 
 dalam refaktor dan pemeliharaan.
 
 Ke...Kembali berpindah static site generator [1] ke 
@@ -20,9 +20,7 @@ harus di terima demi mencapai kemaslahatan.
 Source code website ini berasal dari $/dylanaraps 
 artikel-artikel ditulis menggunakan Vim [2] 
 ASCII [3] pada postingan ini dibuat dengan cinta 
-rambu pemberitahuan serta peringatan postingan di 
-sediakan oleh Compart [4] serta hosting menggunakan 
-layanan GitHub [5].
+serta hosting menggunakan layanan GitHub [4].
 
 "Keindahan subjektif merayakan permasalahan 
 yang tak terbantahkan namun dihargai, menghadirkan 
@@ -32,32 +30,13 @@ yang dibutuhkan untuk membuka pintu potensi
 pengalaman yang lebih baik. Tidak melulu tertutup 
 dan berlagak konservatif melainkan terbuka pada 
 kemungkinan, karena jika menggunakan sesuatu itu 
-salah maka selamanya saya tidak ingin benar [6] 
+salah maka selamanya saya tidak ingin benar [5] 
 dalam era digital, militansi bukan hanya tentang 
 kekuatan fisik, tetapi juga tentang dominasi 
 informasi dan kontrol teknologi."
-
-TODO AF :
- 
-  &#9633; Add a CSS declaration for code, terminal 
-     command so that newlines are not required when 
-     writing :
-
-    - $ find /path/to/directory -type f -name 
-        "*.log" -mtime -7 -exec grep -i "error" {} 
-        \; | sort uniq -c | sort -nr 
-        | awk '{print "Found " $1 " occurrences of 
-        error in " $2}' | mail -s "Weekly Error 
-        Report" user@example.com
-
-    + <code>$ find /path/to/directory -type f -name "*.log" -mtime -7 -exec grep -i "error" {} \; | sort | uniq -c | sort -nr | awk '{print "Found " $1 " occurrences of error in " $2}' | mail -s "Weekly Error Report" user@example.com</code>
-  
-  &#9633; This site supports PWAs! Should I add a 
-     notification?
 
 [1] https://jamstack.org/generators/
 [2] https://www.vim.org/
 [3] https://www.asciiart.eu/
 [4] https://github.com/
-[5] https://www.compart.com/en/unicode/
-[6] https://shorturl.at/KYLZ1
+[5] https://shorturl.at/KYLZ1
