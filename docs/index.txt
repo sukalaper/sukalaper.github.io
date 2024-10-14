@@ -6,6 +6,7 @@
 |                                          |_____| |
 |                                         _|_( )_|_|
 +--------------------------------------------------+
+&#128065; <span id="read-time">0</span> min | &#128366; <span id="word-count">0</span> character
 
 Terhitung sejak 06/10/2024 21:44 PM, situs sedang 
 dalam refaktor dan pemeliharaan.

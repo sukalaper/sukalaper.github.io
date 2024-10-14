@@ -8,4 +8,4 @@
 |                                                  |
 |                   PAGE NOT FOUND                 |
 +--------------------------------------------------+
-
+&#128065; <span id="read-time">0</span> min | &#128366; <span id="word-count">0</span> character

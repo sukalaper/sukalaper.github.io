@@ -1,28 +1,32 @@
 Membuat Pengaturan Bash Sederhana Seperti Fish
 (Bonus Konfigurasi Bash Seperti Vim)
 
-&#128065; <span id="read-time">0</span> min | &#128366; <span id="word-count">0</span> words
+&#128065; <span id="read-time">0</span> min | &#128366; <span id="word-count">0</span> character
 ____________________________________________________
 
 Bash [1] dan Fish [2] adalah dua jenis shell yang 
 berbeda. 
 
-  1. Bash (Bourne Again Shell) :
+1. Bash (Bourne Again Shell)
     
-     - Shell yang paling umum di gunakan di banyak 
-       sistem Unix-like
-     - Menyediakan fitur scripting dan dukungan 
-       untuk banyak perintah Unix standar
-     - Sintaksis yang lebih kompleks namun juga 
-       sangat fleksibel dan dapat di sesuaikan
+   Shell yang paling umum di gunakan di banyak 
+   sistem Unix-like
 
-  2. Fish (Friendly Interactive Shell) :
+   Menyediakan fitur scripting dan dukungan 
+   untuk banyak perintah Unix standar
 
-     - Di rancang untuk lebih ramah pengguna, 
-       terutama untuk pemula (saya)
-     - Autocompletion yang jauh lebih canggih 
-     - Sintaksis yang lebih bersih dan mudah untuk 
-       di baca
+   Sintaksis yang lebih kompleks namun juga 
+   sangat fleksibel dan dapat di sesuaikan
+
+2. Fish (Friendly Interactive Shell)
+
+   Di rancang untuk lebih ramah pengguna, 
+   terutama untuk pemula (saya)
+
+   Autocompletion yang jauh lebih canggih 
+
+   Sintaksis yang lebih bersih dan mudah untuk 
+   di baca
 
 Mana yang terhebat? Ini sangat subjektif. Pilihan 
 antara Bash dan Fish tergantung pada preferensi 

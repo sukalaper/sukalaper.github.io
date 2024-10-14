@@ -46,7 +46,7 @@
 
 Konfigurasi Dual Boot Windows 10 Dengan Arch Linux
 
-&#128065; <span id="read-time">0</span> min | &#128366; <span id="word-count">0</span> words
+&#128065; <span id="read-time">0</span> min | &#128366; <span id="word-count">0</span> character
 ____________________________________________________
 
 Panduan singkat untuk melakukan dual boot Windows 10 
@@ -102,13 +102,17 @@ Persyaratan penting sebelum melakukan dual boot :
 
 1. Matikan secure boot pada BIOS. Ini dapat di 
    aktifkan kembali setelah instalasi
+
 2. Matikan fast boot pada Windows
+
 3. Matikan hibernasi pada Windows
 
 Alat-alat untuk membuat media instalasi :
 
 1. Siapkan ISO terbaru dari Arch Linux <a href=#1>[1]</a>
+
 2. Sebuah flash drive berukuran 4 GB atau lebih
+
 3. Alat balenaEtcher <a href=#2>[2]</a>
 
 Di sini saya tidak membuat cara untuk memburn ISO - 
@@ -312,8 +316,8 @@ Akhir kata, saya mengucapkan selamat menjadi Archer
 
 <span id=1><a href=#1>[1]</a></span> <a href=https://archlinux.org/download/>https://archlinux.org/download/</a>
 <span id=2><a href=#2>[2]</a></span> <a href=https://etcher.balena.io/>https://etcher.balena.io/</a> 
-
 ____________________________________________________
+
               Sukalaper © 2023, All rights reserved.
 
             </pre>
@@ -334,10 +338,10 @@ ____________________________________________________
         }
 
         function calculateReadTimeAndWordCount() {
-            const content = document.querySelector('pre').innerText; // Ambil konten dari <pre>
-            const words = content.split(/\s+/).filter(Boolean); // Pisahkan kata
+            const content = document.querySelector('pre').innerText; 
+            const words = content.split(/\s+/).filter(Boolean); 
             const wordCount = words.length;
-            const readTime = Math.ceil(wordCount / 200); // Asumsi 200 kata per menit
+            const readTime = Math.ceil(wordCount / 200); 
             
             document.getElementById('word-count').innerText = wordCount;
             document.getElementById('read-time').innerText = readTime;
@@ -361,7 +365,7 @@ ____________________________________________________
                 document.body.classList.add("dark-mode");
             }
             updateToggleText();
-            calculateReadTimeAndWordCount(); // Hitung waktu baca dan jumlah kata saat halaman dimuat
+            calculateReadTimeAndWordCount(); 
         };
     </script>
 </body>

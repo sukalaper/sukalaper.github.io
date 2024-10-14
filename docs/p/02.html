@@ -47,7 +47,7 @@
 Cara Mengatur Kecepatan TrackPoint Thinkpad Serta
 Disable TouchPad Pada Arch Linux
 
-&#128065; <span id="read-time">0</span> min | &#128366; <span id="word-count">0</span> words
+&#128065; <span id="read-time">0</span> min | &#128366; <span id="word-count">0</span> character
 ____________________________________________________
 
 TL;DR: Pengaturan sensivitas TrackPoint dan disable 
@@ -72,9 +72,11 @@ keyboard.
 Ya, itu yang dinamakan trackpoint. Lalu, apa saja
 fungsi dari trackpoint?
   
-  1. Navigasi 
-  2. Klik
-  3. Scroll
+1. Navigasi 
+
+2. Klik
+
+3. Scroll
 
 Yang mungkin tidak hanya itu. Saya lebih sering
 menggunakan trackpoint di banding mouse atau
@@ -223,8 +225,8 @@ i3wm di jalankan.
 <span id=1><a href=#1>[1]</a></span> <a href=https://www.youtube.com/watch?v=H9ya4dUZfTQ>https://www.youtube.com/watch?v=H9ya4dUZfTQ</a>
 <span id=2><a href=#2>[2]</a></span> <a href=https://wiki.archlinux.org/title/TrackPoint>https://wiki.archlinux.org/title/TrackPoint</a>
 <span id=3><a href=#3>[3]</a></span> <a href=https://i3wm.org/>https://i3wm.org/</a>
-
 ____________________________________________________
+
               Sukalaper © 2023, All rights reserved.
 
             </pre>
@@ -245,10 +247,10 @@ ____________________________________________________
         }
 
         function calculateReadTimeAndWordCount() {
-            const content = document.querySelector('pre').innerText; // Ambil konten dari <pre>
-            const words = content.split(/\s+/).filter(Boolean); // Pisahkan kata
+            const content = document.querySelector('pre').innerText; 
+            const words = content.split(/\s+/).filter(Boolean); 
             const wordCount = words.length;
-            const readTime = Math.ceil(wordCount / 200); // Asumsi 200 kata per menit
+            const readTime = Math.ceil(wordCount / 200); 
             
             document.getElementById('word-count').innerText = wordCount;
             document.getElementById('read-time').innerText = readTime;
@@ -272,7 +274,7 @@ ____________________________________________________
                 document.body.classList.add("dark-mode");
             }
             updateToggleText();
-            calculateReadTimeAndWordCount(); // Hitung waktu baca dan jumlah kata saat halaman dimuat
+            calculateReadTimeAndWordCount(); 
         };
     </script>
 </body>

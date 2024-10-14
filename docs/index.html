@@ -52,6 +52,7 @@
 |                                          |_____| |
 |                                         _|_( )_|_|
 +--------------------------------------------------+
+&#128065; <span id="read-time">0</span> min | &#128366; <span id="word-count">0</span> character
 
 Terhitung sejak 06/10/2024 21:44 PM, situs sedang 
 dalam refaktor dan pemeliharaan.
@@ -86,8 +87,8 @@ informasi dan kontrol teknologi."
 <span id=3><a href=#3>[3]</a></span> <a href=https://www.asciiart.eu/>https://www.asciiart.eu/</a>
 <span id=4><a href=#4>[4]</a></span> <a href=https://github.com/>https://github.com/</a>
 <span id=5><a href=#5>[5]</a></span> <a href=https://shorturl.at/KYLZ1>https://shorturl.at/KYLZ1</a>
-
 ____________________________________________________
+
               Sukalaper © 2023, All rights reserved.
 
             </pre>
@@ -108,10 +109,10 @@ ____________________________________________________
         }
 
         function calculateReadTimeAndWordCount() {
-            const content = document.querySelector('pre').innerText; // Ambil konten dari <pre>
-            const words = content.split(/\s+/).filter(Boolean); // Pisahkan kata
+            const content = document.querySelector('pre').innerText; 
+            const words = content.split(/\s+/).filter(Boolean); 
             const wordCount = words.length;
-            const readTime = Math.ceil(wordCount / 200); // Asumsi 200 kata per menit
+            const readTime = Math.ceil(wordCount / 200); 
             
             document.getElementById('word-count').innerText = wordCount;
             document.getElementById('read-time').innerText = readTime;
@@ -135,7 +136,7 @@ ____________________________________________________
                 document.body.classList.add("dark-mode");
             }
             updateToggleText();
-            calculateReadTimeAndWordCount(); // Hitung waktu baca dan jumlah kata saat halaman dimuat
+            calculateReadTimeAndWordCount(); 
         };
     </script>
 </body>

@@ -56,12 +56,14 @@
 |                                         |===|/   |
 |                                         '---'    |
 +--------------------------------------------------+
+&#128065; <span id="read-time">0</span> min | &#128366; <span id="word-count">0</span> character
 
 .rw-r--r-- 11k sukalaper ..................... <a href="p/01.html">[#01]</a>
 .rw-r--r-- 6.9k sukalaper .................... <a href="p/02.html">[#02]</a>
 .rw-r--r-- 6.8k sukalaper .................... <a href="p/03.html">[#03]</a>
-
+.rw-r--r-- 10k sukalaper ..................... <a href="p/04.html">[#04]</a>
 ____________________________________________________
+
               Sukalaper © 2023, All rights reserved.
 
             </pre>
@@ -82,10 +84,10 @@ ____________________________________________________
         }
 
         function calculateReadTimeAndWordCount() {
-            const content = document.querySelector('pre').innerText; // Ambil konten dari <pre>
-            const words = content.split(/\s+/).filter(Boolean); // Pisahkan kata
+            const content = document.querySelector('pre').innerText; 
+            const words = content.split(/\s+/).filter(Boolean); 
             const wordCount = words.length;
-            const readTime = Math.ceil(wordCount / 200); // Asumsi 200 kata per menit
+            const readTime = Math.ceil(wordCount / 200); 
             
             document.getElementById('word-count').innerText = wordCount;
             document.getElementById('read-time').innerText = readTime;
@@ -109,7 +111,7 @@ ____________________________________________________
                 document.body.classList.add("dark-mode");
             }
             updateToggleText();
-            calculateReadTimeAndWordCount(); // Hitung waktu baca dan jumlah kata saat halaman dimuat
+            calculateReadTimeAndWordCount(); 
         };
     </script>
 </body>

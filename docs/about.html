@@ -51,8 +51,9 @@
 |                                           (o)_.' |
 |                                             )/   |
 +--------------------------------------------------+
-
+&#128065; <span id="read-time">0</span> min | &#128366; <span id="word-count">0</span> character
 ____________________________________________________
+
               Sukalaper © 2023, All rights reserved.
 
             </pre>
@@ -73,10 +74,10 @@ ____________________________________________________
         }
 
         function calculateReadTimeAndWordCount() {
-            const content = document.querySelector('pre').innerText; // Ambil konten dari <pre>
-            const words = content.split(/\s+/).filter(Boolean); // Pisahkan kata
+            const content = document.querySelector('pre').innerText; 
+            const words = content.split(/\s+/).filter(Boolean); 
             const wordCount = words.length;
-            const readTime = Math.ceil(wordCount / 200); // Asumsi 200 kata per menit
+            const readTime = Math.ceil(wordCount / 200); 
             
             document.getElementById('word-count').innerText = wordCount;
             document.getElementById('read-time').innerText = readTime;
@@ -100,7 +101,7 @@ ____________________________________________________
                 document.body.classList.add("dark-mode");
             }
             updateToggleText();
-            calculateReadTimeAndWordCount(); // Hitung waktu baca dan jumlah kata saat halaman dimuat
+            calculateReadTimeAndWordCount(); 
         };
     </script>
 </body>

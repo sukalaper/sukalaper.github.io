@@ -1,7 +1,7 @@
 Cara Mengatur Kecepatan TrackPoint Thinkpad Serta
 Disable TouchPad Pada Arch Linux
 
-&#128065; <span id="read-time">0</span> min | &#128366; <span id="word-count">0</span> words
+&#128065; <span id="read-time">0</span> min | &#128366; <span id="word-count">0</span> character
 ____________________________________________________
 
 TL;DR: Pengaturan sensivitas TrackPoint dan disable 
@@ -26,9 +26,11 @@ keyboard.
 Ya, itu yang dinamakan trackpoint. Lalu, apa saja
 fungsi dari trackpoint?
   
-  1. Navigasi 
-  2. Klik
-  3. Scroll
+1. Navigasi 
+
+2. Klik
+
+3. Scroll
 
 Yang mungkin tidak hanya itu. Saya lebih sering
 menggunakan trackpoint di banding mouse atau
