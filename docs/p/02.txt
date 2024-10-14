@@ -1,21 +1,22 @@
 Cara Mengatur Kecepatan TrackPoint Thinkpad Serta
 Disable TouchPad Pada Arch Linux
+
+&#128065; <span id="read-time">0</span> min | &#128366; <span id="word-count">0</span> words
 ____________________________________________________
 
-TL;DR: Pengaturan singkat sensivitas TrackPoint dan 
-       disable Touchpad. Beberapa id mungkin 
-       berbeda-beda :
+TL;DR: Pengaturan sensivitas TrackPoint dan disable 
+       Touchpad. Beberapa id mungkin berbeda-beda :
 
        $ xinput list | grep -i "trackpoint" 
          | awk -F'id=' '{print $2}' 
          | awk '{print $1}'
-       11 // Ini adalah keluaran perintah pertama
+       11 
        $ xinput set-prop 11 "libinput Accel Speed" 
          -0.66
        $ xinput list | grep -i "touchpad" 
          | awk -F'id=' '{print $2}' 
          | awk '{print $1}'
-       10 // Ini adalah keluaran perintah kedua
+       10 
        $ xinput disable 10
 
 Jika teman-teman menggunakan laptop bawaan Lenovo

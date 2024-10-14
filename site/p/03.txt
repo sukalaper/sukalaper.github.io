@@ -1,5 +1,7 @@
 Membuat Pengaturan Bash Sederhana Seperti Fish
 (Bonus Konfigurasi Bash Seperti Vim)
+
+&#128065; <span id="read-time">0</span> min | &#128366; <span id="word-count">0</span> words
 ____________________________________________________
 
 Bash [1] dan Fish [2] adalah dua jenis shell yang 

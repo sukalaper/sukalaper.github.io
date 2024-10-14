@@ -1,4 +1,6 @@
 Konfigurasi Dual Boot Windows 10 Dengan Arch Linux
+
+&#128065; <span id="read-time">0</span> min | &#128366; <span id="word-count">0</span> words
 ____________________________________________________
 
 Panduan singkat untuk melakukan dual boot Windows 10 
@@ -44,11 +46,11 @@ Bagaimana membuatnya?
 Biarkan partisi tersebut kosong dan masuk ke tahap 
 selanjut nya.
 
-&#128712; Teman-teman wajib menggunakan UEFI mode dan 
-"datang" dari sistem operasi Windows. Mengapa? Pada 
-beberapa kasus Windows update sering kali menimpa 
-bootloader yang mungkin dapat mengakibatkan 
-kesalahan konfigurasi.
+Teman-teman wajib menggunakan UEFI mode dan "datang"
+dari sistem operasi Windows. Mengapa? Pada beberapa 
+kasus Windows update sering kali menimpa bootloader 
+yang mungkin dapat mengakibatkan kesalahan 
+konfigurasi.
 
 Persyaratan penting sebelum melakukan dual boot :
 
@@ -261,3 +263,6 @@ tunggu hasil nya.
 Akhir kata, saya mengucapkan selamat menjadi Archer 
 (pengguna Arch Linux) dan jangan lupa mengucapkan 
 "I uSe ArCh BtW"~
+
+[1] https://archlinux.org/download/
+[2] https://etcher.balena.io/ 
