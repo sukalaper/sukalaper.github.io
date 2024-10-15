@@ -1,7 +1,7 @@
 Membuat Pengaturan Bash Sederhana Seperti Fish
 (Bonus Konfigurasi Bash Seperti Vim)
 
-&#128065; <span id="read-time">0</span> min | &#128366; <span id="word-count">0</span> character
+<span id="read-time">0</span> min | <span id="word-count">0</span> character 
 ____________________________________________________
 
 Bash [1] dan Fish [2] adalah dua jenis shell yang 
@@ -32,7 +32,7 @@ Mana yang terhebat? Ini sangat subjektif. Pilihan
 antara Bash dan Fish tergantung pada preferensi 
 pengguna.
 
-Apa yang saya gunakan? Tentu, Bash! 
+Apa yang saya gunakan? Bash! 
 
   $ which $SHELL 
   /bin/bash
@@ -100,8 +100,8 @@ Gunakan konfigurasi pada .inputrc seperti ini :
 
   set editing-mode vi
   set show-mode-in-prompt on
-  set vi-ins-mode-string "[ins]"
-  set vi-cmd-mode-string "[cmd]"
+  set vi-ins-mode-string "[INS]"
+  set vi-cmd-mode-string "[NOR]"
 
 "Yang sulit bukan memilih tapi bertahan pada 
 pilihan."

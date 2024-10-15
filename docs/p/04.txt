@@ -1,6 +1,6 @@
 Mengapa Haskell?
 
-&#128065; <span id="read-time">0</span> min | &#128366; <span id="word-count">0</span> character
+<span id="read-time">0</span> min | <span id="word-count">0</span> character 
 ____________________________________________________
 
 Haskell [1] adalah bahasa pemrograman fungsional 
@@ -47,7 +47,7 @@ langkah :
 
 2. Menghitung jumlah dari squares
 
-Bingung? Saya bahas kode tersebut baris per baris : 
+Bingung? Saya bahas kode tersebut baris per baris.
 
 1. sumSquares :: [Int] -> Int
 
@@ -176,12 +176,6 @@ tawarkan oleh Haskell itu sendiri.
    melibatkan algoritma dan Haskell memiliki 
    pendekatan yang sistematis untuk menyelesaikan 
    masalah tersebut
-
-Untuk teman-teman yang bukan matematikawan atau 
-fisikawan, jangan berkecil hati! Ini bukan berarti 
-tidak bisa, namun perlu lebih banyak waktu untuk 
-memahami konsep-konsep dasar terutama terkait 
-pemrograman fungsional.
 
   "Bayangkan seseorang yang sudah mahir memasak. 
    Mereka mungkin dapat dengan cepat memahami resep 

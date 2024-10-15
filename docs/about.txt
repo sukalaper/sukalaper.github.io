@@ -5,4 +5,4 @@
 |                                           (o)_.' |
 |                                             )/   |
 +--------------------------------------------------+
-&#128065; <span id="read-time">0</span> min | &#128366; <span id="word-count">0</span> character
+<span id="read-time">0</span> min | <span id="word-count">0</span> character 

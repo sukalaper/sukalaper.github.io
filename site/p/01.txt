@@ -1,6 +1,6 @@
 Konfigurasi Dual Boot Windows 10 Dengan Arch Linux
 
-&#128065; <span id="read-time">0</span> min | &#128366; <span id="word-count">0</span> character
+<span id="read-time">0</span> min | <span id="word-count">0</span> character 
 ____________________________________________________
 
 Panduan singkat untuk melakukan dual boot Windows 10 
@@ -20,8 +20,7 @@ Partisi sda5 dan sda6 adalah bagian dari Arch Linux.
 Bagaimana membuatnya?
  
 1. Gunakan alat Disk Management untuk melihat 
-   partisi. Asumsi isi nya adalah kurang lebih 
-   seperti ini :
+   partisi. Milik saya isi nya adalah seperti ini :
   
   Disk 0/
   ├── 100 MB Healthy (EFI System Partition)

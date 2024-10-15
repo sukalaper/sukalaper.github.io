@@ -10,9 +10,12 @@
 |                                         |===|/   |
 |                                         '---'    |
 +--------------------------------------------------+
-&#128065; <span id="read-time">0</span> min | &#128366; <span id="word-count">0</span> character
+<span id="read-time">0</span> min | <span id="word-count">0</span> character 
 
-.rw-r--r-- 11k sukalaper ..................... <a href="p/01.html">[#01]</a>
-.rw-r--r-- 6.9k sukalaper .................... <a href="p/02.html">[#02]</a>
-.rw-r--r-- 6.8k sukalaper .................... <a href="p/03.html">[#03]</a>
-.rw-r--r-- 10k sukalaper ..................... <a href="p/04.html">[#04]</a>
+.rw-r--r-- 11k  sukalaper .................... <a href="p/01.html">[#01]</a>
+.rw-r--r-- 9.7k sukalaper .................... <a href="p/02.html">[#02]</a>
+.rw-r--r-- 7.3k sukalaper .................... <a href="p/03.html">[#03]</a>
+.rw-r--r-- 9.7k sukalaper .................... <a href="p/04.html">[#04]</a>
+.rw-r--r-- 12k  sukalaper .................... <a href="p/05.html">[#05]</a>
+.rw-r--r-- 5.5k sukalaper .................... <a href="p/06.html">[#06]</a>
+.rw-r--r-- 6.5k sukalaper .................... <a href="p/07.html">[#07]</a>
