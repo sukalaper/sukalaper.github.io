@@ -12,19 +12,18 @@ Disable TouchPad Pada Arch Linux
 ____________________________________________________
 
 TL;DR: Pengaturan sensivitas TrackPoint dan disable 
-       Touchpad. Beberapa id mungkin berbeda-beda :
+       Touchpad. Beberapa id mungkin berbeda-beda.
 
        $ xinput list | grep -i "trackpoint" 
          | awk -F'id=' '{print $2}' 
          | awk '{print $1}'
-       11 
+       $ xinput list-props [id] | grep -i "speed"
        $ xinput set-prop 11 "libinput Accel Speed" 
          -0.66
        $ xinput list | grep -i "touchpad" 
          | awk -F'id=' '{print $2}' 
          | awk '{print $1}'
-       10 
-       $ xinput disable 10
+       $ xinput disable [id]
 
 Jika teman-teman menggunakan laptop bawaan Lenovo
 (dulu IBM) pasti sudah tidak asing lagi dengan
@@ -95,14 +94,10 @@ coba dengan perintah ini :
   run.
 
   Trying to open "/etc/systemd/hwdb/hwdb.bin"..
-  Trying to open "/etc/udev/hwdb.bin"..
   Trying to open "/usr/lib/systemd/hwdb/hwdb.bin"..
-  Trying to open "/usr/lib/udev/hwdb.bin"..
   === trie on-disk ===
   tool version:          255
   file size:        12356767 bytes
-  header size             80 bytes
-  strings            2580575 bytes
   nodes              9776112 bytes
   Loading kernel module index.
 
@@ -111,10 +106,6 @@ coba dengan perintah ini :
   network/99-default.link"
   Created link configuration context.
 
-  Reading rules file: /usr/lib/udev/rules.d/
-  01-md-raid-creating.rules
-  Reading rules file: /usr/lib/udev/rules.d/
-  10-dm.rules
   Reading rules file: /etc/udev/rules.d/
   10-trackpoint.rules
 
@@ -125,10 +116,6 @@ coba dengan perintah ini :
   serio2: /etc/udev/rules.d/10-trackpoint.rules:1 
           ATTR '/sys/devices/platform/
           i8042/serio1/serio2/speed' writing '100'
-  serio2: /usr/lib/udev/rules.d/50-udev-
-          default.rules:20 Importing properties 
-          from results of builtin command 
-          'hwdb --subsystem=serio'
   serio2: hwdb modalias key: 
           "serio:ty05pr00id00ex00"
   serio2: hwdb modalias key: 
@@ -173,7 +160,7 @@ keluaran yang di hasilkan dari xinput tadi?
     ⎜   ↳ SynPS/2 Synaptics TouchPad        id=10
           [slave  pointer  (2)]
 
-TouchPad memiliki id 10, jadi cukup gunakan 
+Touchpad memiliki id 10, jadi cukup gunakan 
 perintah ini :
 
   $ xinput disable 10

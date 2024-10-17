@@ -19,3 +19,5 @@
 .rw-r--r-- 12k  sukalaper .................... <a href="p/05.html">[#05]</a>
 .rw-r--r-- 5.5k sukalaper .................... <a href="p/06.html">[#06]</a>
 .rw-r--r-- 6.5k sukalaper .................... <a href="p/07.html">[#07]</a>
+.rw-r--r-- 6.3k sukalaper .................... <a href="p/08.html">[#08]</a>
+.rw-r--r-- 10k  sukalaper .................... <a href="p/09.html">[#09]</a>
