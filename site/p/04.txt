@@ -177,14 +177,14 @@ tawarkan oleh Haskell itu sendiri.
    pendekatan yang sistematis untuk menyelesaikan 
    masalah tersebut
 
-  "Bayangkan seseorang yang sudah mahir memasak. 
-   Mereka mungkin dapat dengan cepat memahami resep 
-   baru, bahkan jika bahan-bahannya asing, karena 
-   mereka sudah terbiasa dengan teknik dasar 
-   memasak. Namun, seseorang yang tidak memiliki 
-   pengalaman memasak mungkin harus belajar dari 
-   awal tentang cara menggunakan peralatan dan 
-   memahami langkah-langkah dalam resep tersebut."
+"Bayangkan seseorang yang sudah mahir memasak. 
+Mereka mungkin dapat dengan cepat memahami resep 
+baru, bahkan jika bahan-bahannya asing, karena 
+mereka sudah terbiasa dengan teknik dasar 
+memasak. Namun, seseorang yang tidak memiliki 
+pengalaman memasak mungkin harus belajar dari 
+awal tentang cara menggunakan peralatan dan 
+memahami langkah-langkah dalam resep tersebut."
 
 [1] https://www.haskell.org/
 [2] https://xmonad.org/

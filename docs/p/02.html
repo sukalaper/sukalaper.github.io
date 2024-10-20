@@ -124,24 +124,24 @@ coba dengan perintah ini :
 Atau jika ingin lebih mudah, gunakan xinput dengan :
 
   $ xinput list
-    ⎡ Virtual core pointer                  id=2
-      [master pointer  (3)]
-    ⎜   ↳ SynPS/2 Synaptics TouchPad        id=10
-          [slave  pointer  (2)]
-    ⎜   ↳ TPPS/2 IBM TrackPoint             id=11
-          [slave  pointer  (2)]
-    ⎣ Virtual core keyboard                 id=3
-      [master keyboard (2)]
-        ↳ Virtual core XTEST keyboard       id=5
-          [slave  keyboard (3)]
+  Virtual core pointer                id=2
+    [master pointer  (3)]
+    ↳ SynPS/2 Synaptics TouchPad      id=10
+      [slave  pointer  (2)]
+      ↳ TPPS/2 IBM TrackPoint         id=11
+        [slave  pointer  (2)]
+  Virtual core keyboard           id=3
+    [master keyboard (2)]
+    ↳ Virtual core XTEST keyboard id=5
+      [slave  keyboard (3)]
 
 Dari keluaran tersebut, perhatikan id pada 
 TPPS/2 IBM TrackPoint yang bernilai 11 :
 
   $ xinput list-props 11
-    Device 'TPPS/2 IBM TrackPoint':
-	  Device Enabled (183):	1
-    libinput Accel Speed (332):	-0.660000 
+  Device 'TPPS/2 IBM TrackPoint':
+	Device Enabled (183):	1
+  libinput Accel Speed (332):	-0.660000 
 
 Perhatikan pada keluaran akhir.
 
@@ -155,10 +155,9 @@ touchpad? Apa teman-teman masih ingat dengan
 keluaran yang di hasilkan dari xinput tadi?
 
   $ xinput list
-    ⎡ Virtual core pointer                  id=2
-      [master pointer  (3)]
-    ⎜   ↳ SynPS/2 Synaptics TouchPad        id=10
-          [slave  pointer  (2)]
+  Virtual core pointer                  id=2
+    [master pointer  (3)]
+    ↳ SynPS/2 Synaptics TouchPad        id=10
 
 Touchpad memiliki id 10, jadi cukup gunakan 
 perintah ini :
