@@ -1,6 +1,4 @@
 Mengapa Haskell?
-
-<span id="read-time">0</span> min | <span id="word-count">0</span> character 
 ____________________________________________________
 
 Haskell [1] adalah bahasa pemrograman fungsional 
@@ -13,8 +11,6 @@ Kesan pertama adalah banyak nya "kode cerdas"
 karena Haskell memperbolehkan dan sering kali 
 menghasilkan kode yang lebih sulit di pahami oleh 
 saya(?)
-
-Contoh :
 
   sumSquares :: [Int] -> Int
   sumSquares xs = sum (map (^2) xs)
@@ -148,34 +144,6 @@ lainnya. Argumen saya adalah orang yang datang dari
 latar belakang matematikawan dan fisikawan "mungkin"
 akan lebih cepat memahami konsep paradigma yang di 
 tawarkan oleh Haskell itu sendiri.
-
-1. Pemikiran abstrak 
-
-   Kedua disiplin ini melatih kemampuan berpikir 
-   abstrak, yang sangat berguna saat bekerja 
-   dengan konsep pemrograman fungsional dan 
-   struktur data di Haskell
-
-2. Notasi dan konsep  
-
-   Banyak konsep di Haskell, seperti fungsi dan 
-   komposisi, mirip dengan notasi dan ide-ide 
-   dalam matematika sehingga mereka mungkin sudah 
-   familiar dengan cara berpikir yang diperlukan
-
-3. Logika dan formalisme  
-
-   Matematikawan dan fisikawan sering terbiasa 
-   dengan logika formal dan pembuktian yang dapat 
-   membantu mereka memahami sistem tipe dan 
-   aturan-aturan dalam Haskell
-
-4. Pengalaman dengan algoritma  
-
-   Banyak masalah dalam fisika dan matematika 
-   melibatkan algoritma dan Haskell memiliki 
-   pendekatan yang sistematis untuk menyelesaikan 
-   masalah tersebut
 
 "Bayangkan seseorang yang sudah mahir memasak. 
 Mereka mungkin dapat dengan cepat memahami resep 

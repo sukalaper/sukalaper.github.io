@@ -7,4 +7,3 @@
 |                                           (o)_.' |
 |                                             )/   |
 +--------------------------------------------------+
-<span id="read-time">0</span> min | <span id="word-count">0</span> character 

@@ -1,6 +1,4 @@
 Integrasi Situs Ke Progressive Web Application (PWA)
-
-<span id="read-time">0</span> min | <span id="word-count">0</span> character 
 ____________________________________________________
 
 PWA adalah jenis aplikasi yang menggabungkan fitur 

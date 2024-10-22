@@ -6,9 +6,7 @@
 +--------------------------------------------------+
 
 Git: Cara Mengatasi Fatal The Remote End Hung Up 
-Unexpectedly Pada Git
-
-<span id="read-time">0</span> min | <span id="word-count">0</span> character 
+Unexpectedly 
 ____________________________________________________
 
 Saat saya ingin melakukan push pada salah satu 
@@ -65,15 +63,6 @@ ____________________________________________________
                     });
             });
         }
-        function calculateReadTimeAndWordCount() {
-            const content = document.querySelector('pre').innerText; 
-            const words = content.split(/\s+/).filter(Boolean); 
-            const wordCount = words.length;
-            const readTime = Math.ceil(wordCount / 200); 
-            
-            document.getElementById('word-count').innerText = wordCount;
-            document.getElementById('read-time').innerText = readTime;
-        }
         function toggleDarkMode() {
             document.body.classList.toggle("dark-mode");
             updateToggleText();
@@ -90,5 +79,4 @@ ____________________________________________________
                 document.body.classList.add("dark-mode");
             }
             updateToggleText();
-            calculateReadTimeAndWordCount(); 
         };</script></body></html>

@@ -1,7 +1,5 @@
 Membuat Pengaturan Bash Sederhana Seperti Fish
 (Bonus Konfigurasi Bash Seperti Vim)
-
-<span id="read-time">0</span> min | <span id="word-count">0</span> character 
 ____________________________________________________
 
 Bash [1] dan Fish [2] adalah dua jenis shell yang 
@@ -28,20 +26,20 @@ berbeda.
    Sintaksis yang lebih bersih dan mudah untuk 
    di baca
 
-Mana yang terhebat? Ini sangat subjektif. Pilihan 
+Mana yang terbaik? Ini sangat subjektif. Pilihan 
 antara Bash dan Fish tergantung pada preferensi 
-pengguna.
+teman-teman.
 
 Apa yang saya gunakan? Bash! 
 
   $ which $SHELL 
   /bin/bash
 
-Saya sempat menggunakan Fish, itu hebat! Serius. 
+Saya sempat menggunakan Fish, itu keren! Serius. 
 Tanpa perlu konfigurasi apapun, pelengkapan 
 otomatis Fish benar-benar sangat berguna.
 
-Namun, mengapa Saya tetap memilih Bash?
+Namun, mengapa saya tetap memilih Bash?
 
 Karena ini adalah shell default yang telah ada.
 

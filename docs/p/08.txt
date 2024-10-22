@@ -1,17 +1,17 @@
 Instalasi Dan Konfigurasi TOR Di Arch Linux
-
-<span id="read-time">0</span> min | <span id="word-count">0</span> character
 ____________________________________________________
 
-Anonimitas memang sangat subjektif dan dapat berarti
-hal yang berbeda bagi setiap orang.
+Anonimitas memang menjadi pilihan dan dapat 
+berarti hal yang berbeda bagi setiap orang.
 
 TOR (The Onion Router) [1] adalah sebuah jaringan 
 yang dirancang untuk meningkatkan privasi dan 
 anonimitas saat berselancar di internet. 
+
 TOR bekerja dengan cara mengalihkan lalu lintas 
 internet melalui serangkaian server yang dikelola 
 oleh sukarelawan di seluruh dunia. 
+
 Ini menciptakan "jalur" yang kompleks, sehingga 
 lokasi dan identitas pengguna menjadi lebih sulit 
 dilacak.
@@ -56,9 +56,11 @@ mencoba nya, ini cara nya :
 
 Apakah ini mirip dengan VPN? Ya, namun cara kerja
 nya "sedikit" berbeda dan yang paling utama 
-adalah soal kecepatan. TOR sedikit lebih lambat
-karena rute yang berputar jika di sandingkan dengan
-VPN namun tingkat anonimitas TOR lebih kuat.
+adalah soal kecepatan.
+
+TOR sedikit lebih lambat karena rute yang berputar 
+jika di sandingkan dengan VPN namun tingkat 
+anonimitas TOR lebih kuat.
 
 Selamat berselancar dan menyelam!
 

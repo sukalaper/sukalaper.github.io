@@ -1,6 +1,4 @@
 Cara Konfigurasi Threshold Baterai Di Arch Linux
-
-<span id="read-time">0</span> min | <span id="word-count">0</span> character 
 ____________________________________________________
 
 Threshold [1] merujuk pada batas tertentu yang 

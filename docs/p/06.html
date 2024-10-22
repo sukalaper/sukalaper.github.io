@@ -6,8 +6,6 @@
 +--------------------------------------------------+
 
 Konfigurasi REISUB Pada Arch Linux
-
-<span id="read-time">0</span> min | <span id="word-count">0</span> character 
 ____________________________________________________
 
 "Perlu diketahui bahwa REISUB itu sendiri hanyalah 
@@ -42,8 +40,8 @@ untuk melakukan aksi emergency remount pada sistem
 file dalam mode baca-tulis (read-write) yang mana 
 ini juga merupakan tindakan darurat.
 
-<span id=1><a href=#1>[1]</a></span> <a href=https://itsfoss.com/what-is-tty-in-linux/>https://itsfoss.com/what-is-tty-in-linux/</a>
-<span id=2><a href=#2>[2]</a></span> <a href=https://tinyurl.com/n8pd2y4h>https://tinyurl.com/n8pd2y4h</a>
+<span id=1><a href=#1>[1]</a></span> <a href=https://tinyurl.com/n8pd2y4h>https://tinyurl.com/n8pd2y4h</a>
+<span id=2><a href=#2>[2]</a></span> <a href=https://itsfoss.com/what-is-tty-in-linux/>https://itsfoss.com/what-is-tty-in-linux/</a>
 
 ____________________________________________________
 
@@ -61,15 +59,6 @@ ____________________________________________________
                     });
             });
         }
-        function calculateReadTimeAndWordCount() {
-            const content = document.querySelector('pre').innerText; 
-            const words = content.split(/\s+/).filter(Boolean); 
-            const wordCount = words.length;
-            const readTime = Math.ceil(wordCount / 200); 
-            
-            document.getElementById('word-count').innerText = wordCount;
-            document.getElementById('read-time').innerText = readTime;
-        }
         function toggleDarkMode() {
             document.body.classList.toggle("dark-mode");
             updateToggleText();
@@ -86,5 +75,4 @@ ____________________________________________________
                 document.body.classList.add("dark-mode");
             }
             updateToggleText();
-            calculateReadTimeAndWordCount(); 
         };</script></body></html>

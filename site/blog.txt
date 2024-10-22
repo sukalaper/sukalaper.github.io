@@ -10,7 +10,6 @@
 |                                         |===|/   |
 |                                         '---'    |
 +--------------------------------------------------+
-<span id="read-time">0</span> min | <span id="word-count">0</span> character 
 
 .rw-r--r-- 11k  sukalaper .................... <a href="p/01.html">[#01]</a>
 .rw-r--r-- 9.7k sukalaper .................... <a href="p/02.html">[#02]</a>

@@ -6,8 +6,6 @@
 +--------------------------------------------------+
 
 Membuat Statusbar Sederhana Pada Arch Linux
-
-<span id="read-time">0</span> min | <span id="word-count">0</span> character 
 ____________________________________________________
 
 Statusbar pada GNU/Linux adalah elemen antarmuka 
@@ -193,15 +191,6 @@ ____________________________________________________
                     });
             });
         }
-        function calculateReadTimeAndWordCount() {
-            const content = document.querySelector('pre').innerText; 
-            const words = content.split(/\s+/).filter(Boolean); 
-            const wordCount = words.length;
-            const readTime = Math.ceil(wordCount / 200); 
-            
-            document.getElementById('word-count').innerText = wordCount;
-            document.getElementById('read-time').innerText = readTime;
-        }
         function toggleDarkMode() {
             document.body.classList.toggle("dark-mode");
             updateToggleText();
@@ -218,5 +207,4 @@ ____________________________________________________
                 document.body.classList.add("dark-mode");
             }
             updateToggleText();
-            calculateReadTimeAndWordCount(); 
         };</script></body></html>

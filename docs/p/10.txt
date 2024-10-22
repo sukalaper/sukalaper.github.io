@@ -1,6 +1,4 @@
 Bash: Perbedaan Echo Dan Printf (Berlanjut)
-
-<span id="read-time">0</span> min | <span id="word-count">0</span> character 
 ____________________________________________________
 
 Di Bash [1], echo [2] dan printf [3] adalah dua 

@@ -1,7 +1,5 @@
 Git: Cara Mengatasi Fatal The Remote End Hung Up 
-Unexpectedly Pada Git
-
-<span id="read-time">0</span> min | <span id="word-count">0</span> character 
+Unexpectedly 
 ____________________________________________________
 
 Saat saya ingin melakukan push pada salah satu 

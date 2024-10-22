@@ -7,8 +7,6 @@
 
 Membuat Pengaturan Bash Sederhana Seperti Fish
 (Bonus Konfigurasi Bash Seperti Vim)
-
-<span id="read-time">0</span> min | <span id="word-count">0</span> character 
 ____________________________________________________
 
 Bash <a href=#1>[1]</a> dan Fish <a href=#2>[2]</a> adalah dua jenis shell yang 
@@ -35,20 +33,20 @@ berbeda.
    Sintaksis yang lebih bersih dan mudah untuk 
    di baca
 
-Mana yang terhebat? Ini sangat subjektif. Pilihan 
+Mana yang terbaik? Ini sangat subjektif. Pilihan 
 antara Bash dan Fish tergantung pada preferensi 
-pengguna.
+teman-teman.
 
 Apa yang saya gunakan? Bash! 
 
   $ which $SHELL 
   /bin/bash
 
-Saya sempat menggunakan Fish, itu hebat! Serius. 
+Saya sempat menggunakan Fish, itu keren! Serius. 
 Tanpa perlu konfigurasi apapun, pelengkapan 
 otomatis Fish benar-benar sangat berguna.
 
-Namun, mengapa Saya tetap memilih Bash?
+Namun, mengapa saya tetap memilih Bash?
 
 Karena ini adalah shell default yang telah ada.
 
@@ -134,15 +132,6 @@ ____________________________________________________
                     });
             });
         }
-        function calculateReadTimeAndWordCount() {
-            const content = document.querySelector('pre').innerText; 
-            const words = content.split(/\s+/).filter(Boolean); 
-            const wordCount = words.length;
-            const readTime = Math.ceil(wordCount / 200); 
-            
-            document.getElementById('word-count').innerText = wordCount;
-            document.getElementById('read-time').innerText = readTime;
-        }
         function toggleDarkMode() {
             document.body.classList.toggle("dark-mode");
             updateToggleText();
@@ -159,5 +148,4 @@ ____________________________________________________
                 document.body.classList.add("dark-mode");
             }
             updateToggleText();
-            calculateReadTimeAndWordCount(); 
         };</script></body></html>

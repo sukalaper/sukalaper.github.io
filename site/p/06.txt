@@ -1,6 +1,4 @@
 Konfigurasi REISUB Pada Arch Linux
-
-<span id="read-time">0</span> min | <span id="word-count">0</span> character 
 ____________________________________________________
 
 "Perlu diketahui bahwa REISUB itu sendiri hanyalah 
@@ -35,5 +33,5 @@ untuk melakukan aksi emergency remount pada sistem
 file dalam mode baca-tulis (read-write) yang mana 
 ini juga merupakan tindakan darurat.
 
-[1] https://itsfoss.com/what-is-tty-in-linux/
-[2] https://tinyurl.com/n8pd2y4h
+[1] https://tinyurl.com/n8pd2y4h
+[2] https://itsfoss.com/what-is-tty-in-linux/

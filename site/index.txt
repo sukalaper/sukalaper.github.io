@@ -6,7 +6,6 @@
 |                                          |_____| |
 |                                         _|_( )_|_|
 +--------------------------------------------------+
-<span id="read-time">0</span> min | <span id="word-count">0</span> character 
 
 Kembali berpindah static site generator [1] ke 
 static site lainnya―― 

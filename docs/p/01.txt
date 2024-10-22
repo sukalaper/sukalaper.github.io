@@ -1,6 +1,4 @@
 Konfigurasi Dual Boot Windows 10 Dengan Arch Linux
-
-<span id="read-time">0</span> min | <span id="word-count">0</span> character 
 ____________________________________________________
 
 Panduan singkat untuk melakukan dual boot Windows 10 
@@ -49,7 +47,9 @@ Teman-teman wajib menggunakan UEFI mode dan "datang"
 dari sistem operasi Windows. Mengapa? Pada beberapa 
 kasus Windows update sering kali menimpa bootloader 
 yang mungkin dapat mengakibatkan kesalahan 
-konfigurasi.
+konfigurasi. 
+
+Harap berhati-hati saat melakukan partisi!
 
 Persyaratan penting sebelum melakukan dual boot :
 
@@ -68,13 +68,13 @@ Alat-alat untuk membuat media instalasi :
 
 - Alat balenaEtcher [2]
 
-Di sini saya tidak membuat cara untuk memburn ISO - 
+saya tidak membuat cara untuk memburn ISO - 
 melakukan boot lingkungan tersebut. Teman-teman 
 dapat menggunakan Google atau YouTube.
 
-Selanjutnya, mungkin saat ini sudah berada pada menu 
-dari instalasi Arch Linux di tandai dengan ada nya 
-kalimat :
+Selanjutnya, mungkin saat ini teman-teman sudah 
+berada pada menu dari instalasi Arch Linux di tandai
+dengan ada nya :
   
   Welcome to Arch Linux!
 
@@ -164,7 +164,8 @@ Ingat, fokus kita hanya pada sda5 dan sda6.
      --number 5 --save /etc/pacman.d/mirrorlist 
      --verbose
 
-10. Pasang paket-paket yang di butuhkan : 
+10. Pasang paket-paket yang di butuhkan, di sini 
+    saya menggunakan prosesor Intel : 
 
    $ pacstrap -K /mnt base linux linux-firmware 
      linux-headers base-devel intel-ucode vim dhcpcd 

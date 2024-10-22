@@ -7,18 +7,16 @@
 
 Cara Mengatur Kecepatan TrackPoint Thinkpad Serta
 Disable TouchPad Pada Arch Linux
-
-<span id="read-time">0</span> min | <span id="word-count">0</span> character 
 ____________________________________________________
 
 TL;DR: Pengaturan sensivitas TrackPoint dan disable 
-       Touchpad. Beberapa id mungkin berbeda-beda.
+       Touchpad. Beberapa ID mungkin berbeda-beda.
 
        $ xinput list | grep -i "trackpoint" 
          | awk -F'id=' '{print $2}' 
          | awk '{print $1}'
        $ xinput list-props [id] | grep -i "speed"
-       $ xinput set-prop 11 "libinput Accel Speed" 
+       $ xinput set-prop [id] "libinput Accel Speed" 
          -0.66
        $ xinput list | grep -i "touchpad" 
          | awk -F'id=' '{print $2}' 
@@ -121,50 +119,7 @@ coba dengan perintah ini :
   serio2: hwdb modalias key: 
           "serio:ty01pr00id00ex00"
 
-Atau jika ingin lebih mudah, gunakan xinput dengan :
-
-  $ xinput list
-  Virtual core pointer                id=2
-    [master pointer  (3)]
-    ↳ SynPS/2 Synaptics TouchPad      id=10
-      [slave  pointer  (2)]
-      ↳ TPPS/2 IBM TrackPoint         id=11
-        [slave  pointer  (2)]
-  Virtual core keyboard           id=3
-    [master keyboard (2)]
-    ↳ Virtual core XTEST keyboard id=5
-      [slave  keyboard (3)]
-
-Dari keluaran tersebut, perhatikan id pada 
-TPPS/2 IBM TrackPoint yang bernilai 11 :
-
-  $ xinput list-props 11
-  Device 'TPPS/2 IBM TrackPoint':
-	Device Enabled (183):	1
-  libinput Accel Speed (332):	-0.660000 
-
-Perhatikan pada keluaran akhir.
-
-  xinput set-prop 11 "libinput Accel Speed" -0.66 
-
-Nilai dari -0.66 dapat teman-teman sesuaikan dengan 
-preferensi masing-masing. 
-
-Trackpoint sudah, lalu bagaimana dengan disable 
-touchpad? Apa teman-teman masih ingat dengan 
-keluaran yang di hasilkan dari xinput tadi?
-
-  $ xinput list
-  Virtual core pointer                  id=2
-    [master pointer  (3)]
-    ↳ SynPS/2 Synaptics TouchPad        id=10
-
-Touchpad memiliki id 10, jadi cukup gunakan 
-perintah ini :
-
-  $ xinput disable 10
-
-karena saya menggunakan i3wm <a href=#3>[3]</a> maka saat ini 
+Karena saya menggunakan i3wm <a href=#3>[3]</a> maka saat ini 
 saya menambahkan skrip ke dalam 
 ~/.config/i3/config agar di muat setiap kali 
 i3wm di jalankan.
@@ -189,15 +144,6 @@ ____________________________________________________
                     });
             });
         }
-        function calculateReadTimeAndWordCount() {
-            const content = document.querySelector('pre').innerText; 
-            const words = content.split(/\s+/).filter(Boolean); 
-            const wordCount = words.length;
-            const readTime = Math.ceil(wordCount / 200); 
-            
-            document.getElementById('word-count').innerText = wordCount;
-            document.getElementById('read-time').innerText = readTime;
-        }
         function toggleDarkMode() {
             document.body.classList.toggle("dark-mode");
             updateToggleText();
@@ -214,5 +160,4 @@ ____________________________________________________
                 document.body.classList.add("dark-mode");
             }
             updateToggleText();
-            calculateReadTimeAndWordCount(); 
         };</script></body></html>
