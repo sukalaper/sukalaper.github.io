@@ -1,8 +1,8 @@
 Instalasi Dan Konfigurasi TOR Di Arch Linux
 ____________________________________________________
 
-Anonimitas memang menjadi pilihan dan dapat 
-berarti hal yang berbeda bagi setiap orang.
+Anonimitas memang menjadi pilihan dan dapat berarti 
+hal yang berbeda bagi setiap orang.
 
 TOR (The Onion Router) [1] adalah sebuah jaringan 
 yang dirancang untuk meningkatkan privasi dan 

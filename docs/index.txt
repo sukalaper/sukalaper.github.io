@@ -1,4 +1,12 @@
 +--------------------------------------------------+
+|                              #StopGenocideInGaza |
+|                                                  |
+|                              "Will that incident | 
+|                               happen (#OpIsrael) |
+|                               again? Will the    |
+|                               hacktivists execute| 
+|                               commands like they |
+|                               did before?"       |
 |                                          _______ |
 |                                          ||  .'| |
 |                                          ||,`  | |
@@ -18,6 +26,11 @@ Source code website ini berasal dari $/dylanaraps
 artikel-artikel ditulis menggunakan Vim [2] 
 ASCII [3] pada postingan ini dibuat dengan cinta 
 serta hosting menggunakan layanan GitHub [4].
+
+"If you want to have a more in depth discussion I'm 
+always available by email or IRC. We can discuss and 
+argue about what you like and dislike, about new 
+ideas to consider, opinions, etc.."
 
 [1] https://jamstack.org/generators/
 [2] https://www.vim.org/

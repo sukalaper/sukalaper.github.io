@@ -4,12 +4,12 @@ ____________________________________________________
 Statusbar pada GNU/Linux adalah elemen antarmuka 
 grafis yang menampilkan informasi penting tentang 
 sistem seperti penggunaan CPU, penggunaan memori dan 
-status jaringan. Biasanya terletak di bagian bawah 
-atau atas layar, statusbar memberikan pemantauan 
-real-time yang membantu pengguna memahami kinerja 
-sistem. Dengan memanfaatkan widget dan plugin, 
-pengguna dapat menyesuaikan statusbar sesuai 
-kebutuhan.
+status jaringan. 
+Biasanya terletak di bagian bawah atau atas layar, 
+statusbar memberikan pemantauan real-time yang 
+membantu untuk memahami kinerja sistem. Dengan 
+memanfaatkan widget dan plugin, kita dapat 
+menyesuaikan statusbar sesuai kebutuhan.
 
 Ada banyak beberapa statusbar yang cukup populer dan
 sering di gunakan oleh pengguna window manager [1] 

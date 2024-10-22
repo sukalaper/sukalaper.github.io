@@ -29,7 +29,7 @@ Bagaimana membuatnya?
   
   Disk 0/
   ├── 100 MB Healthy (EFI System Partition)
-  ├── 119.4 GB Disk C: // Partisi tunggal
+  ├── 119.4 GB Disk C:
   └── 500 MB  Healthy (Recovery Partition)
   
 2. Gunakan klik kanan pada Disk C: kemudian pilih 
@@ -55,8 +55,6 @@ dari sistem operasi Windows. Mengapa? Pada beberapa
 kasus Windows update sering kali menimpa bootloader 
 yang mungkin dapat mengakibatkan kesalahan 
 konfigurasi. 
-
-Harap berhati-hati saat melakukan partisi!
 
 Persyaratan penting sebelum melakukan dual boot :
 
@@ -102,7 +100,7 @@ dengan ada nya :
 
   root@archiso ~ # _
 
-Tidak ada GUI, tidak ada. Hanya sebuah terminal. 
+Tidak ada GUI, tidak ada. Hanya sebuah terminal~
 
 1. Bagi sebagian orang, mungkin ukuran font terlihat 
    sangat kecil. Ini dapat di sesuaikan dengan 
@@ -131,6 +129,7 @@ Tidak ada GUI, tidak ada. Hanya sebuah terminal.
 Biasa nya, sistem akan berada pada /dev/sda namun 
 ini menyesuaikan, konfigurasi mungkin akan 
 berbeda-beda.
+Harap berhati-hati saat melakukan partisi!
      
    $ cfdsik /dev/sda 
       
@@ -172,7 +171,7 @@ Ingat, fokus kita hanya pada sda5 dan sda6.
      --verbose
 
 10. Pasang paket-paket yang di butuhkan, di sini 
-    saya menggunakan prosesor Intel : 
+    saya menggunakan driver Intel : 
 
    $ pacstrap -K /mnt base linux linux-firmware 
      linux-headers base-devel intel-ucode vim dhcpcd 
@@ -182,6 +181,12 @@ Jika teman-teman menggunakan AMD, gunakan ini :
       
    $ pacstrap -K /mnt base linux linux-firmware 
      linux-headers base-devel amd-ucode vim dhcpcd 
+     iwd
+
+Jika teman-teman menggunakan NVDIA, gunakan ini :
+   
+   $ pacstrap -K /mnt base linux linux-firmware 
+     linux-headers base-devel nvidia vim dhcpcd 
      iwd
 
 11. Buat FSTAB : 

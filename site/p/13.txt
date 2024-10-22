@@ -2,9 +2,8 @@ Git: Cara Mengatasi Fatal The Remote End Hung Up
 Unexpectedly 
 ____________________________________________________
 
-Saat saya ingin melakukan push pada salah satu 
-repository milik saya, keluaran Git menunjukan 
-seperti ini :
+Saat ingin melakukan push pada salah satu repository
+milik saya, keluaran Git menunjukan seperti ini :
 
   Counting objects: 2649, done.
   Delta compression uses up to 2 threads.
