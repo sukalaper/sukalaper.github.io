@@ -1,10 +1,7 @@
 Konfigurasi Dual Boot Windows 10 Dengan Arch Linux
 ____________________________________________________
 
-Panduan singkat untuk melakukan dual boot Windows 10 
-dengan Arch Linux, Di sini saya "datang" dari 
-Windows 10 yang memiliki rincian partisi seperti 
-ini :
+Rincian partisi yang saya miliki :
 
   sda      8:0    0 119.2G  0 disk
   ├─sda1   8:1    0   100M  0 part
@@ -54,9 +51,9 @@ Persyaratan penting sebelum melakukan dual boot :
 - Matikan secure boot pada BIOS. Ini dapat di 
   aktifkan kembali setelah instalasi
 
-- Matikan fast boot pada Windows
+- Matikan fitur fastboot pada Windows
 
-- Matikan hibernasi pada Windows
+- Matikan fitur hibernasi pada Windows
 
 Alat-alat untuk membuat media instalasi :
 
@@ -64,9 +61,9 @@ Alat-alat untuk membuat media instalasi :
 
 - Sebuah flash drive berukuran 4 GB atau lebih
 
-- Alat balenaEtcher [2]
+- Alat untuk melakukan burn ISO, balenaEtcher [2]
 
-saya tidak membuat cara untuk memburn ISO - 
+Saya tidak membuat cara untuk memburn ISO - 
 melakukan boot lingkungan tersebut. Teman-teman 
 dapat menggunakan Google atau YouTube.
 
