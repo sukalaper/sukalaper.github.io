@@ -15,12 +15,17 @@ Untuk memulai memahami kembali kerangka dokumentasi
 yang berbeda adalah sebuah konsekuensi logis yang 
 harus di terima demi mencapai kemaslahatan.
 
-Source code website ini berasal dari $/dylanaraps 
+Blog ini berisi beberapa kutipan, penggunaan sistem 
+operasi (mostly GNU/Linux: Arch) dan barisan kode.
+
+Source code website berasal dari $/dylanaraps 
 artikel-artikel ditulis menggunakan Vim [2] 
 ASCII [3] pada postingan ini dibuat dengan cinta 
-serta hosting menggunakan layanan GitHub [4].
+serta hosting menggunakan layanan GitHub [4] dan
+Rumahweb [5].
 
 [1] https://jamstack.org/generators/
 [2] https://www.vim.org/
 [3] https://www.asciiart.eu/
 [4] https://github.com/
+[5] https://www.rumahweb.com/
