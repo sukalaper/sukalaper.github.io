@@ -11,18 +11,13 @@
 Kembali berpindah static site generator [1] ke 
 static site lainnya―― 
 
-Untuk memulai memahami kembali kerangka dokumentasi 
-yang berbeda adalah sebuah konsekuensi logis yang 
-harus di terima demi mencapai kemaslahatan.
-
-Blog ini berisi beberapa kutipan, penggunaan sistem 
-operasi (mostly GNU/Linux: Arch) dan barisan kode.
-
 Source code website berasal dari $/dylanaraps 
 artikel-artikel ditulis menggunakan Vim [2] 
 ASCII [3] pada postingan ini dibuat dengan cinta 
 serta hosting menggunakan layanan GitHub [4] dan
 Rumahweb [5].
+
+Situs ini mendukung PWA.^
 
 [1] https://jamstack.org/generators/
 [2] https://www.vim.org/

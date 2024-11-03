@@ -11,8 +11,7 @@
 |                                         '---'    |
 +--------------------------------------------------+
 
-See the paper section only, this section is under 
-maintenance.
+Under maintenance.
 <!--
 .rw-r--r-- 11k  sukalaper .................... <a href="p/01.html">[#01]</a>
 .rw-r--r-- 9.7k sukalaper .................... <a href="p/02.html">[#02]</a>
