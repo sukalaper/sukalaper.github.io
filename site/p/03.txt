@@ -1,5 +1,4 @@
 Membuat Pengaturan Bash Sederhana Seperti Fish
-(Bonus Konfigurasi Bash Seperti Vi)
 ____________________________________________________
 
 Bash [1] dan Fish [2] adalah dua jenis shell yang 

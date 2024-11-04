@@ -119,6 +119,7 @@ Tidak ada GUI, tidak ada. Hanya sebuah terminal~
 Biasa nya, sistem akan berada pada /dev/sda namun 
 ini menyesuaikan, konfigurasi mungkin akan 
 berbeda-beda.
+
 Harap berhati-hati saat melakukan partisi!
      
    $ cfdsik /dev/sda 
