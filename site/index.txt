@@ -32,6 +32,12 @@ menggunakan gaya href [7] melainkan menggunakan
 footnotes [8] alih-alih lebih bersih pada elemen 
 &lt;pre&gt; [9].
 
+"Bahwa dalam setiap harta terdapat hak orang lain 
+(orang yang meminta-minta dan orang yang tidak 
+meminta-minta)." (QS. Adz-Dzaariyat : 19) [10].
+
+https://kitabisa.com/explore/all
+
 [1] https://jamstack.org/generators/
 [2] https://kisslinux.github.io/
 [3] https://www.vim.org/
@@ -41,3 +47,4 @@ footnotes [8] alih-alih lebih bersih pada elemen
 [7] https://www.w3schools.com/tags/att_a_href.asp
 [8] https://www.scribbr.com/chicago-style/footnotes
 [9] https://www.w3schools.com/tags/tag_pre.asp
+[10] https://quran.nu.or.id/adz-dzariyat/19
