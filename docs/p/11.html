@@ -10,18 +10,19 @@ ____________________________________________________
 
 Threshold <a href=#1>[1]</a> merujuk pada batas tertentu yang 
 ditentukan untuk level pengisian atau penggunaan 
-baterai. Misalnya, banyak perangkat memiliki 
-threshold untuk menghindari pengisian berlebihan 
-atau pengosongan total yang dapat merusak baterai. 
-Dengan mengatur threshold, umur baterai dapat di 
-perpanjang.
+baterai. 
+
+Misalnya, banyak perangkat memiliki threshold untuk 
+menghindari pengisian berlebihan atau pengosongan 
+total yang dapat merusak baterai. Dengan mengatur 
+threshold, umur baterai dapat di perpanjang.
 
 Pada Arch Linux, ini dapat di atur dengan cara :
 
   # echo 40 > /sys/class/power_supply/BAT0/
-    charge_control_start_threshold
+  charge_control_start_threshold
   # echo 85 > /sys/class/power_supply/BAT0
-    /charge_control_end_threshold
+  /charge_control_end_threshold
 
 Pengaturan threshold di atas hanya bekerja untuk 
 sesi saat ini saja, jadi jika teman-teman ingin 
@@ -31,7 +32,7 @@ Systemd Service <a href=#2>[2]</a> dengan cara :
 1. Buat file unit systemd :
 
   $ sudo vim /etc/systemd/system
-    /battery-threshold.service
+  /battery-threshold.service
 
 2. Isi file tersebut dengan konfigurasi berikut :
 

@@ -9,19 +9,18 @@ Cara Mengatur Kecepatan TrackPoint Thinkpad Serta
 Disable TouchPad Pada Arch Linux
 ____________________________________________________
 
-TL;DR: Pengaturan sensivitas TrackPoint dan disable 
-       Touchpad. Beberapa ID mungkin berbeda-beda.
+TL;DR: Perintah untuk pengaturan sensivitas 
+TrackPoint dan disable Touchpad. Beberapa ID mungkin 
+berbeda-beda.
 
-       $ xinput list | grep -i "trackpoint" 
-         | awk -F'id=' '{print $2}' 
-         | awk '{print $1}'
-       $ xinput list-props [id] | grep -i "speed"
-       $ xinput set-prop [id] "libinput Accel Speed" 
-         -0.66
-       $ xinput list | grep -i "touchpad" 
-         | awk -F'id=' '{print $2}' 
-         | awk '{print $1}'
-       $ xinput disable [id]
+  $ xinput list | grep -i "trackpoint" | awk -F'id=' 
+  '{print $2}' | awk '{print $1}'
+  $ xinput list-props [id] | grep -i "speed"
+  $ xinput set-prop [id] "libinput Accel Speed" 
+  -0.66
+  $ xinput list | grep -i "touchpad" | awk -F'id=' '
+  {print $2}' | awk '{print $1}'
+  $ xinput disable [id]
 
 Jika teman-teman menggunakan laptop bawaan Lenovo
 (dulu IBM) pasti sudah tidak asing lagi dengan
@@ -31,25 +30,22 @@ keyboard.
 Ya, itu yang dinamakan trackpoint. Lalu, apa saja
 fungsi dari trackpoint?
   
-1. Navigasi 
+* Navigasi 
 
-2. Klik
+* Klik
 
-3. Scroll
+* Scroll
 
 Yang mungkin tidak hanya itu. Saya lebih sering
 menggunakan trackpoint di banding mouse atau
 touchpad. Terutama untuk menggeser-geser sebuah
-window. Penggunaan trackpoint ini sebenarnya cukup
+window. 
+
+Penggunaan trackpoint ini sebenarnya cukup
 meningkatkan efisiensi penggunaan keyboard tanpa
 harus mengangkat tangan untuk menggunakan mouse atau
 sekedar elus-elus touchpad untuk melakukan gerakan
-navigasi.
-
-Jika di gambarkan adalah hanya jari telunjuk sebelah
-kanan saya yang aktif untuk menggerakan kursor dan
-sisanya tetap aktif berada di atas keyboard tanpa
-terdistraksi oleh apapun <a href=#1>[1]</a>.
+navigasi <a href=#1>[1]</a>.
 
 Lalu bagaimana cara mengatur kecepatan trackpoint
 pada Arch Linux?
@@ -85,7 +81,8 @@ coba dengan perintah ini :
 
   # udevadm control --reload
   # udevadm test /sys/devices/platform/i8042/serio1/
-    serio2
+  serio2
+
   This program is for debugging only, it does not 
   run any program specified by a RUN key. It may 
   show incorrect results, because some values may 

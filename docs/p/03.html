@@ -13,24 +13,24 @@ berbeda.
 
 1. Bash : Bourne Again Shell
     
-   Shell yang paling umum di gunakan di banyak 
-   sistem Unix-like
+  Shell yang paling umum di gunakan di banyak sistem 
+  Unix-like
 
-   Menyediakan fitur scripting dan dukungan 
-   untuk banyak perintah Unix standar
+  Menyediakan fitur scripting dan dukungan untuk 
+  banyak perintah Unix standar
 
-   Sintaksis yang lebih kompleks namun juga 
-   sangat fleksibel dan dapat di sesuaikan
+  Sintaksis yang lebih kompleks namun juga sangat 
+  fleksibel dan dapat di sesuaikan
 
 2. Fish : Friendly Interactive Shell
 
-   Di rancang untuk lebih ramah pengguna, 
-   terutama untuk pemula (saya)
+  Di rancang untuk lebih ramah pengguna, terutama 
+  untuk pemula (saya)
 
-   Autocompletion yang jauh lebih canggih 
+  Autocompletion yang jauh lebih canggih 
 
-   Sintaksis yang lebih bersih dan mudah untuk 
-   di baca
+  Sintaksis yang lebih bersih dan mudah untuk di 
+  baca
 
 Pilihan antara Bash dan Fish tergantung pada 
 preferensi teman-teman.
@@ -41,8 +41,8 @@ Apa yang saya gunakan? Bash!
   /bin/bash
 
 Saya sempat menggunakan Fish, itu keren! Serius. 
-Tanpa perlu konfigurasi apapun, pelengkapan 
-otomatis Fish benar-benar sangat berguna.
+Tanpa perlu konfigurasi apapun, pelengkapan otomatis 
+Fish benar-benar sangat berguna.
 
 Namun, mengapa saya tetap memilih Bash?
 
@@ -83,15 +83,15 @@ Isi .bashrc akan seperti ini :
     local result
     result=$(find . \( -type d -o -type f \) | 
     fzf --preview 'bat --color=always {}')
-      if [ -n "$result" ]; then
-        if [ -d "$result" ]; then
-          cd "$result"  
-        else
-          vim "$result"  
-        fi
+    if [ -n "$result" ]; then
+      if [ -d "$result" ]; then
+        cd "$result"  
+      else
+        vim "$result"  
       fi
+    fi
   }
-
+  
 Ini tidak 100% seperti Fish tapi setidak nya itu 
 mendekati.
 
@@ -105,9 +105,6 @@ Gunakan konfigurasi pada .inputrc seperti ini :
   set show-mode-in-prompt on
   set vi-ins-mode-string "[INS]"
   set vi-cmd-mode-string "[NOR]"
-
-"Yang sulit bukan memilih tapi bertahan pada 
-pilihan."
 
 <span id=1><a href=#1>[1]</a></span> <a href=https://www.gnu.org/software/bash/>https://www.gnu.org/software/bash/</a>
 <span id=2><a href=#2>[2]</a></span> <a href=https://fishshell.com/>https://fishshell.com/</a>

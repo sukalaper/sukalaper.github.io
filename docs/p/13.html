@@ -9,7 +9,7 @@ Git: Cara Mengatasi Fatal The Remote End Hung Up
 Unexpectedly 
 ____________________________________________________
 
-Saat ingin melakukan push pada salah satu repository
+Saat ingin melakukan push pada salah satu repositori
 milik saya, keluaran Git menunjukan seperti ini :
 
   Counting objects: 2649, done.
@@ -26,11 +26,13 @@ milik saya, keluaran Git menunjukan seperti ini :
 
 Awalnya saya pikir ini adalah kesalahan dari koneksi
 yang tidak stabil, ternyata bukan. 
+
 Ini terjadi karena pengaturan buffer Git / HTTPS. 
 Masalah ini umumnya terkait dengan pengaturan buffer
-Git untuk transfer data melalui HTTP. Secara 
-default, buffer ini mungkin terlalu kecil untuk 
-menangani data yang di kirim.
+Git untuk transfer data melalui HTTP. 
+
+Secara default, buffer ini mungkin terlalu kecil 
+untuk menangani data yang di kirim.
 
 Cara mengatasinya dengan meningkatkan ukuran buffer 
 menggunakan perintah :
