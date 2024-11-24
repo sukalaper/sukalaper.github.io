@@ -134,9 +134,9 @@ pertama teman-teman?
 Banyak anggota forum Haskeller [3] sering kali 
 mengatakan :
 
-  "There are times when, while I'm write the code, 
-  whether it’s been a week or even just three days,
-  I forget the purpose of it."
+"There are times when, while I'm write the code, 
+whether it’s been a week or even just three days,
+I forget the purpose of it."
 
 Mengapa? Hal-hal dalam Haskell cenderung sangat 
 abstrak, bahkan relatif terhadap bahasa fungsional 
