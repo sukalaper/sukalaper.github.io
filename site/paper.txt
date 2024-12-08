@@ -5,7 +5,7 @@
 |                                      (_   _    _)|
 |                                        (_) (__)  |
 +--------------------------------------------------+
-
+<!--
 ALESANA: THE THESPIAN [1]
  
 "Look at you, you miserable fool. Get off your 
@@ -854,7 +854,7 @@ Dunia I pada usia 27 tahun."
 [34] https://shorturl.at/AnGLn
 ____________________________________________________
 
-LAYOUT: DVORAK VS QWERTY
+LAYOUT KEYBOARD: DVORAK VS QWERTY
 
 "Perangkat layout keyboard Dvorak [35] sering di 
 anggap lebih efisien di bandingkan dengan layout 
@@ -963,3 +963,5 @@ ini berfungsi sebagai cara untuk "membersihkan"
 diri dari ketegangan mental."
 
 [38] https://shorturl.at/2PXht
+--> 
+Under maintenance.
