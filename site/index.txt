@@ -1,5 +1,5 @@
 +--------------------------------------------------+
-|                              #StopGenocideInGaza |
+|                                  On hiatus af――  |
 |                                          _______ |
 |                                          ||  .'| |
 |                                          ||,`  | |
@@ -20,20 +20,16 @@ GitHub [5] dan domain dari Rumahweb [6].
 
 Blog ini berisi artikel yang sedikit-demi-sedikit 
 atau selesai di teliti secara epistemik (tentu akan
-kontradiktif) Unix, secuil filsafat dan banyak lagi. 
+kontradiktif) Unix (mostly GNU/Linux) [7] secuil 
+filsafat dan banyak lagi. 
 
 Beberapa bagian nya lagi mencoba mengambil sudut 
 pandang baru, menghubungkan ide-ide secara intuitif 
 tanpa menghilangkan sumber asli.
 
-Kalimat asing dan juga sumber daya eksternal bukan 
-menggunakan gaya href [7] melainkan menggunakan 
-footnotes [8] alih-alih lebih bersih pada elemen 
-&lt;pre&gt; [9].
-
 "Bahwa dalam setiap harta terdapat hak orang lain 
 (orang yang meminta-minta dan orang yang tidak 
-meminta-minta)." (QS. Adz-Dzaariyat : 19) [10].
+meminta-minta)." (QS. Adz-Dzaariyat : 19) [8].
 
 https://kitabisa.com/explore/all
 
@@ -43,7 +39,5 @@ https://kitabisa.com/explore/all
 [4] https://www.asciiart.eu/
 [5] https://github.com/
 [6] https://www.rumahweb.com/
-[7] https://www.w3schools.com/tags/att_a_href.asp
-[8] https://www.scribbr.com/chicago-style/footnotes
-[9] https://www.w3schools.com/tags/tag_pre.asp
-[10] https://quran.nu.or.id/adz-dzariyat/19
+[7] https://en.m.wikipedia.org/wiki/Unix
+[8] https://quran.nu.or.id/adz-dzariyat/19
