@@ -1,5 +1,5 @@
 +--------------------------------------------------+
-|                                  On hiatus af――  |
+|                                    On hiatus af――|
 |                                          _______ |
 |                                          ||  .'| |
 |                                          ||,`  | |
@@ -8,30 +8,25 @@
 |                                         _|_( )_|_|
 +--------------------------------------------------+
 
-Kembali berpindah static site generator [1] ke 
-static site lainnya―― 
+Yowza!
 
-Source code asli berasal dari $/dylanaraps (saat ini
-sudah tidak aktif. Cerminan dapat di akses pada 
-situs resmi Kiss Linux [2]) artikel-artikel di tulis 
-menggunakan Vim [3] ASCII [4] pada postingan ini di
-buat dengan cinta serta hosting menggunakan layanan 
-GitHub [5] dan domain dari Rumahweb [6].
+Kembali berpindah satu static site generator [1] ke 
+static site lainnya.
+
+Source code asli berasal dari $/dylanaraps (mirror
+Kiss Linux [2]) situs dan artikel di tulis kembali 
+menggunakan Vim [3] ASCII [4] di buat dengan cinta, 
+hosting menggunakan layanan GitHub [5] domain dari 
+Rumahweb [6] dan CDN Cloudflare [7].
 
 Blog ini berisi artikel yang sedikit-demi-sedikit 
-atau selesai di teliti secara epistemik (tentu akan
-kontradiktif) Unix (mostly GNU/Linux) [7] secuil 
-filsafat dan banyak lagi. 
+atau selesai di teliti secara epistemik 
+(kontradiktif) Unix (mostly GNU/Linux) [8] dan 
+banyak lagi. 
 
 Beberapa bagian nya lagi mencoba mengambil sudut 
 pandang baru, menghubungkan ide-ide secara intuitif 
 tanpa menghilangkan sumber asli.
-
-"Bahwa dalam setiap harta terdapat hak orang lain 
-(orang yang meminta-minta dan orang yang tidak 
-meminta-minta)." (QS. Adz-Dzaariyat : 19) [8].
-
-https://kitabisa.com/explore/all
 
 [1] https://jamstack.org/generators/
 [2] https://kisslinux.github.io/
@@ -40,4 +35,3 @@ https://kitabisa.com/explore/all
 [5] https://github.com/
 [6] https://www.rumahweb.com/
 [7] https://en.m.wikipedia.org/wiki/Unix
-[8] https://quran.nu.or.id/adz-dzariyat/19
