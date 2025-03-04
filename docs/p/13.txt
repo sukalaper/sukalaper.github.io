@@ -1,0 +1,42 @@
+Git: Cara Mengatasi Fatal The Remote End Hung Up 
+Unexpectedly 
+____________________________________________________
+
+Saat ingin melakukan push pada salah satu repositori
+milik saya, keluaran Git menunjukan seperti ini :
+
+  Counting objects: 2649, done.
+  Delta compression uses up to 2 threads.
+  Compressing objects: 100% (1280/1280), done.
+  error: RPC failed; result=22, HTTP code = 413 
+  | 116 KiB/s   
+  fatal: The remote end hung up unexpectedly
+  Writing objects: 100% (2504/2504), 449.61 MiB 
+  | 4.19 MiB/s, done.
+  Total 2504 (delta 1309), reused 2242 (delta 1216)
+  fatal: The remote end hung up unexpectedly
+  Everything up-to-date
+
+Awalnya saya pikir ini adalah kesalahan dari koneksi
+yang tidak stabil, ternyata bukan. 
+
+Ini terjadi karena pengaturan buffer Git / HTTPS. 
+Masalah ini umumnya terkait dengan pengaturan buffer
+Git untuk transfer data melalui HTTP. 
+
+Secara default, buffer ini mungkin terlalu kecil 
+untuk menangani data yang di kirim.
+
+Cara mengatasinya dengan meningkatkan ukuran buffer 
+menggunakan perintah :
+
+  $ git config http.postBuffer 524288000
+
+Setelahnya, gunakan kembali perintah Git seperti 
+biasa :
+
+  $ git add .
+  $ git commit -m "chore: xx"
+  $ git push -u origin xx
+
+Dan semua akan berfungsi semestinya.

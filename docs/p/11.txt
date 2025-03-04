@@ -1,0 +1,58 @@
+Cara Konfigurasi Threshold Baterai Di Arch Linux
+____________________________________________________
+
+Threshold [1] merujuk pada batas tertentu yang 
+ditentukan untuk level pengisian atau penggunaan 
+baterai. 
+
+Misalnya, banyak perangkat memiliki threshold untuk 
+menghindari pengisian berlebihan atau pengosongan 
+total yang dapat merusak baterai. Dengan mengatur 
+threshold, umur baterai dapat di perpanjang.
+
+Pada Arch Linux, ini dapat di atur dengan cara :
+
+  # echo 40 > /sys/class/power_supply/BAT0/
+  charge_control_start_threshold
+  # echo 85 > /sys/class/power_supply/BAT0
+  /charge_control_end_threshold
+
+Pengaturan threshold di atas hanya bekerja untuk 
+sesi saat ini saja, jadi jika teman-teman ingin 
+mengatur agar menjadi permanen, cukup gunakan 
+Systemd Service [2] dengan cara :
+
+1. Buat file unit systemd :
+
+  $ sudo vim /etc/systemd/system
+  /battery-threshold.service
+
+2. Isi file tersebut dengan konfigurasi berikut :
+
+  [Unit]
+  Description=Battery Charge Threshold
+
+  [Service]
+  Type=oneshot
+  ExecStart=/bin/bash -c 'echo 40 > /sys/class
+  /power_supply/BAT0/charge_control_start_threshold 
+  && echo 85 > /sys/class/power_supply/BAT0
+  /charge_control_end_threshold'
+
+  [Install]
+  WantedBy=multi-user.target
+
+3. Aktifkan layanan :
+
+  $ sudo systemctl enable battery-threshold.service
+
+Perlu di ketahui, tidak semua perangkat memiliki 
+dukungan pengaturan threshold. Teman-teman dapat
+cek terlebih dahulu dengan mencari file-file 
+yang relevan dengan kata "threshold" dengan 
+perintah :
+
+  $ ls /sys/class/power_supply/BAT0/
+
+[1] https://tinyurl.com/4enf5kp8
+[2] https://tinyurl.com/42jw8hfu

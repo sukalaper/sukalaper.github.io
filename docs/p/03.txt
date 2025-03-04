@@ -1,0 +1,105 @@
+Membuat Pengaturan Bash Sederhana Seperti Fish
+____________________________________________________
+
+Bash [1] dan Fish [2] adalah dua jenis shell yang 
+berbeda. 
+
+1. Bash : Bourne Again Shell
+    
+  Shell yang paling umum di gunakan di banyak sistem 
+  Unix-like
+
+  Menyediakan fitur scripting dan dukungan untuk 
+  banyak perintah Unix standar
+
+  Sintaksis yang lebih kompleks namun juga sangat 
+  fleksibel dan dapat di sesuaikan
+
+2. Fish : Friendly Interactive Shell
+
+  Di rancang untuk lebih ramah pengguna, terutama 
+  untuk pemula (saya)
+
+  Autocompletion yang jauh lebih canggih 
+
+  Sintaksis yang lebih bersih dan mudah untuk di 
+  baca
+
+Pilihan antara Bash dan Fish tergantung pada 
+preferensi teman-teman.
+
+Apa yang saya gunakan? Bash! 
+
+  $ which $SHELL 
+  /bin/bash
+
+Saya sempat menggunakan Fish, itu keren! Serius. 
+Tanpa perlu konfigurasi apapun, pelengkapan otomatis 
+Fish benar-benar sangat berguna.
+
+Namun, mengapa saya tetap memilih Bash?
+
+Karena ini adalah shell default yang telah ada.
+
+Jadi, saya lebih memilih dan memanfaatkan Bash untuk 
+membuat Bash "sedekat mungkin" dengan Fish dengan 
+bantuan FZF [3] dan lain-lain.
+
+Isi .bashrc akan seperti ini :
+
+  # Kode ini memeriksa apakah mode POSIX tidak aktif 
+  # dan jika tidak, mencoba untuk memuat definisi 
+  # autocompletion dari dua lokasi. Jika gagal 
+  # memuat dari lokasi pertama, ia mencoba lokasi 
+  # kedua, sambil mengabaikan pesan kesalahan jika 
+  # file tidak ada.
+  if ! shopt -oq posix; then
+    . /usr/share/bash-completion/bash_completion 
+      2>/dev/null || 
+    . /etc/bash_completion.d/
+    000_bash_completion_compat.bash 2>/dev/null
+  fi
+
+  # Mengaktifkan opsi cdspell untuk memperbaiki 
+  # kesalahan ketik saat menggunakan perintah 
+  # cd
+  shopt -s cdspell
+
+  # Mengatur penyelesaian perintah agar tidak 
+  # membedakan huruf besar/kecil
+  bind 'set completion-ignore-case on'
+
+  # Fungsi fcd untuk memilih direktori atau file 
+  # menggunakan FZF dan membuka atau berpindah ke 
+  # pilihan tersebut.
+  function fcd() {
+    local result
+    result=$(find . \( -type d -o -type f \) | 
+    fzf --preview 'bat --color=always {}')
+    if [ -n "$result" ]; then
+      if [ -d "$result" ]; then
+        cd "$result"  
+      else
+        vim "$result"  
+      fi
+    fi
+  }
+  
+Ini tidak 100% seperti Fish tapi setidak nya itu 
+mendekati.
+
+Karena saya terbiasa menggunakan Vim [4], saya juga 
+ingin Bash memiliki perilaku seperti Vim meskipun 
+hanya normal dan insert mode.
+
+Gunakan konfigurasi pada .inputrc seperti ini :
+
+  set editing-mode vi
+  set show-mode-in-prompt on
+  set vi-ins-mode-string "[INS]"
+  set vi-cmd-mode-string "[NOR]"
+
+[1] https://www.gnu.org/software/bash/
+[2] https://fishshell.com/
+[3] https://github.com/junegunn/fzf
+[4] https://www.vim.org/

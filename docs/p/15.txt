@@ -1,0 +1,16 @@
+Beberapa Perintah Dari Systemctl Untuk Mengelola 
+Layanan Di Sistem Berbasis Systemd
+____________________________________________________
+
+start: Memulai layanan.
+restart: Menghentikan dan kemudian memulai ulang layanan.
+reload: Memuat ulang konfigurasi layanan.
+status: Menampilkan status layanan.
+is-active: Memeriksa apakah layanan sedang aktif.
+is-enabled: Memeriksa apakah layanan diaktifkan untuk boot otomatis.
+list-units: Menampilkan unit yang aktif.
+daemon-reload: Memuat ulang file konfigurasi unit.
+reboot: Mereboot sistem.
+poweroff: Mematikan sistem.
+isolate: Berpindah ke target tertentu.
+mask: menonaktifkan layanan dengan memblokir.

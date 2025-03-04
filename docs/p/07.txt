@@ -1,0 +1,81 @@
+Cara Membuat Lingkungan Virtual Python Di Arch Linux
+____________________________________________________
+
+Pada saat menjalankan sebuah proyek yang memerlukan 
+dependensi dari Python, saya mendapat keluaran 
+seperti ini :
+
+  error: externally-managed-environment
+
+  × This environment is externally managed
+  ╰─> To install Python packages system-wide, 
+      try 'pacman -S python-xyz', where xyz is the 
+      package you are trying to install.
+
+      If you wish to install a non-Arch-packaged 
+      Python package,create a virtual environment 
+      using 'python -m venv path/to/venv'. Then use 
+      path/to/venv/bin/python and 
+      path/to/venv/bin/pip.
+
+      If you wish to install a non-Arch packaged 
+      Python application, it may be easiest to use 
+      'pipx install xyz', which will manage a
+      virtual environment for you. Make sure you 
+      have python-pipx installed via pacman.
+
+      note: If you believe this is a mistake, please 
+      contact your Python installation or OS 
+      distribution provider. You can override this, 
+      at the risk of breaking your Python 
+      installation or OS, by passing 
+      --break-system-packages.
+      hint: See PEP 668 for the detailed 
+      specification.
+    
+Pesan ini menunjukkan bahwa saya berada dalam 
+lingkungan yang dikelola secara eksternal dan tidak 
+dapat menginstal paket Python secara langsung.
+
+Langkah yang harus dilakukan adalah membuat sebuah 
+lingkungan virtual pada direktori saat ini dengan 
+perintah :
+
+  $ python -m venv .
+
+Setelahnya akan ada direktori bernama bin/ 
+(atau Scripts/ di Windows) didalam nya.
+
+  example-x
+  ├── bin 
+  ├── CHANGELOG.txt
+  ├── Docs
+  ├── include
+  ├── lib
+  ├── circle-x.py
+  └── requirements.txt
+
+Selanjutnya saatnya mengaktifkan lingkungan virtual 
+tersebut dengan perintah :
+
+  $ source ./bin/activate
+
+Harusnya, shell saat ini akan berubah untuk 
+menunjukan bahwa saya telah berhasil berada di dalam 
+lingkungan virtual. 
+
+  (circle-X) ex :: ~/Documents/example-x ‹master*› »
+
+Sekarang saya dapat melanjutkan instalasi 
+paket-paket yang dibutuhkan dengan contoh perintah :
+
+  $ pip install -r requirements.txt
+
+Dengan langkah-langkah ini, saya dapat mengelola 
+dependensi proyek Python dengan aman di dalam 
+lingkungan virtual yang terisolasi.
+
+Setelah selesai, keluar dari lingkungan virtual 
+dengan perintah :
+
+  $ deactivate

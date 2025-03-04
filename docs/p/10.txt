@@ -1,0 +1,81 @@
+Bash: Perbedaan Echo Dan Printf (Berlanjut)
+____________________________________________________
+
+Di Bash [1], echo [2] dan printf [3] adalah dua 
+perintah yang digunakan untuk menampilkan output ke 
+terminal, tetapi ada beberapa perbedaan antara 
+kedua nya.
+
+1. echo 
+
+  Sederhana, echo adalah perintah yang lebih 
+  sederhana dan lebih mudah di gunakan untuk 
+  mencetak string ke terminal
+
+  Dapat menginterpretasi beberapa escape sequences
+  seperti \n (newline) atau \t (tab) jika 
+  menggunakan opsi -e
+
+2. printf 
+
+  Mirip dengan fungsi printf pada C yang sangat 
+  memungkinkan teman-teman untuk memiliki kontrol 
+  yang lebih besar
+
+  Selalu menginterpretasikan escape sequences 
+  tanpa perlu opsi tambahan
+
+Untuk contoh sederhana, akan saya mulai dengan echo
+terlebih dahulu.
+
+  $ echo 'Halo,\nDunia\tIni adalah tab.'
+  Halo,\nDunia!\tIni adalah tab.
+
+  $ echo -e 'Halo,\nDunia!\tIni adalah tab.'
+  Halo,
+  Dunia!	Ini adalah tab.
+
+Mengapa berbeda? 
+
+Pada perintah pertama, saya tidak menambahkan 
+opsi -e yang mana berfungsi untuk escape sequences
+yang mengakibatkan teks di tampilkan sebagai literal
+sehingga tidak ada efek format yang di terapkan.
+
+Bagaimana dengan printf?
+
+  $ printf 'Halo,\nDunia!\tIni adalah tab.'
+  Halo,
+  Dunia!	Ini adalah tab.
+
+Dengan printf, teman-teman tidak perlu menggunakan
+opsi -e karena printf secara otomatis menangani 
+karakter khusus.
+
+Contoh lain dari echo :
+
+  $ echo -e "Nama\tUmur\n---\t---\n
+  Alice\t30\t\nBob\t25"
+  Nama  Umur
+  ---   ---
+  Alice 30
+  Bob   25
+
+Contoh lain dari printf :
+
+  $ printf "%-10s %-5s\n" "Nama" "Umur" ; 
+  printf "%-10s %-5s\n" "---" "---" ;
+  printf "%-10s %-5s\n" "Alice" "30" ;
+  printf "%-10s %-5s\n" "Bob" "25" 
+  Nama       Umur
+  ---        ---
+  Alice      30
+  Bob        25
+
+Secara sederhana, jika teman-teman membutuhkan 
+manipulasi keluaran yang lebih kompleks, gunakan 
+printf. Sebalik nya, gunakan echo.
+
+[1] https://www.gnu.org/software/bash/
+[2] https://shorturl.at/AE1hE
+[3] https://linuxize.com/post/bash-printf-command/
