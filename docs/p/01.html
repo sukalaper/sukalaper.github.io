@@ -1,0 +1,273 @@
+<!-- BIG THANKS, DYLAN ARAPS! -->
+
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Sukalaper - 01</title><link rel="canonical" href="https://www.sukalaper.my.id"><link href="data:," rel="icon" href="favicon.ico" type="image/x-icon"><meta content="Sukalaper blog, sukalaper, blog teknologi, programming, GNU/Linux, paper" name="description"><meta name="robots" content="index, follow"><meta content="width=device-width,initial-scale=1" name="viewport"><meta property="og:title" content="Blog Sukalaper - Teknologi, Programming, dan GNU/Linux"><meta property="og:description" content="Sukalaper blog, sukalaper, blog teknologi, programming, GNU/Linux, paper"><meta property="og:url" content="https://sukalaper.my.id"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Blog Sukalaper - Teknologi, Programming, dan GNU/Linux"><meta name="twitter:description" content="Sukalaper blog, sukalaper, blog teknologi, programming, GNU/Linux, paper"><link rel="manifest" href="/manifest.json"><style>body{background:#fffbda;color:#333;overflow-y:scroll;font:16px monospace,monospace;transition:background 0.3s, color 0.3s ease}a{color:#06f}pre{margin:0;overflow-x:hidden}img,video{display:block;max-width:47ch;border-radius:5px;margin:0 auto}@media (max-width:999px){#c{display:block;font-size:1.94vw}}body.dark-mode{background:#333;color:#fffbda}body.dark-mode a{color:#9cf}#toggle-mode{text-decoration:underline;cursor:pointer}</style></head><body><div style="display:table;margin:16px auto"><div id="c"><pre>
++------------------------------------------------------------------------------+
+|                                                                              |
+|  <a href="/">$HOME</a>                                    <a href="/about">about</a>  <a href="/blog">blog/</a>  <a href="/paper">paper</a>  <span id="toggle-mode" style="cursor:pointer" onclick="toggleDarkMode()">view-mode.sh</span>  |
+|                                                                              |
++------------------------------------------------------------------------------+
+
+
+Konfigurasi Dual Booting Windows 10 Dengan Arch Linux
+________________________________________________________________________________
+
+Rincian partisi :
+
+  sda      8:0    0 119.2G  0 disk
+  ├─sda1   8:1    0   100M  0 part
+  ├─sda2   8:2    0    16M  0 part
+  ├─sda3   8:3    0  84.4G  0 part
+  ├─sda4   8:4    0   530M  0 part
+  ├─sda5   8:5    0  33.2G  0 part /
+  └─sda6   8:6    0  1003M  0 part /boot
+
+Partisi sda5 dan sda6 adalah bagian dari Arch Linux. Bagaimana membuatnya?
+ 
+1. Gunakan alat Disk Management untuk melihat partisi. Milik saya adalah seperti
+ini :
+  
+  Disk 0/
+  ├── 100 MB Healthy (EFI System Partition)
+  ├── 119.4 GB Disk C:
+  └── 500 MB  Healthy (Recovery Partition)
+  
+2. Gunakan klik kanan pada Disk C: kemudian pilih bagian "shrink volume"
+  
+3. Pada bagian "enter the amount of space to shrink in MB:" saya mengambil 35000 
+(baca: 35GB)
+  
+4. Kemudian nantinya akan ada partisi baru seperti ini :
+
+  Disk 0/
+  ├── 100 MB Healthy (EFI System Partition)  
+  ├── 93.7 GB Disk C:                        
+  ├── 500 MB Healthy (Recovery Partition)     
+  └── 35 GB Unallocated                        
+ 
+Biarkan partisi tersebut kosong dan masuk ke tahap selanjutnya.
+  
+Cara ini saya tulis untuk UEFI mode dan datang dari sistem operasi Windows. 
+
+Mengapa? Pada beberapa kasus Windows Update sering kali menimpa bootloader yang 
+"mungkin" dapat mengakibatkan kesalahan konfigurasi. 
+
+Persyaratan penting sebelum melakukan dual boot :
+* Matikan secure boot pada BIOS 
+* Matikan fitur fastboot pada Windows
+* Matikan fitur hibernasi pada Windows
+
+Alat-alat untuk membuat media instalasi :
+* Siapkan ISO terbaru dari Arch Linux <a href=#1>[1]</a>
+* Sebuah flash drive berukuran 4 GB atau lebih
+* Alat untuk melakukan burn ISO, balenaEtcher <a href=#2>[2]</a>
+
+Saya tidak membuat cara untuk memburn ISO - melakukan boot lingkungan tersebut. 
+Teman-teman dapat menggunakan Google atau YouTube~
+
+Selanjutnya, mungkin sudah berada pada menu dari instalasi Arch Linux di tandai 
+dengan adanya :
+  
+  Welcome to Arch Linux!
+
+  archiso login: root (automatic login)
+
+  To install Arch Linux follow the installation guide:
+
+  For Wi-Fi, authenticate to the wireless network using the iwctl utility. 
+  For mobile broadband (WWAN) modems, connect with the nmcli utility. 
+  Ethernet, WLAN and WWAN interfaces using DHCP should work automatically.
+ 
+  After connecting to the internet, the installation guide can be accessed via 
+  the convenience script installation_guide.
+
+  root@archiso ~ # _
+
+Perhatian, tanda Dolar ($) menunjukan bahwa itu adalah sebuah perintah.
+
+1. Bagi sebagian orang, mungkin ukuran font terlihat sangat kecil. Ini dapat di 
+  ubah dengan perintah : 
+    
+  $ setfont ter-132b
+
+2. Hubungkan ke internet dengan iwctl REPL :
+     
+  $ iwctl station wlan0 connect [nama-perangkat] --passphrase "kata-sandi"
+
+3. Periksa apakah sudah terhubung dengan jaringan saat ini :
+     
+  $ ping archlinux.org -c 3
+
+4. Perbarui sistem waktu dengan :
+     
+  $ timedatectl 
+ 
+5. Melihat, membuat dan memformat partisi :
+     
+  $ lsblk 
+      
+Biasanya, sistem akan berada pada /dev/sda namun ini menyesuaikan, konfigurasi 
+mungkin akan berbeda-beda. Harap berhati-hati saat melakukan partisi!
+     
+  $ cfdsik /dev/sda 
+      
+Pada tahapan ini, teman-teman akan melihat sebuah partisi kosong 35GB yang telah 
+di buat. Isi 33.2 GB sebagai Linux filesystem dan 1GB sebagai EFI(ya, terlihat 
+berlebihan) setelahnya teman-teman write partisi tersebut.
+  
+6. Periksa kembali hasil partisi :
+     
+  $ lsblk
+  sda      8:0    0 119.2G  0 disk
+  ├─sda1   8:1    0   100M  0 part
+  ├─sda2   8:2    0    16M  0 part
+  ├─sda3   8:3    0  84.4G  0 part
+  ├─sda4   8:4    0   530M  0 part
+  ├─sda5   8:5    0  33.2G  0 part
+  └─sda6   8:6    0  1003M  0 part 
+     
+Ingat, fokus kita hanya pada sda5 dan sda6.
+
+7. Format partisi :
+     
+  $ mkfs.fat -F32 /dev/sda6
+  $ mkfs.ext4 /dev/sda5
+
+8. Mount partisi :
+     
+  $ mount /dev/sda5 /mnt 
+  $ mkdir /mnt/boot
+  $ mount /dev/sda6 /mnt/boot 
+
+9. Perbarui mirror agar pemasangan paket lebih cepat : 
+     
+  $ sudo reflector --country Indonesia --sort rate --number 5 --save 
+  /etc/pacman.d/mirrorlist --verbose
+
+10. Pasang paket-paket yang di butuhkan, di sini saya menggunakan driver Intel : 
+
+  $ pacstrap -K /mnt base linux linux-firmware linux-headers base-devel 
+  intel-ucode vim dhcpcd iwd
+    
+Jika teman-teman menggunakan AMD, gunakan ini :
+      
+  $ pacstrap -K /mnt base linux linux-firmware linux-headers base-devel 
+  amd-ucode vim dhcpcd iwd
+
+Jika teman-teman menggunakan NVDIA, gunakan ini :
+   
+  $ pacstrap -K /mnt base linux linux-firmware linux-headers base-devel nvidia 
+  vim dhcpcd iwd
+
+11. Buat FSTAB : 
+      
+  $ genfstab -U /mnt >> /mnt/etc/fstab
+
+12. Gunakan chroot :
+      
+  $ arch-chroot /mnt
+
+13. Perbarui zona waktu : 
+     
+  $ ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+  $ hwclock --systohc
+
+14. Lokalisasi : 
+
+  $ vim /etc/locale.gen 
+      
+Cari dan hapus komentar (#) pada bagian #en_US.UTF-8 UTF-8 kemudian lanjut 
+dengan :
+      
+  $ locale-gen
+  $ echo LANG=en_US.UTF-8 > /etc/locale.conf
+  $ export LANG=en_US.UTF-8
+
+15. Tambahkan pengguna dan kata sandi :
+      
+  $ passwd 
+  $ useradd -m [username-teman-teman]
+  $ usermod -aG wheel,storage,power,audio [username-teman-teman]
+  $ visudo 
+     
+Cari dan hapus komentar (#) pada $%wheel ALL=(ALL:ALL) ALL dan lanjut dengan :
+      
+  $ echo [username-teman-teman] > /etc/hostname
+  $ vim /etc/hosts
+      
+Pada bagian ini, tambahkan :
+      
+  127.0.0.1     localhost
+  ::1           localhost
+  127.0.1.1     [username-teman-teman].localdomain localhost
+ 
+16. Mounting direktori boot, konfigurasi dan instalasi bootloader :
+      
+  $ mkdir /boot/efi
+  $ mount /dev/sda6 /boot/efi
+  $ pacman -S grub efibootmgr os-prober mtools dosfstools
+  $ vim /etc/default/grub 
+      
+Cari dan hapus komentar (#) pada #GRUB_DISABLE_OS_PROBER=false kemudian :
+
+  $ grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck
+  $ grub-mkconfig -o /boot/grub/grub.cfg
+      
+Pastikan bootloader Windows terdeteksi dengan adanya keluaran :
+       
+  Found Windows Boot Manager on /dev/sda1/efi /Microsoft/Boot/bootmgfw.efi
+      
+Jika tidak ada, pasang paket dari fuse3 dengan perintah :
+      
+  $ pacman -S fuse3 
+      
+Kemudian jalankan kembali :
+      
+  $ grub-mkconfig -o /boot/grub/grub.cfg
+
+17. Mengaktifkan dan mengakhiri instalasi : 
+      
+  $ systemctl start iwd dhcpcd 
+  $ systemctl enable dhcpcd iwd
+  $ exit 
+  $ umount -lR /mnt
+  $ reboot 
+
+Pada tahapan ini, cabut media instalasi kemudian tunggu hasilnya. 
+
+<span id=1><a href=#1>[1]</a></span> <a href=https://archlinux.org/download/>https://archlinux.org/download/</a>
+<span id=2><a href=#2>[2]</a></span> <a href=https://etcher.balena.io/>https://etcher.balena.io/</a> 
+________________________________________________________________________________
+
+                                          Sukalaper © 2022, All rights reserved.
+
+</pre></div></div><script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/service-worker.js")
+      .then((registration) => {
+        console.log("Service Worker registered with scope:", registration.scope);
+    })
+    .catch((error) => {
+      console.error("Service Worker registration failed:", error);
+    });
+  });
+}
+const darkModePreference = localStorage.getItem("darkMode") === "true";
+if (darkModePreference) {
+  document.body.classList.add("dark-mode");
+}
+window.addEventListener('DOMContentLoaded', () => {
+  updateToggleText(); 
+});
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+  updateToggleText();
+  localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
+}
+function updateToggleText() {
+  const toggleText = document.getElementById("toggle-mode");
+  toggleText.innerText = document.body.classList.contains("dark-mode") ? "view-mode.sh" : "read-mode.sh";
+  toggleText.style.color = document.body.classList.contains("dark-mode") ? "#9cf" : "#06f";
+}
+</script></body></html>

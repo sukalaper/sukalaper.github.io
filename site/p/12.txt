@@ -1,0 +1,174 @@
+Integrasi Situs Ke Progressive Web Application (PWA)
+____________________________________________________
+
+PWA adalah jenis aplikasi yang menggabungkan fitur 
+dari website dan aplikasi mobile. PWA dapat di
+akses melalui browser, tetapi juga bisa di instal di 
+perangkat seperti aplikasi biasa. Beberapa 
+keunggulan nya :
+
+* PWA dapat berfungsi tanpa koneksi internet
+
+* Tampil baik di berbagai ukuran layar
+  
+* Memuat dengan cepat berkat caching
+
+Dan, saya ingin agar situs ini mendukung PWA! 
+
+Struktur dari situs ini kurang lebih adalah sebagai
+berikut :
+
+  .
+  ├── docs/
+  ├── make
+  ├── README.md
+  ├── site/
+  └── template.html
+
+Sebelum memulai, saya akan jelaskan masing-masing 
+dari direktori maupun file yang ada di atas. 
+
+1. docs/ :
+     
+  Direktori ini berisi hasil file dari site/ yang 
+  telah di generate menjadi .html
+
+2. make :
+     
+  Ini adalah sebuah file (Bash) yang melakukan 
+  konversi dari .txt ke .html (site/ -> docs/)
+
+3. site/ :
+     
+  Ini adalah sebuah direktori berisi konten-konten 
+  dengan ekstensi .txt yang akan di generate oleh 
+  make
+
+4. template.html :
+     
+  Sederhana nya, ini adalah kerangka dari situs ini 
+
+Jadi, ketika saya menjalankan perintah :
+
+  $ bash make 
+
+Itu akan menghasilkan folder docs/ yang berisi 
+file-file dari site/ yang telah di buat.
+
+Semoga teman-teman paham ya. 
+
+Lalu bagaimana mengintegrasikan situs ini ke PWA?
+
+1. Buat 2 file pada direktori situs ini :
+     
+  $ touch service-worker.js manifest.json
+
+2. Untuk service-worker.js saya isi dengan kode 
+  ini :
+     
+  self.addEventListener('install', (event) => {
+    const filesToCache = [
+      'index.html',
+      'about.html',
+      'blog.html',
+      'paper.html',
+      '404.html',
+    ];
+    
+    const blogPosts = [
+      'p/01.html',
+      'p/02.html',
+    ];
+    
+    event.waitUntil(
+      caches.open('sukalaper-cache').then((cache) 
+      => {
+        return cache.addAll(filesToCache.concat
+        (blogPosts));
+      })
+    );
+  });
+    
+  self.addEventListener('fetch', (event) => {
+    event.respondWith(
+      caches.match(event.request).then((response) 
+      => {
+        if (response) {
+          return response; 
+        } else {
+            return fetch(event.request).catch(() => {
+            return caches.match('404.html');
+          });
+        }
+      })
+    );
+  });
+
+3. manifest.json saya isi dengan :
+     
+  {
+    "name": "Sukalaper Blog",
+    "short_name": "Sukalaper Blog",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#fffbda",
+    "theme_color": "#333",
+    "icons": [
+        {
+          "src": "icons.webp",
+          "sizes": "512x512",
+          "type": "image/webp"
+        }
+    ],
+      "scope": "/",
+      "orientation": "portrait",
+      "lang": "id"
+  }
+
+4. Pada template.html saya tambahkan :
+      
+  &lt;script&gt;
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register
+        ('service-worker.js')
+          .then((registration) => {
+            console.log('Service Worker registered 
+                         with scope:', 
+                         registration.scope);
+          })
+          .catch((error) => {
+            console.error('Service Worker 
+            registration failed:', error);
+          });
+      });
+    }
+  &lt;script&gt;
+
+Karena manifest.json dan service-worker.js berada 
+pada direktori saat ini maka saya menambahkan 
+sebuah kode sederhana pada make :
+     
+  cp icons.webp manifest.json service-worker.js
+  docs/
+
+Uji coba PWA membutuhkan HTTPS saat di jalankan. 
+Lakukan sebuah instalasi paket dari NPM (Pengguna 
+Vscode dapat menggunakan live-server) : 
+
+  $ sudo npm install -g http-server 
+
+Jalankan http-server pada direktori saat ini dengan
+perintah : 
+
+  $ http-server --cors
+
+Kemudian arahkan lokasi agar browser bisa mengakses 
+direktori situs ini. 
+
+  <video controls>
+    <source src="12.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+Huray! Situs saya sudah mendukung PWA. Mudah bukan?

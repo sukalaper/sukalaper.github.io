@@ -1,0 +1,218 @@
+<!-- BIG THANKS, DYLAN ARAPS! -->
+
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Sukalaper - 12</title><link rel="canonical" href="https://www.sukalaper.my.id"><link href="data:," rel="icon" href="favicon.ico" type="image/x-icon"><meta content="Sukalaper blog, sukalaper, blog teknologi, programming, GNU/Linux, paper" name="description"><meta name="robots" content="index, follow"><meta content="width=device-width,initial-scale=1" name="viewport"><meta property="og:title" content="Blog Sukalaper - Teknologi, Programming, dan GNU/Linux"><meta property="og:description" content="Sukalaper blog, sukalaper, blog teknologi, programming, GNU/Linux, paper"><meta property="og:url" content="https://sukalaper.my.id"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Blog Sukalaper - Teknologi, Programming, dan GNU/Linux"><meta name="twitter:description" content="Sukalaper blog, sukalaper, blog teknologi, programming, GNU/Linux, paper"><link rel="manifest" href="/manifest.json"><style>body{background:#fffbda;color:#333;overflow-y:scroll;font:16px monospace,monospace;transition:background 0.3s, color 0.3s ease}a{color:#06f}pre{margin:0;overflow-x:hidden}img,video{display:block;max-width:47ch;border-radius:5px;margin:0 auto}@media (max-width:999px){#c{display:block;font-size:1.94vw}}body.dark-mode{background:#333;color:#fffbda}body.dark-mode a{color:#9cf}#toggle-mode{text-decoration:underline;cursor:pointer}</style></head><body><div style="display:table;margin:16px auto"><div id="c"><pre>
++------------------------------------------------------------------------------+
+|                                                                              |
+|  <a href="/">$HOME</a>                                    <a href="/about">about</a>  <a href="/blog">blog/</a>  <a href="/paper">paper</a>  <span id="toggle-mode" style="cursor:pointer" onclick="toggleDarkMode()">view-mode.sh</span>  |
+|                                                                              |
++------------------------------------------------------------------------------+
+
+Integrasi Situs Ke Progressive Web Application (PWA)
+____________________________________________________
+
+PWA adalah jenis aplikasi yang menggabungkan fitur 
+dari website dan aplikasi mobile. PWA dapat di
+akses melalui browser, tetapi juga bisa di instal di 
+perangkat seperti aplikasi biasa. Beberapa 
+keunggulan nya :
+
+* PWA dapat berfungsi tanpa koneksi internet
+
+* Tampil baik di berbagai ukuran layar
+  
+* Memuat dengan cepat berkat caching
+
+Dan, saya ingin agar situs ini mendukung PWA! 
+
+Struktur dari situs ini kurang lebih adalah sebagai
+berikut :
+
+  .
+  ├── docs/
+  ├── make
+  ├── README.md
+  ├── site/
+  └── template.html
+
+Sebelum memulai, saya akan jelaskan masing-masing 
+dari direktori maupun file yang ada di atas. 
+
+1. docs/ :
+     
+  Direktori ini berisi hasil file dari site/ yang 
+  telah di generate menjadi .html
+
+2. make :
+     
+  Ini adalah sebuah file (Bash) yang melakukan 
+  konversi dari .txt ke .html (site/ -> docs/)
+
+3. site/ :
+     
+  Ini adalah sebuah direktori berisi konten-konten 
+  dengan ekstensi .txt yang akan di generate oleh 
+  make
+
+4. template.html :
+     
+  Sederhana nya, ini adalah kerangka dari situs ini 
+
+Jadi, ketika saya menjalankan perintah :
+
+  $ bash make 
+
+Itu akan menghasilkan folder docs/ yang berisi 
+file-file dari site/ yang telah di buat.
+
+Semoga teman-teman paham ya. 
+
+Lalu bagaimana mengintegrasikan situs ini ke PWA?
+
+1. Buat 2 file pada direktori situs ini :
+     
+  $ touch service-worker.js manifest.json
+
+2. Untuk service-worker.js saya isi dengan kode 
+  ini :
+     
+  self.addEventListener('install', (event) => {
+    const filesToCache = [
+      'index.html',
+      'about.html',
+      'blog.html',
+      'paper.html',
+      '404.html',
+    ];
+    
+    const blogPosts = [
+      'p/01.html',
+      'p/02.html',
+    ];
+    
+    event.waitUntil(
+      caches.open('sukalaper-cache').then((cache) 
+      => {
+        return cache.addAll(filesToCache.concat
+        (blogPosts));
+      })
+    );
+  });
+    
+  self.addEventListener('fetch', (event) => {
+    event.respondWith(
+      caches.match(event.request).then((response) 
+      => {
+        if (response) {
+          return response; 
+        } else {
+            return fetch(event.request).catch(() => {
+            return caches.match('404.html');
+          });
+        }
+      })
+    );
+  });
+
+3. manifest.json saya isi dengan :
+     
+  {
+    "name": "Sukalaper Blog",
+    "short_name": "Sukalaper Blog",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#fffbda",
+    "theme_color": "#333",
+    "icons": [
+        {
+          "src": "icons.webp",
+          "sizes": "512x512",
+          "type": "image/webp"
+        }
+    ],
+      "scope": "/",
+      "orientation": "portrait",
+      "lang": "id"
+  }
+
+4. Pada template.html saya tambahkan :
+      
+  &lt;script&gt;
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register
+        ('service-worker.js')
+          .then((registration) => {
+            console.log('Service Worker registered 
+                         with scope:', 
+                         registration.scope);
+          })
+          .catch((error) => {
+            console.error('Service Worker 
+            registration failed:', error);
+          });
+      });
+    }
+  &lt;script&gt;
+
+Karena manifest.json dan service-worker.js berada 
+pada direktori saat ini maka saya menambahkan 
+sebuah kode sederhana pada make :
+     
+  cp icons.webp manifest.json service-worker.js
+  docs/
+
+Uji coba PWA membutuhkan HTTPS saat di jalankan. 
+Lakukan sebuah instalasi paket dari NPM (Pengguna 
+Vscode dapat menggunakan live-server) : 
+
+  $ sudo npm install -g http-server 
+
+Jalankan http-server pada direktori saat ini dengan
+perintah : 
+
+  $ http-server --cors
+
+Kemudian arahkan lokasi agar browser bisa mengakses 
+direktori situs ini. 
+
+  <video controls>
+    <source src="12.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+Huray! Situs saya sudah mendukung PWA. Mudah bukan?
+________________________________________________________________________________
+
+                                          Sukalaper © 2022, All rights reserved.
+
+</pre></div></div><script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/service-worker.js")
+      .then((registration) => {
+        console.log("Service Worker registered with scope:", registration.scope);
+    })
+    .catch((error) => {
+      console.error("Service Worker registration failed:", error);
+    });
+  });
+}
+const darkModePreference = localStorage.getItem("darkMode") === "true";
+if (darkModePreference) {
+  document.body.classList.add("dark-mode");
+}
+window.addEventListener('DOMContentLoaded', () => {
+  updateToggleText(); 
+});
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+  updateToggleText();
+  localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
+}
+function updateToggleText() {
+  const toggleText = document.getElementById("toggle-mode");
+  toggleText.innerText = document.body.classList.contains("dark-mode") ? "view-mode.sh" : "read-mode.sh";
+  toggleText.style.color = document.body.classList.contains("dark-mode") ? "#9cf" : "#06f";
+}
+</script></body></html>

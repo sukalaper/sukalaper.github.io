@@ -1,0 +1,82 @@
+Atur Responsif TrackPoint Dan Disable TouchPad Di ThinkPad Dengan Arch Linux 
+________________________________________________________________________________
+
+TL;DR: Perintah untuk pengaturan sensivitas TrackPoint dan disable Touchpad. 
+Beberapa ID mungkin berbeda-beda.
+
+  $ xinput list | grep -i "trackpoint" | awk -F'id=' '{print $2}' | awk 
+  '{print $1}'
+  $ xinput list-props [id] | grep -i "speed"
+  $ xinput set-prop [id] "libinput Accel Speed" -0.66
+  $ xinput list | grep -i "touchpad" | awk -F'id=' '{print $2}' | awk 
+  '{print $1}'
+  $ xinput disable [id]
+
+Jika teman-teman menggunakan laptop bawaan Lenovo (dulu IBM) pasti sudah tidak 
+asing lagi dengan "pentil merah" yang berada tepat di tengah-tengah keyboard.
+
+Penggunaan trackpoint ini sebenarnya cukup meningkatkan efisiensi penggunaan 
+keyboard tanpa harus mengangkat tangan untuk menggunakan mouse atau sekedar 
+elus-elus touchpad untuk melakukan gerakan navigasi [1].
+
+Lalu bagaimana cara mengatur kecepatan trackpoint pada Arch Linux?
+
+Teman-teman harus membuat sebuah file pada /etc/udev/rules.d/10-trackpoint.rules 
+[2] dengan perintah : 
+
+  $ sudo touch /etc/udev/rules.d/10-trackpoint.rules
+
+kemudian isi file tersebut dengan baris ini :
+
+  ACTION=="add", KERNEL=="serio2", 
+  SUBSYSTEM=="serio", DRIVERS=="psmouse", 
+  ATTR{sensitivity}="300", ATTR{speed}="300"
+
+Sebelum menuju ke tahap selanjutnya, perhatikan pada kedua nilai ini :
+  
+  ATTR{sensitivity}="300"
+  ATTR{speed}="300"
+
+Nilai tersebut dapat di ubah sesuai dengan preferensi masing-masing, saya 
+membuat nilai tersebut menjadi :
+
+  ATTR{sensitivity}="100"
+  ATTR{speed}="100"
+
+Tujuannya agar tidak terlalu cepat dan lebih akurat. Setelah selesai, 
+teman-teman dapat melakukan uji coba dengan perintah ini :
+
+  # udevadm control --reload
+  # udevadm test /sys/devices/platform/i8042/serio1/serio2
+
+  This program is for debugging only, it does not run any program specified by a
+  RUN key. It may show incorrect results, because some values may be different, 
+  or not available at a simulation run.
+
+  Trying to open "/etc/systemd/hwdb/hwdb.bin"..
+  Trying to open "/usr/lib/systemd/hwdb/hwdb.bin"..
+  === trie on-disk ===
+  tool version:          255
+  file size:        12356767 bytes
+  nodes              9776112 bytes
+  Loading kernel module index.
+
+  Using default interface naming scheme 'v255'. Parsed configuration file 
+  "/usr/lib/systemd/network/99-default.link"
+  Created link configuration context.
+
+  Reading rules file: /etc/udev/rules.d/10-trackpoint.rules
+
+  serio2: /etc/udev/rules.d/10-trackpoint.rules:1 ATTR '/sys/devices/platform/
+          i8042/serio1/serio2/sensitivity' writing '100'
+  serio2: /etc/udev/rules.d/10-trackpoint.rules:1 ATTR '/sys/devices/platform/
+          i8042/serio1/serio2/speed' writing '100'
+  serio2: hwdb modalias key: "serio:ty05pr00id00ex00"
+  serio2: hwdb modalias key: "serio:ty01pr00id00ex00"
+
+Karena saya menggunakan i3wm [3] maka saat ini saya menambahkan skrip ke dalam 
+~/.config/i3/config agar di muat setiap kali i3wm di jalankan.
+
+[1] https://www.youtube.com/watch?v=H9ya4dUZfTQ
+[2] https://wiki.archlinux.org/title/TrackPoint
+[3] https://i3wm.org/

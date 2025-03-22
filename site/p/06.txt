@@ -1,0 +1,37 @@
+Konfigurasi REISUB Pada Arch Linux
+____________________________________________________
+
+"Perlu diketahui bahwa REISUB itu sendiri hanyalah 
+sebuah mnemonik, bukan rekomendasi umum apa pun 
+untuk urutan penekanan tombol guna mengambil kembali 
+kendali sistem yang tidak responsif. Anda tidak 
+boleh menekan urutan ini secara membabi buta setiap 
+kali tanpa mengetahui fungsi sebenarnya [1]."
+
+Untuk mengaktifkan REISUB di Arch Linux, teman-teman 
+perlu membuat dan mengisi file konfigurasi terlebih 
+dahulu :
+
+  $ sudo sh -c 'echo "kernel.sysrq = 1" > /etc
+  /sysctl.d/99-sysctl.conf'
+
+Setelah selesai, teman-teman dapat melakukan uji 
+coba dengan cara menekan :
+
+  Alt + PrtSc + R + E + I + S + U + B
+
+Dalam kasus ini, mesin saya hanya memerlukan 
+penekanan seperti ini :
+
+  Alt + PrtSc + R + E 
+
+Kemudian, sistem saya langsung dialihkan kembali ke 
+TTY1 [2] ini mungkin terjadi mengingat perbedaan 
+konfigurasi kernel dan pengaturan sistem. Dimana 
+dalam beberapa kasus kombinasi tombol ini dirancang 
+untuk melakukan aksi emergency remount pada sistem 
+file dalam mode baca-tulis (read-write) yang mana 
+ini juga merupakan tindakan darurat.
+
+[1] https://tinyurl.com/n8pd2y4h
+[2] https://itsfoss.com/what-is-tty-in-linux/

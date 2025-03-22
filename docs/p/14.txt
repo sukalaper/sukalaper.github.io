@@ -1,0 +1,87 @@
+Enkripsi dan Dekripsi (Caesar Cipher, Vigenère 
+Cipher)
+____________________________________________________
+
+Caesar Cipher [1] adalah teknik enkripsi yang 
+menggantikan setiap huruf dalam teks dengan huruf 
+lain yang berada pada posisi tertentu dalam alfabet, 
+berdasarkan sebuah nilai kunci (shift).
+
+Contoh nya seperti ini.
+
+Jika kita ingin mengenkripsi kata "tiga" kemudian 
+menggunakan nilai kunci (shift) dengan nilai "3" 
+maka hasil nya akan menjadi "wljd".
+
+Mengapa demikian?
+
+* 3 huruf setelah "t" adalah "w"
+
+* 3 huruf setelah "i" adalah "l"
+
+* 3 huruf setelah "g" adalah "j"
+
+* 3 huruf setelah "a" adalah "d"
+
+Vigenère Cipher [2] adalah metode enkripsi dengan 
+kunci berupa kata kunci. Setiap huruf dalam teks 
+di geser dengan posisi berdasarkan huruf dalam kunci
+yang berulang.
+
+1. Setiap huruf dalam teks dan kunci di konversi 
+  menjadi angka berdasarkan posisi dalam alfabet 
+  (A = 0, B = 1, C = 2, ..., Z = 25).
+
+2. Jika kunci lebih pendek dari teks, kunci di ulang
+  untuk mencocokkan panjang teks. 
+
+3. Setiap huruf pada teks akan digeser berdasarkan
+  huruf yang sesuai dengan kunci. Geseran ini di 
+  hitung dengan rumus Ci=(Pi+Ki) mod 26
+
+1. Ci 
+
+  Adalah huruf terenkripsi pada posisi ke-i
+
+2. Pi 
+
+  Adalah huruf pada posisi ke-i dalam plaintext
+
+3. Ki
+
+  Adalah huruf pada posisi yang sama dalam kunci
+
+4. mod 26 
+
+  Menunjukkan bahwa kita bekerja dalam sistem modulo
+  26 (karena ada 26 huruf dalam alfabet)
+
+Jika kita ingin mengenkripsi kata "tiga" kemudian 
+menggunakan kata kunci (key) dengan kunci "lima" 
+maka hasil nya akan menjadi "eqsa".
+
+Mengapa demikian?
+
+1. Huruf pertama
+
+  (T+L) mod 26 = (19 + 11) mod 26 = 30 mod  
+  26 = 4 -> e
+
+2. Huruf ke-dua 
+
+  (I+I ) mod 26 = (8 + 8) mod 26 = 16 mod  
+  26 = 16 -> q
+
+3. Huruf ke-tiga
+
+  (G+M) mod 26 = (6 + 12) mod 26 = 18 mod  
+  26 = 18 -> s
+
+4. Huruf ke-empat 
+
+  (A+A) mod 26 = (0 + 0) mod 26 = 0 mod
+  26 = 0 -> a
+____________________________________________________
+
+[1] https://cplusplus.com/forum/beginner/115317/
+[2] https://www.geeksforgeeks.org/vigenere-cipher/
