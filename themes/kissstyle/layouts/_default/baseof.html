@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ .Site.Title }}</title>
+    <meta name="description" content="{{ .Site.Params.description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="{{ .Site.BaseURL }}">
+    <link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon">
+
+    {{ $style := resources.Get "css/style.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+  </head>
+  <body>
+    <div style="display:table;margin:16px auto">
+      <div id="c">
+        <pre>
++------------------------------------------------------------------------------+
+|                                                                              |
+|   <a href="{{ .Site.BaseURL }}">$HOME</a>                                         <a href="{{ "/about" | relURL }}">about</a>  <a href="{{ "/paper" | relURL }}">paper</a>  <span id="toggle-mode" onclick="toggleDarkMode()">read-mode.sh</span>   |
+|                                                                              |
++------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------+
+|                                                                      _______ |
+|                                                                      ||  .'| |
+|                                                                      ||,`  | |
+|                                                                      |     | |
+|                                                                      |_____| |
+|                                                                     _|_( )_|_|
++------------------------------------------------------------------------------+
+        </pre>
+
+        {{ block "main" . }}{{ end }}
+
+        <pre>
+________________________________________________________________________________
+
+                                          Sukalaper © 2022, All rights reserved.
+        </pre>
+      </div>
+    </div>
+
+    <script>
+      const darkModePreference = localStorage.getItem("darkMode") === "true";
+      if (darkModePreference) {
+        document.body.classList.add("dark-mode");
+      }
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+        localStorage.setItem(
+          "darkMode",
+          document.body.classList.contains("dark-mode")
+        );
+        updateToggleText();
+      }
+      function updateToggleText() {
+        const toggleText = document.getElementById("toggle-mode");
+        toggleText.innerText = document.body.classList.contains("dark-mode")
+          ? "view-mode.sh"
+          : "read-mode.sh";
+        toggleText.style.color = document.body.classList.contains("dark-mode")
+          ? "#9cf"
+          : "#06f";
+      }
+      document.addEventListener("DOMContentLoaded", updateToggleText);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+{{ define "main" }}
+<pre>
+
+First off, big shoutout to <a href="https://github.com/dylanaraps" target="_blank">Dylan Araps</a> (no clue where you at right now, but hope you’re all good, buddy).
+
+So, I kinda reworked the original site into Hugo—yep, with a lil’ help from AI~
+
+The site itself? Dope. Super clean, simple, and totally on point with that KISS vibe. But man, sometimes it drove me nuts building it from scratch—especially having to hit $ bash make just to reload (yeah yeah, I know, that’s just my lack of skills showing).
+
+Anyway, moving it to Hugo feels way smoother, and now the structure’s looking like this:
+
+.
+├── archetypes
+│   └── default.md
+├── assets
+├── content
+├── data
+├── hugo.toml
+├── i18n
+├── layouts
+├── public
+│   ├── categories
+│   ├── css
+│   ├── index.html
+│   ├── index.xml
+│   ├── sitemap.xml
+│   └── tags
+├── static
+└── themes
+    └── kissstyle
+
+{{ .Content }}
+</pre>
+{{ end }}
