@@ -1,5 +1,11 @@
-baseURL = "http://localhost/"
+baseURL = "/"
 languageCode = "en-us"
-title = "KISS Style Hugo"
+title = "Sukalaper - Blog"
 theme = "kissstyle"
 publishDir = "docs"
+
+[markup]
+  [markup.highlight]
+    noClasses = true
+    style = "fruity"  
+    lineNos = true    

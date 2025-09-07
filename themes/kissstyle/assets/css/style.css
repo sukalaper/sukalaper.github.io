@@ -11,12 +11,9 @@ a {
 }
 
 pre {
-  margin: 0;
-  padding: 0;
-  overflow-x: visible;
   white-space: pre-wrap;
   word-wrap: break-word;
-  max-width: 80ch;
+  max-width: 81ch;
 }
 
 pre:last-child {
@@ -24,17 +21,26 @@ pre:last-child {
 }
 
 pre code {
-  display: block;
-  white-space: pre;
+  white-space: pre; 
   overflow-x: auto;
-  background: #222;
-  padding: 0.25rem 0.75em;
-  margin: 0;
-  color: #fffbda;
-  border-radius: 6px;
-  font-size: 0.95em;
-  line-height: 1.4;
-  max-width: 100%;
+}
+
+#c {
+  max-width: 81ch;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+#c p,
+#c h1, #c h2, #c h3, #c h4, #c h5, #c h6,
+#c ul, #c ol, #c pre, #c code {
+  max-width: 80ch;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
 }
 
 img,
@@ -67,3 +73,6 @@ body.dark-mode a {
   cursor: pointer;
 }
 
+.chroma {
+  border-radius: 12px;
+}
