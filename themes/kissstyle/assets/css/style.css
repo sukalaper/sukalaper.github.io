@@ -36,7 +36,7 @@ pre code {
 #c p,
 #c h1, #c h2, #c h3, #c h4, #c h5, #c h6,
 #c ul, #c ol, #c pre, #c code {
-  max-width: 80ch;
+  max-width: 81ch;
 }
 
 h1, h2, h3, h4, h5, h6 {
