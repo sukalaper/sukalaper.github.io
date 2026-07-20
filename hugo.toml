@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://sukalaper.github.io"
 languageCode = "en-us"
 title = "Sukalaper - Blog"
 theme = "kissstyle"
@@ -9,3 +9,6 @@ publishDir = "docs"
     noClasses = true
     style = "fruity"  
     lineNos = true    
+
+[params]
+description = "Technical Blog and Portfolio"
