@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Paper as fuck. on Sukalaper - Blog</title>
+		<link>https://sukalaper.github.io/paper/</link>
+		<description>Recent content in Paper as fuck. on Sukalaper - Blog</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 08 Sep 2025 00:24:15 +0700</lastBuildDate>
+		
+			<atom:link href="https://sukalaper.github.io/paper/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Example</title>
+				<link>https://sukalaper.github.io/paper/post-1/</link>
+				<pubDate>Mon, 08 Sep 2025 00:24:15 +0700</pubDate>
+				<guid>https://sukalaper.github.io/paper/post-1/</guid>
+				<description>&lt;h1 id=&#34;h1-judul-halaman-utama-header-1&#34;&gt;H1: Judul Halaman Utama (Header 1)&lt;/h1&gt;&#xA;&lt;h2 id=&#34;h2-bagian-artikel-header-2&#34;&gt;H2: Bagian Artikel (Header 2)&lt;/h2&gt;&#xA;&lt;h3 id=&#34;h3-sub-bagian-penting-header-3&#34;&gt;H3: Sub-bagian Penting (Header 3)&lt;/h3&gt;&#xA;&lt;h4 id=&#34;h4-detail-teknis-header-4&#34;&gt;H4: Detail Teknis (Header 4)&lt;/h4&gt;&#xA;&lt;h5 id=&#34;h5-catatan-tambahan-header-5&#34;&gt;H5: Catatan Tambahan (Header 5)&lt;/h5&gt;&#xA;&lt;h6 id=&#34;h6-detail-mikro-header-6&#34;&gt;H6: Detail Mikro (Header 6)&lt;/h6&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-tipografi-dasar&#34;&gt;1. Tipografi Dasar&lt;/h2&gt;&#xA;&lt;p&gt;Ini adalah contoh paragraf yang panjang untuk melihat bagaimana &lt;em&gt;line-height&lt;/em&gt; dan &lt;em&gt;max-width&lt;/em&gt; (81ch) bekerja. Jika teks ini terlalu rapat atau terlalu lebar, kita bisa melakukan penyesuaian pada CSS. Fokus kita adalah &lt;strong&gt;keterbacaan&lt;/strong&gt; dan &lt;strong&gt;estetika&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Teks tebal&lt;/strong&gt; untuk penekanan kuat.&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Teks miring&lt;/em&gt; untuk penekanan lembut.&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;&lt;strong&gt;Teks tebal dan miring&lt;/strong&gt;&lt;/em&gt; untuk penekanan ganda.&lt;/li&gt;&#xA;&lt;li&gt;&lt;del&gt;Teks dicoret&lt;/del&gt; untuk revisi atau pemikiran yang dibatalkan.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;Inline code&lt;/code&gt; untuk perintah terminal atau nama file seperti &lt;code&gt;hugo.toml&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;2-blockquote-berjenjang&#34;&gt;2. Blockquote Berjenjang&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;Prinsip KISS adalah tentang kesederhanaan.&amp;rdquo;&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
