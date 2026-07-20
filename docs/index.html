@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="generator" content="Hugo 0.164.0">
+  <meta charset="UTF-8">
+  <title>Sukalaper - Blog</title>
+
+  
+  <meta name="description" content="">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="/">
+  <link rel="icon" href="/%20favicon.ico" type="image/x-icon">
+
+  
+  <link rel="stylesheet" href="/css/style.min.655c63b9b0b97edb1a517a71a88fd46b99f6734f2e488a90f8a8452b48d40c00.css">
+</head>
+
+<body>
+  <div style="display:table;margin:16px auto">
+    <div id="c">
+      <pre>
++------------------------------------------------------------------------------+
+|                                                                              |
+|  <a href="/">$HOME</a>                                           <a href="/about">about</a>  <a href="/paper">paper</a>  <span id="toggle-mode" onclick="toggleDarkMode()">read-mode.sh</span>  |
+|                                                                              |
++------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------+
+|                                                                      _______ |
+|                                                                      ||  .'| |
+|                                                                      ||,`  | |
+|                                                                      |     | |
+|                                                                      |_____| |
+|                                                                     _|_( )_|_|
++------------------------------------------------------------------------------+
+        </pre>
+
+      <main id="main">
+        
+<pre>
+
+First off, big shoutout to <a href="https://github.com/dylanaraps" target="_blank">Dylan Araps</a> (no clue where you at right now, but hope you’re all good, buddy).
+
+So, I kinda reworked the original site into <a href="https://gohugo.io/" target="_blank">Hugo</a>—yep, with a lil’ help from AI~
+
+The site itself? Dope. Super clean, simple, and totally on point with that KISS vibe. But man, sometimes it drove me nuts building it from scratch—especially having to hit $ bash make just to reload (yeah yeah, I know, that’s just my lack of skills showing).
+
+Anyway, moving it to Hugo feels way smoother, and now the structure’s looking like this:
+
+.
+├── archetypes
+│   └── default.md
+├── assets
+├── content
+├── data
+├── hugo.toml
+├── i18n
+├── layouts
+├── public
+│   ├── categories
+│   ├── css
+│   ├── index.html
+│   ├── index.xml
+│   ├── sitemap.xml
+│   └── tags
+├── static
+└── themes
+    └── kissstyle
+
+
+</pre>
+
+      </main>
+
+      <pre>
+________________________________________________________________________________
+
+Sukalaper © 2022, All rights reserved
+        </pre>
+    </div>
+  </div>
+
+  <script>
+    const darkModePreference = localStorage.getItem("darkMode") === "true";
+    if (darkModePreference) {
+      document.body.classList.add("dark-mode");
+    }
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem(
+        "darkMode",
+        document.body.classList.contains("dark-mode")
+      );
+      updateToggleText();
+    }
+    function updateToggleText() {
+      const toggleText = document.getElementById("toggle-mode");
+      toggleText.innerText = document.body.classList.contains("dark-mode")
+        ? "view-mode.sh"
+        : "read-mode.sh";
+      toggleText.style.color = document.body.classList.contains("dark-mode")
+        ? "#9cf"
+        : "#06f";
+    }
+    document.addEventListener("DOMContentLoaded", updateToggleText);
+  </script>
+</body>
+
+</html>
