@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+	<meta name="generator" content="Hugo 0.164.0">
+  <meta charset="UTF-8">
+  <title>Sukalaper Blog</title>
+
+  
+  <meta name="description" content="Technical Blog and Portfolio">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://sukalaper.github.io/">
+  <link rel="icon" href="/%20favicon.svg" type="image/svg+xml">
+
+  
+  <link rel="stylesheet" href="/css/style.min.f5904f7db74cb1f5c7e82b96e318b62283136ca23f2ec8e9425e5a5219930fb7.css">
+</head>
+
+<body>
+  <div style="display:table;margin:16px auto">
+    <div id="c">
+      <pre>
++------------------------------------------------------------------------------+
+|                                                                              |
+|  <a href="https://sukalaper.github.io/">$HOME</a>                                           <a href="/about">about</a>  <a href="/paper">paper</a>  <span id="toggle-mode" onclick="toggleDarkMode()">read-mode.sh</span>  |
+|                                                                              |
++------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------+
+|                                                                      _______ |
+|                                                                      ||  .'| |
+|                                                                      ||,`  | |
+|                                                                      |     | |
+|                                                                      |_____| |
+|                                                                     _|_( )_|_|
++------------------------------------------------------------------------------+
+        </pre>
+
+      <main id="main">
+        
+<pre>
+
+First off, big shoutout to <a href="https://github.com/dylanaraps" target="_blank">Dylan Araps</a>, so I kinda reworked the original site into <a href="https://gohugo.io/" target="_blank">Hugo</a>—yep, with a lil’ help from AI~
+
+Anyway, moving it to Hugo feels way smoother, and now the structure’s looking like this:
+
+.
+├── .hugo_build.lock
+├── hugo.toml
+├── archetypes/
+│   └── default.md
+├── content/
+│   ├── about.md
+│   └── paper/
+│       ├── _index.md
+│       ├── post-1/
+│       │   └── index.md
+│       └── post-2/
+│           └── index.md
+├── docs/
+│   ├── about/
+│   │   └── index.html
+│   ├── categories/
+│   │   ├── index.html
+│   │   └── index.xml
+│   ├── css/
+│   │   └── style.min.<hash>.css
+│   ├── paper/
+│   │   ├── index.html
+│   │   ├── index.xml
+│   │   ├── post-1/
+│   │   │   └── index.html
+│   │   └── post-2/
+│   │       └── index.html
+│   ├── tags/
+│   │   ├── index.html
+│   │   └── index.xml
+│   ├── favicon.svg
+│   ├── google30ec71e0c3b9c81c.html
+│   ├── index.html
+│   ├── index.xml
+│   └── sitemap.xml
+├── static/
+│   ├── favicon.svg
+│   └── google30ec71e0c3b9c81c.html
+└── themes/
+    └── kissstyle/
+        ├── assets/
+        │   └── css/
+        │       └── style.css
+        └── layouts/
+            ├── _default/
+            │   ├── baseof.html
+            │   ├── list.html
+            │   └── single.html
+            ├── paper/
+            │   └── single.html
+            └── index.html
+
+</pre>
+
+      </main>
+
+      <pre>
+________________________________________________________________________________
+
+Sukalaper © 2022, All rights reserved
+        </pre>
+    </div>
+  </div>
+
+  <script>
+    const darkModePreference = localStorage.getItem("darkMode") === "true";
+    if (darkModePreference) {
+      document.body.classList.add("dark-mode");
+    }
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem(
+        "darkMode",
+        document.body.classList.contains("dark-mode")
+      );
+      updateToggleText();
+    }
+    function updateToggleText() {
+      const toggleText = document.getElementById("toggle-mode");
+      toggleText.innerText = document.body.classList.contains("dark-mode")
+        ? "view-mode.sh"
+        : "read-mode.sh";
+      toggleText.style.color = document.body.classList.contains("dark-mode")
+        ? "#9cf"
+        : "#06f";
+    }
+    document.addEventListener("DOMContentLoaded", updateToggleText);
+  </script>
+</body>
+
+</html>

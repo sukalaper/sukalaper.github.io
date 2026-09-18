@@ -1,0 +1,7 @@
+{{ define "main" }}
+<div class="ascii-box">
+  <h1>{{ .Title }}</h1>
+  <p class="post-date">{{ .Date.Format "2 January 2006" }}</p>
+  {{ .Content }}
+</div>
+{{ end }}

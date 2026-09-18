@@ -21,8 +21,26 @@ pre:last-child {
 }
 
 pre code {
-  white-space: pre; 
+  white-space: pre;
   overflow-x: auto;
+}
+
+/* Syntax-highlighted code blocks (Hugo Chroma) */
+#c .highlight {
+  max-width: 80ch;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+#c .highlight pre,
+#c .highlight code,
+#c .highlight table {
+  max-width: none;
+  white-space: pre;
+  overflow-wrap: normal;
+  word-break: normal;
+  word-wrap: normal;
 }
 
 #c {
@@ -31,15 +49,29 @@ pre code {
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-word;
+  overflow-x: hidden;
 }
 
 #c p,
-#c h1, #c h2, #c h3, #c h4, #c h5, #c h6,
-#c ul, #c ol, #c pre, #c code {
+#c h1,
+#c h2,
+#c h3,
+#c h4,
+#c h5,
+#c h6,
+#c ul,
+#c ol,
+#c pre,
+#c code {
   max-width: 81ch;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: normal;
 }
 
@@ -75,4 +107,13 @@ body.dark-mode a {
 
 .chroma {
   border-radius: 12px;
+}
+
+.post-date {
+  font-size: 0.9em;
+  opacity: 0.65;
+}
+
+.footnotes hr {
+  display: none;
 }

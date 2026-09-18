@@ -1,13 +1,13 @@
 baseURL = "https://sukalaper.github.io"
-languageCode = "en-us"
-title = "Sukalaper - Blog"
+locale = "id"
+title = "Sukalaper Blog"
 theme = "kissstyle"
 publishDir = "docs"
 
 [markup]
   [markup.highlight]
     noClasses = true
-    style = "fruity"  
+    style = "modus-vivendi"  
     lineNos = true    
 
 [params]

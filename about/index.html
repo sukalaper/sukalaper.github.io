@@ -3,20 +3,18 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Site.Title }} - {{ .Title }}{{ end }}</title>
+  <title>Sukalaper Blog - About</title>
 
-  {{ if .Description }}
-  <meta name="description" content="{{ .Description }}">
-  {{ else }}
-  <meta name="description" content="{{ .Site.Params.description }}">
-  {{ end }}
+  
+  <meta name="description" content="Technical Blog and Portfolio">
+  
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="canonical" href="{{ .Permalink }}">
-  <link rel="icon" href="{{ " favicon.svg" | relURL }}" type="image/svg+xml">
+  <link rel="canonical" href="https://sukalaper.github.io/about/">
+  <link rel="icon" href="/%20favicon.svg" type="image/svg+xml">
 
-  {{ $style := resources.Get "css/style.css" | resources.Minify | resources.Fingerprint }}
-  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+  
+  <link rel="stylesheet" href="/css/style.min.f5904f7db74cb1f5c7e82b96e318b62283136ca23f2ec8e9425e5a5219930fb7.css">
 </head>
 
 <body>
@@ -25,7 +23,7 @@
       <pre>
 +------------------------------------------------------------------------------+
 |                                                                              |
-|  <a href="{{ .Site.BaseURL }}">$HOME</a>                                           <a href="{{ "/about" | relURL }}">about</a>  <a href="{{ "/paper" | relURL }}">paper</a>  <span id="toggle-mode" onclick="toggleDarkMode()">read-mode.sh</span>  |
+|  <a href="https://sukalaper.github.io/">$HOME</a>                                           <a href="/about">about</a>  <a href="/paper">paper</a>  <span id="toggle-mode" onclick="toggleDarkMode()">read-mode.sh</span>  |
 |                                                                              |
 +------------------------------------------------------------------------------+
 
@@ -40,7 +38,12 @@
         </pre>
 
       <main id="main">
-        {{ block "main" . }}{{ end }}
+        
+<div class="ascii-box">
+  <p>There&rsquo;s no place like home~</p>
+
+</div>
+
       </main>
 
       <pre>

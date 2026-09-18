@@ -3,20 +3,18 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Site.Title }} - {{ .Title }}{{ end }}</title>
+  <title>Sukalaper Blog - PAPER AF.</title>
 
-  {{ if .Description }}
-  <meta name="description" content="{{ .Description }}">
-  {{ else }}
-  <meta name="description" content="{{ .Site.Params.description }}">
-  {{ end }}
+  
+  <meta name="description" content="Technical Blog and Portfolio">
+  
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="canonical" href="{{ .Permalink }}">
-  <link rel="icon" href="{{ " favicon.svg" | relURL }}" type="image/svg+xml">
+  <link rel="canonical" href="https://sukalaper.github.io/paper/">
+  <link rel="icon" href="/%20favicon.svg" type="image/svg+xml">
 
-  {{ $style := resources.Get "css/style.css" | resources.Minify | resources.Fingerprint }}
-  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+  
+  <link rel="stylesheet" href="/css/style.min.f5904f7db74cb1f5c7e82b96e318b62283136ca23f2ec8e9425e5a5219930fb7.css">
 </head>
 
 <body>
@@ -25,7 +23,7 @@
       <pre>
 +------------------------------------------------------------------------------+
 |                                                                              |
-|  <a href="{{ .Site.BaseURL }}">$HOME</a>                                           <a href="{{ "/about" | relURL }}">about</a>  <a href="{{ "/paper" | relURL }}">paper</a>  <span id="toggle-mode" onclick="toggleDarkMode()">read-mode.sh</span>  |
+|  <a href="https://sukalaper.github.io/">$HOME</a>                                           <a href="/about">about</a>  <a href="/paper">paper</a>  <span id="toggle-mode" onclick="toggleDarkMode()">read-mode.sh</span>  |
 |                                                                              |
 +------------------------------------------------------------------------------+
 
@@ -40,7 +38,22 @@
         </pre>
 
       <main id="main">
-        {{ block "main" . }}{{ end }}
+        
+<div class="ascii-box">
+  <h1>PAPER AF.</h1>
+  <ul>
+    
+      <li><a href="/paper/post-4/">Proyek Vim Yang Saya Tinggalkan</a></li>
+    
+      <li><a href="/paper/post-3/">I Stopped Using Google Keep For Daily Task.</a></li>
+    
+      <li><a href="/paper/post-2/">Bagaimana Notifikasi Darurat Bisa Muncul di Semua HP Saat Krisis?</a></li>
+    
+      <li><a href="/paper/post-1/">Posting Pertama Setelah Hiatus.</a></li>
+    
+  </ul>
+</div>
+
       </main>
 
       <pre>

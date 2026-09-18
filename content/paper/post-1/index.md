@@ -1,62 +1,109 @@
 +++
 date = '2025-09-08T00:24:15+07:00'
-title = 'Post 1'
+title = 'Posting Pertama Setelah Hiatus.'
 +++
 
-# Heading 1
-Ini adalah paragraf pertama berisi *lorem ipsum* untuk mengetes format Markdown.
-
-## Heading 2
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
-Vivamus viverra, nunc id tincidunt dictum, lectus felis feugiat purus, ut dictum erat sem a neque.
-
-### Heading 3
-Contoh list:
-- Item 1
-- Item 2
-- Item 3
+# H1: Judul Halaman Utama (Header 1)
+## H2: Bagian Artikel (Header 2)
+### H3: Sub-bagian Penting (Header 3)
+#### H4: Detail Teknis (Header 4)
+##### H5: Catatan Tambahan (Header 5)
+###### H6: Detail Mikro (Header 6)
 
 ---
 
-## Sample Complex C++ Code
+## 1. Tipografi Dasar
+Ini adalah contoh paragraf yang panjang untuk melihat bagaimana *line-height* dan *max-width* (81ch) bekerja. Jika teks ini terlalu rapat atau terlalu lebar, kita bisa melakukan penyesuaian pada CSS. Fokus kita adalah **keterbacaan** dan **estetika**.
 
-```cpp
-#include <iostream>
-#include <vector>
-#include <string>
-#include <algorithm>
+*   **Teks tebal** untuk penekanan kuat.
+*   *Teks miring* untuk penekanan lembut.
+*   ***Teks tebal dan miring*** untuk penekanan ganda.
+*   ~~Teks dicoret~~ untuk revisi atau pemikiran yang dibatalkan.
+*   `Inline code` untuk perintah terminal atau nama file seperti `hugo.toml`.
 
-class Student {
-public:
-    std::string name;
-    int score;
+## 2. Blockquote Berjenjang
+> "Prinsip KISS adalah tentang kesederhanaan."
+>
+> Ini adalah paragraf kedua dalam kutipan yang sama.
+>
+> > Dan ini adalah level kutipan kedua. Biasanya digunakan untuk *referencing* atau komentar tambahan.
+> > > Dan ini level ketiga, untuk menunjukkan kedalaman hierarki informasi dalam sebuah argumen.
 
-    Student(const std::string &n, int s) : name(n), score(s) {}
-};
+## 3. Daftar Kompleks
+*   **Root Item 1**
+    *   Sub-item A
+        *   Level 3 item: Detail sangat spesifik.
+    *   Sub-item B
+*   **Root Item 2**
+    1.  Ordered item 1
+    2.  Ordered item 2
 
-int main() {
-    std::vector<Student> students = {
-        {"Alice", 85},
-        {"Bob", 92},
-        {"Charlie", 78},
-        {"Diana", 88},
-        {"Evan", 95}
-    };
+- [ ] Task belum selesai
+- [x] Task selesai
 
-    std::cout << "Original List:" << std::endl;
-    for (const auto &s : students) {
-        std::cout << s.name << " - " << s.score << std::endl;
-    }
+## 4. Tabel (Complex)
+| Header 1 | Header 2 | Header 3 |
+| :--- | :---: | ---: |
+| Kiri | Tengah | Kanan |
+| Data A | Data B | Data C |
+| Baris panjang banget biar ngetes cell width | 123 | 999 |
 
-    std::sort(students.begin(), students.end(),
-              [](const Student &a, const Student &b) {
-                  return a.score > b.score;
-              });
+## 5. Media & Embeds
+![Alt text buat ngetes gambar yang lebarnya ngawur](https://placehold.co/400)
+*Caption gambar.*
 
-    std::cout << "\nSorted by Score (Descending):" << std::endl;
-    for (const auto &s : students) {
-        std::cout << s.name << " - " << s.score << std::endl;
-    }
-
-    return 0;
+## 6. Blok Kode (Syntax Highlighting)
+```rust
+struct Record<'a> {
+    name: &'a str,
+    score: f64,
 }
+
+fn main() {
+    let mut data = [
+        Record { name: "Alice", score: 85.0 },
+        Record { name: "Bob", score: 92.0 },
+        Record { name: "Charlie", score: 78.0 },
+        Record { name: "Diana", score: 88.0 },
+        Record { name: "Evan", score: 95.0 },
+    ];
+
+    println!("Original List:");
+    for r in &data {
+        println!("{} - {:.0}", r.name, r.score);
+    }
+
+    data.sort_unstable_by(|a, b| {
+        b.score.total_cmp(&a.score)
+    });
+
+    println!("\nSorted by Score (Descending):");
+    for r in &data {
+        println!("{} - {:.0}", r.name, r.score);
+    }
+
+    let n = data.len() as f64;
+    let sum: f64 = data.iter().map(|r| r.score).sum();
+    let mean = sum / n;
+
+    let variance = data
+        .iter()
+        .map(|r| (r.score - mean).powi(2))
+        .sum::<f64>() / n;
+
+    let std_dev = variance.sqrt();
+    let median = data[data.len() / 2].score;
+
+    println!("\nDescriptive Analytics:");
+    println!("Count   : {}", n);
+    println!("Mean    : {:.2}", mean);
+    println!("Std Dev : {:.2}", std_dev);
+    println!("Median  : {:.2}", median);
+
+    println!("\nStandardized Scores (Z-Score):");
+    for r in &data {
+        let z = (r.score - mean) / std_dev;
+        println!("{:<8} | Z: {:>5.2}", r.name, z);
+    }
+}
+```
