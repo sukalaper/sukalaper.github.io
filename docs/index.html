@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+	<meta name="generator" content="Hugo 0.164.0">
+  <meta charset="UTF-8">
+  <title>Sukalaper Blog</title>
+
+  
+  <meta name="description" content="Technical Blog and Portfolio">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://sukalaper.github.io/">
+  <link rel="icon" href="/%20favicon.svg" type="image/svg+xml">
+
+  
+  <link rel="stylesheet" href="/css/style.min.2df9cb60f9478e869eebab565df4c3a277be5e13b9924f094dd5d709efbba247.css">
+</head>
+
+<body>
+  <div style="display:table;margin:16px auto">
+    <div id="c">
+      <pre>
++------------------------------------------------------------------------------+
+|                                                                              |
+|  <a href="https://sukalaper.github.io/">$HOME</a>                                           <a href="/about">about</a>  <a href="/paper">paper</a>  <span id="toggle-mode" onclick="toggleDarkMode()">read-mode.sh</span>  |
+|                                                                              |
++------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------+
+|                                                                      _______ |
+|                                                                      ||  .'| |
+|                                                                      ||,`  | |
+|                                                                      |     | |
+|                                                                      |_____| |
+|                                                                     _|_( )_|_|
++------------------------------------------------------------------------------+
+        </pre>
+
+      <main id="main">
+        
+<div class="home-content">
+    <p>Yowza!</p>
+<p>Pertama-tama, terima kasih banyak untuk <a href="https://github.com/dylanaraps">Dylan Araps</a> atas <a href="https://github.com/dylanaraps/blog">situs lamanya</a> yang luar biasa! Situs tersebut ditulis menggunakan <a href="https://id.wikipedia.org/wiki/Bash_(syel_Unix)">Bash</a> tanpa &ldquo;hal aneh&rdquo;, hanya <em>font monospace</em> dan beberapa <a href="https://www.asciiart.eu">ASCII Art</a>.</p>
+<p>Namun karena <em>skill issue</em> dengan Bash, saya lakukan sedikit penyesuaian pada situs ini dan <em>rewrite</em> ke <a href="https://gohugo.io/">Hugo</a>.</p>
+
+</div>
+
+      </main>
+
+      <pre>
+________________________________________________________________________________
+
+© Sukalaper, All Rights Reserved.
+        </pre>
+    </div>
+  </div>
+
+  <script>
+    const darkModePreference = localStorage.getItem("darkMode") === "true";
+    if (darkModePreference) {
+      document.body.classList.add("dark-mode");
+    }
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem(
+        "darkMode",
+        document.body.classList.contains("dark-mode")
+      );
+      updateToggleText();
+    }
+    function updateToggleText() {
+      const toggleText = document.getElementById("toggle-mode");
+      toggleText.innerText = document.body.classList.contains("dark-mode")
+        ? "view-mode.sh"
+        : "read-mode.sh";
+      toggleText.style.color = document.body.classList.contains("dark-mode")
+        ? "#9cf"
+        : "#06f";
+    }
+    document.addEventListener("DOMContentLoaded", updateToggleText);
+  </script>
+</body>
+
+</html>
