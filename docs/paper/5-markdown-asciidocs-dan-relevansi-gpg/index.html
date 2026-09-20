@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sukalaper Blog - Markdown, AsciiDocs dan Relevansi GPG</title>
+
+  
+  <meta name="description" content="Technical Blog and Portfolio">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://sukalaper.github.io/paper/5-markdown-asciidocs-dan-relevansi-gpg/">
+  <link rel="icon" href="/%20favicon.svg" type="image/svg+xml">
+
+  
+  <link rel="stylesheet" href="/css/style.min.2df9cb60f9478e869eebab565df4c3a277be5e13b9924f094dd5d709efbba247.css">
+</head>
+
+<body>
+  <div style="display:table;margin:16px auto">
+    <div id="c">
+      <pre>
++------------------------------------------------------------------------------+
+|                                                                              |
+|  <a href="https://sukalaper.github.io/">$HOME</a>                                           <a href="/about">about</a>  <a href="/paper">paper</a>  <span id="toggle-mode" onclick="toggleDarkMode()">read-mode.sh</span>  |
+|                                                                              |
++------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------+
+|                                                                      _______ |
+|                                                                      ||  .'| |
+|                                                                      ||,`  | |
+|                                                                      |     | |
+|                                                                      |_____| |
+|                                                                     _|_( )_|_|
++------------------------------------------------------------------------------+
+        </pre>
+
+      <main id="main">
+        
+<div class="ascii-box">
+  <h1>Markdown, AsciiDocs dan Relevansi GPG</h1>
+  <p class="post-date">20 September 2026</p>
+  <p>Dunia markup language berbasis teks sering kali diwarnai perdebatan klasik: mana yang terbaik untuk menulis? Apakah kita harus tetap setia dengan kesederhanaan Markdown, atau beralih ke AsciiDoc yang kaya fitur? Dan di tengah ekosistem digital modern yang serba end-to-end, apakah alat keamanan klasik seperti GPG masih dibutuhkan?</p>
+<p>Mari kita bedah ringkasan obrolan seputar perbandingan format penulisan, integrasinya dengan Hugo, hingga pertimbangan keamanan digital saat ini.</p>
+<ol>
+<li>Markdown vs. AsciiDoc: Pilih Mana?</li>
+</ol>
+<p>Secara garis besar, Markdown dan AsciiDoc memiliki fungsi dasar yang serupa—memungkinkan kita menulis menggunakan teks biasa tanpa pusing memikirkan styling di awal. Namun, kelas dan pendekatannya berbeda:</p>
+<ul>
+<li>
+<p><strong>Markdown</strong>: Dibuat sesimpel mungkin agar mudah dibaca dalam bentuk teks mentah. Sangat ideal untuk catatan harian, file README, atau postingan blog kasual. Kekurangannya, Markdown memiliki banyak flavor (CommonMark, GFM) dan minim fitur bawaan untuk dokumen kompleks.</p>
+</li>
+<li>
+<p><strong>AsciiDoc</strong>: Dirancang khusus untuk dokumentasi teknis berat, buku, dan laporan skala besar. Memiliki fitur bawaan yang lengkap seperti table of contents otomatis, cross-references, manajemen tabel yang rapi, hingga include macro modular tanpa butuh plugin tambahan.</p>
+</li>
+</ul>
+<p>Perbedaan Sintaksis Singkat:</p>
+<ul>
+<li>
+<p><strong>Heading</strong>: Markdown menggunakan pagar (#), sementara AsciiDoc menggunakan tanda sama dengan (=).</p>
+</li>
+<li>
+<p><strong>Tebal/Miring</strong>: Keduanya mirip, namun AsciiDoc menggunakan backtick ganda (``) untuk inline code demi menghindari konflik karakter.</p>
+</li>
+<li>
+<p><strong>Admonition (Kotak Peringatan)</strong>: AsciiDoc punya sintaks bawaan yang rapi (NOTE: , WARNING: ), sedangkan Markdown harus mengandalkan ekstensi atau blockquote.</p>
+</li>
+</ul>
+<ol start="2">
+<li>Pindah ke AsciiDoc di Hugo: Layak Dicoba?</li>
+</ol>
+<p>Bagi pengguna static site generator Hugo, migrasi dari Markdown ke AsciiDoc sangat memungkinkan karena Hugo sudah memberikan dukungan native. Namun, ada beberapa konsekuensi:</p>
+<ul>
+<li>
+<p><strong>Prosesor Eksternal</strong>: Hugo tidak memiliki parser AsciiDoc internal, sehingga ia harus memanggil program luar seperti Asciidoctor (berbasis Ruby) saat melakukan build.</p>
+</li>
+<li>
+<p><strong>Kecepatan Build</strong>: Karena melibatkan prosesor eksternal, waktu build situs bisa sedikit lebih lambat dibandingkan Markdown murni yang diproses langsung di memori oleh Hugo.</p>
+</li>
+</ul>
+<ol start="3">
+<li>Di Era End-to-End, Masihkah Kita Memerlukan GPG?</li>
+</ol>
+<p>Meskipun aplikasi perpesanan dan layanan cloud masa kini sudah dilengkapi enkripsi end-to-end secara otomatis, GPG (GNU Privacy Guard) tetap sangat relevan, terutama bagi developer dan pekerja IT.</p>
+<p>Fungsi utamanya bergeser dari sekadar enkripsi pesan rahasia menjadi:</p>
+<ul>
+<li>
+<p><strong>Tanda Tangan Digital (Digital Signatures)</strong>: Memastikan keaslian commit Git atau rilis software agar terhindar dari tampering.</p>
+</li>
+<li>
+<p><strong>Autentikasi SSH yang Aman</strong>: Mengamankan akses ke server atau platform seperti GitHub menggunakan private key yang tersimpan di perangkat keras (misal: YubiKey).</p>
+</li>
+</ul>
+<p>Beberapa perintah dasar yang sering dipakai untuk memulai GPG:</p>
+<div class="highlight"><div style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># Membuat kunci GPG baru
+</span></span><span style="display:flex;"><span>gpg --full-generate-key
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Mengatur Git agar otomatis menandatangani commit
+</span></span><span style="display:flex;"><span>git config --global user.signingkey YOUR_KEY_ID
+</span></span><span style="display:flex;"><span>git config --global commit.gpgsign true
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Mengekspor public key
+</span></span><span style="display:flex;"><span>gpg --armor --export YOUR_KEY_ID
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Kesimpulan: Harus Migrasi atau Tetap?</p>
+<p>Semua kembali ke skala kebutuhan Anda. Jika rutinitas Anda sebatas menulis artikel blog santai dan dokumentasi ringan, Markdown sudah lebih dari cukup dan efisien.</p>
+<p>Jika Anda sedang membangun dokumentasi sistem skala besar, menulis buku, atau mengelola proyek teknis rumit, beralih ke AsciiDoc adalah investasi yang sangat layak.</p>
+<p>Bagaimana dengan alur kerja Anda saat ini? Apakah sudah waktunya mencoba format yang lebih kompleks?</p>
+
+</div>
+
+      </main>
+
+      <pre>
+________________________________________________________________________________
+
+© Sukalaper, All Rights Reserved.
+        </pre>
+    </div>
+  </div>
+
+  <script>
+    const darkModePreference = localStorage.getItem("darkMode") === "true";
+    if (darkModePreference) {
+      document.body.classList.add("dark-mode");
+    }
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem(
+        "darkMode",
+        document.body.classList.contains("dark-mode")
+      );
+      updateToggleText();
+    }
+    function updateToggleText() {
+      const toggleText = document.getElementById("toggle-mode");
+      toggleText.innerText = document.body.classList.contains("dark-mode")
+        ? "view-mode.sh"
+        : "read-mode.sh";
+      toggleText.style.color = document.body.classList.contains("dark-mode")
+        ? "#9cf"
+        : "#06f";
+    }
+    document.addEventListener("DOMContentLoaded", updateToggleText);
+  </script>
+</body>
+
+</html>
