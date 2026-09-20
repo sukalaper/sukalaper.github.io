@@ -1,11 +1,19 @@
 {{ define "main" }}
-<div class="ascii-box">
+<div id="c">
   <h1>{{ .Title }}</h1>
+
   <ul>
-    {{ range .Pages }}
-      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ range .Paginator.Pages }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
     {{ end }}
   </ul>
+
+  <div class="pagination-mono" style="margin-top: 2rem; font-family: monospace; text-align: center;">
+    [ view: <strong>10</strong> | <a href="?limit=20">20</a> | <a href="?limit=50">50</a> | <a href="?limit=100">100</a>
+    ]
+  </div>
+
 </div>
 {{ end }}
-
